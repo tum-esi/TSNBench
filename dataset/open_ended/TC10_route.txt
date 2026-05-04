@@ -1,0 +1,16 @@
+id,src,dst,hop_count,path
+0,node11_4,node11_1,2,node11_4->sw_11->node11_1
+1,node0_0,node1_3,3,node0_0->sw_0->sw_1->node1_3
+2,node6_2,node4_4,7,node6_2->sw_6->sw_7->sw_8->sw_0->sw_5->sw_4->node4_4
+3,node5_0,node7_3,5,node5_0->sw_5->sw_0->sw_8->sw_7->node7_3
+4,node2_1,node0_3,4,node2_1->sw_2->sw_1->sw_0->node0_3
+5,node11_0,node10_2,3,node11_0->sw_11->sw_10->node10_2
+6,node10_4,node6_0,4,node10_4->sw_10->sw_11->sw_6->node6_0
+7,node11_2,node0_3,6,node11_2->sw_11->sw_10->sw_9->sw_5->sw_0->node0_3
+8,node6_2,node6_3,2,node6_2->sw_6->node6_3
+9,node2_0,node4_4,4,node2_0->sw_2->sw_3->sw_4->node4_4
+10,node2_4,node10_1,7,node2_4->sw_2->sw_1->sw_0->sw_5->sw_9->sw_10->node10_1
+11,node8_1,node4_0,5,node8_1->sw_8->sw_0->sw_5->sw_4->node4_0
+12,node1_2,node6_4,6,node1_2->sw_1->sw_0->sw_8->sw_7->sw_6->node6_4
+13,node0_0,node7_0,4,node0_0->sw_0->sw_8->sw_7->node7_0
+14,node10_3,node3_0,6,node10_3->sw_10->sw_9->sw_5->sw_4->sw_3->node3_0

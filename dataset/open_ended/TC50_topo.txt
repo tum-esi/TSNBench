@@ -1,0 +1,7 @@
+vertex,sw_1,3
+vertex,node0_1,1
+vertex,node0_2,1
+vertex,node0_3,1
+edge,sw_1.P0,node0_1
+edge,sw_1.P1,node0_2
+edge,sw_1.P2,node0_3
