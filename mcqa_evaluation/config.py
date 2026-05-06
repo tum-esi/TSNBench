@@ -7,7 +7,6 @@ RESULTS_DIR = "output"
 
 RUNS_PER_QUESTION = 3          # each question is asked this many times per model
 
-# Temperature settings
 TEMPERATURE_WITH = 0.7      # with temperature
 TEMPERATURE_WITHOUT = 0.0      # deterministic
 

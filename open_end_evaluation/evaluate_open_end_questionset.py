@@ -1,23 +1,3 @@
-"""
-evaluate_open_end_questionset.py
-================================
-Evaluates all models on open-ended WCD computation questions.
-
-Consistent with evaluate_questionset.py:
-  - Runs each TC 3 times per model (RUNS_PER_TC)
-  - Evaluates at temp=0.0 AND temp=0.7 (except reasoning models)
-  - Reasoning/skip_temperature models run once at default temp only
-
-Each TC folder contains: Topology.txt, Flows.txt, route.txt
-Prompt type controlled by PROMPT_TYPE = "CQF" or "CBS"
-
-Output: output/open_end/raw_openend_{model}_{prompt}_{temp}.json
-        output/open_end/summary_openend_{model}_{prompt}_{temp}.json
-        output/open_end/full_summary_openend_{prompt}.json
-
-Scoring (MAE, MAPE, exact match) computed by score_openend_results.py
-"""
-
 import sys
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
@@ -45,9 +25,6 @@ from config import (
     compute_cost
 )
 
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
 TC_DIR         = "../dataset/open_ended"
 PROMPT_TYPE    = "CQF"     # "CQF" or "CBS"
 RUNS_PER_TC    = 3
@@ -153,7 +130,6 @@ def parse_response(raw: str) -> dict:
     clean = re.sub(r"^```(?:json)?", "", clean).strip()
     clean = re.sub(r"```$",          "", clean).strip()
 
-    # Refusal check
     refusal_patterns = [
         "i cannot", "i can't", "i am not able", "i'm not able",
         "unable to", "cannot answer", "not enough information",
@@ -178,7 +154,6 @@ def parse_response(raw: str) -> dict:
                 try:
                     wcd_values[flow_id] = float(val)
                 except (TypeError, ValueError):
-                    # Value is a string — try to extract a number from it
                     num_match = re.search(r"[\d.]+", str(val))
                     if num_match:
                         wcd_values[flow_id] = float(num_match.group())
@@ -495,13 +470,10 @@ def compute_summary(
         "type"               : model_cfg["type"],
         "weights"            : model_cfg["weights"],
         "prompt_type"        : PROMPT_TYPE,
-        # "temperature"        : temperature,
         "temperature": None if (model_cfg.get("skip_temperature", False) or
                                 model_cfg["type"] == "Reasoning") else temperature,
         "runs_per_tc"        : RUNS_PER_TC,
         "timestamp"          : datetime.utcnow().isoformat(),
-
-        # Counts
         "total_tcs"          : total_tcs,
         "total_runs"         : total_runs,
         "valid_runs"         : len(valid),
@@ -510,23 +482,17 @@ def compute_summary(
         "failed_api_calls"   : len(api_errors),
         "invalid_rate"       : round(len(invalid) / total_runs, 4) if total_runs else 0,
         "refusal_rate"       : round(len(refused) / total_runs, 4) if total_runs else 0,
-
         "parse_notes"        : dict(parse_notes),
-
         "avg_consistency"    : round(mean(all_consistency), 4) if all_consistency else None,
         "min_consistency"    : round(min(all_consistency), 4)  if all_consistency else None,
-
         "mae_us"             : None,
         "mape_percent"       : None,
         "exact_match_rate"   : None,
-
         "avg_confidence"     : round(mean(confs), 4) if confs else None,
-
         "total_tokens_in"    : sum(tokens_in),
         "total_tokens_out"   : sum(tokens_out),
         "total_cost_usd"     : round(sum(costs), 6),
         "avg_cost_per_run"   : round(mean(costs), 8) if costs else 0,
-
         "avg_latency_ms"     : round(mean(latencies), 1) if latencies else 0,
         "max_latency_ms"     : max(latencies) if latencies else 0,
         "total_time_seconds" : round(sum(latencies) / 1000, 2) if latencies else 0,
@@ -602,7 +568,7 @@ def main():
     log.info(f"Models         : {len(MODELS)}")
     log.info(f"Temp settings  : {TEMPERATURE_WITHOUT} (without) | {TEMPERATURE_WITH} (with)")
     log.info(f"Output dir     : {OPEN_END_DIR}")
-    log.info(f"NOTE: WCD accuracy computed by score_openend_results.py")
+    log.info(f"NOTE: WCD accuracy computed by error_calculation.py")
 
     temp_one = sum(1 for m in MODELS if m.get("skip_temperature", False) or m["type"] == "Reasoning")
     temp_two = len(MODELS) - temp_one
@@ -641,7 +607,6 @@ def main():
         consist = f"{s['avg_consistency']:.2f}" if s["avg_consistency"] is not None else "N/A"
         log.info(
             f"{s['model']:<28} "
-            # f"{s['temperature']:>5} "
             f"{str(s['temperature']) if s['temperature'] is not None else 'Def':>5} "
             f"{s['valid_runs']:>6} "
             f"{s['invalid_runs']:>8} "
@@ -650,7 +615,7 @@ def main():
             f"{s['avg_latency_ms']:>9.0f}"
         )
     log.info(f"{'='*80}")
-    log.info(f"Evaluation complete. Run score_openend_results.py for MAE/MAPE.")
+    log.info(f"Evaluation complete. Run error_calculation.py for MAE and MAPE values.")
 
 
 if __name__ == "__main__":

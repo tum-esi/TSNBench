@@ -15,8 +15,8 @@ SCORED_DIR = "output/CBS/score"
 
 PROMPT_TYPE = "CBS"
 EXACT_MATCH_TOL = 0.01
-MIN_FLOW_COVERAGE = 0.8
-MIN_SCORED_TCS = 50     # out of 100
+MIN_FLOW_COVERAGE = 0.8     # 80% of flows WCD given by model
+MIN_SCORED_TCS = 50         # out of 100
 
 os.makedirs(OPEN_END_DIR, exist_ok=True)
 os.makedirs(SCORED_DIR,   exist_ok=True)
@@ -48,7 +48,7 @@ def get_majority_wcd(runs: list) -> dict:
         r for r in runs
         if r.get("wcd_values")
            and not r["invalid"]
-           and not is_trivial(r.get("wcd_values", {}))  # ← exclude trivial runs
+           and not is_trivial(r.get("wcd_values", {}))
     ]
     if not valid_runs:
         return {}
@@ -75,7 +75,7 @@ def get_average_wcd(runs: list) -> dict:
         r for r in runs
         if r.get("wcd_values")
            and not r["invalid"]
-           and not is_trivial(r.get("wcd_values", {}))  # ← exclude trivial runs
+           and not is_trivial(r.get("wcd_values", {}))
     ]
     if not valid_runs:
         return {}
@@ -266,7 +266,6 @@ def compute_model_summary(model_key: str,
             per_tc_mae_avg.append(m_avg["mae_us"])
             per_tc_mape_avg.append(m_avg["mape_pct"])
 
-        # Collect flow-level errors from majority vote records
         for f in tc_data["flow_records"]:
             if f["abs_error"] is not None:
                 all_errors.append(f["abs_error"])
@@ -397,11 +396,8 @@ def main():
                 log.warning(f"  {tc_name}: {len(hv_flags)} high-variance flows "
                             f"— {[f['flow_id'] for f in hv_flags]}")
 
-            # Majority vote scoring
             flow_records_majority = compute_flow_errors(majority_wcd, gt_flows)
             tc_metrics_majority   = compute_tc_metrics(flow_records_majority, majority_wcd)
-
-            # Average scoring
             flow_records_average  = compute_flow_errors(average_wcd, gt_flows)
             tc_metrics_average    = compute_tc_metrics(flow_records_average, average_wcd)
 
@@ -487,7 +483,7 @@ def main():
             for tc, d in tc_results.items()
         }
         out["flow_records"]     = scored_records
-        out["flow_records_avg"] = flow_records_avg_out   # per-flow avg errors for box plot
+        out["flow_records_avg"] = flow_records_avg_out
 
         with open(scored_path, "w", encoding="utf-8") as f:
             json.dump(out, f, indent=2, ensure_ascii=False)

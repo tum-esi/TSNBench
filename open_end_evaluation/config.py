@@ -2,14 +2,13 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-QUESTIONSET_FILE = "input/test_cases"
-RESULTS_DIR = "output/CQF"
+QUESTIONSET_FILE = "../dataset/open_ended"
+RESULTS_DIR = "output/CQF"      # or CBS directory for CBS results
 RUNS_PER_QUESTION = 3
 
 TEMPERATURE_WITH = 0.7      # with temperature
 TEMPERATURE_WITHOUT = 0.0      # deterministic
 
-# update it accordingly
 MODEL_PRICING = {
     "grok-4-1-fast-reasoning"       : {"input":  0.20, "output": 0.50},
     "grok-4-1-fast-non-reasoning"   : {"input":  0.20, "output": 0.50},
@@ -30,7 +29,6 @@ MODEL_PRICING = {
 }
 
 def compute_cost(model_key: str, tokens_in: int, tokens_out: int) -> float:
-    """Calculate cost in USD for a single API call."""
     pricing = MODEL_PRICING.get(model_key, {"input": 0.0, "output": 0.0})
     return (tokens_in * pricing["input"] + tokens_out * pricing["output"]) / 1_000_000
 
@@ -40,31 +38,21 @@ from anthropic import Anthropic
 from google import genai
 from google.genai import types as genai_types
 
-# OpenAI — GPT-4o, GPT-4o mini, o3
 openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-# Anthropic — Claude 3.7 Sonnet
 anthropic_client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-
-# Google — Gemini 2.5 Flash
 gemini_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
-
-# Mistral — Large 3, Medium 3.1
 mistral_client = Mistral(api_key=os.getenv("MISTRAL_API_KEY"))
 
-# xAI — Grok 3
 grok_client = OpenAI(
     api_key=os.getenv("XAI_API_KEY"),
     base_url="https://api.x.ai/v1"
 )
 
-# DeepSeek — R1, V3
 deepseek_client = OpenAI(
     api_key=os.getenv("DEEPSEEK_API_KEY"),
     base_url="https://api.deepseek.com/v1"
 )
 
-# HuggingFace Router — Llama 3.3, Qwen3 8B
 hf_client = OpenAI(
     api_key=os.getenv("HF_TOKEN"),
     base_url="https://router.huggingface.co/v1"

@@ -83,7 +83,6 @@ def parse_eval_response(raw: str) -> dict:
     clean = re.sub(r"^```(?:json)?", "", clean).strip()
     clean = re.sub(r"```$",          "", clean).strip()
 
-    # Check for refusal patterns
     refusal_patterns = [
         "i cannot", "i can't", "i am not able", "i'm not able",
         "unable to", "i don't know", "i do not know",
@@ -105,7 +104,7 @@ def parse_eval_response(raw: str) -> dict:
             raise json.JSONDecodeError("not a dict", clean, 0)
 
         answer = str(parsed.get("answer", "")).strip().upper()
-        # Parse confidence as float 0.0 – 1.0
+
         confidence_raw = parsed.get("confidence")
         if isinstance(confidence_raw, (int, float)):
             confidence = round(max(0.0, min(1.0, float(confidence_raw))), 4)
@@ -234,7 +233,6 @@ def call_model(model_cfg: dict, system: str, user: str, temperature: float) -> d
                     {"role": "user", "content": user}
                 ]
             }
-            # Reasoning models (o3, DeepSeek-R1) do not support temperature
             if model_cfg["type"] != "Reasoning" and not model_cfg.get("skip_temperature", False):
                 kwargs["temperature"] = temperature
 
@@ -271,7 +269,6 @@ def evaluate_question(
         )
 
         record = {
-            # Identifiers
             "question_id"      : question.get("question_id"),
             "model"            : model_cfg["key"],
             "run"              : run_idx,
@@ -349,12 +346,10 @@ def compute_summary(
     avg_confidence = round(mean(confidences), 4) if confidences else None
 
     return {
-        # Identity
         "model"                  : model_cfg["key"],
         "organization"           : model_cfg["org"],
         "type"                   : model_cfg["type"],
         "weights"                : model_cfg["weights"],
-        # "temperature"            : temperature,
         "temperature": None if (model_cfg.get("skip_temperature", False) or
                                 model_cfg["type"] == "Reasoning") else temperature,
         "temperature_applied"    : not (
@@ -420,7 +415,6 @@ def evaluate_model(
     model_elapsed = round(time.time() - model_start, 2)
     log.info(f"Model {model_cfg['key']} completed in {model_elapsed}s")
 
-    # Save raw results
     raw_path = os.path.join(
         RESULTS_DIR,
         f"raw_{model_cfg['key']}_{temp_label}.json"
@@ -514,7 +508,7 @@ def main():
             f"{s['refusal_rate']:>8.2%}"
         )
     log.info(f"{'='*70}")
-    log.info("Evaluation complete. Run score_results.py to compute accuracy.")
+    log.info("Evaluation complete. Run check_accuracy.py to compute accuracy.")
 
 
 if __name__ == "__main__":

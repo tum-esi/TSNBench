@@ -335,8 +335,6 @@ def main():
     log.info(f"\n\n% {'='*100}")
     log.info("% LaTeX table — Cost and Latency per Model")
     log.info("% MCQA: total actual spend (all valid records summed)")
-    log.info("% CBS/CQF: 3-run normalized (1-run TCs × 3, 2-run × 1.5, 3-run × 1)")
-    log.info("% Requires \\usepackage{colortbl} in preamble")
     log.info("% Model & MCQA Cost ($) & MCQA Lat (ms) & CBS Cost ($) & CBS Lat (ms) "
              "& CQF Cost ($) & CQF Lat (ms) \\\\")
     log.info(f"% {'='*100}\n")

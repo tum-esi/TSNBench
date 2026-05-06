@@ -5,13 +5,12 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
 
-SCORED_DIR      = "../mcqa_evaluation/output/results/accuracy_new_new"
+SCORED_DIR      = "../mcqa_evaluation/output/results/score"
 OUTPUT_PDF   = "reliability_diagrams.pdf"
 OUTPUT_PNG   = "reliability_diagrams.png"
 CW_THRESHOLD = 0.8
 N_BINS       = 10
 
-# Model display names
 MODEL_NAMES = {
     "grok-4-1-fast-reasoning"    : "Grok 4.1 Fast",
     "grok-4-1-fast-non-reasoning": "Grok 4.1 Fast (NR)",
@@ -31,7 +30,6 @@ MODEL_NAMES = {
     "ministral-8b-2512"          : "Ministral 3 8B",
 }
 
-# Model order for grid layout
 MODEL_ORDER = [
     "grok-4-1-fast-reasoning",
     "grok-4-1-fast-non-reasoning",

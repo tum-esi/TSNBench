@@ -6,19 +6,19 @@ import matplotlib.patches as mpatches
 
 
 CBS_SCORED_DIRS = [
-    "../open_end_evaluation/output/CBS/score_new",
+    "../open_end_evaluation/output/CBS/ring_topo_one/score",
     # "../open_end_evaluation/output/CBS/one_switch_topo/score",
     # "../open_end_evaluation/output/CBS/medium_mesh_topo/score",
 
 ]
 
 CQF_SCORED_DIRS = [
-    "../open_end_evaluation/output/CQF/score_new",
+    "../open_end_evaluation/output/CQF/ring_topo_one/score",
     # "../open_end_evaluation/output/CQF/one_switch_topo/score",
     # "../open_end_evaluation/output/CQF/medium_mesh_topo/score",
 ]
 
-MCQA_SUMMARY    = "../mcqa_evaluation/output/results/full_mcqa_summary.json"
+MCQA_SUMMARY    = "../mcqa_evaluation/output/results/score/scored_full_summary.json"
 MIN_TC_COVERAGE = 0.50
 TOTAL_TCS       = 100
 
@@ -43,11 +43,6 @@ MODEL_ORDER = [
 
 
 def load_flow_errors_multi(scored_dirs: list, prompt_type: str) -> dict:
-    """
-    Aggregate flow_records_avg across multiple scored directories.
-    Per-model errors are pooled across all directories.
-    Returns: {model_key: {"errors": [...], "scored_tcs": int}}
-    """
     model_data  = {}
     total_files = 0
 
@@ -167,7 +162,6 @@ fig2, (ax1b, ax2b) = plt.subplots(
 plt.subplots_adjust(wspace=0.06, left=0.13, right=0.98,
                     top=0.88, bottom=0.10)
 
-# --- MCQA panel ---
 ax1b.barh(y, mcqa_vals, 0.55, color=BLUE, alpha=0.85, zorder=3)
 for i, val in enumerate(mcqa_vals):
     ax1b.text(val + 0.4, y[i], f"{val:.0f}%",
@@ -192,7 +186,6 @@ for spine in ax1b.spines.values():
     spine.set_linewidth(0.7)
 ax1b.grid(axis="x", color="#D3D1C7", linewidth=0.3, linestyle="--", alpha=0.5)
 
-# --- CBS vs CQF box plot panel ---
 h2 = 0.50
 
 cbs_plot2, cbs_pos2 = [], []

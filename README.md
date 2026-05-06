@@ -68,7 +68,7 @@ TSNBench/
 1. Clone the repository:
 
 ```bash
-git clone https://anonymous.4open.science/r/TSNBench
+git clone <CODE_REPOSITORY_URL>
 cd TSNBench
 ```
 
@@ -112,6 +112,11 @@ MISTRAL_API_KEY=
 - Located in `ground_truth/CBS/` and `ground_truth/CQF/`
 - WCD values computed via Network Calculus (NC) and mathematical analysis.
 - Per-topology breakdowns available in `topology_wise_wcd/`
+
+### Evaluation Results
+- Located in `evaluation_results`
+- `mcqa_evaluation.zip` contains the MCQA evaluation results.
+- `open_ended_evaluation.zip` contains the open-ended evaluation results.
 
 > **Note:** The research documents and paper drafts used during dataset construction are not included in this repository.
 

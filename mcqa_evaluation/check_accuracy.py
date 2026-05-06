@@ -11,9 +11,9 @@ from statistics import median, mean
 from collections import Counter
 
 
-RESULTS_DIR = "./output"
-ANSWER_KEY_FILE = "./input_dataset/mcqa_tsn_dataset_answer_key.json.json"
-SCORED_DIR = "./output"
+RESULTS_DIR = "./output/results"
+ANSWER_KEY_FILE = "./input_dataset/mcqa_tsn_dataset_answer_key.json"
+SCORED_DIR = "./output/results/score"
 
 os.makedirs(SCORED_DIR, exist_ok=True)
 

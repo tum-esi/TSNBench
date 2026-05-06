@@ -21,9 +21,6 @@ if not scored_files:
     print(f"No scored files found in {SCORED_DIR}")
     exit()
 
-# ---------------------------------------------------------------------------
-# Step 1 — collect all rows
-# ---------------------------------------------------------------------------
 rows = []
 
 for fname in scored_files:
@@ -39,8 +36,6 @@ for fname in scored_files:
     values = []
 
     if not enough_tcs:
-        # model did not score enough TCs — suppress genuine MAE values
-        # but still show trivial zeros (0) and invalid (--) per TC
         print(f"% {model} — enough_tcs=False "
               f"(scored_tcs={data.get('scored_tcs')}/{data.get('total_tcs')}) "
               f"→ genuine MAE suppressed")
@@ -54,14 +49,13 @@ for fname in scored_files:
             scenario = tc_data.get("metrics_avg", {}).get("scenario", "")
 
             if scenario == "trivial_zeros":
-                values.append("0")   # model attempted but returned all zeros
+                values.append("0")
             else:
-                values.append("--")  # invalid, missing, or suppressed genuine MAE
+                values.append("--")
 
         rows.append((model, values))
-        continue  # skip to next model
+        continue
 
-    # enough_tcs is True — read per-TC MAE normally
     for tc in TC_LIST:
         tc_data = tc_results.get(tc)
         if tc_data is None:
@@ -81,9 +75,7 @@ for fname in scored_files:
 
     rows.append((model, values))
 
-# ---------------------------------------------------------------------------
-# Step 2 — find best (minimum genuine MAE) per TC column
-# ---------------------------------------------------------------------------
+
 best_per_tc = []
 for col_idx in range(len(TC_LIST)):
     col_values = []
@@ -96,9 +88,7 @@ for col_idx in range(len(TC_LIST)):
                 pass
     best_per_tc.append(min(col_values) if col_values else None)
 
-# ---------------------------------------------------------------------------
-# Step 3 — print rows with bold on best value per TC
-# ---------------------------------------------------------------------------
+
 for model, values in rows:
     formatted = []
     for col_idx, v in enumerate(values):
@@ -117,9 +107,7 @@ for model, values in rows:
     row = f"{model} & " + " & ".join(formatted) + " \\\\"
     print(row)
 
-# ---------------------------------------------------------------------------
-# Step 4 — print best per TC row for reference
-# ---------------------------------------------------------------------------
+
 print("\n% Best MAE per TC (for reference):")
 best_row = " & ".join(
     str(round(b, 2)) if b is not None else "--"
