@@ -1,0 +1,25 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "deepseek-reasoner",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": null,
+    "timestamp": "2026-05-04T10:26:42.677313",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 2224,
+    "tokens_out": 8000,
+    "total_tokens": 10224,
+    "cost_usd": 0.00342227,
+    "latency_ms": 108263,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": null
+  }
+]

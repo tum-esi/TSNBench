@@ -1,0 +1,1170 @@
+{
+  "model": "ministral-8b-2512",
+  "prompt_type": "CBS",
+  "temperature_label": "temp0_0",
+  "timestamp": "2026-05-04T10:16:51.284573",
+  "total_tcs": 11,
+  "scored_tcs": 11,
+  "trivial_tcs": 0,
+  "invalid_tcs": 0,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": true,
+  "min_scored_tcs": 5,
+  "mae_us_majority": 1018.5403,
+  "mape_pct_majority": 367.0277,
+  "mae_us_average": 71574.5545,
+  "mape_pct_average": 13926.1076,
+  "exact_match_rate": 0.0,
+  "error_min": 20.5733,
+  "error_q1": 586.766,
+  "error_median": 854.293,
+  "error_q3": 949.333,
+  "error_max": 4476.48,
+  "error_mean": 1018.5403,
+  "total_flow_errors": 33,
+  "total_tokens_in": 29433,
+  "total_tokens_out": 125257,
+  "total_tokens": 154690,
+  "avg_tokens_in": 891.9,
+  "avg_tokens_out": 3795.7,
+  "avg_latency_ms": 31104.1,
+  "max_latency_ms": 200680,
+  "total_time_seconds": 1026.43,
+  "tc_results": {
+    "TC41": {
+      "metrics": {
+        "mae_us": 828.4403,
+        "mape_pct": 159.3483,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 778156.7737,
+        "mape_pct": 149676.3322,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F3",
+          "values": [
+            1245.0,
+            1245.0,
+            2000000.0
+          ],
+          "ratio": 1606.4
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            1400.0,
+            1400.0,
+            4000000.0
+          ],
+          "ratio": 2857.1
+        },
+        {
+          "flow_id": "F1",
+          "values": [
+            1400.0,
+            1400.0,
+            1000000.0
+          ],
+          "ratio": 714.3
+        }
+      ]
+    },
+    "TC42": {
+      "metrics": {
+        "mae_us": 783.1067,
+        "mape_pct": 157.0737,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 1467.1067,
+        "mape_pct": 294.2688,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            1400.0,
+            1.0,
+            1400.0
+          ],
+          "ratio": 1400.0
+        }
+      ]
+    },
+    "TC43": {
+      "metrics": {
+        "mae_us": 1005.314,
+        "mape_pct": 300.8062,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 652.9807,
+        "mape_pct": 196.738,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC44": {
+      "metrics": {
+        "mae_us": 858.589,
+        "mape_pct": 609.1099,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 858.589,
+        "mape_pct": 609.1099,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC45": {
+      "metrics": {
+        "mae_us": 863.2933,
+        "mape_pct": 638.345,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 863.2933,
+        "mape_pct": 638.345,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC46": {
+      "metrics": {
+        "mae_us": 1693.4777,
+        "mape_pct": 559.3043,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 1360.1443,
+        "mape_pct": 448.5156,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC47": {
+      "metrics": {
+        "mae_us": 1283.861,
+        "mape_pct": 627.0421,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 1183.861,
+        "mape_pct": 560.7052,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F3",
+          "values": [
+            2500.0,
+            2500.0,
+            100.0
+          ],
+          "ratio": 25.0
+        }
+      ]
+    },
+    "TC48": {
+      "metrics": {
+        "mae_us": 20.8355,
+        "mape_pct": 25.9937,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 10.0756,
+        "mape_pct": 12.5671,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F3",
+          "values": [
+            8.0,
+            101.0,
+            101.0
+          ],
+          "ratio": 12.6
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            10.0,
+            101.0,
+            101.0
+          ],
+          "ratio": 10.1
+        },
+        {
+          "flow_id": "F1",
+          "values": [
+            6.8,
+            101.0,
+            101.0
+          ],
+          "ratio": 14.9
+        }
+      ]
+    },
+    "TC49": {
+      "metrics": {
+        "mae_us": 949.333,
+        "mape_pct": 378.7228,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 882.6663,
+        "mape_pct": 352.127,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC50": {
+      "metrics": {
+        "mae_us": 2346.5753,
+        "mape_pct": 448.3942,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 979.3809,
+        "mape_pct": 187.2485,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F2",
+          "values": [
+            2500.0,
+            0.25,
+            1300.0
+          ],
+          "ratio": 10000.0
+        },
+        {
+          "flow_id": "F1",
+          "values": [
+            5000.0,
+            1300.0,
+            3.0
+          ],
+          "ratio": 1666.7
+        }
+      ]
+    },
+    "TC51": {
+      "metrics": {
+        "mae_us": 571.1173,
+        "mape_pct": 133.1645,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 905.2284,
+        "mape_pct": 211.2263,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F3",
+          "values": [
+            1.0,
+            1000.0,
+            1000.0
+          ],
+          "ratio": 1000.0
+        }
+      ]
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 519.893,
+      "predicted": 1400.0,
+      "abs_error": 880.107,
+      "pct_error": 169.2862,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 519.893,
+      "predicted": 1400.0,
+      "abs_error": 880.107,
+      "pct_error": 169.2862,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 519.893,
+      "predicted": 1245.0,
+      "abs_error": 725.107,
+      "pct_error": 139.4724,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 498.56,
+      "predicted": 1400.0,
+      "abs_error": 901.44,
+      "pct_error": 180.8087,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 498.56,
+      "predicted": 1400.0,
+      "abs_error": 901.44,
+      "pct_error": 180.8087,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 498.56,
+      "predicted": 1045.0,
+      "abs_error": 546.44,
+      "pct_error": 109.6037,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 338.56,
+      "predicted": 1100.0,
+      "abs_error": 761.44,
+      "pct_error": 224.9055,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 338.56,
+      "predicted": 2500.0,
+      "abs_error": 2161.44,
+      "pct_error": 638.4216,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 238.062,
+      "predicted": 145.0,
+      "abs_error": 93.062,
+      "pct_error": 39.0915,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 146.56,
+      "predicted": 1000.0,
+      "abs_error": 853.44,
+      "pct_error": 582.3144,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 146.56,
+      "predicted": 1000.0,
+      "abs_error": 853.44,
+      "pct_error": 582.3144,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 131.113,
+      "predicted": 1000.0,
+      "abs_error": 868.887,
+      "pct_error": 662.7009,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 145.707,
+      "predicted": 1000.0,
+      "abs_error": 854.293,
+      "pct_error": 586.3088,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 145.707,
+      "predicted": 1000.0,
+      "abs_error": 854.293,
+      "pct_error": 586.3088,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 118.706,
+      "predicted": 1000.0,
+      "abs_error": 881.294,
+      "pct_error": 742.4174,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 316.373,
+      "predicted": 1000.0,
+      "abs_error": 683.627,
+      "pct_error": 216.0826,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 316.373,
+      "predicted": 2500.0,
+      "abs_error": 2183.627,
+      "pct_error": 690.2065,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 286.821,
+      "predicted": 2500.0,
+      "abs_error": 2213.179,
+      "pct_error": 771.6238,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 228.48,
+      "predicted": 1000.0,
+      "abs_error": 771.52,
+      "pct_error": 337.6751,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 228.48,
+      "predicted": 1000.0,
+      "abs_error": 771.52,
+      "pct_error": 337.6751,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 191.457,
+      "predicted": 2500.0,
+      "abs_error": 2308.543,
+      "pct_error": 1205.7762,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 80.4267,
+      "predicted": 101.0,
+      "abs_error": 20.5733,
+      "pct_error": 25.5802,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 80.4267,
+      "predicted": 101.0,
+      "abs_error": 20.5733,
+      "pct_error": 25.5802,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 79.64,
+      "predicted": 101.0,
+      "abs_error": 21.36,
+      "pct_error": 26.8207,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 250.667,
+      "predicted": 1200.0,
+      "abs_error": 949.333,
+      "pct_error": 378.7228,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 250.667,
+      "predicted": 1200.0,
+      "abs_error": 949.333,
+      "pct_error": 378.7228,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 250.667,
+      "predicted": 1200.0,
+      "abs_error": 949.333,
+      "pct_error": 378.7228,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 523.52,
+      "predicted": 5000.0,
+      "abs_error": 4476.48,
+      "pct_error": 855.0733,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 523.52,
+      "predicted": 2500.0,
+      "abs_error": 1976.48,
+      "pct_error": 377.5367,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 521.234,
+      "predicted": 1108.0,
+      "abs_error": 586.766,
+      "pct_error": 112.5725,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 428.444,
+      "predicted": 1000.0,
+      "abs_error": 571.556,
+      "pct_error": 133.4027,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 428.444,
+      "predicted": 1000.0,
+      "abs_error": 571.556,
+      "pct_error": 133.4027,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 429.76,
+      "predicted": 1000.0,
+      "abs_error": 570.24,
+      "pct_error": 132.688,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "ministral-8b-2512"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 519.893,
+      "predicted": 334266.6667,
+      "abs_error": 333746.7737,
+      "pct_error": 64195.2813,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 519.893,
+      "predicted": 1334266.6667,
+      "abs_error": 1333746.7737,
+      "pct_error": 256542.5527,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 519.893,
+      "predicted": 667496.6667,
+      "abs_error": 666976.7737,
+      "pct_error": 128291.1625,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 498.56,
+      "predicted": 933.6667,
+      "abs_error": 435.1067,
+      "pct_error": 87.2727,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 498.56,
+      "predicted": 2600.0,
+      "abs_error": 2101.44,
+      "pct_error": 421.5019,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 498.56,
+      "predicted": 2363.3333,
+      "abs_error": 1864.7733,
+      "pct_error": 374.0319,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 338.56,
+      "predicted": 1066.6667,
+      "abs_error": 728.1067,
+      "pct_error": 215.0599,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 338.56,
+      "predicted": 1476.3333,
+      "abs_error": 1137.7733,
+      "pct_error": 336.0625,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 238.062,
+      "predicted": 145.0,
+      "abs_error": 93.062,
+      "pct_error": 39.0915,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 146.56,
+      "predicted": 1000.0,
+      "abs_error": 853.44,
+      "pct_error": 582.3144,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 146.56,
+      "predicted": 1000.0,
+      "abs_error": 853.44,
+      "pct_error": 582.3144,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 131.113,
+      "predicted": 1000.0,
+      "abs_error": 868.887,
+      "pct_error": 662.7009,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 145.707,
+      "predicted": 1000.0,
+      "abs_error": 854.293,
+      "pct_error": 586.3088,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 145.707,
+      "predicted": 1000.0,
+      "abs_error": 854.293,
+      "pct_error": 586.3088,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 118.706,
+      "predicted": 1000.0,
+      "abs_error": 881.294,
+      "pct_error": 742.4174,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 316.373,
+      "predicted": 1000.0,
+      "abs_error": 683.627,
+      "pct_error": 216.0826,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 316.373,
+      "predicted": 2000.0,
+      "abs_error": 1683.627,
+      "pct_error": 532.1652,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 286.821,
+      "predicted": 2000.0,
+      "abs_error": 1713.179,
+      "pct_error": 597.299,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 228.48,
+      "predicted": 1000.0,
+      "abs_error": 771.52,
+      "pct_error": 337.6751,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 228.48,
+      "predicted": 1500.0,
+      "abs_error": 1271.52,
+      "pct_error": 556.5126,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 191.457,
+      "predicted": 1700.0,
+      "abs_error": 1508.543,
+      "pct_error": 787.9278,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 80.4267,
+      "predicted": 69.6,
+      "abs_error": 10.8267,
+      "pct_error": 13.4616,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 80.4267,
+      "predicted": 70.6667,
+      "abs_error": 9.76,
+      "pct_error": 12.1353,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 79.64,
+      "predicted": 70.0,
+      "abs_error": 9.64,
+      "pct_error": 12.1045,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 250.667,
+      "predicted": 1133.3333,
+      "abs_error": 882.6663,
+      "pct_error": 352.127,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 250.667,
+      "predicted": 1133.3333,
+      "abs_error": 882.6663,
+      "pct_error": 352.127,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 250.667,
+      "predicted": 1133.3333,
+      "abs_error": 882.6663,
+      "pct_error": 352.127,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 523.52,
+      "predicted": 2101.0,
+      "abs_error": 1577.48,
+      "pct_error": 301.3218,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 523.52,
+      "predicted": 1266.75,
+      "abs_error": 743.23,
+      "pct_error": 141.9678,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 521.234,
+      "predicted": 1138.6667,
+      "abs_error": 617.4327,
+      "pct_error": 118.456,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 428.444,
+      "predicted": 1000.3333,
+      "abs_error": 571.8893,
+      "pct_error": 133.4805,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 428.444,
+      "predicted": 2335.0,
+      "abs_error": 1906.556,
+      "pct_error": 444.9954,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "ministral-8b-2512"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 429.76,
+      "predicted": 667.0,
+      "abs_error": 237.24,
+      "pct_error": 55.2029,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "ministral-8b-2512"
+    }
+  ]
+}

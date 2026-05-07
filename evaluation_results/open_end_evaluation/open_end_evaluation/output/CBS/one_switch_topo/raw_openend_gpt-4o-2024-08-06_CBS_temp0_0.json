@@ -1,0 +1,2559 @@
+[
+  {
+    "tc_name": "TC41",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:10:01.289541",
+    "wcd_values": {
+      "F1": 14.45,
+      "F2": 14.45,
+      "F3": 14.45
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75% of 100 Mbps",
+        "SendSlope": "25% of 100 Mbps",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Frame size": "1400 Bytes",
+          "Periodicity": "1000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (1400 * 8 / (0.25 * 100 * 10^6)) + 1 + 1 + 1 = 14.45µs"
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75% of 100 Mbps",
+        "SendSlope": "25% of 100 Mbps",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Frame size": "829 Bytes",
+          "Periodicity": "5000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (829 * 8 / (0.25 * 100 * 10^6)) + 1 + 1 + 1 = 14.45µs"
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75% of 100 Mbps",
+        "SendSlope": "25% of 100 Mbps",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Frame size": "1245 Bytes",
+          "Periodicity": "2500µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (1245 * 8 / (0.25 * 100 * 10^6)) + 1 + 1 + 1 = 14.45µs"
+        },
+        "missing_inputs": []
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 825,
+    "tokens_out": 1207,
+    "total_tokens": 2032,
+    "cost_usd": 0.0141325,
+    "latency_ms": 15275,
+    "response_chars": 3916,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 14.45,\n    \"F2\": 14.45,\n    \"F3\": 14.45\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75% of 100 Mbps\",\n      \"SendSlope\": \"25% of 100 Mbps\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Frame size\": \"1400 Bytes\",\n        \"Periodicity\": \"1000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1400 * 8 / (0.25 * 100 * 10^6)) + 1 + 1 + 1 = 14.45µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75% of 100 Mbps\",\n      \"SendSlope\": \"25% of 100 Mbps\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Frame size\": \"829 Bytes\",\n        \"Periodicity\": \"5000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (829 * 8 / (0.25 * 100 * 10^6)) + 1 + 1 + 1 = 14.45µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75% of 100 Mbps\",\n      \"SendSlope\": \"25% of 100 Mbps\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Frame size\": \"1245 Bytes\",\n        \"Periodicity\": \"2500µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1245 * 8 / (0.25 * 100 * 10^6)) + 1 + 1 + 1 = 14.45µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope**: Calculated as `Bandwidth * (1 - IdleSlope) = 100 Mbps * 0.25 = 25 Mbps`.\n   - **WCD Equation**: `WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - **WCD Calculation**: For each flow, the WCD is calculated using the frame size and the derived SendSlope.\n\n3. **Reason**: Detailed parameters and calculations are provided for each flow, including the path, IdleSlope, SendSlope, and the equation used for WCD calculation.\n\n4. **Confidence**: Set to 0.8 due to the use of standard parameters and calculations, but acknowledging potential variations in real-world scenarios.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC41",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:10:11.281400",
+    "wcd_values": {
+      "F1": 14.0,
+      "F2": 14.0,
+      "F3": 14.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "IdleSlope": "75%"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+        "SendSlope": "Bandwidth * (1 - IdleSlope)"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 825,
+    "tokens_out": 747,
+    "total_tokens": 1572,
+    "cost_usd": 0.0095325,
+    "latency_ms": 8976,
+    "response_chars": 2473,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 14,\n    \"F2\": 14,\n    \"F3\": 14\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"IdleSlope\": \"75%\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n      \"SendSlope\": \"Bandwidth * (1 - IdleSlope)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the Credit-Based Shaper (CBS) with AVB Class A and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope** is calculated as `Bandwidth * (1 - IdleSlope)`. Given the IdleSlope is 75%, the SendSlope is 25% of the bandwidth.\n   - **WCD Equation**: `WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - For simplicity, the WCD is assumed to be the same for all flows due to similar paths and parameters.\n\n3. **Reason**:\n   - Each flow's path, IdleSlope, SendSlope, and CBS parameters are detailed.\n   - The equation used for WCD calculation is provided.\n\n4. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC41",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:10:26.356979",
+    "wcd_values": {
+      "F1": 14.45,
+      "F2": 12.29,
+      "F3": 13.45
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 825,
+    "tokens_out": 1018,
+    "total_tokens": 1843,
+    "cost_usd": 0.0122425,
+    "latency_ms": 14069,
+    "response_chars": 3358,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 14.45,\n    \"F2\": 12.29,\n    \"F3\": 13.45\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"1400 Bytes\",\n        \"R\": \"25 Mbps\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"829 Bytes\",\n        \"R\": \"25 Mbps\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"1245 Bytes\",\n        \"R\": \"25 Mbps\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{L}{R}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n     where \\(L\\) is the payload size in bits, and \\(R\\) is the SendSlope in bits per second.\n   - **SendSlope**: Calculated as \\( \\text{Bandwidth} \\times (1 - \\text{IdleSlope}) = 100 \\text{ Mbps} \\times 0.25 = 25 \\text{ Mbps} \\).\n\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:10:39.209308",
+    "wcd_values": {
+      "F1": 14.0,
+      "F2": 14.0,
+      "F3": 14.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error",
+          "L": "1400 Bytes",
+          "R": "25 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error",
+          "L": "829 Bytes",
+          "R": "25 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error",
+          "L": "1045 Bytes",
+          "R": "25 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "missing_inputs": []
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 825,
+    "tokens_out": 1069,
+    "total_tokens": 1894,
+    "cost_usd": 0.0127525,
+    "latency_ms": 11840,
+    "response_chars": 3632,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 14,\n    \"F2\": 14,\n    \"F3\": 14\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"1400 Bytes\",\n        \"R\": \"25 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"829 Bytes\",\n        \"R\": \"25 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"1045 Bytes\",\n        \"R\": \"25 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope**: Calculated as `Bandwidth * (1 - IdleSlope) = 100 Mbps * 0.25 = 25 Mbps`.\n   - **WCD Equation**: `WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error`.\n     - `L` is the payload size in bytes.\n     - `R` is the SendSlope in Mbps.\n     - Propagation delay, Switching delay, and Time synchronization error are constants at 1µs each.\n\n3. **Confidence**: Set to 0.8 due to the use of standard network calculus methods and given parameters, but acknowledging potential variations in real-world implementations.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:10:52.281736",
+    "wcd_values": {
+      "F1": 14.4,
+      "F2": 8.29,
+      "F3": 10.45
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Payload": "1400 Bytes",
+          "Periodicity": "1000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (1400 Bytes / 25%) + 1µs + 1µs + 1µs = 14.4µs"
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Payload": "829 Bytes",
+          "Periodicity": "5000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (829 Bytes / 25%) + 1µs + 1µs + 1µs = 8.29µs"
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Payload": "1045 Bytes",
+          "Periodicity": "1000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (1045 Bytes / 25%) + 1µs + 1µs + 1µs = 10.45µs"
+        },
+        "missing_inputs": []
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 825,
+    "tokens_out": 1069,
+    "total_tokens": 1894,
+    "cost_usd": 0.0127525,
+    "latency_ms": 12064,
+    "response_chars": 3495,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 14.4,\n    \"F2\": 8.29,\n    \"F3\": 10.45\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Payload\": \"1400 Bytes\",\n        \"Periodicity\": \"1000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1400 Bytes / 25%) + 1µs + 1µs + 1µs = 14.4µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Payload\": \"829 Bytes\",\n        \"Periodicity\": \"5000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (829 Bytes / 25%) + 1µs + 1µs + 1µs = 8.29µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Payload\": \"1045 Bytes\",\n        \"Periodicity\": \"1000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1045 Bytes / 25%) + 1µs + 1µs + 1µs = 10.45µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism with AVB Class A and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope** is calculated as `Bandwidth * (1 - IdleSlope)`. Given IdleSlope is 75%, SendSlope is 25% of the bandwidth.\n   - **WCD Equation**: `WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - The payload is divided by the SendSlope to get the transmission time, and then delays are added.\n\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:11:04.728722",
+    "wcd_values": {
+      "F1": 14.4,
+      "F2": 8.29,
+      "F3": 10.45
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 825,
+    "tokens_out": 1087,
+    "total_tokens": 1912,
+    "cost_usd": 0.0129325,
+    "latency_ms": 11442,
+    "response_chars": 3523,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 14.4,\n    \"F2\": 8.29,\n    \"F3\": 10.45\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1400 Bytes / 25%) + 1µs + 1µs + 1µs = 14.4µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (829 Bytes / 25%) + 1µs + 1µs + 1µs = 8.29µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1045 Bytes / 25%) + 1µs + 1µs + 1µs = 10.45µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism with AVB Class A and PCP 6.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Payload}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **SendSlope**: Calculated as \\(100\\% - \\text{IdleSlope} = 25\\%\\).\n\n3. **Reason**:\n   - Each flow's path, IdleSlope, SendSlope, and CBS parameters are detailed.\n   - The WCD calculation is shown with the specific values used.\n\n4. **Confidence**: Set to 0.8 due to the assumptions made in the absence of detailed network calculus parameters and potential simplifications in the WCD formula.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:11:20.018252",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 8.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error",
+          "L": "Payload size in bits",
+          "R": "SendSlope in bps"
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error",
+          "L": "Payload size in bits",
+          "R": "SendSlope in bps"
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error",
+          "L": "Payload size in bits",
+          "R": "SendSlope in bps"
+        },
+        "missing_inputs": []
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 824,
+    "tokens_out": 1031,
+    "total_tokens": 1855,
+    "cost_usd": 0.01237,
+    "latency_ms": 14281,
+    "response_chars": 3453,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 8\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"Payload size in bits\",\n        \"R\": \"SendSlope in bps\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"Payload size in bits\",\n        \"R\": \"SendSlope in bps\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"Payload size in bits\",\n        \"R\": \"SendSlope in bps\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as `Bandwidth - IdleSlope`, which is `100% - 75% = 25%`.\n   - **WCD Equation**: `WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error`, where `L` is the payload size in bits, and `R` is the SendSlope in bps.\n   - **Payload Conversion**: Convert payload from bytes to bits (e.g., 1100 bytes = 8800 bits).\n\n3. **Reasoning**:\n   - Each flow's path is identified.\n   - Parameters used for CBS and WCD calculation are listed.\n   - The equation used for WCD is provided.\n\n4. **Confidence**: Set to 0.8 due to the use of standard calculations and assumptions based on provided data.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:11:29.995244",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 8.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "all_parameters_used": {
+          "frame_size": "1100 Bytes",
+          "periodicity": "1000 µs",
+          "hop_count": 2
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "all_parameters_used": {
+          "frame_size": "829 Bytes",
+          "periodicity": "1000 µs",
+          "hop_count": 2
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "all_parameters_used": {
+          "frame_size": "145 Bytes",
+          "periodicity": "2500 µs",
+          "hop_count": 2
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 824,
+    "tokens_out": 812,
+    "total_tokens": 1636,
+    "cost_usd": 0.01018,
+    "latency_ms": 8974,
+    "response_chars": 2705,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 8\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"1100 Bytes\",\n        \"periodicity\": \"1000 µs\",\n        \"hop_count\": 2\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"829 Bytes\",\n        \"periodicity\": \"1000 µs\",\n        \"hop_count\": 2\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"145 Bytes\",\n        \"periodicity\": \"2500 µs\",\n        \"hop_count\": 2\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope** is calculated as `Bandwidth * (1 - IdleSlope) = 100 Mbps * 0.25 = 25 Mbps`.\n   - **WCD Equation**: `WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - For each flow, the frame size is divided by the SendSlope to get the transmission delay, and then the propagation, switching, and synchronization delays are added.\n\n3. **Reason**: Each flow's path, IdleSlope, SendSlope, and CBS parameters are detailed. The parameters used for each flow's WCD calculation are also listed.\n\n4. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:11:42.147411",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 8.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "frame_size": "1100 Bytes",
+          "periodicity": "1000µs",
+          "hop_count": 2
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (1100 * 8 / (100 * 0.25)) + 1 + 1 + 1 = 12µs"
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "frame_size": "829 Bytes",
+          "periodicity": "1000µs",
+          "hop_count": 2
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (829 * 8 / (100 * 0.25)) + 1 + 1 + 1 = 12µs"
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "frame_size": "145 Bytes",
+          "periodicity": "2500µs",
+          "hop_count": 2
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (145 * 8 / (100 * 0.25)) + 1 + 1 + 1 = 8µs"
+        },
+        "missing_inputs": []
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 824,
+    "tokens_out": 925,
+    "total_tokens": 1749,
+    "cost_usd": 0.01131,
+    "latency_ms": 11144,
+    "response_chars": 2949,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 8\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"1100 Bytes\",\n        \"periodicity\": \"1000µs\",\n        \"hop_count\": 2\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1100 * 8 / (100 * 0.25)) + 1 + 1 + 1 = 12µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"829 Bytes\",\n        \"periodicity\": \"1000µs\",\n        \"hop_count\": 2\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (829 * 8 / (100 * 0.25)) + 1 + 1 + 1 = 12µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"145 Bytes\",\n        \"periodicity\": \"2500µs\",\n        \"hop_count\": 2\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (145 * 8 / (100 * 0.25)) + 1 + 1 + 1 = 8µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism with AVB Class A and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope** is calculated as `Bandwidth * (1 - IdleSlope) = 100 Mbps * 0.25 = 25 Mbps`.\n   - **WCD Equation**: `WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - For each flow, the frame size is converted to bits (Bytes * 8), and the WCD is calculated using the given equation.\n\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:11:50.053445",
+    "wcd_values": {
+      "F1": 42.0,
+      "F2": 84.0,
+      "F3": 42.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cut-through switch": true
+        },
+        "all_parameters_used": {
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cut-through switch": true
+        },
+        "all_parameters_used": {
+          "periodicity": "5000µs",
+          "deadline": "5000µs",
+          "payload": "329 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cut-through switch": true
+        },
+        "all_parameters_used": {
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "245 Bytes"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 746,
+    "total_tokens": 1569,
+    "cost_usd": 0.0095175,
+    "latency_ms": 6884,
+    "response_chars": 2451,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 42,\n    \"F2\": 84,\n    \"F3\": 42\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cut-through switch\": true\n      },\n      \"all_parameters_used\": {\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cut-through switch\": true\n      },\n      \"all_parameters_used\": {\n        \"periodicity\": \"5000µs\",\n        \"deadline\": \"5000µs\",\n        \"payload\": \"329 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cut-through switch\": true\n      },\n      \"all_parameters_used\": {\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"245 Bytes\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope**: Calculated as `Bandwidth * (1 - IdleSlope) = 100 Mbps * 0.25 = 25 Mbps`.\n   - **WCD Equation**: `WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - For each flow, the payload is divided by the SendSlope to get the transmission time, and then added to the constant delays.\n\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:12:03.821276",
+    "wcd_values": {
+      "F1": 42.0,
+      "F2": 84.0,
+      "F3": 42.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "IdleSlope": "75%"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+        "SendSlope": "Bandwidth * (1 - IdleSlope)"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 785,
+    "total_tokens": 1608,
+    "cost_usd": 0.0099075,
+    "latency_ms": 12759,
+    "response_chars": 2635,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 42,\n    \"F2\": 84,\n    \"F3\": 42\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"IdleSlope\": \"75%\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n      \"SendSlope\": \"Bandwidth * (1 - IdleSlope)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope**: Calculated as `Bandwidth * (1 - IdleSlope)`. Given IdleSlope is 75%, SendSlope is 25% of the bandwidth.\n   - **WCD Equation**: `WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - **WCD Values**: Calculated for each flow using the above equation.\n\n3. **Reason**:\n   - **Path**: The path each flow takes through the network.\n   - **IdleSlope and SendSlope**: Used in the CBS calculation.\n   - **CBS Parameters**: Constants and parameters used in the calculation.\n   - **All Parameters Used**: A summary of all parameters considered in the calculation.\n   - **WCD Calculation**: The equation and method used to calculate the WCD.\n\n4. **Confidence**: Set to 0.8 due to the use of standard equations and parameters, but acknowledging potential variations in real-world implementations.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:12:12.732417",
+    "wcd_values": {
+      "F1": 42.0,
+      "F2": 84.0,
+      "F3": 42.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "IdleSlope": "75%"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+        "SendSlope": "Bandwidth * (1 - IdleSlope)"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 785,
+    "total_tokens": 1608,
+    "cost_usd": 0.0099075,
+    "latency_ms": 7904,
+    "response_chars": 2635,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 42,\n    \"F2\": 84,\n    \"F3\": 42\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"IdleSlope\": \"75%\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n      \"SendSlope\": \"Bandwidth * (1 - IdleSlope)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope**: Calculated as `Bandwidth * (1 - IdleSlope)`. Given IdleSlope is 75%, SendSlope is 25% of the bandwidth.\n   - **WCD Equation**: `WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - **WCD Values**: Calculated for each flow using the above equation.\n\n3. **Reason**:\n   - **Path**: The path each flow takes through the network.\n   - **IdleSlope and SendSlope**: Used in the CBS calculation.\n   - **CBS Parameters**: Constants and parameters used in the calculation.\n   - **All Parameters Used**: A summary of all parameters considered in the calculation.\n   - **WCD Calculation**: The equation and method used to calculate the WCD.\n\n4. **Confidence**: Set to 0.8 due to the use of standard equations and parameters, but acknowledging potential variations in real-world implementations.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:12:21.945048",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 633,
+    "total_tokens": 1456,
+    "cost_usd": 0.0083875,
+    "latency_ms": 8206,
+    "response_chars": 1941,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"25%\"],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n      \"F1\": \"WCD = (466 Bytes / 25%) + 1µs + 1µs + 1µs\",\n      \"F2\": \"WCD = (229 Bytes / 25%) + 1µs + 1µs + 1µs\",\n      \"F3\": \"WCD = (205 Bytes / 25%) + 1µs + 1µs + 1µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.7\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the Credit-Based Shaper (CBS) with AVB Class A and Priority Code Point (PCP) 6.\n\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%, which means the SendSlope is 25% (100% - 75%).\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Frame Size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **WCD for each flow**: Calculated using the above equation with the given frame sizes and network parameters.\n\n3. **Confidence**: The confidence score is set to 0.7 due to potential assumptions made in the absence of detailed network calculus parameters and exact CBS behavior specifics.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:12:32.646624",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 14.0,
+      "F3": 13.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 901,
+    "total_tokens": 1724,
+    "cost_usd": 0.0110675,
+    "latency_ms": 9686,
+    "response_chars": 2997,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 14,\n    \"F3\": 13\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"25%\"],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"25%\"],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"25%\"],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Frame Size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **SendSlope**: Calculated as \\( \\text{SendSlope} = \\text{Bandwidth} \\times (1 - \\text{IdleSlope}) \\).\n\n3. **Reason**:\n   - **Path**: The path each flow takes through the network.\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as 25% of the bandwidth.\n   - **CBS Parameters**: Includes bandwidth, propagation delay, switching delay, and time synchronization error.\n\n4. **Confidence**: Set to 0.8 due to the use of standard network calculus methods and given parameters, but acknowledging potential variations in real-world scenarios.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:12:42.006989",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 870,
+    "total_tokens": 1693,
+    "cost_usd": 0.0107575,
+    "latency_ms": 8359,
+    "response_chars": 2864,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.7\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Frame Size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **SendSlope**: Calculated as \\( \\text{SendSlope} = \\text{Bandwidth} \\times (1 - \\text{IdleSlope}) \\).\n   - **IdleSlope**: Given as 75%, hence SendSlope is 25% of the bandwidth.\n\n3. **Reason**: Each flow's path, IdleSlope, SendSlope, and CBS parameters are detailed.\n\n4. **Confidence**: Set at 0.7 due to assumptions made in the absence of detailed network calculus parameters and potential simplifications in the WCD calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:12:51.161486",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 15.0,
+      "F3": 18.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 824,
+    "tokens_out": 764,
+    "total_tokens": 1588,
+    "cost_usd": 0.0097,
+    "latency_ms": 8142,
+    "response_chars": 2532,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 15,\n    \"F3\": 18\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as `100% - IdleSlope = 25%`.\n   - **Equation**: The WCD is calculated using the formula: \n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Frame Size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **Frame Size**: Derived from the payload of each flow.\n   - **Propagation Delay, Switching Delay, Time Synchronization Error**: Given as constants.\n\n3. **Confidence**: Set to 0.8 due to the use of standard network calculus methods and given parameters, but acknowledging potential variations in real-world implementations.\n\n4. **Reason**: Detailed for each flow, including path, slopes, and CBS parameters used.\n\n5. **Missing Inputs**: None, as all necessary parameters were provided or derived from the given data.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:13:02.933732",
+    "wcd_values": {
+      "F1": 34.0,
+      "F2": 85.0,
+      "F3": 85.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Frame size": "1000 Bytes",
+          "Periodicity": "1000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (1000 Bytes / 0.25) + 1µs + 1µs + 1µs = 34µs"
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Frame size": "299 Bytes",
+          "Periodicity": "2500µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (299 Bytes / 0.25) + 1µs + 1µs + 1µs = 85µs"
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Frame size": "667 Bytes",
+          "Periodicity": "2500µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (667 Bytes / 0.25) + 1µs + 1µs + 1µs = 85µs"
+        },
+        "missing_inputs": []
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 824,
+    "tokens_out": 1077,
+    "total_tokens": 1901,
+    "cost_usd": 0.01283,
+    "latency_ms": 10768,
+    "response_chars": 3535,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 34,\n    \"F2\": 85,\n    \"F3\": 85\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Frame size\": \"1000 Bytes\",\n        \"Periodicity\": \"1000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1000 Bytes / 0.25) + 1µs + 1µs + 1µs = 34µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Frame size\": \"299 Bytes\",\n        \"Periodicity\": \"2500µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (299 Bytes / 0.25) + 1µs + 1µs + 1µs = 85µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Frame size\": \"667 Bytes\",\n        \"Periodicity\": \"2500µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (667 Bytes / 0.25) + 1µs + 1µs + 1µs = 85µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope** is calculated as `Bandwidth * (1 - IdleSlope) = 100 Mbps * 0.25 = 25 Mbps`.\n   - **WCD Equation**: `WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - For each flow, the frame size is divided by the SendSlope to get the transmission time, and then the propagation, switching, and synchronization delays are added.\n\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:13:11.775263",
+    "wcd_values": {
+      "F1": 0.0,
+      "F2": 0.0,
+      "F3": 0.0
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "IdleSlope": "75%",
+        "SendSlope": "25%"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error"
+      },
+      "missing_inputs": [
+        "Exact frame size in bits for each flow",
+        "Precise arrival curve parameters"
+      ]
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 824,
+    "tokens_out": 755,
+    "total_tokens": 1579,
+    "cost_usd": 0.00961,
+    "latency_ms": 7834,
+    "response_chars": 2559,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 0,\n    \"F2\": 0,\n    \"F3\": 0\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n    },\n    \"missing_inputs\": [\n      \"Exact frame size in bits for each flow\",\n      \"Precise arrival curve parameters\"\n    ]\n  },\n  \"confidence\": 0.5\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD_us**: The worst-case delay (WCD) is currently set to 0 for each flow due to missing precise frame size and arrival curve parameters.\n\n3. **Reason**:\n   - **Path**: The path each flow takes through the network.\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as 25% (100% - IdleSlope).\n   - **CBS Parameters**: Includes bandwidth, propagation delay, switching delay, and time synchronization error.\n   - **All Parameters Used**: Lists all parameters considered in the calculation.\n   - **WCD Calculation**: Provides the equation used for calculating WCD.\n   - **Missing Inputs**: Lists the missing information needed for precise WCD calculation.\n\n4. **Confidence**: Set to 0.5 due to missing precise frame size and arrival curve parameters, which are crucial for accurate WCD calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:13:23.023327",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 0.7,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Frame size": "688 Bytes",
+          "Periodicity": "1000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (688 Bytes / 25 Mbps) + 1µs + 1µs + 1µs"
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Frame size": "445 Bytes",
+          "Periodicity": "1000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (445 Bytes / 25 Mbps) + 1µs + 1µs + 1µs"
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": [
+          75
+        ],
+        "SendSlope": [
+          25
+        ],
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Frame size": "321 Bytes",
+          "Periodicity": "2500µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (321 Bytes / 25 Mbps) + 1µs + 1µs + 1µs"
+        },
+        "missing_inputs": []
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 1103,
+    "total_tokens": 1926,
+    "cost_usd": 0.0130875,
+    "latency_ms": 10244,
+    "response_chars": 3644,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Frame size\": \"688 Bytes\",\n        \"Periodicity\": \"1000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (688 Bytes / 25 Mbps) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Frame size\": \"445 Bytes\",\n        \"Periodicity\": \"1000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (445 Bytes / 25 Mbps) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Frame size\": \"321 Bytes\",\n        \"Periodicity\": \"2500µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (321 Bytes / 25 Mbps) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.7\n}\n```\n\n### Explanation:\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as `100% - IdleSlope = 25%`.\n   - **WCD Equation**: `WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - **WCD Calculation**: For each flow, the frame size is divided by the SendSlope (converted to Mbps), and delays are added.\n3. **Confidence**: Set to 0.7 due to assumptions made in the absence of detailed network calculus parameters and potential simplifications in the WCD calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:13:34.751228",
+    "wcd_values": {
+      "F1": 12.5,
+      "F2": 12.5,
+      "F3": 8.5
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 839,
+    "total_tokens": 1662,
+    "cost_usd": 0.0104475,
+    "latency_ms": 10705,
+    "response_chars": 2812,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12.5,\n    \"F2\": 12.5,\n    \"F3\": 8.5\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope** is calculated as `Bandwidth * (1 - IdleSlope) = 100 Mbps * 0.25 = 25 Mbps`.\n   - **WCD Equation**: `WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - For each flow, the frame size is divided by the SendSlope to get the transmission delay, and then the propagation, switching, and synchronization delays are added.\n\n3. **Reason**: Each flow's path, IdleSlope, SendSlope, and CBS parameters are detailed.\n\n4. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:13:46.969353",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 10.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 835,
+    "total_tokens": 1658,
+    "cost_usd": 0.0104075,
+    "latency_ms": 11203,
+    "response_chars": 2817,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 10\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope** is calculated as `Bandwidth * (1 - IdleSlope)`, which is `100 Mbps * 0.25 = 25 Mbps`.\n   - **WCD Equation**: `WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - For each flow, the frame size is divided by the SendSlope to get the transmission delay, and then the propagation, switching, and synchronization delays are added.\n\n3. **Reason**: Each flow's path, IdleSlope, SendSlope, and CBS parameters are detailed.\n\n4. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:13:59.802445",
+    "wcd_values": {
+      "F1": 22.0,
+      "F2": 22.0,
+      "F3": 22.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 952,
+    "total_tokens": 1775,
+    "cost_usd": 0.0115775,
+    "latency_ms": 11816,
+    "response_chars": 3355,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 22,\n    \"F2\": 22,\n    \"F3\": 22\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cut-through switch\": true\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cut-through switch\": true\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cut-through switch\": true\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n    \"explanation\": \"The WCD is calculated using the Network Calculus method, considering the frame size, SendSlope, and various delays.\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope**: Calculated as `Bandwidth - IdleSlope`, which is `100% - 75% = 25%`.\n   - **WCD Equation**: The worst-case delay is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Frame Size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **WCD Values**: The calculated WCD for each flow is 22 µs, assuming a simplified scenario where the frame size and network conditions are consistent across flows.\n\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions. However, the lack of detailed network conditions and potential interactions between flows introduces some uncertainty.\n\n4. **Missing Inputs**: No missing inputs were identified, but assumptions were made regarding the uniformity of network conditions and frame sizes.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:14:10.189181",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 15.0,
+      "F3": 14.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 804,
+    "total_tokens": 1627,
+    "cost_usd": 0.0100975,
+    "latency_ms": 9366,
+    "response_chars": 2642,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 15,\n    \"F3\": 14\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"212 Bytes\",\n        \"periodicity\": \"1000 µs\",\n        \"hop_count\": 2\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"130 Bytes\",\n        \"periodicity\": \"5000 µs\",\n        \"hop_count\": 2\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"200 Bytes\",\n        \"periodicity\": \"2500 µs\",\n        \"hop_count\": 2\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (frame_size / SendSlope) + (hop_count * (Propagation delay + Switching delay)) + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the Credit-Based Shaper (CBS) with AVB Class A and PCP 6.\n\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as `100% - IdleSlope = 25%`.\n   - **Equation**: The WCD is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{frame size}}{\\text{SendSlope}}\\right) + (\\text{hop count} \\times (\\text{Propagation delay} + \\text{Switching delay})) + \\text{Time synchronization error}\n     \\]\n\n3. **Reason**: Each flow's path, IdleSlope, SendSlope, and CBS parameters are detailed. The parameters used for each flow's WCD calculation are also listed.\n\n4. **Confidence**: Set to 0.8 due to the use of standard calculations and assumptions based on the provided data. However, the confidence is not 1.0 due to potential variations in network conditions and lack of detailed network configuration specifics.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:14:21.324432",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 15.0,
+      "F3": 14.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 822,
+    "total_tokens": 1645,
+    "cost_usd": 0.0102775,
+    "latency_ms": 10112,
+    "response_chars": 2801,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 15,\n    \"F3\": 14\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"212 Bytes\",\n        \"periodicity\": \"1000 µs\",\n        \"hop_count\": 2\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"130 Bytes\",\n        \"periodicity\": \"5000 µs\",\n        \"hop_count\": 2\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"frame_size\": \"200 Bytes\",\n        \"periodicity\": \"2500 µs\",\n        \"hop_count\": 2\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (frame_size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the Credit-Based Shaper (CBS) with AVB Class A and PCP 6.\n\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as `100% - IdleSlope = 25%`.\n   - **Equation**: The WCD is calculated using the formula: \n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{frame size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **Parameters**: The parameters used include frame size, periodicity, hop count, bandwidth, propagation delay, switching delay, and time synchronization error.\n\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions. The score is not 1.0 due to potential variations in network conditions and assumptions made in the absence of detailed network calculus parameters.\n\n4. **Missing Inputs**: No missing inputs were identified, as all necessary parameters for the calculation were provided or reasonably assumed.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:14:35.466066",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 14.0,
+      "F3": 15.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 1083,
+    "total_tokens": 1906,
+    "cost_usd": 0.0128875,
+    "latency_ms": 13133,
+    "response_chars": 3680,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 14,\n    \"F3\": 15\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"Payload size in bits\",\n        \"R\": \"SendSlope in bps\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"Payload size in bits\",\n        \"R\": \"SendSlope in bps\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"Payload size in bits\",\n        \"R\": \"SendSlope in bps\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{L}{R}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n     where \\( L \\) is the payload size in bits, and \\( R \\) is the SendSlope in bps.\n\n3. **Reason**:\n   - **Path**: The path for each flow is specified.\n   - **IdleSlope and SendSlope**: IdleSlope is given as 75%, and SendSlope is calculated as \\( 100\\% - \\text{IdleSlope} = 25\\% \\).\n   - **CBS Parameters**: Lists all parameters used in the calculation.\n   - **All Parameters Used**: Includes all parameters considered in the calculation.\n   - **Missing Inputs**: None, as all necessary inputs are provided.\n\n4. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:14:49.317972",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 14.0,
+      "F3": 13.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 1230,
+    "total_tokens": 2053,
+    "cost_usd": 0.0143575,
+    "latency_ms": 12842,
+    "response_chars": 3761,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 14,\n    \"F3\": 13\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"25%\"],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (500 Bytes / 25%) + 1µs + 1µs + 1µs = 12µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"25%\"],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (450 Bytes / 25%) + 1µs + 1µs + 1µs = 14µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"25%\"],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (700 Bytes / 25%) + 1µs + 1µs + 1µs = 13µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.7\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as `100% - IdleSlope = 25%`.\n   - **Equation**: The WCD is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Frame Size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **Calculations**:\n     - For F1: \\( \\text{WCD} = \\left(\\frac{500 \\text{ Bytes}}{0.25}\\right) + 1\\mu s + 1\\mu s + 1\\mu s = 12\\mu s \\)\n     - For F2: \\( \\text{WCD} = \\left(\\frac{450 \\text{ Bytes}}{0.25}\\right) + 1\\mu s + 1\\mu s + 1\\mu s = 14\\mu s \\)\n     - For F3: \\( \\text{WCD} = \\left(\\frac{700 \\text{ Bytes}}{0.25}\\right) + 1\\mu s + 1\\mu s + 1\\mu s = 13\\mu s \\)\n\n3. **Confidence**: The confidence score is set to 0.7 due to assumptions made in the absence of detailed network calculus parameters and potential simplifications in the WCD formula.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:15:01.943575",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 14.0,
+      "F3": 15.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 823,
+    "tokens_out": 1073,
+    "total_tokens": 1896,
+    "cost_usd": 0.0127875,
+    "latency_ms": 11618,
+    "response_chars": 3623,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 14,\n    \"F3\": 15\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"Payload size in bits\",\n        \"R\": \"SendSlope in bps\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"Payload size in bits\",\n        \"R\": \"SendSlope in bps\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": [75],\n      \"SendSlope\": [25],\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (L/R) + Propagation delay + Switching delay + Time synchronization error\",\n        \"L\": \"Payload size in bits\",\n        \"R\": \"SendSlope in bps\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{L}{R}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n     where \\( L \\) is the payload size in bits, and \\( R \\) is the SendSlope in bps.\n   - **SendSlope**: Calculated as \\( \\text{Bandwidth} \\times (1 - \\text{IdleSlope}) = 100 \\text{ Mbps} \\times 0.25 = 25 \\text{ Mbps} \\).\n\n3. **Reason**:\n   - Each flow's path, IdleSlope, SendSlope, and CBS parameters are detailed.\n   - All parameters used in the calculation are listed.\n   - Missing inputs are noted as none, indicating all necessary data was available.\n\n4. **Confidence**: Set at 0.8 due to the use of standard equations and parameters, but acknowledging potential variations in real-world implementations.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:15:12.836801",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 13.0,
+      "F3": 11.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 826,
+    "tokens_out": 892,
+    "total_tokens": 1718,
+    "cost_usd": 0.010985,
+    "latency_ms": 9886,
+    "response_chars": 3015,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 13,\n    \"F3\": 11\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.7\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Frame Size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **SendSlope**: Calculated as \\( \\text{SendSlope} = \\text{Bandwidth} \\times (1 - \\text{IdleSlope}) \\).\n\n3. **Reason**:\n   - **Path**: The path each flow takes through the network.\n   - **IdleSlope and SendSlope**: Given and calculated values.\n   - **CBS Parameters**: Constants used in the calculation.\n\n4. **Confidence**: Set to 0.7 due to assumptions made in the absence of detailed network calculus parameters and potential variations in network conditions.\n\n5. **Missing Inputs**: None identified, but assumptions were made regarding the network calculus method and parameters.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:15:23.343705",
+    "wcd_values": {
+      "F1": 12.5,
+      "F2": 13.0,
+      "F3": 11.8
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "(1200 Bytes / 25%) + 1µs + 1µs + 1µs"
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "(1300 Bytes / 25%) + 1µs + 1µs + 1µs"
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "(1108 Bytes / 25%) + 1µs + 1µs + 1µs"
+        },
+        "missing_inputs": []
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 826,
+    "tokens_out": 1023,
+    "total_tokens": 1849,
+    "cost_usd": 0.012295,
+    "latency_ms": 9499,
+    "response_chars": 3449,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12.5,\n    \"F2\": 13.0,\n    \"F3\": 11.8\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"(1200 Bytes / 25%) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"(1300 Bytes / 25%) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"(1108 Bytes / 25%) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **SendSlope** is calculated as `Bandwidth * (1 - IdleSlope)`, where IdleSlope is 75%, so SendSlope is 25% of the bandwidth.\n   - **WCD Equation**: `WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - The frame size is divided by the SendSlope to get the transmission time, and then delays are added.\n\n3. **Reason**: Each flow's path, IdleSlope, SendSlope, and CBS parameters are detailed. The WCD calculation is shown with the equation and specific calculation for each flow.\n\n4. **Confidence**: Set to 0.8 due to the assumptions made in the absence of detailed network calculus parameters and potential variations in real-world scenarios.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:15:36.712704",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 13.0,
+      "F3": 11.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 826,
+    "tokens_out": 875,
+    "total_tokens": 1701,
+    "cost_usd": 0.010815,
+    "latency_ms": 12367,
+    "response_chars": 2991,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 13,\n    \"F3\": 11\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (Frame Size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.7\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as `100% - IdleSlope = 25%`.\n   - **WCD Equation**: The worst-case delay is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Frame Size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **Parameters**: Bandwidth, propagation delay, switching delay, and time synchronization error are used as constants.\n\n3. **Confidence**: The confidence score is set to 0.7 due to assumptions made in the absence of detailed network calculus parameters and potential variations in network conditions.\n\n4. **Missing Inputs**: No missing inputs were identified, but assumptions were made regarding the calculation of SendSlope and the application of the CBS mechanism.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:16:09.570292",
+    "wcd_values": {
+      "F1": 12.4,
+      "F2": 14.8,
+      "F3": 13.6
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Frame size": "400 Bytes",
+          "Periodicity": "1000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (400 Bytes / 25%) + 1µs + 1µs + 1µs"
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Frame size": "829 Bytes",
+          "Periodicity": "5000µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (829 Bytes / 25%) + 1µs + 1µs + 1µs"
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "25%",
+        "cbs_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs"
+        },
+        "all_parameters_used": {
+          "Bandwidth": "100 Mbps",
+          "IdleSlope": "75%",
+          "SendSlope": "25%",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Frame size": "1400 Bytes",
+          "Periodicity": "2500µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error",
+          "calculation": "WCD = (1400 Bytes / 25%) + 1µs + 1µs + 1µs"
+        },
+        "missing_inputs": []
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 824,
+    "tokens_out": 1057,
+    "total_tokens": 1881,
+    "cost_usd": 0.01263,
+    "latency_ms": 31853,
+    "response_chars": 3459,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12.4,\n    \"F2\": 14.8,\n    \"F3\": 13.6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Frame size\": \"400 Bytes\",\n        \"Periodicity\": \"1000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (400 Bytes / 25%) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Frame size\": \"829 Bytes\",\n        \"Periodicity\": \"5000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (829 Bytes / 25%) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Frame size\": \"1400 Bytes\",\n        \"Periodicity\": \"2500µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1400 Bytes / 25%) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as `100% - IdleSlope = 25%`.\n   - **WCD Equation**: `WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error`.\n   - **WCD Calculation**: For each flow, the frame size is divided by the SendSlope, and the delays are added.\n\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:16:20.979621",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 14.0,
+      "F3": 15.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 824,
+    "tokens_out": 1081,
+    "total_tokens": 1905,
+    "cost_usd": 0.01287,
+    "latency_ms": 10394,
+    "response_chars": 3493,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 14,\n    \"F3\": 15\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Frame size\": \"400 Bytes\",\n        \"Periodicity\": \"1000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (400 Bytes / 25%) + 1µs + 1µs + 1µs = 12µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Frame size\": \"829 Bytes\",\n        \"Periodicity\": \"5000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (829 Bytes / 25%) + 1µs + 1µs + 1µs = 14µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Frame size\": \"1400 Bytes\",\n        \"Periodicity\": \"2500µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Frame size / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1400 Bytes / 25%) + 1µs + 1µs + 1µs = 15µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism with AVB Class A and PCP 6.\n2. **WCD Calculation**: The worst-case delay is calculated using the formula:\n   \\[\n   \\text{WCD} = \\left(\\frac{\\text{Frame size}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n   \\]\n   - **SendSlope** is derived from the given IdleSlope (75%) as \\( \\text{SendSlope} = 100\\% - \\text{IdleSlope} = 25\\% \\).\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T13:16:34.768434",
+    "wcd_values": {
+      "F1": 12.4,
+      "F2": 14.8,
+      "F3": 13.6
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 824,
+    "tokens_out": 1087,
+    "total_tokens": 1911,
+    "cost_usd": 0.01293,
+    "latency_ms": 12783,
+    "response_chars": 3546,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12.4,\n    \"F2\": 14.8,\n    \"F3\": 13.6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Payload\": \"400 Bytes\",\n        \"Periodicity\": \"1000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (400 Bytes / 25%) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Payload\": \"829 Bytes\",\n        \"Periodicity\": \"5000µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (829 Bytes / 25%) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"25%\",\n      \"cbs_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"IdleSlope\": \"75%\",\n        \"SendSlope\": \"25%\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Payload\": \"1400 Bytes\",\n        \"Periodicity\": \"2500µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (Payload / SendSlope) + Propagation delay + Switching delay + Time synchronization error\",\n        \"calculation\": \"WCD = (1400 Bytes / 25%) + 1µs + 1µs + 1µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CBS mechanism, AVB Class A, and PCP 6.\n\n2. **WCD Calculation**:\n   - **IdleSlope**: Given as 75%.\n   - **SendSlope**: Calculated as `100% - IdleSlope = 25%`.\n   - **Equation**: The WCD is calculated using the formula: \n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Payload}}{\\text{SendSlope}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - **Calculation**: For each flow, the payload is divided by the SendSlope, and the delays are added.\n\n3. **Confidence**: The confidence score is set to 0.8, indicating a high level of confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  }
+]

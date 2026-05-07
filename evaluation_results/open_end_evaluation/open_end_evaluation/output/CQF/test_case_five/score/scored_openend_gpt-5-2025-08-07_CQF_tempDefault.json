@@ -1,0 +1,201 @@
+{
+  "model": "gpt-5-2025-08-07",
+  "prompt_type": "CQF",
+  "temperature_label": "tempDefault",
+  "timestamp": "2026-05-05T22:59:42.042890",
+  "total_tcs": 1,
+  "scored_tcs": 1,
+  "trivial_tcs": 0,
+  "invalid_tcs": 0,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": false,
+  "min_scored_tcs": 50,
+  "mae_us_majority": null,
+  "mape_pct_majority": null,
+  "mae_us_average": null,
+  "mape_pct_average": null,
+  "exact_match_rate": null,
+  "error_min": null,
+  "error_q1": null,
+  "error_median": null,
+  "error_q3": null,
+  "error_max": null,
+  "error_mean": null,
+  "total_flow_errors": 6,
+  "total_tokens_in": 2093,
+  "total_tokens_out": 12556,
+  "total_tokens": 14649,
+  "avg_tokens_in": 2093,
+  "avg_tokens_out": 12556,
+  "avg_latency_ms": 179014,
+  "max_latency_ms": 179014,
+  "total_time_seconds": 179.01,
+  "tc_results": {
+    "TC5": {
+      "metrics": {
+        "mae_us": 125.2,
+        "mape_pct": 65.2069,
+        "exact_match_rate": 0.0,
+        "total_flows": 6,
+        "valid_flows": 6,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 125.2,
+        "mape_pct": 65.2079,
+        "exact_match_rate": 0.0,
+        "total_flows": 6,
+        "valid_flows": 6,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 205,
+      "predicted": 253.9,
+      "abs_error": 48.9,
+      "pct_error": 23.8537,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 154,
+      "predicted": 230.0,
+      "abs_error": 76.0,
+      "pct_error": 49.3506,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 205,
+      "predicted": 395.0,
+      "abs_error": 190.0,
+      "pct_error": 92.6829,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F4",
+      "ground_truth": 154,
+      "predicted": 273.4,
+      "abs_error": 119.4,
+      "pct_error": 77.5325,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F5",
+      "ground_truth": 205,
+      "predicted": 452.3,
+      "abs_error": 247.3,
+      "pct_error": 120.6341,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F6",
+      "ground_truth": 256,
+      "predicted": 325.6,
+      "abs_error": 69.6,
+      "pct_error": 27.1875,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 205,
+      "predicted": 253.88,
+      "abs_error": 48.88,
+      "pct_error": 23.8439,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 154,
+      "predicted": 230.0,
+      "abs_error": 76.0,
+      "pct_error": 49.3506,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 205,
+      "predicted": 395.0,
+      "abs_error": 190.0,
+      "pct_error": 92.6829,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F4",
+      "ground_truth": 154,
+      "predicted": 273.44,
+      "abs_error": 119.44,
+      "pct_error": 77.5584,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F5",
+      "ground_truth": 205,
+      "predicted": 452.28,
+      "abs_error": 247.28,
+      "pct_error": 120.6244,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F6",
+      "ground_truth": 256,
+      "predicted": 325.6,
+      "abs_error": 69.6,
+      "pct_error": 27.1875,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    }
+  ]
+}

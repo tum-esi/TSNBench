@@ -1,0 +1,1093 @@
+{
+  "model": "gpt-4o-mini-2024-07-18",
+  "prompt_type": "CQF",
+  "temperature_label": "temp0_0",
+  "timestamp": "2026-05-04T10:21:11.170487",
+  "total_tcs": 11,
+  "scored_tcs": 11,
+  "trivial_tcs": 0,
+  "invalid_tcs": 0,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": true,
+  "min_scored_tcs": 5,
+  "mae_us_majority": 91.4849,
+  "mape_pct_majority": 88.8202,
+  "mae_us_average": 87.2222,
+  "mape_pct_average": 84.6818,
+  "exact_match_rate": 0.0,
+  "error_min": 27.0,
+  "error_q1": 91.0,
+  "error_median": 91.0,
+  "error_q3": 97.0,
+  "error_max": 109.0,
+  "error_mean": 91.4848,
+  "total_flow_errors": 33,
+  "total_tokens_in": 27057,
+  "total_tokens_out": 24695,
+  "total_tokens": 51752,
+  "avg_tokens_in": 819.9,
+  "avg_tokens_out": 748.3,
+  "avg_latency_ms": 10441.2,
+  "max_latency_ms": 31587,
+  "total_time_seconds": 344.56,
+  "tc_results": {
+    "TC41": {
+      "metrics": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 88.3333,
+        "mape_pct": 85.7605,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC42": {
+      "metrics": {
+        "mae_us": 83.0,
+        "mape_pct": 80.5825,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 85.6667,
+        "mape_pct": 83.1716,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC43": {
+      "metrics": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC44": {
+      "metrics": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC45": {
+      "metrics": {
+        "mae_us": 97.0,
+        "mape_pct": 94.1748,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 97.0,
+        "mape_pct": 94.1748,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC46": {
+      "metrics": {
+        "mae_us": 99.0,
+        "mape_pct": 96.1165,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 98.3333,
+        "mape_pct": 95.4692,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC47": {
+      "metrics": {
+        "mae_us": 97.0,
+        "mape_pct": 94.1748,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 97.0,
+        "mape_pct": 94.1748,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC48": {
+      "metrics": {
+        "mae_us": 77.6667,
+        "mape_pct": 75.4045,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 29.6666,
+        "mape_pct": 28.8026,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            212.0,
+            212.0,
+            12.0
+          ],
+          "ratio": 17.7
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            200.0,
+            200.0,
+            12.0
+          ],
+          "ratio": 16.7
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            130.0,
+            130.0,
+            12.0
+          ],
+          "ratio": 10.8
+        }
+      ]
+    },
+    "TC49": {
+      "metrics": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC50": {
+      "metrics": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC51": {
+      "metrics": {
+        "mae_us": 97.6667,
+        "mape_pct": 94.822,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 95.4444,
+        "mape_pct": 92.6645,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 20.0,
+      "abs_error": 83.0,
+      "pct_error": 80.5825,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 20.0,
+      "abs_error": 83.0,
+      "pct_error": 80.5825,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 20.0,
+      "abs_error": 83.0,
+      "pct_error": 80.5825,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 212.0,
+      "abs_error": 109.0,
+      "pct_error": 105.8252,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 130.0,
+      "abs_error": 27.0,
+      "pct_error": 26.2136,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 200.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "gpt-4o-mini-2024-07-18"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 14.6667,
+      "abs_error": 88.3333,
+      "pct_error": 85.7605,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 14.6667,
+      "abs_error": 88.3333,
+      "pct_error": 85.7605,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 14.6667,
+      "abs_error": 88.3333,
+      "pct_error": 85.7605,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 17.3333,
+      "abs_error": 85.6667,
+      "pct_error": 83.1716,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 17.3333,
+      "abs_error": 85.6667,
+      "pct_error": 83.1716,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 17.3333,
+      "abs_error": 85.6667,
+      "pct_error": 83.1716,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 4.6667,
+      "abs_error": 98.3333,
+      "pct_error": 95.4692,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 4.6667,
+      "abs_error": 98.3333,
+      "pct_error": 95.4692,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 4.6667,
+      "abs_error": 98.3333,
+      "pct_error": 95.4692,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 6.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 145.3333,
+      "abs_error": 42.3333,
+      "pct_error": 41.1003,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 90.6667,
+      "abs_error": 12.3333,
+      "pct_error": 11.9741,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 137.3333,
+      "abs_error": 34.3333,
+      "pct_error": 33.3333,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 6.6667,
+      "abs_error": 96.3333,
+      "pct_error": 93.5275,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 9.3333,
+      "abs_error": 93.6667,
+      "pct_error": 90.9385,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "gpt-4o-mini-2024-07-18"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 6.6667,
+      "abs_error": 96.3333,
+      "pct_error": 93.5275,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "gpt-4o-mini-2024-07-18"
+    }
+  ]
+}

@@ -1,0 +1,1093 @@
+{
+  "model": "claude-sonnet-4-5-20250929",
+  "prompt_type": "CQF",
+  "temperature_label": "temp0_0",
+  "timestamp": "2026-05-04T10:21:11.057577",
+  "total_tcs": 11,
+  "scored_tcs": 11,
+  "trivial_tcs": 0,
+  "invalid_tcs": 0,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": true,
+  "min_scored_tcs": 5,
+  "mae_us_majority": 47.1606,
+  "mape_pct_majority": 45.787,
+  "mae_us_average": 41.0324,
+  "mape_pct_average": 39.8373,
+  "exact_match_rate": 0.0,
+  "error_min": 2.6,
+  "error_q1": 45.4,
+  "error_median": 47.0,
+  "error_q3": 50.2,
+  "error_max": 87.9,
+  "error_mean": 47.1606,
+  "total_flow_errors": 33,
+  "total_tokens_in": 31578,
+  "total_tokens_out": 63749,
+  "total_tokens": 95327,
+  "avg_tokens_in": 956.9,
+  "avg_tokens_out": 1931.8,
+  "avg_latency_ms": 29353.2,
+  "max_latency_ms": 40478,
+  "total_time_seconds": 968.65,
+  "tc_results": {
+    "TC41": {
+      "metrics": {
+        "mae_us": 87.4333,
+        "mape_pct": 84.8867,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 87.4293,
+        "mape_pct": 84.8829,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC42": {
+      "metrics": {
+        "mae_us": 43.4,
+        "mape_pct": 42.1359,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 44.4764,
+        "mape_pct": 43.181,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC43": {
+      "metrics": {
+        "mae_us": 52.4333,
+        "mape_pct": 50.9062,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 11.6809,
+        "mape_pct": 11.3406,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            156.8,
+            13.8,
+            105.0
+          ],
+          "ratio": 11.4
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            153.16,
+            13.16,
+            105.0
+          ],
+          "ratio": 11.6
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            156.32,
+            13.632,
+            105.0
+          ],
+          "ratio": 11.5
+        }
+      ]
+    },
+    "TC44": {
+      "metrics": {
+        "mae_us": 45.7333,
+        "mape_pct": 44.4013,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 46.2916,
+        "mape_pct": 44.9433,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC45": {
+      "metrics": {
+        "mae_us": 47.4667,
+        "mape_pct": 46.0842,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 47.4378,
+        "mape_pct": 46.0561,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC46": {
+      "metrics": {
+        "mae_us": 66.0667,
+        "mape_pct": 64.1424,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 43.376,
+        "mape_pct": 42.1126,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC47": {
+      "metrics": {
+        "mae_us": 47.2667,
+        "mape_pct": 45.89,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 30.2773,
+        "mape_pct": 29.3955,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC48": {
+      "metrics": {
+        "mae_us": 48.9,
+        "mape_pct": 47.4758,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 48.888,
+        "mape_pct": 47.4641,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC49": {
+      "metrics": {
+        "mae_us": 46.4667,
+        "mape_pct": 45.1133,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 46.5378,
+        "mape_pct": 45.1824,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC50": {
+      "metrics": {
+        "mae_us": 2.7,
+        "mape_pct": 2.6214,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 13.6853,
+        "mape_pct": 13.2867,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC51": {
+      "metrics": {
+        "mae_us": 30.9,
+        "mape_pct": 30.0,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 31.2764,
+        "mape_pct": 30.3655,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 15.1,
+      "abs_error": 87.9,
+      "pct_error": 85.3398,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 15.6,
+      "abs_error": 87.4,
+      "pct_error": 84.8544,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 16.0,
+      "abs_error": 87.0,
+      "pct_error": 84.466,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.1,
+      "abs_error": 46.9,
+      "pct_error": 45.534,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 67.3,
+      "abs_error": 35.7,
+      "pct_error": 34.6602,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 55.4,
+      "abs_error": 47.6,
+      "pct_error": 46.2136,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 156.8,
+      "abs_error": 53.8,
+      "pct_error": 52.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 156.3,
+      "abs_error": 53.3,
+      "pct_error": 51.7476,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 153.2,
+      "abs_error": 50.2,
+      "pct_error": 48.7379,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 58.2,
+      "abs_error": 44.8,
+      "pct_error": 43.4951,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 58.6,
+      "abs_error": 44.4,
+      "pct_error": 43.1068,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 55.0,
+      "abs_error": 48.0,
+      "pct_error": 46.6019,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.7,
+      "abs_error": 46.3,
+      "pct_error": 44.9515,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 55.3,
+      "abs_error": 47.7,
+      "pct_error": 46.3107,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 54.6,
+      "abs_error": 48.4,
+      "pct_error": 46.9903,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.1,
+      "abs_error": 46.9,
+      "pct_error": 45.534,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 26.4,
+      "abs_error": 76.6,
+      "pct_error": 74.3689,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 28.3,
+      "abs_error": 74.7,
+      "pct_error": 72.5243,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.0,
+      "abs_error": 47.0,
+      "pct_error": 45.6311,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 56.6,
+      "abs_error": 46.4,
+      "pct_error": 45.0485,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 54.6,
+      "abs_error": 48.4,
+      "pct_error": 46.9903,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.7,
+      "abs_error": 46.3,
+      "pct_error": 44.9515,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 52.0,
+      "abs_error": 51.0,
+      "pct_error": 49.5146,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 53.6,
+      "abs_error": 49.4,
+      "pct_error": 47.9612,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.0,
+      "abs_error": 47.0,
+      "pct_error": 45.6311,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 56.0,
+      "abs_error": 47.0,
+      "pct_error": 45.6311,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 57.6,
+      "abs_error": 45.4,
+      "pct_error": 44.0777,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 105.6,
+      "abs_error": 2.6,
+      "pct_error": 2.5243,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 105.8,
+      "abs_error": 2.8,
+      "pct_error": 2.7184,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 105.7,
+      "abs_error": 2.7,
+      "pct_error": 2.6214,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.2,
+      "abs_error": 46.8,
+      "pct_error": 45.4369,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 67.3,
+      "abs_error": 35.7,
+      "pct_error": 34.6602,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 113.2,
+      "abs_error": 10.2,
+      "pct_error": 9.9029,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "claude-sonnet-4-5-20250929"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 15.12,
+      "abs_error": 87.88,
+      "pct_error": 85.3204,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 15.632,
+      "abs_error": 87.368,
+      "pct_error": 84.8233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 15.96,
+      "abs_error": 87.04,
+      "pct_error": 84.5049,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.12,
+      "abs_error": 46.88,
+      "pct_error": 45.5146,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 64.0907,
+      "abs_error": 38.9093,
+      "pct_error": 37.776,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 55.36,
+      "abs_error": 47.64,
+      "pct_error": 46.2524,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 91.8667,
+      "abs_error": 11.1333,
+      "pct_error": 10.809,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 91.6507,
+      "abs_error": 11.3493,
+      "pct_error": 11.0187,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 90.44,
+      "abs_error": 12.56,
+      "pct_error": 12.1942,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 57.5333,
+      "abs_error": 45.4667,
+      "pct_error": 44.1424,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 57.632,
+      "abs_error": 45.368,
+      "pct_error": 44.0466,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 54.96,
+      "abs_error": 48.04,
+      "pct_error": 46.6408,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.3893,
+      "abs_error": 46.6107,
+      "pct_error": 45.2531,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 55.324,
+      "abs_error": 47.676,
+      "pct_error": 46.2874,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 54.9733,
+      "abs_error": 48.0267,
+      "pct_error": 46.6279,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 72.3867,
+      "abs_error": 30.6133,
+      "pct_error": 29.7217,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 52.5947,
+      "abs_error": 50.4053,
+      "pct_error": 48.9372,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 53.8907,
+      "abs_error": 49.1093,
+      "pct_error": 47.6789,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 73.3733,
+      "abs_error": 29.6267,
+      "pct_error": 28.7638,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 73.2267,
+      "abs_error": 29.7733,
+      "pct_error": 28.9061,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 71.568,
+      "abs_error": 31.432,
+      "pct_error": 30.5165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.696,
+      "abs_error": 46.304,
+      "pct_error": 44.9553,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 52.04,
+      "abs_error": 50.96,
+      "pct_error": 49.4757,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 53.6,
+      "abs_error": 49.4,
+      "pct_error": 47.9612,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.0133,
+      "abs_error": 46.9867,
+      "pct_error": 45.6182,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 56.12,
+      "abs_error": 46.88,
+      "pct_error": 45.5146,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 57.2533,
+      "abs_error": 45.7467,
+      "pct_error": 44.4143,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 89.5067,
+      "abs_error": 13.4933,
+      "pct_error": 13.1003,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 89.3067,
+      "abs_error": 13.6933,
+      "pct_error": 13.2945,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 89.1307,
+      "abs_error": 13.8693,
+      "pct_error": 13.4653,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.24,
+      "abs_error": 46.76,
+      "pct_error": 45.3981,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 64.0907,
+      "abs_error": 38.9093,
+      "pct_error": 37.776,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 94.84,
+      "abs_error": 8.16,
+      "pct_error": 7.9223,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "claude-sonnet-4-5-20250929"
+    }
+  ]
+}

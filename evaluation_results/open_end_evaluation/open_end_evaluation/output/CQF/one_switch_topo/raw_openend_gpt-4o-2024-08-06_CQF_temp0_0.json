@@ -1,0 +1,1973 @@
+[
+  {
+    "tc_name": "TC41",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:22:21.220376",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))",
+        "explanation": "Each hop introduces a cycle duration delay, plus switching, propagation, and synchronization errors."
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 907,
+    "total_tokens": 1728,
+    "cost_usd": 0.0111225,
+    "latency_ms": 9684,
+    "response_chars": 3029,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))\",\n      \"explanation\": \"Each hop introduces a cycle duration delay, plus switching, propagation, and synchronization errors.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: `WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))`\n   - **Explanation**: The worst-case delay is calculated by considering the number of hops each flow takes and the delays introduced by each hop. Each hop introduces a cycle duration delay, plus switching, propagation, and synchronization errors.\n\n3. **Parameters**:\n   - **Bandwidth**: 100 Mbps\n   - **Propagation Delay**: 1µs\n   - **Switching Delay**: 1µs\n   - **Time Synchronization Error**: 1µs\n   - **Cycle Duration**: 50µs\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The confidence is not 1.0 due to potential variations in real-world implementations and assumptions made in the absence of specific details.\n\n5. **Reasoning**:\n   - Each flow traverses 2 hops (node0_1 -> sw_1 -> node0_2 or node0_3).\n   - The hypercycle is the same as the cycle duration since all flows are TT and synchronized.\n   - The WCD for each flow is calculated as `2 * (50µs + 1µs + 1µs + 1µs) = 104µs`.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC41",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:22:29.761341",
+    "wcd_values": {
+      "F1": 102.0,
+      "F2": 102.0,
+      "F3": 102.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 913,
+    "total_tokens": 1734,
+    "cost_usd": 0.0111825,
+    "latency_ms": 7538,
+    "response_chars": 3007,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 102,\n    \"F2\": 102,\n    \"F3\": 102\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count - 1) * cycle_duration + propagation_delay + switching_delay + time_synchronization_error\",\n      \"explanation\": \"For each flow, the worst-case delay is calculated by considering the number of hops, cycle duration, propagation delay, switching delay, and time synchronization error.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} - 1) \\times \\text{cycle\\_duration} + \\text{propagation\\_delay} + \\text{switching\\_delay} + \\text{time\\_synchronization\\_error}\n     \\]\n   - **Parameters**:\n     - **Hop Count**: Each flow has 2 hops.\n     - **Cycle Duration**: 50µs.\n     - **Propagation Delay**: 1µs per hop.\n     - **Switching Delay**: 1µs per hop.\n     - **Time Synchronization Error**: 1µs.\n\n3. **Reasoning**:\n   - Each flow traverses 2 hops, so the cycle duration contributes once (since \\( \\text{hop\\_count} - 1 = 1 \\)).\n   - The propagation delay, switching delay, and time synchronization error are added for each hop.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The score is not 1.0 due to potential variations in real-world implementations and assumptions made in the absence of additional data.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC41",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:22:41.585086",
+    "wcd_values": {
+      "F1": 1052.0,
+      "F2": 1052.0,
+      "F3": 1052.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 868,
+    "total_tokens": 1689,
+    "cost_usd": 0.0107325,
+    "latency_ms": 10810,
+    "response_chars": 2799,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1052,\n    \"F2\": 1052,\n    \"F3\": 1052\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay)) + time_synchronization_error\",\n      \"explanation\": \"The worst-case delay is calculated by considering the number of hops, cycle duration, propagation delay, switching delay, and time synchronization error.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{propagation\\_delay} + \\text{switching\\_delay})) + \\text{time\\_synchronization\\_error}\n     \\]\n   - **Parameters**:\n     - **hop_count**: 2 (for all flows)\n     - **cycle_duration**: 50µs\n     - **propagation_delay**: 1µs\n     - **switching_delay**: 1µs\n     - **time_synchronization_error**: 1µs\n\n3. **Hypercycle**: The hypercycle is calculated as twice the cycle duration, i.e., 100µs, considering the two queues (odd and even) used in CQF.\n\n4. **Confidence**: The confidence score is set to 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:22:49.660264",
+    "wcd_values": {
+      "F1": 1052.0,
+      "F2": 1052.0,
+      "F3": 1052.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (2 * Cycle Duration) + Propagation Delay + Switching Delay + Time Synchronization Error",
+        "explanation": "The worst-case delay is calculated considering two cycles of CQF, propagation delay, switching delay, and time synchronization error."
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 834,
+    "total_tokens": 1655,
+    "cost_usd": 0.0103925,
+    "latency_ms": 7072,
+    "response_chars": 2891,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1052,\n    \"F2\": 1052,\n    \"F3\": 1052\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (2 * Cycle Duration) + Propagation Delay + Switching Delay + Time Synchronization Error\",\n      \"explanation\": \"The worst-case delay is calculated considering two cycles of CQF, propagation delay, switching delay, and time synchronization error.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: `WCD = (2 * Cycle Duration) + Propagation Delay + Switching Delay + Time Synchronization Error`\n   - **Explanation**: The worst-case delay is calculated by considering two cycles of CQF (since the packet might just miss the cycle and have to wait for the next one), plus the propagation delay, switching delay, and time synchronization error.\n\n3. **Reasoning**:\n   - **Path**: Each flow's path is specified.\n   - **Cycle Duration**: Given as 50µs.\n   - **Hypercycle**: Calculated as 100µs (2 cycles).\n   - **CQF Parameters**: Include bandwidth, propagation delay, switching delay, time synchronization error, and cycle duration.\n\n4. **Confidence**: Set to 0.9 due to the clear definition of parameters and the straightforward application of the CQF mechanism. The confidence is not 1.0 because real-world factors and potential missing details in the problem statement could affect the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:22:58.029674",
+    "wcd_values": {
+      "F1": 54.0,
+      "F2": 54.0,
+      "F3": 54.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 904,
+    "total_tokens": 1725,
+    "cost_usd": 0.0110925,
+    "latency_ms": 7364,
+    "response_chars": 3075,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 54,\n    \"F2\": 54,\n    \"F3\": 54\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))\",\n      \"explanation\": \"Each hop introduces a cycle duration delay, and each hop also adds propagation, switching, and synchronization delays.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}))\n     \\]\n   - **Parameters**:\n     - **Cycle Duration**: 50µs\n     - **Propagation Delay**: 1µs\n     - **Switching Delay**: 1µs\n     - **Time Synchronization Error**: 1µs\n   - **Hypercycle**: The hypercycle is twice the cycle duration, i.e., 100µs, as it accounts for the two alternating queues in CQF.\n\n3. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The confidence is not 1.0 due to potential variations in real-world implementations and assumptions made in the absence of additional data.\n\n4. **Reasoning**: Each flow traverses two hops, and the delays are calculated based on the given parameters and the CQF mechanism. The WCD for each flow is calculated to be 54µs, considering the cycle duration and additional delays per hop.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:23:06.833674",
+    "wcd_values": {
+      "F1": 53.0,
+      "F2": 53.0,
+      "F3": 53.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 937,
+    "total_tokens": 1758,
+    "cost_usd": 0.0114225,
+    "latency_ms": 7788,
+    "response_chars": 3079,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 53,\n    \"F2\": 53,\n    \"F3\": 53\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error))\",\n      \"explanation\": \"Each hop incurs a cycle duration delay due to CQF, plus propagation, switching, and synchronization delays.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{propagation\\_delay} + \\text{switching\\_delay} + \\text{time\\_sync\\_error}))\n     \\]\n   - **Explanation**: Each hop in the path incurs a cycle duration delay due to the CQF mechanism, along with additional delays from propagation, switching, and time synchronization errors.\n\n3. **Reasoning**:\n   - Each flow traverses 2 hops (node0_1 -> sw_1 -> node0_2 or node0_3).\n   - The cycle duration is 50µs.\n   - The propagation delay, switching delay, and time synchronization error are each 1µs.\n   - Therefore, for each flow, the WCD is calculated as:\n     \\[\n     \\text{WCD} = (2 \\times 50) + (2 \\times (1 + 1 + 1)) = 100 + 6 = 106 \\text{µs}\n     \\]\n\n4. **Confidence**: The confidence score is set to 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The slight reduction from 1.0 accounts for any potential ambiguities or assumptions made in the absence of additional network-specific details.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:23:17.706409",
+    "wcd_values": {
+      "F1": 1052.0,
+      "F2": 1052.0,
+      "F3": 1052.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 854,
+    "total_tokens": 1674,
+    "cost_usd": 0.01059,
+    "latency_ms": 9864,
+    "response_chars": 2725,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1052,\n    \"F2\": 1052,\n    \"F3\": 1052\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\",\n      \"Hypercycle\": \"100µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error))\",\n      \"explanation\": \"The worst-case delay is calculated by considering the number of hops each flow takes, multiplied by the cycle duration, and adding the propagation, switching, and synchronization delays for each hop.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{propagation\\_delay} + \\text{switching\\_delay} + \\text{time\\_sync\\_error}))\n     \\]\n   - **Parameters**:\n     - **hop_count**: 2 (for all flows)\n     - **cycle_duration**: 50µs\n     - **propagation_delay**: 1µs\n     - **switching_delay**: 1µs\n     - **time_sync_error**: 1µs\n\n3. **Hypercycle**: The hypercycle is calculated as twice the cycle duration, which is 100µs.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:23:25.344408",
+    "wcd_values": {
+      "F1": 1052.0,
+      "F2": 1052.0,
+      "F3": 1052.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error))",
+        "explanation": "The worst-case delay is calculated by considering the number of hops each flow takes, multiplied by the cycle duration, and adding the propagation, switching, and time synchronization delays for each hop."
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 836,
+    "total_tokens": 1656,
+    "cost_usd": 0.01041,
+    "latency_ms": 6637,
+    "response_chars": 2858,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1052,\n    \"F2\": 1052,\n    \"F3\": 1052\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error))\",\n      \"explanation\": \"The worst-case delay is calculated by considering the number of hops each flow takes, multiplied by the cycle duration, and adding the propagation, switching, and time synchronization delays for each hop.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: `WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error))`\n   - **Explanation**: The worst-case delay is calculated by considering the number of hops each flow takes, multiplied by the cycle duration, and adding the propagation, switching, and time synchronization delays for each hop.\n   - **Parameters**:\n     - Bandwidth: 100 Mbps\n     - Propagation delay: 1µs\n     - Switching delay: 1µs\n     - Time synchronization error: 1µs\n     - Cycle duration: 50µs\n\n3. **Hypercycle**: The hypercycle is calculated as twice the cycle duration because the flows are using two queues (odd and even).\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:23:32.938077",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "cycle_duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "cycle_duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "cycle_duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))",
+        "explanation": "Each hop incurs a cycle duration delay, plus switching, propagation, and synchronization delays."
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 820,
+    "total_tokens": 1640,
+    "cost_usd": 0.01025,
+    "latency_ms": 6482,
+    "response_chars": 2632,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"cycle_duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"cycle_duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"cycle_duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))\",\n      \"explanation\": \"Each hop incurs a cycle duration delay, plus switching, propagation, and synchronization delays.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: `WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))`\n   - **Explanation**: For each hop in the path, the flow incurs a delay equal to the cycle duration plus additional delays due to switching, propagation, and synchronization errors.\n   - **Calculation**: For each flow, with 2 hops, the WCD is calculated as:\n     - `WCD = 2 * (50µs + 1µs + 1µs + 1µs) = 2 * 53µs = 106µs`\n\n3. **Reason**: Each flow's path, cycle duration, hypercycle, and CQF parameters are detailed. The hypercycle is twice the cycle duration because of the two-hop paths.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:23:42.548438",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 891,
+    "total_tokens": 1710,
+    "cost_usd": 0.0109575,
+    "latency_ms": 8602,
+    "response_chars": 2859,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))\",\n      \"explanation\": \"Each hop introduces a cycle duration delay due to CQF, plus additional delays from propagation, switching, and synchronization errors.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}))\n     \\]\n   - **Parameters**:\n     - **Cycle Duration**: 50µs\n     - **Propagation Delay**: 1µs\n     - **Switching Delay**: 1µs\n     - **Time Synchronization Error**: 1µs\n   - **Calculation**:\n     - For each flow, the hop count is 2.\n     - WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 100µs + 6µs = 106µs\n\n3. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The slight reduction from 1.0 is due to potential variations in real-world implementations and assumptions made in the absence of specific details.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:23:51.891492",
+    "wcd_values": {
+      "F1": 102.0,
+      "F2": 102.0,
+      "F3": 102.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 881,
+    "total_tokens": 1700,
+    "cost_usd": 0.0108575,
+    "latency_ms": 8331,
+    "response_chars": 2820,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 102,\n    \"F2\": 102,\n    \"F3\": 102\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))\",\n      \"explanation\": \"Each hop introduces a cycle duration delay, plus switching, propagation, and synchronization delays.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\text{hop\\_count} \\times (\\text{cycle\\_duration} + \\text{switching\\_delay} + \\text{propagation\\_delay} + \\text{time\\_sync\\_error})\n     \\]\n   - **Parameters**:\n     - **Cycle Duration**: 50µs\n     - **Switching Delay**: 1µs\n     - **Propagation Delay**: 1µs\n     - **Time Synchronization Error**: 1µs\n   - **Hop Count**: Each flow has 2 hops.\n\n3. **WCD for Each Flow**:\n   - For each flow, the WCD is calculated as:\n     \\[\n     \\text{WCD} = 2 \\times (50 + 1 + 1 + 1) = 102 \\text{µs}\n     \\]\n\n4. **Confidence**: The confidence score is set to 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The confidence is not 1.0 due to potential variations in real-world implementations and assumptions made in the absence of additional data.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:24:00.129624",
+    "wcd_values": {
+      "F1": 103.0,
+      "F2": 103.0,
+      "F3": 103.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 891,
+    "total_tokens": 1710,
+    "cost_usd": 0.0109575,
+    "latency_ms": 7237,
+    "response_chars": 2858,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 103,\n    \"F2\": 103,\n    \"F3\": 103\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))\",\n      \"explanation\": \"Each hop introduces a cycle duration delay due to CQF, plus additional delays from propagation, switching, and synchronization errors.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}))\n     \\]\n   - **Parameters**:\n     - **Cycle Duration**: 50µs\n     - **Propagation Delay**: 1µs\n     - **Switching Delay**: 1µs\n     - **Time Synchronization Error**: 1µs\n   - **Calculation**:\n     - For each flow, the hop count is 2.\n     - WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 100µs + 6µs = 106µs\n\n3. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The slight reduction from 1.0 is due to potential variations in real-world implementations and assumptions made in the absence of additional data.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:24:07.988577",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error))",
+        "explanation": "Each hop incurs a cycle duration delay due to CQF, plus propagation, switching, and synchronization delays."
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 886,
+    "total_tokens": 1705,
+    "cost_usd": 0.0109075,
+    "latency_ms": 6851,
+    "response_chars": 3021,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error))\",\n      \"explanation\": \"Each hop incurs a cycle duration delay due to CQF, plus propagation, switching, and synchronization delays.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: `WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error))`\n   - **Explanation**: The worst-case delay is calculated by considering the cycle duration for each hop and adding the propagation, switching, and synchronization delays for each hop.\n   - **Parameters**:\n     - Bandwidth: 100 Mbps\n     - Propagation delay: 1µs\n     - Switching delay: 1µs\n     - Time synchronization error: 1µs\n     - Cycle duration: 50µs\n\n3. **Reasoning**:\n   - Each flow traverses 2 hops (node0_1 -> sw_1 -> node0_2 or node0_3).\n   - The cycle duration is 50µs, and each hop incurs additional delays due to propagation, switching, and synchronization.\n   - The hypercycle is the same as the cycle duration since all flows fit within a single cycle.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The slight reduction from 1.0 accounts for any potential variations in real-world implementations not covered by the given data.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:24:16.271126",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))",
+        "explanation": "Each hop incurs a cycle duration delay, plus switching, propagation, and synchronization delays."
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 844,
+    "total_tokens": 1663,
+    "cost_usd": 0.0104875,
+    "latency_ms": 7270,
+    "response_chars": 2833,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))\",\n      \"explanation\": \"Each hop incurs a cycle duration delay, plus switching, propagation, and synchronization delays.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: `WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error))`\n   - **Explanation**: For each hop in the path, the flow incurs a delay equal to the cycle duration plus additional delays due to switching, propagation, and time synchronization errors.\n   - **Calculation**: For each flow, the path has 2 hops. Therefore, the WCD is calculated as:\n     - `WCD = 2 * (50µs + 1µs + 1µs + 1µs) = 2 * 53µs = 106µs`\n\n3. **Reason**: Each flow's path, cycle duration, hypercycle, and CQF parameters are detailed. The hypercycle is the same as the cycle duration since all flows fit within one cycle.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The slight reduction from 1.0 is due to potential variations in real-world implementations not covered by the given data.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:24:23.647900",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))",
+        "calculation": {
+          "F1": "WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs",
+          "F2": "WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs",
+          "F3": "WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 683,
+    "total_tokens": 1502,
+    "cost_usd": 0.0088775,
+    "latency_ms": 6371,
+    "response_chars": 1914,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))\",\n      \"calculation\": {\n        \"F1\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs\",\n        \"F2\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs\",\n        \"F3\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:24:33.716580",
+    "wcd_values": {
+      "F1": 54.0,
+      "F2": 54.0,
+      "F3": 54.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 888,
+    "total_tokens": 1708,
+    "cost_usd": 0.01093,
+    "latency_ms": 9052,
+    "response_chars": 2965,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 54,\n    \"F2\": 54,\n    \"F3\": 54\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count - 1) * cycle_duration + propagation_delay + switching_delay + time_synchronization_error\",\n      \"explanation\": \"For each flow, the worst-case delay is calculated by considering the number of hops, cycle duration, propagation delay, switching delay, and time synchronization error.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} - 1) \\times \\text{cycle\\_duration} + \\text{propagation\\_delay} + \\text{switching\\_delay} + \\text{time\\_synchronization\\_error}\n     \\]\n   - **Parameters**:\n     - **Hop Count**: Each flow has 2 hops.\n     - **Cycle Duration**: 50µs.\n     - **Propagation Delay**: 1µs per hop.\n     - **Switching Delay**: 1µs per switch.\n     - **Time Synchronization Error**: 1µs.\n\n3. **Reasoning**:\n   - Each flow traverses 2 hops, resulting in 1 cycle duration delay.\n   - The propagation, switching, and synchronization delays are added to the cycle duration delay.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The score is not 1.0 due to potential variations in real-world implementations and assumptions made in the absence of additional data.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:24:41.154821",
+    "wcd_values": {
+      "F1": 54.0,
+      "F2": 54.0,
+      "F3": 54.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 870,
+    "total_tokens": 1690,
+    "cost_usd": 0.01075,
+    "latency_ms": 6430,
+    "response_chars": 2654,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 54,\n    \"F2\": 54,\n    \"F3\": 54\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay)) + time_synchronization_error\",\n      \"explanation\": \"Each hop incurs a cycle duration delay, plus propagation and switching delays. Time synchronization error is added once.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: \n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{propagation\\_delay} + \\text{switching\\_delay})) + \\text{time\\_synchronization\\_error}\n     \\]\n   - **Parameters**:\n     - Bandwidth: 100 Mbps\n     - Propagation delay: 1µs\n     - Switching delay: 1µs\n     - Time synchronization error: 1µs\n     - Cycle duration: 50µs\n\n3. **WCD for Each Flow**:\n   - Each flow has a hop count of 2.\n   - WCD = (2 * 50µs) + (2 * (1µs + 1µs)) + 1µs = 100µs + 4µs + 1µs = 105µs\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:24:49.282136",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 839,
+    "total_tokens": 1659,
+    "cost_usd": 0.01044,
+    "latency_ms": 7117,
+    "response_chars": 2658,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (2 * Cycle Duration) + Propagation Delay + Switching Delay + Time Synchronization Error\",\n      \"calculation\": \"WCD = (2 * 50µs) + 1µs + 1µs + 1µs = 104µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CQF mechanism with TT traffic type and PCP priority 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (2 \\times \\text{Cycle Duration}) + \\text{Propagation Delay} + \\text{Switching Delay} + \\text{Time Synchronization Error}\n     \\]\n   - **Calculation**: Substituting the given values:\n     \\[\n     \\text{WCD} = (2 \\times 50\\mu s) + 1\\mu s + 1\\mu s + 1\\mu s = 104\\mu s\n     \\]\n\n3. **Reason**:\n   - Each flow's path, cycle duration, hypercycle, and CQF parameters are detailed.\n   - The hypercycle is calculated as twice the cycle duration because of the CQF mechanism, which requires two cycles for a packet to be forwarded.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and standard CQF principles without ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:24:58.492586",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 1139,
+    "total_tokens": 1958,
+    "cost_usd": 0.0134375,
+    "latency_ms": 8208,
+    "response_chars": 3745,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 1000,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\",\n        \"Payload\": \"688 Bytes\",\n        \"Hop count\": 2\n      },\n      \"WCD_calculation\": {\n        \"Equation\": \"WCD = (Hop count * Cycle duration) + Propagation delay + Switching delay + Time synchronization error\",\n        \"Calculation\": \"WCD = (2 * 50) + 1 + 1 + 1 = 104µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 1000,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\",\n        \"Payload\": \"445 Bytes\",\n        \"Hop count\": 2\n      },\n      \"WCD_calculation\": {\n        \"Equation\": \"WCD = (Hop count * Cycle duration) + Propagation delay + Switching delay + Time synchronization error\",\n        \"Calculation\": \"WCD = (2 * 50) + 1 + 1 + 1 = 104µs\"\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 2500,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      },\n      \"all_parameters_used\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\",\n        \"Payload\": \"321 Bytes\",\n        \"Hop count\": 2\n      },\n      \"WCD_calculation\": {\n        \"Equation\": \"WCD = (Hop count * Cycle duration) + Propagation delay + Switching delay + Time synchronization error\",\n        \"Calculation\": \"WCD = (2 * 50) + 1 + 1 + 1 = 104µs\"\n      },\n      \"missing_inputs\": []\n    }\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{Hop count} \\times \\text{Cycle duration}) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error}\n     \\]\n   - For all flows, the hop count is 2, cycle duration is 50µs, propagation delay is 1µs, switching delay is 1µs, and time synchronization error is 1µs.\n   - Therefore, WCD for each flow is calculated as:\n     \\[\n     \\text{WCD} = (2 \\times 50) + 1 + 1 + 1 = 104\\mu s\n     \\]\n\n3. **Reason**: Each flow's path, cycle duration, hypercycle, and parameters used in the calculation are detailed.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:25:05.612932",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))",
+        "explanation": "Each hop introduces a cycle duration delay, and additional delays due to propagation, switching, and synchronization errors."
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 907,
+    "total_tokens": 1726,
+    "cost_usd": 0.0111175,
+    "latency_ms": 6116,
+    "response_chars": 3143,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))\",\n      \"explanation\": \"Each hop introduces a cycle duration delay, and additional delays due to propagation, switching, and synchronization errors.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: `WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))`\n   - **Explanation**: The worst-case delay is calculated by considering the cycle duration for each hop and adding the propagation, switching, and synchronization delays for each hop.\n   - **Calculation**:\n     - For each flow, the hop count is 2.\n     - Cycle duration is 50µs.\n     - Propagation delay, Switching delay, and Time synchronization error are each 1µs.\n     - Therefore, WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 100µs + 6µs = 106µs.\n\n3. **Reasoning**:\n   - Each flow traverses two hops: from the source node to the switch and from the switch to the destination node.\n   - The Hypercycle is calculated as twice the cycle duration because each flow can be delayed by up to one full cycle at each hop.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The slight reduction from 1.0 is due to potential variations in real-world implementations and assumptions made in the absence of additional network parameters.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:25:13.344787",
+    "wcd_values": {
+      "F1": 1042.0,
+      "F2": 1042.0,
+      "F3": 1042.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 807,
+    "total_tokens": 1626,
+    "cost_usd": 0.0101175,
+    "latency_ms": 6725,
+    "response_chars": 2574,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1042,\n    \"F2\": 1042,\n    \"F3\": 1042\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"1000µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"1000µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"2500µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error)) + transmission_delay\",\n      \"transmission_delay\": \"payload_size / bandwidth\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: \n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times (\\text{cycle\\_duration} + \\text{switching\\_delay} + \\text{propagation\\_delay} + \\text{time\\_sync\\_error})) + \\text{transmission\\_delay}\n     \\]\n   - **Transmission Delay**: Calculated as \\(\\text{payload\\_size} / \\text{bandwidth}\\).\n\n3. **Reasoning**:\n   - Each flow traverses 2 hops.\n   - The cycle duration is 50µs.\n   - The hypercycle is determined by the periodicity of the flows.\n   - The transmission delay is calculated based on the payload size and bandwidth.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:25:22.245964",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 918,
+    "total_tokens": 1737,
+    "cost_usd": 0.0112275,
+    "latency_ms": 7868,
+    "response_chars": 2910,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"cycle_duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"cycle_duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"cycle_duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + propagation_delay + switching_delay + time_sync_error\",\n      \"explanation\": \"Each flow traverses 2 hops (node0_1 -> sw_1 -> destination). The cycle duration is 50µs, and each hop adds a propagation delay of 1µs, a switching delay of 1µs, and a time synchronization error of 1µs.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, Time-Triggered (TT) traffic type, and a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + \\text{propagation\\_delay} + \\text{switching\\_delay} + \\text{time\\_sync\\_error}\n     \\]\n   - **Parameters**:\n     - **hop_count**: 2 (each flow traverses two hops: source -> switch -> destination)\n     - **cycle_duration**: 50µs\n     - **propagation_delay**: 1µs per hop\n     - **switching_delay**: 1µs per hop\n     - **time_sync_error**: 1µs\n\n3. **Reasoning**:\n   - Each flow traverses the same number of hops and experiences the same delays due to the network's uniform configuration.\n   - The hypercycle is equivalent to the cycle duration since all flows fit within a single cycle.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and assumptions without ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:25:29.176491",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 882,
+    "total_tokens": 1701,
+    "cost_usd": 0.0108675,
+    "latency_ms": 5919,
+    "response_chars": 2782,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay)) + time_synchronization_error\",\n      \"calculation\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs)) + 1µs = 104µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{propagation\\_delay} + \\text{switching\\_delay})) + \\text{time\\_synchronization\\_error}\n     \\]\n   - **Calculation**: For each flow, the hop count is 2, the cycle duration is 50µs, propagation delay is 1µs, switching delay is 1µs, and time synchronization error is 1µs. This results in a WCD of 104µs for each flow.\n\n3. **Reason**: Each flow's path, cycle duration, hypercycle, and CQF parameters are detailed. The hypercycle is calculated as twice the cycle duration because the flows traverse two hops.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculation is mathematically and procedurally provable with zero ambiguity based on the given information.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:25:36.481806",
+    "wcd_values": {
+      "F1": 54.0,
+      "F2": 54.0,
+      "F3": 54.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 917,
+    "total_tokens": 1736,
+    "cost_usd": 0.0112175,
+    "latency_ms": 6273,
+    "response_chars": 2841,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 54,\n    \"F2\": 54,\n    \"F3\": 54\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + propagation_delay + switching_delay + time_synchronization_error\",\n      \"calculation_steps\": {\n        \"hop_count\": 2,\n        \"cycle_duration\": 50,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_synchronization_error\": 1,\n        \"WCD\": \"2 * 50 + 1 + 1 + 1 = 54µs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + \\text{propagation\\_delay} + \\text{switching\\_delay} + \\text{time\\_synchronization\\_error}\n     \\]\n   - **Parameters**:\n     - **hop_count**: 2 (each flow traverses two hops: source to switch, switch to destination)\n     - **cycle_duration**: 50µs\n     - **propagation_delay**: 1µs\n     - **switching_delay**: 1µs\n     - **time_synchronization_error**: 1µs\n   - **Calculation**: For each flow, the WCD is calculated as \\(2 \\times 50 + 1 + 1 + 1 = 54\\)µs.\n\n3. **Confidence**: The confidence score is 1.0, indicating that the calculation is mathematically and procedurally provable with zero ambiguity based on the given information.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:25:43.192368",
+    "wcd_values": {
+      "F1": 1052.0,
+      "F2": 1052.0,
+      "F3": 1052.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 850,
+    "total_tokens": 1669,
+    "cost_usd": 0.0105475,
+    "latency_ms": 5702,
+    "response_chars": 2673,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1052,\n    \"F2\": 1052,\n    \"F3\": 1052\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error)) + transmission_delay\",\n      \"transmission_delay\": \"payload_size / (bandwidth / 8)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CQF mechanism with TT traffic type and PCP priority 7.\n\n2. **WCD Calculation**:\n   - **Equation**: \n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{propagation\\_delay} + \\text{switching\\_delay} + \\text{time\\_sync\\_error})) + \\text{transmission\\_delay}\n     \\]\n   - **Transmission Delay**: Calculated as \\(\\text{payload\\_size} / (\\text{bandwidth} / 8)\\).\n\n3. **Parameters**:\n   - **Bandwidth**: 100 Mbps\n   - **Propagation Delay**: 1 µs\n   - **Switching Delay**: 1 µs\n   - **Time Synchronization Error**: 1 µs\n   - **Cycle Duration**: 50 µs\n\n4. **Hypercycle**: The hypercycle is calculated as twice the cycle duration since the flows are TT and use two queues (odd and even).\n\n5. **Confidence**: The confidence score is set to 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:25:58.678495",
+    "wcd_values": {
+      "F1": 1052.0,
+      "F2": 1052.0,
+      "F3": 1052.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 853,
+    "total_tokens": 1672,
+    "cost_usd": 0.0105775,
+    "latency_ms": 14478,
+    "response_chars": 2655,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1052,\n    \"F2\": 1052,\n    \"F3\": 1052\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error)) + transmission_delay\",\n      \"transmission_delay\": \"payload_size / (bandwidth / 8)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: \n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{propagation\\_delay} + \\text{switching\\_delay} + \\text{time\\_sync\\_error})) + \\text{transmission\\_delay}\n     \\]\n   - **Transmission Delay**: Calculated as \\(\\text{payload\\_size} / (\\text{bandwidth} / 8)\\).\n\n3. **Parameters**:\n   - **Bandwidth**: 100 Mbps\n   - **Propagation Delay**: 1 µs\n   - **Switching Delay**: 1 µs\n   - **Time Synchronization Error**: 1 µs\n   - **Cycle Duration**: 50 µs\n\n4. **Hypercycle**: The hypercycle is calculated as twice the cycle duration because of the two queues used in CQF.\n\n5. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:26:05.023301",
+    "wcd_values": {
+      "F1": 1052.0,
+      "F2": 1052.0,
+      "F3": 1052.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 868,
+    "total_tokens": 1687,
+    "cost_usd": 0.0107275,
+    "latency_ms": 5323,
+    "response_chars": 2837,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1052,\n    \"F2\": 1052,\n    \"F3\": 1052\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (propagation_delay + switching_delay + time_sync_error))\",\n      \"explanation\": \"Each hop introduces a cycle duration delay due to CQF, plus propagation, switching, and synchronization delays.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CQF mechanism with TT traffic type and PCP priority 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times \\text{cycle\\_duration}) + (\\text{hop\\_count} \\times (\\text{propagation\\_delay} + \\text{switching\\_delay} + \\text{time\\_sync\\_error}))\n     \\]\n   - **Parameters**:\n     - **Cycle Duration**: 50µs\n     - **Propagation Delay**: 1µs\n     - **Switching Delay**: 1µs\n     - **Time Synchronization Error**: 1µs\n     - **Hop Count**: 2 for all flows\n\n3. **Hypercycle**: The hypercycle is calculated as twice the cycle duration (100µs) because each flow traverses two hops.\n\n4. **Confidence**: The confidence score is set to 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The slight reduction from 1.0 accounts for any potential ambiguities in real-world implementations not covered by the problem statement.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:26:12.233848",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "100µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))",
+        "calculation": {
+          "F1": "WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs",
+          "F2": "WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs",
+          "F3": "WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 822,
+    "tokens_out": 683,
+    "total_tokens": 1505,
+    "cost_usd": 0.008885,
+    "latency_ms": 6205,
+    "response_chars": 1917,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"100µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))\",\n      \"calculation\": {\n        \"F1\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs\",\n        \"F2\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs\",\n        \"F3\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:26:21.502907",
+    "wcd_values": {
+      "F1": 1052.0,
+      "F2": 1052.0,
+      "F3": 1052.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 822,
+    "tokens_out": 785,
+    "total_tokens": 1607,
+    "cost_usd": 0.009905,
+    "latency_ms": 8256,
+    "response_chars": 2486,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1052,\n    \"F2\": 1052,\n    \"F3\": 1052\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 100,\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * (cycle_duration + switching_delay + propagation_delay + time_sync_error)) + transmission_delay\",\n      \"transmission_delay\": \"payload_size / bandwidth\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.8\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is mapped to the CQF mechanism with TT traffic type and PCP priority 7.\n\n2. **WCD Calculation**:\n   - **Equation**: \n     \\[\n     \\text{WCD} = (\\text{hop\\_count} \\times (\\text{cycle\\_duration} + \\text{switching\\_delay} + \\text{propagation\\_delay} + \\text{time\\_sync\\_error})) + \\text{transmission\\_delay}\n     \\]\n   - **Transmission Delay**: Calculated as \\(\\text{payload\\_size} / \\text{bandwidth}\\).\n   - **Cycle Duration**: 50µs.\n   - **Hypercycle**: 100µs (2 cycles for CQF).\n   - **Hop Count**: 2 for all flows.\n   - **Transmission Delay**: Calculated for each flow based on payload size and bandwidth.\n\n3. **Confidence**: Set to 0.8 due to the assumption of perfect synchronization and no additional network congestion or errors.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:26:27.260468",
+    "wcd_values": {
+      "F1": 104.0,
+      "F2": 104.0,
+      "F3": 104.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))",
+        "calculation_steps": {
+          "F1": "WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs",
+          "F2": "WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs",
+          "F3": "WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 822,
+    "tokens_out": 684,
+    "total_tokens": 1506,
+    "cost_usd": 0.008895,
+    "latency_ms": 4744,
+    "response_chars": 1920,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 104,\n    \"F2\": 104,\n    \"F3\": 104\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + (hop_count * (Propagation delay + Switching delay + Time synchronization error))\",\n      \"calculation_steps\": {\n        \"F1\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs\",\n        \"F2\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs\",\n        \"F3\": \"WCD = (2 * 50µs) + (2 * (1µs + 1µs + 1µs)) = 104µs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:26:38.562189",
+    "wcd_values": {
+      "F1": 1052.0,
+      "F2": 1052.0,
+      "F3": 1052.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 851,
+    "total_tokens": 1671,
+    "cost_usd": 0.01056,
+    "latency_ms": 10290,
+    "response_chars": 2821,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 1052,\n    \"F2\": 1052,\n    \"F3\": 1052\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (Payload / Bandwidth) + Propagation delay + Switching delay + Time synchronization error + Cycle duration\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) is calculated using the formula:\n     \\[\n     \\text{WCD} = \\left(\\frac{\\text{Payload}}{\\text{Bandwidth}}\\right) + \\text{Propagation delay} + \\text{Switching delay} + \\text{Time synchronization error} + \\text{Cycle duration}\n     \\]\n   - **Parameters**:\n     - Bandwidth = 100 Mbps\n     - Propagation delay = 1µs\n     - Switching delay = 1µs\n     - Time synchronization error = 1µs\n     - Cycle duration = 50µs\n\n3. **WCD for Each Flow**:\n   - For each flow, the payload is divided by the bandwidth to get the transmission delay. Adding the propagation delay, switching delay, time synchronization error, and cycle duration gives the WCD.\n   - The calculated WCD for each flow is 1052µs.\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions. The slight reduction from 1.0 is due to potential variations in real-world conditions not accounted for in the model.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:26:47.358890",
+    "wcd_values": {
+      "F1": 54.0,
+      "F2": 54.0,
+      "F3": 54.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Bandwidth": "100 Mbps",
+          "Propagation delay": "1µs",
+          "Switching delay": "1µs",
+          "Time synchronization error": "1µs",
+          "Cycle duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = Propagation delay + Switching delay + Time synchronization error + Cycle duration",
+        "explanation": "Each flow traverses two hops (node to switch and switch to node), and each hop incurs a propagation delay, switching delay, and time synchronization error. The cycle duration is added to account for the CQF mechanism."
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 810,
+    "total_tokens": 1630,
+    "cost_usd": 0.01015,
+    "latency_ms": 7781,
+    "response_chars": 2619,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 54,\n    \"F2\": 54,\n    \"F3\": 54\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation delay\": \"1µs\",\n        \"Switching delay\": \"1µs\",\n        \"Time synchronization error\": \"1µs\",\n        \"Cycle duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = Propagation delay + Switching delay + Time synchronization error + Cycle duration\",\n      \"explanation\": \"Each flow traverses two hops (node to switch and switch to node), and each hop incurs a propagation delay, switching delay, and time synchronization error. The cycle duration is added to account for the CQF mechanism.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is Time-Triggered (TT), and has a Priority Code Point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Propagation Delay**: 1µs per hop.\n   - **Switching Delay**: 1µs per hop.\n   - **Time Synchronization Error**: 1µs per hop.\n   - **Cycle Duration**: 50µs.\n   - **Total for each flow**: 1µs (propagation) + 1µs (switching) + 1µs (sync error) + 50µs (cycle duration) = 54µs.\n\n3. **Reason**: Each flow traverses the same number of hops and incurs the same delays, resulting in the same WCD for each flow.\n\n4. **Confidence**: The confidence score is 1.0 because the calculation is based on given parameters and standard CQF operation, with no ambiguity in the provided data.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:26:56.205569",
+    "wcd_values": {
+      "F1": 54.0,
+      "F2": 54.0,
+      "F3": 54.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "cycle_duration": "50µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "cycle_duration": "50µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "cycle_duration": "50µs"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (hop_count * cycle_duration) + propagation_delay + switching_delay + time_sync_error",
+        "explanation": "Each hop introduces a cycle duration delay due to CQF. Additional delays include propagation, switching, and time synchronization error."
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 788,
+    "total_tokens": 1608,
+    "cost_usd": 0.00993,
+    "latency_ms": 7839,
+    "response_chars": 2552,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 54,\n    \"F2\": 54,\n    \"F3\": 54\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"cycle_duration\": \"50µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"cycle_duration\": \"50µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"cycle_duration\": \"50µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (hop_count * cycle_duration) + propagation_delay + switching_delay + time_sync_error\",\n      \"explanation\": \"Each hop introduces a cycle duration delay due to CQF. Additional delays include propagation, switching, and time synchronization error.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is using CQF, is time-triggered (TT), and has a priority code point (PCP) of 7.\n\n2. **WCD Calculation**:\n   - **Equation**: `WCD = (hop_count * cycle_duration) + propagation_delay + switching_delay + time_sync_error`\n   - **Explanation**: The worst-case delay is calculated by considering the cycle duration for each hop, along with additional delays due to propagation, switching, and time synchronization error.\n\n3. **Parameters**:\n   - **Bandwidth**: 100 Mbps\n   - **Propagation Delay**: 1µs\n   - **Switching Delay**: 1µs\n   - **Time Synchronization Error**: 1µs\n   - **Cycle Duration**: 50µs\n\n4. **Confidence**: The confidence score is 0.9, indicating high confidence in the calculations based on the provided data and assumptions.",
+    "api_error": null
+  }
+]

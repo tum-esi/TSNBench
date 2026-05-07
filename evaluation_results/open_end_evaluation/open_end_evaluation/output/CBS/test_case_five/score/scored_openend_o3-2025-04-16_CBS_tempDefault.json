@@ -1,0 +1,201 @@
+{
+  "model": "o3-2025-04-16",
+  "prompt_type": "CBS",
+  "temperature_label": "tempDefault",
+  "timestamp": "2026-05-05T22:50:56.262597",
+  "total_tcs": 1,
+  "scored_tcs": 1,
+  "trivial_tcs": 0,
+  "invalid_tcs": 0,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": false,
+  "min_scored_tcs": 50,
+  "mae_us_majority": null,
+  "mape_pct_majority": null,
+  "mae_us_average": null,
+  "mape_pct_average": null,
+  "exact_match_rate": null,
+  "error_min": null,
+  "error_q1": null,
+  "error_median": null,
+  "error_q3": null,
+  "error_max": null,
+  "error_mean": null,
+  "total_flow_errors": 6,
+  "total_tokens_in": 2097,
+  "total_tokens_out": 5722,
+  "total_tokens": 7819,
+  "avg_tokens_in": 2097,
+  "avg_tokens_out": 5722,
+  "avg_latency_ms": 69485,
+  "max_latency_ms": 69485,
+  "total_time_seconds": 69.48,
+  "tc_results": {
+    "TC5": {
+      "metrics": {
+        "mae_us": 62.8246,
+        "mape_pct": 29.1979,
+        "exact_match_rate": 0.0,
+        "total_flows": 6,
+        "valid_flows": 6,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 62.8246,
+        "mape_pct": 29.1979,
+        "exact_match_rate": 0.0,
+        "total_flows": 6,
+        "valid_flows": 6,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 157.038,
+      "predicted": 63.0,
+      "abs_error": 94.038,
+      "pct_error": 59.8823,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 96.0,
+      "predicted": 87.1,
+      "abs_error": 8.9,
+      "pct_error": 9.2708,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 296.64,
+      "predicted": 204.2,
+      "abs_error": 92.44,
+      "pct_error": 31.1624,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F4",
+      "ground_truth": 227.065,
+      "predicted": 130.6,
+      "abs_error": 96.465,
+      "pct_error": 42.4834,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F5",
+      "ground_truth": 336.878,
+      "predicted": 261.4,
+      "abs_error": 75.478,
+      "pct_error": 22.4051,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F6",
+      "ground_truth": 96.4267,
+      "predicted": 86.8,
+      "abs_error": 9.6267,
+      "pct_error": 9.9834,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 157.038,
+      "predicted": 63.0,
+      "abs_error": 94.038,
+      "pct_error": 59.8823,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 96.0,
+      "predicted": 87.1,
+      "abs_error": 8.9,
+      "pct_error": 9.2708,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 296.64,
+      "predicted": 204.2,
+      "abs_error": 92.44,
+      "pct_error": 31.1624,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F4",
+      "ground_truth": 227.065,
+      "predicted": 130.6,
+      "abs_error": 96.465,
+      "pct_error": 42.4834,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F5",
+      "ground_truth": 336.878,
+      "predicted": 261.4,
+      "abs_error": 75.478,
+      "pct_error": 22.4051,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    },
+    {
+      "flow_id": "F6",
+      "ground_truth": 96.4267,
+      "predicted": 86.8,
+      "abs_error": 9.6267,
+      "pct_error": 9.9834,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "o3-2025-04-16"
+    }
+  ]
+}

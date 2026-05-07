@@ -1,0 +1,1042 @@
+{
+  "model": "grok-4-1-fast-reasoning",
+  "prompt_type": "CBS",
+  "temperature_label": "tempDefault",
+  "timestamp": "2026-05-04T10:16:51.271565",
+  "total_tcs": 11,
+  "scored_tcs": 10,
+  "trivial_tcs": 0,
+  "invalid_tcs": 1,
+  "coverage_failed_tcs": 1,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0909,
+  "coverage_failed_rate": 0.0909,
+  "enough_tcs": true,
+  "min_scored_tcs": 5,
+  "mae_us_majority": 151.7354,
+  "mape_pct_majority": 48.4295,
+  "mae_us_average": 113.181,
+  "mape_pct_average": 35.9642,
+  "exact_match_rate": 0.0,
+  "error_min": 13.14,
+  "error_q1": 75.46,
+  "error_median": 132.667,
+  "error_q3": 215.821,
+  "error_max": 452.48,
+  "error_mean": 151.7354,
+  "total_flow_errors": 30,
+  "total_tokens_in": 31809,
+  "total_tokens_out": 29788,
+  "total_tokens": 61597,
+  "avg_tokens_in": 963.9,
+  "avg_tokens_out": 902.7,
+  "avg_latency_ms": 185781.6,
+  "max_latency_ms": 295174,
+  "total_time_seconds": 6130.79,
+  "tc_results": {
+    "TC41": {
+      "metrics": {
+        "mae_us": 127.7737,
+        "mape_pct": 24.5769,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 51.9337,
+        "mape_pct": 9.9893,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC42": {
+      "metrics": {
+        "mae_us": 147.1067,
+        "mape_pct": 29.5063,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 91.48,
+        "mape_pct": 18.3488,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC43": {
+      "metrics": {
+        "mae_us": 205.494,
+        "mape_pct": 69.9261,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 175.1129,
+        "mape_pct": 60.9525,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F2",
+          "values": [
+            19.6,
+            27.07,
+            259.0
+          ],
+          "ratio": 13.2
+        }
+      ]
+    },
+    "TC44": {
+      "metrics": {
+        "mae_us": 44.371,
+        "mape_pct": 32.4565,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 31.0304,
+        "mape_pct": 22.6727,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC45": {
+      "metrics": {
+        "mae_us": 93.6267,
+        "mape_pct": 65.9373,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 16.0418,
+        "mape_pct": 12.7438,
+        "exact_match_rate": 33.3333,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC46": {
+      "metrics": {
+        "mae_us": 220.189,
+        "mape_pct": 71.9408,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 209.2446,
+        "mape_pct": 68.552,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC47": {
+      "metrics": {
+        "mae_us": 97.3523,
+        "mape_pct": 47.1637,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 81.0546,
+        "mape_pct": 40.0306,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC48": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 2,
+        "missing_flows": 1,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.6667,
+        "coverage_failed": true
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 2,
+        "missing_flows": 1,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.6667,
+        "coverage_failed": true
+      },
+      "hv_flags": []
+    },
+    "TC49": {
+      "metrics": {
+        "mae_us": 133.3337,
+        "mape_pct": 53.1916,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 136.0003,
+        "mape_pct": 54.2554,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC50": {
+      "metrics": {
+        "mae_us": 356.0647,
+        "mape_pct": 68.1178,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 172.4113,
+        "mape_pct": 33.0373,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC51": {
+      "metrics": {
+        "mae_us": 92.0427,
+        "mape_pct": 21.4775,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 167.5004,
+        "mape_pct": 39.06,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 519.893,
+      "predicted": 687.0,
+      "abs_error": 167.107,
+      "pct_error": 32.1426,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 519.893,
+      "predicted": 687.0,
+      "abs_error": 167.107,
+      "pct_error": 32.1426,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 519.893,
+      "predicted": 569.0,
+      "abs_error": 49.107,
+      "pct_error": 9.4456,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 498.56,
+      "predicted": 647.0,
+      "abs_error": 148.44,
+      "pct_error": 29.7737,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 498.56,
+      "predicted": 756.0,
+      "abs_error": 257.44,
+      "pct_error": 51.6367,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 498.56,
+      "predicted": 534.0,
+      "abs_error": 35.44,
+      "pct_error": 7.1085,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 338.56,
+      "predicted": 263.1,
+      "abs_error": 75.46,
+      "pct_error": 22.2885,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 338.56,
+      "predicted": 19.6,
+      "abs_error": 318.96,
+      "pct_error": 94.2108,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 238.062,
+      "predicted": 16.0,
+      "abs_error": 222.062,
+      "pct_error": 93.2791,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 146.56,
+      "predicted": 159.7,
+      "abs_error": 13.14,
+      "pct_error": 8.9656,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 146.56,
+      "predicted": 108.0,
+      "abs_error": 38.56,
+      "pct_error": 26.31,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 131.113,
+      "predicted": 49.7,
+      "abs_error": 81.413,
+      "pct_error": 62.0938,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 145.707,
+      "predicted": 270.0,
+      "abs_error": 124.293,
+      "pct_error": 85.3034,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 145.707,
+      "predicted": 270.0,
+      "abs_error": 124.293,
+      "pct_error": 85.3034,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 118.706,
+      "predicted": 151.0,
+      "abs_error": 32.294,
+      "pct_error": 27.205,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 316.373,
+      "predicted": 126.0,
+      "abs_error": 190.373,
+      "pct_error": 60.1736,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 316.373,
+      "predicted": 62.0,
+      "abs_error": 254.373,
+      "pct_error": 80.4029,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 286.821,
+      "predicted": 71.0,
+      "abs_error": 215.821,
+      "pct_error": 75.2459,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 228.48,
+      "predicted": 267.6,
+      "abs_error": 39.12,
+      "pct_error": 17.1218,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 228.48,
+      "predicted": 137.0,
+      "abs_error": 91.48,
+      "pct_error": 40.0385,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 191.457,
+      "predicted": 30.0,
+      "abs_error": 161.457,
+      "pct_error": 84.3307,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 80.4267,
+      "predicted": 46.9,
+      "abs_error": 33.5267,
+      "pct_error": 41.686,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 80.4267,
+      "predicted": 36.0,
+      "abs_error": 44.4267,
+      "pct_error": 55.2387,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 79.64,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC48",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 250.667,
+      "predicted": 120.0,
+      "abs_error": 130.667,
+      "pct_error": 52.1277,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 250.667,
+      "predicted": 116.0,
+      "abs_error": 134.667,
+      "pct_error": 53.7235,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 250.667,
+      "predicted": 116.0,
+      "abs_error": 134.667,
+      "pct_error": 53.7235,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 523.52,
+      "predicted": 976.0,
+      "abs_error": 452.48,
+      "pct_error": 86.4303,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 523.52,
+      "predicted": 766.0,
+      "abs_error": 242.48,
+      "pct_error": 46.3172,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 521.234,
+      "predicted": 148.0,
+      "abs_error": 373.234,
+      "pct_error": 71.6058,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 428.444,
+      "predicted": 302.0,
+      "abs_error": 126.444,
+      "pct_error": 29.5124,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 428.444,
+      "predicted": 302.0,
+      "abs_error": 126.444,
+      "pct_error": 29.5124,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 429.76,
+      "predicted": 453.0,
+      "abs_error": 23.24,
+      "pct_error": 5.4077,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 519.893,
+      "predicted": 614.77,
+      "abs_error": 94.877,
+      "pct_error": 18.2493,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 519.893,
+      "predicted": 531.71,
+      "abs_error": 11.817,
+      "pct_error": 2.273,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 519.893,
+      "predicted": 569.0,
+      "abs_error": 49.107,
+      "pct_error": 9.4456,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 498.56,
+      "predicted": 608.0,
+      "abs_error": 109.44,
+      "pct_error": 21.9512,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 498.56,
+      "predicted": 644.3333,
+      "abs_error": 145.7733,
+      "pct_error": 29.2389,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 498.56,
+      "predicted": 479.3333,
+      "abs_error": 19.2267,
+      "pct_error": 3.8564,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 338.56,
+      "predicted": 271.9533,
+      "abs_error": 66.6067,
+      "pct_error": 19.6735,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 338.56,
+      "predicted": 101.89,
+      "abs_error": 236.67,
+      "pct_error": 69.9049,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 238.062,
+      "predicted": 16.0,
+      "abs_error": 222.062,
+      "pct_error": 93.2791,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 146.56,
+      "predicted": 137.56,
+      "abs_error": 9.0,
+      "pct_error": 6.1408,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 146.56,
+      "predicted": 118.4567,
+      "abs_error": 28.1033,
+      "pct_error": 19.1753,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 131.113,
+      "predicted": 75.125,
+      "abs_error": 55.988,
+      "pct_error": 42.7021,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 145.707,
+      "predicted": 160.1067,
+      "abs_error": 14.3997,
+      "pct_error": 9.8826,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 145.707,
+      "predicted": 146.1067,
+      "abs_error": 0.3997,
+      "pct_error": 0.2743,
+      "exact_match": true,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 118.706,
+      "predicted": 85.38,
+      "abs_error": 33.326,
+      "pct_error": 28.0744,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 316.373,
+      "predicted": 124.3333,
+      "abs_error": 192.0397,
+      "pct_error": 60.7004,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 316.373,
+      "predicted": 103.0,
+      "abs_error": 213.373,
+      "pct_error": 67.4435,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 286.821,
+      "predicted": 64.5,
+      "abs_error": 222.321,
+      "pct_error": 77.5121,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 228.48,
+      "predicted": 231.08,
+      "abs_error": 2.6,
+      "pct_error": 1.138,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 228.48,
+      "predicted": 149.3733,
+      "abs_error": 79.1067,
+      "pct_error": 34.623,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 191.457,
+      "predicted": 30.0,
+      "abs_error": 161.457,
+      "pct_error": 84.3307,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 250.667,
+      "predicted": 120.7778,
+      "abs_error": 129.8892,
+      "pct_error": 51.8174,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 250.667,
+      "predicted": 107.2222,
+      "abs_error": 143.4448,
+      "pct_error": 57.2252,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 250.667,
+      "predicted": 116.0,
+      "abs_error": 134.667,
+      "pct_error": 53.7235,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 523.52,
+      "predicted": 573.3333,
+      "abs_error": 49.8133,
+      "pct_error": 9.5151,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 523.52,
+      "predicted": 429.3333,
+      "abs_error": 94.1867,
+      "pct_error": 17.991,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 521.234,
+      "predicted": 148.0,
+      "abs_error": 373.234,
+      "pct_error": 71.6058,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 428.444,
+      "predicted": 235.1367,
+      "abs_error": 193.3073,
+      "pct_error": 45.1185,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 428.444,
+      "predicted": 266.51,
+      "abs_error": 161.934,
+      "pct_error": 37.7958,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 429.76,
+      "predicted": 282.5,
+      "abs_error": 147.26,
+      "pct_error": 34.2656,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-reasoning"
+    }
+  ]
+}

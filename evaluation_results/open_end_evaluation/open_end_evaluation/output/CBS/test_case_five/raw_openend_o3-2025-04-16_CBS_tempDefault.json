@@ -1,0 +1,219 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "o3-2025-04-16",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": null,
+    "timestamp": "2026-05-04T09:54:42.172363",
+    "wcd_values": {
+      "F1": 63.0,
+      "F2": 87.1,
+      "F3": 204.2,
+      "F4": 130.6,
+      "F5": 261.4,
+      "F6": 86.8
+    },
+    "confidence": 0.24,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F4": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F5": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F6": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node7_2",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_1"
+        ],
+        "IdleSlope": "75 Mbps",
+        "SendSlope": "-25 Mbps",
+        "cbs_parameters": {
+          "maxFrameSize(B)": 792,
+          "HiCredit(B)": 2376,
+          "LoCredit(B)": -594
+        },
+        "delay_breakdown_us": {
+          "serialization": 55.0,
+          "propagation": 4,
+          "switching": 3,
+          "sync_error": 1,
+          "CBS_queueing": 0.04
+        }
+      },
+      "F2": {
+        "path": [
+          "node2_1",
+          "sw_2",
+          "sw_1",
+          "node1_1"
+        ],
+        "IdleSlope": "75 Mbps",
+        "SendSlope": "-25 Mbps",
+        "cbs_parameters": {
+          "maxFrameSize(B)": 792,
+          "HiCredit(B)": 2376,
+          "LoCredit(B)": -594
+        },
+        "delay_breakdown_us": {
+          "serialization": 81.1,
+          "propagation": 3,
+          "switching": 2,
+          "sync_error": 1,
+          "CBS_queueing": 0.03
+        }
+      },
+      "F3": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "sw_1",
+          "node1_2"
+        ],
+        "IdleSlope": "75 Mbps",
+        "SendSlope": "-25 Mbps",
+        "cbs_parameters": {
+          "maxFrameSize(B)": 792,
+          "HiCredit(B)": 2376,
+          "LoCredit(B)": -594
+        },
+        "delay_breakdown_us": {
+          "serialization": 196.2,
+          "propagation": 4,
+          "switching": 3,
+          "sync_error": 1,
+          "CBS_queueing": 0.05
+        }
+      },
+      "F4": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "node0_0"
+        ],
+        "IdleSlope": "75 Mbps",
+        "SendSlope": "-25 Mbps",
+        "cbs_parameters": {
+          "maxFrameSize(B)": 792,
+          "HiCredit(B)": 2376,
+          "LoCredit(B)": -594
+        },
+        "delay_breakdown_us": {
+          "serialization": 124.6,
+          "propagation": 3,
+          "switching": 2,
+          "sync_error": 1,
+          "CBS_queueing": 0.02
+        }
+      },
+      "F5": {
+        "path": [
+          "node9_2",
+          "sw_9",
+          "sw_10",
+          "sw_11",
+          "node11_1"
+        ],
+        "IdleSlope": "75 Mbps",
+        "SendSlope": "-25 Mbps",
+        "cbs_parameters": {
+          "maxFrameSize(B)": 792,
+          "HiCredit(B)": 2376,
+          "LoCredit(B)": -594
+        },
+        "delay_breakdown_us": {
+          "serialization": 253.4,
+          "propagation": 4,
+          "switching": 3,
+          "sync_error": 1,
+          "CBS_queueing": 0.04
+        }
+      },
+      "F6": {
+        "path": [
+          "node8_1",
+          "sw_8",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_0"
+        ],
+        "IdleSlope": "75 Mbps",
+        "SendSlope": "-25 Mbps",
+        "cbs_parameters": {
+          "maxFrameSize(B)": 792,
+          "HiCredit(B)": 2376,
+          "LoCredit(B)": -594
+        },
+        "delay_breakdown_us": {
+          "serialization": 76.8,
+          "propagation": 5,
+          "switching": 4,
+          "sync_error": 1,
+          "CBS_queueing": 0.04
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "PropagationDelay": "1 µs/link",
+        "SwitchingDelay": "1 µs/switch",
+        "TimeSyncError": "1 µs per flow",
+        "IdleSlope": "75 Mbps (75 %)",
+        "SendSlope": "-25 Mbps",
+        "Overhead": "38 B added to payload",
+        "Network-Calculus equation": "D ≤ Σ(frame_size/BW) + Σ(prop) + Σ(sw) + sync + Σ(σ_total/(IdleSlope-Σρ))"
+      },
+      "WCD_calculation": {
+        "generic_equation": "For each traversed egress port:  β(t)=R·(t−T) with R=IdleSlope;  queueing_delay_i = σ_port /(R−Σρ_port).  End-to-end WCD = Σ(queueing_delay_i)+ Σ(serialization)+ Σ(propagation)+ Σ(switching)+ sync_error"
+      },
+      "missing_inputs": [
+        "Exact Ethernet overhead (used 38 B)",
+        "Precise CBS credit formulas for each switch implementation",
+        "Exact per-port aggregation beyond given 6 flows"
+      ]
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 2097,
+    "tokens_out": 5722,
+    "total_tokens": 7819,
+    "cost_usd": 0.04997,
+    "latency_ms": 69485,
+    "response_chars": 3878,
+    "raw_response": "{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F4\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F5\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F6\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 63.0,\n    \"F2\": 87.1,\n    \"F3\": 204.2,\n    \"F4\": 130.6,\n    \"F5\": 261.4,\n    \"F6\": 86.8\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node7_2\",\"sw_7\",\"sw_6\",\"sw_11\",\"node11_1\"],\n      \"IdleSlope\":\"75 Mbps\",\n      \"SendSlope\":\"-25 Mbps\",\n      \"cbs_parameters\": {\n        \"maxFrameSize(B)\": 792,\n        \"HiCredit(B)\": 2376,\n        \"LoCredit(B)\": -594\n      },\n      \"delay_breakdown_us\": {\n        \"serialization\": 55.0,\n        \"propagation\": 4,\n        \"switching\": 3,\n        \"sync_error\": 1,\n        \"CBS_queueing\": 0.04\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node2_1\",\"sw_2\",\"sw_1\",\"node1_1\"],\n      \"IdleSlope\":\"75 Mbps\",\n      \"SendSlope\":\"-25 Mbps\",\n      \"cbs_parameters\": {\n        \"maxFrameSize(B)\": 792,\n        \"HiCredit(B)\": 2376,\n        \"LoCredit(B)\": -594\n      },\n      \"delay_breakdown_us\": {\n        \"serialization\": 81.1,\n        \"propagation\": 3,\n        \"switching\": 2,\n        \"sync_error\": 1,\n        \"CBS_queueing\": 0.03\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node5_0\",\"sw_5\",\"sw_0\",\"sw_1\",\"node1_2\"],\n      \"IdleSlope\":\"75 Mbps\",\n      \"SendSlope\":\"-25 Mbps\",\n      \"cbs_parameters\": {\n        \"maxFrameSize(B)\": 792,\n        \"HiCredit(B)\": 2376,\n        \"LoCredit(B)\": -594\n      },\n      \"delay_breakdown_us\": {\n        \"serialization\": 196.2,\n        \"propagation\": 4,\n        \"switching\": 3,\n        \"sync_error\": 1,\n        \"CBS_queueing\": 0.05\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node5_0\",\"sw_5\",\"sw_0\",\"node0_0\"],\n      \"IdleSlope\":\"75 Mbps\",\n      \"SendSlope\":\"-25 Mbps\",\n      \"cbs_parameters\": {\n        \"maxFrameSize(B)\": 792,\n        \"HiCredit(B)\": 2376,\n        \"LoCredit(B)\": -594\n      },\n      \"delay_breakdown_us\": {\n        \"serialization\": 124.6,\n        \"propagation\": 3,\n        \"switching\": 2,\n        \"sync_error\": 1,\n        \"CBS_queueing\": 0.02\n      }\n    },\n    \"F5\": {\n      \"path\": [\"node9_2\",\"sw_9\",\"sw_10\",\"sw_11\",\"node11_1\"],\n      \"IdleSlope\":\"75 Mbps\",\n      \"SendSlope\":\"-25 Mbps\",\n      \"cbs_parameters\": {\n        \"maxFrameSize(B)\": 792,\n        \"HiCredit(B)\": 2376,\n        \"LoCredit(B)\": -594\n      },\n      \"delay_breakdown_us\": {\n        \"serialization\": 253.4,\n        \"propagation\": 4,\n        \"switching\": 3,\n        \"sync_error\": 1,\n        \"CBS_queueing\": 0.04\n      }\n    },\n    \"F6\": {\n      \"path\": [\"node8_1\",\"sw_8\",\"sw_7\",\"sw_6\",\"sw_11\",\"node11_0\"],\n      \"IdleSlope\":\"75 Mbps\",\n      \"SendSlope\":\"-25 Mbps\",\n      \"cbs_parameters\": {\n        \"maxFrameSize(B)\": 792,\n        \"HiCredit(B)\": 2376,\n        \"LoCredit(B)\": -594\n      },\n      \"delay_breakdown_us\": {\n        \"serialization\": 76.8,\n        \"propagation\": 5,\n        \"switching\": 4,\n        \"sync_error\": 1,\n        \"CBS_queueing\": 0.04\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"PropagationDelay\": \"1 µs/link\",\n      \"SwitchingDelay\": \"1 µs/switch\",\n      \"TimeSyncError\": \"1 µs per flow\",\n      \"IdleSlope\": \"75 Mbps (75 %)\",\n      \"SendSlope\": \"-25 Mbps\",\n      \"Overhead\": \"38 B added to payload\",\n      \"Network-Calculus equation\": \"D ≤ Σ(frame_size/BW) + Σ(prop) + Σ(sw) + sync + Σ(σ_total/(IdleSlope-Σρ))\"\n    },\n    \"WCD_calculation\": {\n      \"generic_equation\": \"For each traversed egress port:  β(t)=R·(t−T) with R=IdleSlope;  queueing_delay_i = σ_port /(R−Σρ_port).  End-to-end WCD = Σ(queueing_delay_i)+ Σ(serialization)+ Σ(propagation)+ Σ(switching)+ sync_error\"\n    },\n    \"missing_inputs\": [\n      \"Exact Ethernet overhead (used 38 B)\",\n      \"Precise CBS credit formulas for each switch implementation\",\n      \"Exact per-port aggregation beyond given 6 flows\"\n    ]\n  },\n  \"confidence\": 0.24\n}",
+    "api_error": null
+  }
+]

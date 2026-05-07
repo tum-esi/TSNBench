@@ -1,0 +1,355 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "deepseek-chat",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-04T10:05:32.271670",
+    "wcd_values": {
+      "F1": 0.0,
+      "F2": 0.0,
+      "F3": 0.0,
+      "F4": 0.0,
+      "F5": 0.0,
+      "F6": 0.0
+    },
+    "confidence": 0.1,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F4": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F5": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F6": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node7_2",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_1"
+        ],
+        "IdleSlope": [
+          "sw_7.P2: 75%",
+          "sw_6.P0: 75%",
+          "sw_11.P1: 75%"
+        ],
+        "SendSlope": [
+          "sw_7.P2: -25%",
+          "sw_6.P0: -25%",
+          "sw_11.P1: -25%"
+        ],
+        "cbs_parameters": {
+          "portRate": "100 Mbps",
+          "idleSlope_fraction": 0.75,
+          "sendSlope_fraction": -0.25,
+          "idleSlope_rate": "75 Mbps",
+          "sendSlope_rate": "-25 Mbps",
+          "queue": 6,
+          "priority": 6,
+          "transmissionSelectionAlgorithm": "CBS"
+        },
+        "WCD_calculation": {
+          "method": "Network Calculus - Payload Only Service Curve",
+          "equation": "WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path",
+          "L_max_bytes": 1000,
+          "L_max_bits": 8000,
+          "idleSlope_bps": 75000000,
+          "transmission_time_us": 0.1067,
+          "propagation_delay_per_hop_us": 1,
+          "switching_delay_per_hop_us": 1,
+          "sync_error_per_hop_us": 1,
+          "hops": 3,
+          "total_fixed_delay_us": 9,
+          "WCD_us": 9.1067,
+          "note": "This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention."
+        },
+        "missing_inputs": [
+          "Aggregate arrival curves for each egress port",
+          "Exact set of flows sharing each egress port (only partially inferable from given routes)",
+          "Per-flow shaping parameters (e.g., max frame size for each flow on each port)"
+        ]
+      },
+      "F2": {
+        "path": [
+          "node2_1",
+          "sw_2",
+          "sw_1",
+          "node1_1"
+        ],
+        "IdleSlope": [
+          "sw_2.P1: 75%",
+          "sw_1.P2: 75%"
+        ],
+        "SendSlope": [
+          "sw_2.P1: -25%",
+          "sw_1.P2: -25%"
+        ],
+        "cbs_parameters": {
+          "portRate": "100 Mbps",
+          "idleSlope_fraction": 0.75,
+          "sendSlope_fraction": -0.25,
+          "idleSlope_rate": "75 Mbps",
+          "sendSlope_rate": "-25 Mbps",
+          "queue": 6,
+          "priority": 6,
+          "transmissionSelectionAlgorithm": "CBS"
+        },
+        "WCD_calculation": {
+          "method": "Network Calculus - Payload Only Service Curve",
+          "equation": "WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path",
+          "L_max_bytes": 2500,
+          "L_max_bits": 20000,
+          "idleSlope_bps": 75000000,
+          "transmission_time_us": 0.2667,
+          "propagation_delay_per_hop_us": 1,
+          "switching_delay_per_hop_us": 1,
+          "sync_error_per_hop_us": 1,
+          "hops": 2,
+          "total_fixed_delay_us": 6,
+          "WCD_us": 6.2667,
+          "note": "This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention."
+        },
+        "missing_inputs": [
+          "Aggregate arrival curves for each egress port",
+          "Exact set of flows sharing each egress port (only partially inferable from given routes)",
+          "Per-flow shaping parameters (e.g., max frame size for each flow on each port)"
+        ]
+      },
+      "F3": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "sw_1",
+          "node1_2"
+        ],
+        "IdleSlope": [
+          "sw_5.P1: 75%",
+          "sw_0.P0: 75%",
+          "sw_1.P2: 75%"
+        ],
+        "SendSlope": [
+          "sw_5.P1: -25%",
+          "sw_0.P0: -25%",
+          "sw_1.P2: -25%"
+        ],
+        "cbs_parameters": {
+          "portRate": "100 Mbps",
+          "idleSlope_fraction": 0.75,
+          "sendSlope_fraction": -0.25,
+          "idleSlope_rate": "75 Mbps",
+          "sendSlope_rate": "-25 Mbps",
+          "queue": 6,
+          "priority": 6,
+          "transmissionSelectionAlgorithm": "CBS"
+        },
+        "WCD_calculation": {
+          "method": "Network Calculus - Payload Only Service Curve",
+          "equation": "WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path",
+          "L_max_bytes": 1000,
+          "L_max_bits": 8000,
+          "idleSlope_bps": 75000000,
+          "transmission_time_us": 0.1067,
+          "propagation_delay_per_hop_us": 1,
+          "switching_delay_per_hop_us": 1,
+          "sync_error_per_hop_us": 1,
+          "hops": 3,
+          "total_fixed_delay_us": 9,
+          "WCD_us": 9.1067,
+          "note": "This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention."
+        },
+        "missing_inputs": [
+          "Aggregate arrival curves for each egress port",
+          "Exact set of flows sharing each egress port (only partially inferable from given routes)",
+          "Per-flow shaping parameters (e.g., max frame size for each flow on each port)"
+        ]
+      },
+      "F4": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "node0_0"
+        ],
+        "IdleSlope": [
+          "sw_5.P1: 75%",
+          "sw_0.P3: 75%"
+        ],
+        "SendSlope": [
+          "sw_5.P1: -25%",
+          "sw_0.P3: -25%"
+        ],
+        "cbs_parameters": {
+          "portRate": "100 Mbps",
+          "idleSlope_fraction": 0.75,
+          "sendSlope_fraction": -0.25,
+          "idleSlope_rate": "75 Mbps",
+          "sendSlope_rate": "-25 Mbps",
+          "queue": 6,
+          "priority": 6,
+          "transmissionSelectionAlgorithm": "CBS"
+        },
+        "WCD_calculation": {
+          "method": "Network Calculus - Payload Only Service Curve",
+          "equation": "WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path",
+          "L_max_bytes": 5000,
+          "L_max_bits": 40000,
+          "idleSlope_bps": 75000000,
+          "transmission_time_us": 0.5333,
+          "propagation_delay_per_hop_us": 1,
+          "switching_delay_per_hop_us": 1,
+          "sync_error_per_hop_us": 1,
+          "hops": 2,
+          "total_fixed_delay_us": 6,
+          "WCD_us": 6.5333,
+          "note": "This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention."
+        },
+        "missing_inputs": [
+          "Aggregate arrival curves for each egress port",
+          "Exact set of flows sharing each egress port (only partially inferable from given routes)",
+          "Per-flow shaping parameters (e.g., max frame size for each flow on each port)"
+        ]
+      },
+      "F5": {
+        "path": [
+          "node9_2",
+          "sw_9",
+          "sw_10",
+          "sw_11",
+          "node11_1"
+        ],
+        "IdleSlope": [
+          "sw_9.P2: 75%",
+          "sw_10.P0: 75%",
+          "sw_11.P1: 75%"
+        ],
+        "SendSlope": [
+          "sw_9.P2: -25%",
+          "sw_10.P0: -25%",
+          "sw_11.P1: -25%"
+        ],
+        "cbs_parameters": {
+          "portRate": "100 Mbps",
+          "idleSlope_fraction": 0.75,
+          "sendSlope_fraction": -0.25,
+          "idleSlope_rate": "75 Mbps",
+          "sendSlope_rate": "-25 Mbps",
+          "queue": 6,
+          "priority": 6,
+          "transmissionSelectionAlgorithm": "CBS"
+        },
+        "WCD_calculation": {
+          "method": "Network Calculus - Payload Only Service Curve",
+          "equation": "WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path",
+          "L_max_bytes": 2500,
+          "L_max_bits": 20000,
+          "idleSlope_bps": 75000000,
+          "transmission_time_us": 0.2667,
+          "propagation_delay_per_hop_us": 1,
+          "switching_delay_per_hop_us": 1,
+          "sync_error_per_hop_us": 1,
+          "hops": 3,
+          "total_fixed_delay_us": 9,
+          "WCD_us": 9.2667,
+          "note": "This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention."
+        },
+        "missing_inputs": [
+          "Aggregate arrival curves for each egress port",
+          "Exact set of flows sharing each egress port (only partially inferable from given routes)",
+          "Per-flow shaping parameters (e.g., max frame size for each flow on each port)"
+        ]
+      },
+      "F6": {
+        "path": [
+          "node8_1",
+          "sw_8",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_0"
+        ],
+        "IdleSlope": [
+          "sw_8.P1: 75%",
+          "sw_7.P0: 75%",
+          "sw_6.P0: 75%",
+          "sw_11.P1: 75%"
+        ],
+        "SendSlope": [
+          "sw_8.P1: -25%",
+          "sw_7.P0: -25%",
+          "sw_6.P0: -25%",
+          "sw_11.P1: -25%"
+        ],
+        "cbs_parameters": {
+          "portRate": "100 Mbps",
+          "idleSlope_fraction": 0.75,
+          "sendSlope_fraction": -0.25,
+          "idleSlope_rate": "75 Mbps",
+          "sendSlope_rate": "-25 Mbps",
+          "queue": 6,
+          "priority": 6,
+          "transmissionSelectionAlgorithm": "CBS"
+        },
+        "WCD_calculation": {
+          "method": "Network Calculus - Payload Only Service Curve",
+          "equation": "WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path",
+          "L_max_bytes": 2500,
+          "L_max_bits": 20000,
+          "idleSlope_bps": 75000000,
+          "transmission_time_us": 0.2667,
+          "propagation_delay_per_hop_us": 1,
+          "switching_delay_per_hop_us": 1,
+          "sync_error_per_hop_us": 1,
+          "hops": 4,
+          "total_fixed_delay_us": 12,
+          "WCD_us": 12.2667,
+          "note": "This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention."
+        },
+        "missing_inputs": [
+          "Aggregate arrival curves for each egress port",
+          "Exact set of flows sharing each egress port (only partially inferable from given routes)",
+          "Per-flow shaping parameters (e.g., max frame size for each flow on each port)"
+        ]
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 2237,
+    "tokens_out": 3300,
+    "total_tokens": 5537,
+    "cost_usd": 0.00144864,
+    "latency_ms": 43418,
+    "response_chars": 10635,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F4\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F5\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F6\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 0,\n    \"F2\": 0,\n    \"F3\": 0,\n    \"F4\": 0,\n    \"F5\": 0,\n    \"F6\": 0\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node7_2\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_1\"],\n      \"IdleSlope\": [\"sw_7.P2: 75%\", \"sw_6.P0: 75%\", \"sw_11.P1: 75%\"],\n      \"SendSlope\": [\"sw_7.P2: -25%\", \"sw_6.P0: -25%\", \"sw_11.P1: -25%\"],\n      \"cbs_parameters\": {\n        \"portRate\": \"100 Mbps\",\n        \"idleSlope_fraction\": 0.75,\n        \"sendSlope_fraction\": -0.25,\n        \"idleSlope_rate\": \"75 Mbps\",\n        \"sendSlope_rate\": \"-25 Mbps\",\n        \"queue\": 6,\n        \"priority\": 6,\n        \"transmissionSelectionAlgorithm\": \"CBS\"\n      },\n      \"WCD_calculation\": {\n        \"method\": \"Network Calculus - Payload Only Service Curve\",\n        \"equation\": \"WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path\",\n        \"L_max_bytes\": 1000,\n        \"L_max_bits\": 8000,\n        \"idleSlope_bps\": 75000000,\n        \"transmission_time_us\": 0.1067,\n        \"propagation_delay_per_hop_us\": 1,\n        \"switching_delay_per_hop_us\": 1,\n        \"sync_error_per_hop_us\": 1,\n        \"hops\": 3,\n        \"total_fixed_delay_us\": 9,\n        \"WCD_us\": 9.1067,\n        \"note\": \"This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention.\"\n      },\n      \"missing_inputs\": [\n        \"Aggregate arrival curves for each egress port\",\n        \"Exact set of flows sharing each egress port (only partially inferable from given routes)\",\n        \"Per-flow shaping parameters (e.g., max frame size for each flow on each port)\"\n      ]\n    },\n    \"F2\": {\n      \"path\": [\"node2_1\", \"sw_2\", \"sw_1\", \"node1_1\"],\n      \"IdleSlope\": [\"sw_2.P1: 75%\", \"sw_1.P2: 75%\"],\n      \"SendSlope\": [\"sw_2.P1: -25%\", \"sw_1.P2: -25%\"],\n      \"cbs_parameters\": {\n        \"portRate\": \"100 Mbps\",\n        \"idleSlope_fraction\": 0.75,\n        \"sendSlope_fraction\": -0.25,\n        \"idleSlope_rate\": \"75 Mbps\",\n        \"sendSlope_rate\": \"-25 Mbps\",\n        \"queue\": 6,\n        \"priority\": 6,\n        \"transmissionSelectionAlgorithm\": \"CBS\"\n      },\n      \"WCD_calculation\": {\n        \"method\": \"Network Calculus - Payload Only Service Curve\",\n        \"equation\": \"WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path\",\n        \"L_max_bytes\": 2500,\n        \"L_max_bits\": 20000,\n        \"idleSlope_bps\": 75000000,\n        \"transmission_time_us\": 0.2667,\n        \"propagation_delay_per_hop_us\": 1,\n        \"switching_delay_per_hop_us\": 1,\n        \"sync_error_per_hop_us\": 1,\n        \"hops\": 2,\n        \"total_fixed_delay_us\": 6,\n        \"WCD_us\": 6.2667,\n        \"note\": \"This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention.\"\n      },\n      \"missing_inputs\": [\n        \"Aggregate arrival curves for each egress port\",\n        \"Exact set of flows sharing each egress port (only partially inferable from given routes)\",\n        \"Per-flow shaping parameters (e.g., max frame size for each flow on each port)\"\n      ]\n    },\n    \"F3\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"sw_1\", \"node1_2\"],\n      \"IdleSlope\": [\"sw_5.P1: 75%\", \"sw_0.P0: 75%\", \"sw_1.P2: 75%\"],\n      \"SendSlope\": [\"sw_5.P1: -25%\", \"sw_0.P0: -25%\", \"sw_1.P2: -25%\"],\n      \"cbs_parameters\": {\n        \"portRate\": \"100 Mbps\",\n        \"idleSlope_fraction\": 0.75,\n        \"sendSlope_fraction\": -0.25,\n        \"idleSlope_rate\": \"75 Mbps\",\n        \"sendSlope_rate\": \"-25 Mbps\",\n        \"queue\": 6,\n        \"priority\": 6,\n        \"transmissionSelectionAlgorithm\": \"CBS\"\n      },\n      \"WCD_calculation\": {\n        \"method\": \"Network Calculus - Payload Only Service Curve\",\n        \"equation\": \"WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path\",\n        \"L_max_bytes\": 1000,\n        \"L_max_bits\": 8000,\n        \"idleSlope_bps\": 75000000,\n        \"transmission_time_us\": 0.1067,\n        \"propagation_delay_per_hop_us\": 1,\n        \"switching_delay_per_hop_us\": 1,\n        \"sync_error_per_hop_us\": 1,\n        \"hops\": 3,\n        \"total_fixed_delay_us\": 9,\n        \"WCD_us\": 9.1067,\n        \"note\": \"This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention.\"\n      },\n      \"missing_inputs\": [\n        \"Aggregate arrival curves for each egress port\",\n        \"Exact set of flows sharing each egress port (only partially inferable from given routes)\",\n        \"Per-flow shaping parameters (e.g., max frame size for each flow on each port)\"\n      ]\n    },\n    \"F4\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"node0_0\"],\n      \"IdleSlope\": [\"sw_5.P1: 75%\", \"sw_0.P3: 75%\"],\n      \"SendSlope\": [\"sw_5.P1: -25%\", \"sw_0.P3: -25%\"],\n      \"cbs_parameters\": {\n        \"portRate\": \"100 Mbps\",\n        \"idleSlope_fraction\": 0.75,\n        \"sendSlope_fraction\": -0.25,\n        \"idleSlope_rate\": \"75 Mbps\",\n        \"sendSlope_rate\": \"-25 Mbps\",\n        \"queue\": 6,\n        \"priority\": 6,\n        \"transmissionSelectionAlgorithm\": \"CBS\"\n      },\n      \"WCD_calculation\": {\n        \"method\": \"Network Calculus - Payload Only Service Curve\",\n        \"equation\": \"WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path\",\n        \"L_max_bytes\": 5000,\n        \"L_max_bits\": 40000,\n        \"idleSlope_bps\": 75000000,\n        \"transmission_time_us\": 0.5333,\n        \"propagation_delay_per_hop_us\": 1,\n        \"switching_delay_per_hop_us\": 1,\n        \"sync_error_per_hop_us\": 1,\n        \"hops\": 2,\n        \"total_fixed_delay_us\": 6,\n        \"WCD_us\": 6.5333,\n        \"note\": \"This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention.\"\n      },\n      \"missing_inputs\": [\n        \"Aggregate arrival curves for each egress port\",\n        \"Exact set of flows sharing each egress port (only partially inferable from given routes)\",\n        \"Per-flow shaping parameters (e.g., max frame size for each flow on each port)\"\n      ]\n    },\n    \"F5\": {\n      \"path\": [\"node9_2\", \"sw_9\", \"sw_10\", \"sw_11\", \"node11_1\"],\n      \"IdleSlope\": [\"sw_9.P2: 75%\", \"sw_10.P0: 75%\", \"sw_11.P1: 75%\"],\n      \"SendSlope\": [\"sw_9.P2: -25%\", \"sw_10.P0: -25%\", \"sw_11.P1: -25%\"],\n      \"cbs_parameters\": {\n        \"portRate\": \"100 Mbps\",\n        \"idleSlope_fraction\": 0.75,\n        \"sendSlope_fraction\": -0.25,\n        \"idleSlope_rate\": \"75 Mbps\",\n        \"sendSlope_rate\": \"-25 Mbps\",\n        \"queue\": 6,\n        \"priority\": 6,\n        \"transmissionSelectionAlgorithm\": \"CBS\"\n      },\n      \"WCD_calculation\": {\n        \"method\": \"Network Calculus - Payload Only Service Curve\",\n        \"equation\": \"WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path\",\n        \"L_max_bytes\": 2500,\n        \"L_max_bits\": 20000,\n        \"idleSlope_bps\": 75000000,\n        \"transmission_time_us\": 0.2667,\n        \"propagation_delay_per_hop_us\": 1,\n        \"switching_delay_per_hop_us\": 1,\n        \"sync_error_per_hop_us\": 1,\n        \"hops\": 3,\n        \"total_fixed_delay_us\": 9,\n        \"WCD_us\": 9.2667,\n        \"note\": \"This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention.\"\n      },\n      \"missing_inputs\": [\n        \"Aggregate arrival curves for each egress port\",\n        \"Exact set of flows sharing each egress port (only partially inferable from given routes)\",\n        \"Per-flow shaping parameters (e.g., max frame size for each flow on each port)\"\n      ]\n    },\n    \"F6\": {\n      \"path\": [\"node8_1\", \"sw_8\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_0\"],\n      \"IdleSlope\": [\"sw_8.P1: 75%\", \"sw_7.P0: 75%\", \"sw_6.P0: 75%\", \"sw_11.P1: 75%\"],\n      \"SendSlope\": [\"sw_8.P1: -25%\", \"sw_7.P0: -25%\", \"sw_6.P0: -25%\", \"sw_11.P1: -25%\"],\n      \"cbs_parameters\": {\n        \"portRate\": \"100 Mbps\",\n        \"idleSlope_fraction\": 0.75,\n        \"sendSlope_fraction\": -0.25,\n        \"idleSlope_rate\": \"75 Mbps\",\n        \"sendSlope_rate\": \"-25 Mbps\",\n        \"queue\": 6,\n        \"priority\": 6,\n        \"transmissionSelectionAlgorithm\": \"CBS\"\n      },\n      \"WCD_calculation\": {\n        \"method\": \"Network Calculus - Payload Only Service Curve\",\n        \"equation\": \"WCD = (L_max / idleSlope) + sum(propagation_delay + switching_delay + sync_error) over path\",\n        \"L_max_bytes\": 2500,\n        \"L_max_bits\": 20000,\n        \"idleSlope_bps\": 75000000,\n        \"transmission_time_us\": 0.2667,\n        \"propagation_delay_per_hop_us\": 1,\n        \"switching_delay_per_hop_us\": 1,\n        \"sync_error_per_hop_us\": 1,\n        \"hops\": 4,\n        \"total_fixed_delay_us\": 12,\n        \"WCD_us\": 12.2667,\n        \"note\": \"This is a simplified calculation ignoring interference from other flows. A full analysis requires per-port aggregate arrival curves and service curves, which is not possible without knowing all flows on each port. The provided WCD is therefore a lower bound and not the true worst-case. The true WCD would be higher due to contention.\"\n      },\n      \"missing_inputs\": [\n        \"Aggregate arrival curves for each egress port\",\n        \"Exact set of flows sharing each egress port (only partially inferable from given routes)\",\n        \"Per-flow shaping parameters (e.g., max frame size for each flow on each port)\"\n      ]\n    }\n  },\n  \"confidence\": 0.1\n}\n```",
+    "api_error": null
+  }
+]

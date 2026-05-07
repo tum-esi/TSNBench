@@ -1,0 +1,1104 @@
+{
+  "model": "mistral-medium-2508",
+  "prompt_type": "CQF",
+  "temperature_label": "temp0_0",
+  "timestamp": "2026-05-04T10:21:11.317493",
+  "total_tcs": 11,
+  "scored_tcs": 11,
+  "trivial_tcs": 0,
+  "invalid_tcs": 0,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": true,
+  "min_scored_tcs": 5,
+  "mae_us_majority": 127.5697,
+  "mape_pct_majority": 123.8541,
+  "mae_us_average": 190.6566,
+  "mape_pct_average": 185.1035,
+  "exact_match_rate": 0.0,
+  "error_min": 53.0,
+  "error_q1": 91.0,
+  "error_median": 93.0,
+  "error_q3": 93.0,
+  "error_max": 1297.0,
+  "error_mean": 127.5697,
+  "total_flow_errors": 33,
+  "total_tokens_in": 29202,
+  "total_tokens_out": 82906,
+  "total_tokens": 112108,
+  "avg_tokens_in": 884.9,
+  "avg_tokens_out": 2512.3,
+  "avg_latency_ms": 17095.5,
+  "max_latency_ms": 31116,
+  "total_time_seconds": 564.15,
+  "tc_results": {
+    "TC41": {
+      "metrics": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 801.1111,
+        "mape_pct": 777.7778,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F3",
+          "values": [
+            10.0,
+            2500.0,
+            10.0
+          ],
+          "ratio": 250.0
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            10.0,
+            5000.0,
+            10.0
+          ],
+          "ratio": 500.0
+        }
+      ]
+    },
+    "TC42": {
+      "metrics": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC43": {
+      "metrics": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC44": {
+      "metrics": {
+        "mae_us": 90.3333,
+        "mape_pct": 87.7023,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 90.3333,
+        "mape_pct": 87.7023,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC45": {
+      "metrics": {
+        "mae_us": 90.0,
+        "mape_pct": 87.3786,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC46": {
+      "metrics": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC47": {
+      "metrics": {
+        "mae_us": 92.0,
+        "mape_pct": 89.3204,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 91.1674,
+        "mape_pct": 88.512,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC48": {
+      "metrics": {
+        "mae_us": 76.6,
+        "mape_pct": 74.3689,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 58.9444,
+        "mape_pct": 57.2276,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            21.0,
+            21.0,
+            212.0
+          ],
+          "ratio": 10.1
+        }
+      ]
+    },
+    "TC49": {
+      "metrics": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC50": {
+      "metrics": {
+        "mae_us": 93.0,
+        "mape_pct": 90.2913,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 92.6667,
+        "mape_pct": 89.9677,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC51": {
+      "metrics": {
+        "mae_us": 498.3333,
+        "mape_pct": 483.8188,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 502.0,
+        "mape_pct": 487.3786,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F2",
+          "values": [
+            829.0,
+            8.0,
+            8.0
+          ],
+          "ratio": 103.6
+        }
+      ]
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 18.0,
+      "abs_error": 85.0,
+      "pct_error": 82.5243,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 13.0,
+      "abs_error": 90.0,
+      "pct_error": 87.3786,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 13.0,
+      "abs_error": 90.0,
+      "pct_error": 87.3786,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 13.0,
+      "abs_error": 90.0,
+      "pct_error": 87.3786,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 11.1,
+      "abs_error": 91.9,
+      "pct_error": 89.2233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.8,
+      "abs_error": 92.2,
+      "pct_error": 89.5146,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 11.1,
+      "abs_error": 91.9,
+      "pct_error": 89.2233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 21.0,
+      "abs_error": 82.0,
+      "pct_error": 79.6117,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.2,
+      "abs_error": 94.8,
+      "pct_error": 92.0388,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 50.0,
+      "abs_error": 53.0,
+      "pct_error": 51.4563,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 0.0,
+      "abs_error": 103.0,
+      "pct_error": 100.0,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 1400.0,
+      "abs_error": 1297.0,
+      "pct_error": 1259.2233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "mistral-medium-2508"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 7.0,
+      "abs_error": 96.0,
+      "pct_error": 93.2039,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 1673.3333,
+      "abs_error": 1570.3333,
+      "pct_error": 1524.5954,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 840.0,
+      "abs_error": 737.0,
+      "pct_error": 715.534,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 18.0,
+      "abs_error": 85.0,
+      "pct_error": 82.5243,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 11.9093,
+      "abs_error": 91.0907,
+      "pct_error": 88.4376,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 11.6793,
+      "abs_error": 91.3207,
+      "pct_error": 88.6609,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 11.9093,
+      "abs_error": 91.0907,
+      "pct_error": 88.4376,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 84.6667,
+      "abs_error": 18.3333,
+      "pct_error": 17.7993,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 9.8333,
+      "abs_error": 93.1667,
+      "pct_error": 90.4531,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 37.6667,
+      "abs_error": 65.3333,
+      "pct_error": 63.4304,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.0,
+      "abs_error": 93.0,
+      "pct_error": 90.2913,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 10.3333,
+      "abs_error": 92.6667,
+      "pct_error": 89.9677,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.3333,
+      "abs_error": 92.6667,
+      "pct_error": 89.9677,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 10.3333,
+      "abs_error": 92.6667,
+      "pct_error": 89.9677,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 133.3333,
+      "abs_error": 30.3333,
+      "pct_error": 29.4498,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 281.6667,
+      "abs_error": 178.6667,
+      "pct_error": 173.4628,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "mistral-medium-2508"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 1400.0,
+      "abs_error": 1297.0,
+      "pct_error": 1259.2233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "mistral-medium-2508"
+    }
+  ]
+}

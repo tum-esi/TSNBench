@@ -1,0 +1,201 @@
+{
+  "model": "gpt-5-2025-08-07",
+  "prompt_type": "CBS",
+  "temperature_label": "tempDefault",
+  "timestamp": "2026-05-05T22:50:56.008529",
+  "total_tcs": 1,
+  "scored_tcs": 1,
+  "trivial_tcs": 0,
+  "invalid_tcs": 0,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": false,
+  "min_scored_tcs": 50,
+  "mae_us_majority": null,
+  "mape_pct_majority": null,
+  "mae_us_average": null,
+  "mape_pct_average": null,
+  "exact_match_rate": null,
+  "error_min": null,
+  "error_q1": null,
+  "error_median": null,
+  "error_q3": null,
+  "error_max": null,
+  "error_mean": null,
+  "total_flow_errors": 6,
+  "total_tokens_in": 2097,
+  "total_tokens_out": 19300,
+  "total_tokens": 21397,
+  "avg_tokens_in": 2097,
+  "avg_tokens_out": 19300,
+  "avg_latency_ms": 242001,
+  "max_latency_ms": 242001,
+  "total_time_seconds": 242.0,
+  "tc_results": {
+    "TC5": {
+      "metrics": {
+        "mae_us": 32.5197,
+        "mape_pct": 16.3348,
+        "exact_match_rate": 0.0,
+        "total_flows": 6,
+        "valid_flows": 6,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 32.5145,
+        "mape_pct": 16.3328,
+        "exact_match_rate": 0.0,
+        "total_flows": 6,
+        "valid_flows": 6,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 157.038,
+      "predicted": 171.4,
+      "abs_error": 14.362,
+      "pct_error": 9.1456,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 96.0,
+      "predicted": 72.8,
+      "abs_error": 23.2,
+      "pct_error": 24.1667,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 296.64,
+      "predicted": 259.6,
+      "abs_error": 37.04,
+      "pct_error": 12.4865,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F4",
+      "ground_truth": 227.065,
+      "predicted": 180.5,
+      "abs_error": 46.565,
+      "pct_error": 20.5073,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F5",
+      "ground_truth": 336.878,
+      "predicted": 276.1,
+      "abs_error": 60.778,
+      "pct_error": 18.0415,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F6",
+      "ground_truth": 96.4267,
+      "predicted": 109.6,
+      "abs_error": 13.1733,
+      "pct_error": 13.6615,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 157.038,
+      "predicted": 171.395,
+      "abs_error": 14.357,
+      "pct_error": 9.1424,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 96.0,
+      "predicted": 72.82,
+      "abs_error": 23.18,
+      "pct_error": 24.1458,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 296.64,
+      "predicted": 259.63,
+      "abs_error": 37.01,
+      "pct_error": 12.4764,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F4",
+      "ground_truth": 227.065,
+      "predicted": 180.47,
+      "abs_error": 46.595,
+      "pct_error": 20.5206,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F5",
+      "ground_truth": 336.878,
+      "predicted": 276.12,
+      "abs_error": 60.758,
+      "pct_error": 18.0356,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    },
+    {
+      "flow_id": "F6",
+      "ground_truth": 96.4267,
+      "predicted": 109.614,
+      "abs_error": 13.1873,
+      "pct_error": 13.676,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gpt-5-2025-08-07"
+    }
+  ]
+}

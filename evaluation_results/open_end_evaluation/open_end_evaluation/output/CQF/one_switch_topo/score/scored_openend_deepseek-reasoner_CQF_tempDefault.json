@@ -1,0 +1,701 @@
+{
+  "model": "deepseek-reasoner",
+  "prompt_type": "CQF",
+  "temperature_label": "tempDefault",
+  "timestamp": "2026-05-04T10:21:11.094737",
+  "total_tcs": 11,
+  "scored_tcs": 0,
+  "trivial_tcs": 0,
+  "invalid_tcs": 11,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 1.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": false,
+  "min_scored_tcs": 5,
+  "mae_us_majority": null,
+  "mape_pct_majority": null,
+  "mae_us_average": null,
+  "mape_pct_average": null,
+  "exact_match_rate": null,
+  "error_min": null,
+  "error_q1": null,
+  "error_median": null,
+  "error_q3": null,
+  "error_max": null,
+  "error_mean": null,
+  "total_flow_errors": 0,
+  "total_tokens_in": 28146,
+  "total_tokens_out": 263999,
+  "total_tokens": 292145,
+  "avg_tokens_in": 852.9,
+  "avg_tokens_out": 8000.0,
+  "avg_latency_ms": 97848.5,
+  "max_latency_ms": 109808,
+  "total_time_seconds": 3229.0,
+  "tc_results": {
+    "TC41": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC42": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC43": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC44": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC45": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC46": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC47": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC48": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC49": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC50": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC51": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 0,
+        "missing_flows": 3,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC41",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC41",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC41",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC42",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC42",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC42",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC43",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC43",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC43",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC44",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC44",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC44",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC45",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC45",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC45",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC46",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC46",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC46",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC47",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC47",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC47",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC48",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC48",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC48",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC49",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC49",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC49",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC50",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC50",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC50",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC51",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC51",
+      "model": "deepseek-reasoner"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC51",
+      "model": "deepseek-reasoner"
+    }
+  ],
+  "flow_records_avg": []
+}

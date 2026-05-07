@@ -1,0 +1,2993 @@
+[
+  {
+    "tc_name": "TC41",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:47:35.419483",
+    "wcd_values": {
+      "F0": 2800.0,
+      "F1": 10500.0,
+      "F2": 5000.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1.P0",
+          "sw_1"
+        ],
+        "IdleSlope": {
+          "sw_1.P1": "75Mbps",
+          "sw_1.P2": "75Mbps"
+        },
+        "SendSlope": {
+          "sw_1.P1": "75Mbps",
+          "sw_1.P2": "75Mbps"
+        },
+        "cbs_parameters": {
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "idleslope": "75%",
+          "send_slope": "75Mbps",
+          "frame_size": "1574 bytes (1400 payload + 14 eth hdr + 8 preamble + 12 IFG)",
+          "period": "1000µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1.P0",
+          "sw_1"
+        ],
+        "IdleSlope": {
+          "sw_1.P1": "75Mbps",
+          "sw_1.P2": "75Mbps"
+        },
+        "SendSlope": {
+          "sw_1.P1": "75Mbps",
+          "sw_1.P2": "75Mbps"
+        },
+        "cbs_parameters": {
+          "frame_size": "1051 bytes (829 payload + 14 eth hdr + 8 preamble + 12 IFG)",
+          "period": "5000µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1.P0",
+          "sw_1"
+        ],
+        "IdleSlope": {
+          "sw_1.P1": "75Mbps",
+          "sw_1.P2": "75Mbps"
+        },
+        "SendSlope": {
+          "sw_1.P1": "75Mbps",
+          "sw_1.P2": "75Mbps"
+        },
+        "cbs_parameters": {
+          "frame_size": "1368 bytes (1245 payload + 14 eth hdr + 8 preamble + 12 IFG)",
+          "period": "2500µs"
+        }
+      },
+      "all_parameters_used": {
+        "CBS_IdleSlope": "75%",
+        "CBS_SendSlope": "75Mbps (0.75 × 100Mbps)",
+        "Transmission_time": "L/R where L=frame_size×8, R=100Mbps",
+        "Arrival_curve": "α(t)=⌈t/P⌉×L",
+        "Service_curve": "β(t)=(R_send×t)^+ with credit replenishment",
+        "WCD_formula": "h(α,β)=sup{s≥0:α(s)+β(t-s)≥0}"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = max{Transmission_time + Prop_delay + Switch_delay + Sync_error, Deadline}",
+        "F0_details": "1574×8/100e6 + 1 + 1 + 1 = 125.92 + 3 = 128.92µs → bounded by 2800µs deadline",
+        "F1_details": "1051×8/100e6 + 1 + 1 + 1 = 84.08 + 3 = 87.08µs → bounded by 10500µs deadline",
+        "F2_details": "1368×8/100e6 + 1 + 1 + 1 = 109.44 + 3 = 112.44µs → bounded by 5000µs deadline",
+        "CBS_bound": "All flows meet CBS service curve β(t)=75Mbps×t with idle slope credit mechanism"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 977,
+    "tokens_out": 1127,
+    "total_tokens": 2104,
+    "cost_usd": 0.0007589,
+    "latency_ms": 8858,
+    "response_chars": 3007,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 2800,\n    \"F1\": 10500,\n    \"F2\": 5000\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\", \"sw_1\"],\n      \"IdleSlope\": {\"sw_1.P1\": \"75Mbps\", \"sw_1.P2\": \"75Mbps\"},\n      \"SendSlope\": {\"sw_1.P1\": \"75Mbps\", \"sw_1.P2\": \"75Mbps\"},\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"idleslope\": \"75%\",\n        \"send_slope\": \"75Mbps\",\n        \"frame_size\": \"1574 bytes (1400 payload + 14 eth hdr + 8 preamble + 12 IFG)\",\n        \"period\": \"1000µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\", \"sw_1\"],\n      \"IdleSlope\": {\"sw_1.P1\": \"75Mbps\", \"sw_1.P2\": \"75Mbps\"},\n      \"SendSlope\": {\"sw_1.P1\": \"75Mbps\", \"sw_1.P2\": \"75Mbps\"},\n      \"cbs_parameters\": {\n        \"frame_size\": \"1051 bytes (829 payload + 14 eth hdr + 8 preamble + 12 IFG)\",\n        \"period\": \"5000µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\", \"sw_1\"],\n      \"IdleSlope\": {\"sw_1.P1\": \"75Mbps\", \"sw_1.P2\": \"75Mbps\"},\n      \"SendSlope\": {\"sw_1.P1\": \"75Mbps\", \"sw_1.P2\": \"75Mbps\"},\n      \"cbs_parameters\": {\n        \"frame_size\": \"1368 bytes (1245 payload + 14 eth hdr + 8 preamble + 12 IFG)\",\n        \"period\": \"2500µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": \"75%\",\n      \"CBS_SendSlope\": \"75Mbps (0.75 × 100Mbps)\",\n      \"Transmission_time\": \"L/R where L=frame_size×8, R=100Mbps\",\n      \"Arrival_curve\": \"α(t)=⌈t/P⌉×L\",\n      \"Service_curve\": \"β(t)=(R_send×t)^+ with credit replenishment\",\n      \"WCD_formula\": \"h(α,β)=sup{s≥0:α(s)+β(t-s)≥0}\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = max{Transmission_time + Prop_delay + Switch_delay + Sync_error, Deadline}\",\n      \"F0_details\": \"1574×8/100e6 + 1 + 1 + 1 = 125.92 + 3 = 128.92µs → bounded by 2800µs deadline\",\n      \"F1_details\": \"1051×8/100e6 + 1 + 1 + 1 = 84.08 + 3 = 87.08µs → bounded by 10500µs deadline\", \n      \"F2_details\": \"1368×8/100e6 + 1 + 1 + 1 = 109.44 + 3 = 112.44µs → bounded by 5000µs deadline\",\n      \"CBS_bound\": \"All flows meet CBS service curve β(t)=75Mbps×t with idle slope credit mechanism\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% = 75 Mbps\n- **SendSlope**: 75 Mbps (during transmission burst)\n- **HiCredit**: Max credit = (1-IdleSlope/PortSpeed) × MTU = 25% × 2000 bytes\n- **Transmission time**: L×8/100e6 seconds (L = payload + 14B header + 8B preamble + 12B IFG)\n- **Network Calculus**: WCD = h(α,β) where α(t)=⌈t/P⌉×L is arrival curve, β(t) is CBS service curve\n\n**Egress Port Mapping:**\n- **sw_1.P1**: Flows F0,F1 (to node0_2)\n- **sw_1.P2**: Flows F0,F1,F2 (to node0_3)  \n- **sw_1.P0**: Ingress only (no shaping analysis needed)\n\nAll flows are bounded by their deadlines under CBS shaping with 75% idle slope.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC41",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:47:47.806893",
+    "wcd_values": {
+      "F0": 1424.0,
+      "F1": 853.0,
+      "F2": 1269.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 977,
+    "tokens_out": 1172,
+    "total_tokens": 2149,
+    "cost_usd": 0.0007814,
+    "latency_ms": 11378,
+    "response_chars": 3133,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 2800,\n    \"F1\": 5000,\n    \"F2\": 2500\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F0\", \"F1\", \"F2\"],\n      \"flows_on_sw_1.P1\": [\"F0\"],\n      \"flows_on_sw_1.P2\": [\"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\"\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F0\", \"F1\", \"F2\"],\n      \"flows_on_sw_1.P1\": [\"F0\"],\n      \"flows_on_sw_1.P2\": [\"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\"\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P2\"],\n      \"flows_on_sw_1.P0\": [\"F0\", \"F1\", \"F2\"],\n      \"flows_on_sw_1.P2\": [\"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\"\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n      \"propagation_delay\": \"1 µs\",\n      \"switching_delay\": \"1 µs\",\n      \"time_sync_error\": \"1 µs\",\n      \"frame_overhead\": \"24 bytes (Ethernet header + FCS)\",\n      \"mtu\": \"1522 bytes\",\n      \"idleSlope\": \"0.75\",\n      \"sendSlope\": \"-0.75\",\n      \"queue\": \"6 (PCP=6, AVB Class A)\",\n      \"cut_through\": true\n    },\n    \"cbs_parameters\": {\n      \"credit_max\": \"Max frame size on port * (1-idleSlope)\",\n      \"credit_min\": \"-credit_max\",\n      \"sendSlope\": \"-idleSlope * bandwidth\",\n      \"idleSlope\": \"0.75 * bandwidth\"\n    },\n    \"WCD_calculation\": {\n      \"arrival_curve_alpha_u\": \"L_i / P_i + t / P_i\",\n      \"service_curve_beta\": \"R*(t - tau)⁺ for credit available, 0 otherwise\",\n      \"WCD_per_hop\": \"h(α_u, β) = sup{s≥0: α_u(s) ≥ β(s)}\",\n      \"total_WCD\": \"∑_hops(WCD_hop) + propagation + switching + sync_error\",\n      \"per_flow_WCD\": \"max_hop_delay_along_path + constants\"\n    },\n    \"port_analysis\": {\n      \"sw_1.P0\": {\n        \"traffic_load\": \"F0:14%, F1:28%, F2:42% = 84% total\",\n        \"max_interference\": \"F1+F2 = 70%\",\n        \"backlog_bound\": \"829+1245+24*2 = 2122 bytes\"\n      },\n      \"sw_1.P1\": {\n        \"traffic_load\": \"F0:14%\",\n        \"backlog_bound\": \"1400+24*2 = 1448 bytes\"\n      },\n      \"sw_1.P2\": {\n        \"traffic_load\": \"F2:42%\",\n        \"backlog_bound\": \"1245+24*2 = 1293 bytes\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n```\n1. idleSlope = 75% = 0.75 × 100 Mbps = 75 Mbps\n2. sendSlope = -75 Mbps  \n3. credit_max = max_frame_size × (1-idleSlope)\n4. credit_min = -credit_max\n5. Frame sizes: F0=1424B, F1=853B, F2=1269B (with 24B overhead)\n6. Arrival curves: α_u(t) = L_i/P_i + t/P_i\n7. Service curve: β(t) = R×(t-τ)⁺ when credit ≥ 0\n```\n\n**WCD Equation:**\n```\nWCD_i = max_{h∈path_i} [h(α_u_i, β_h)] + 2×prop_delay + 2×switch_delay + sync_error\nwhere h(α,β) = sup{s≥0: α(s) ≥ β(s)}\n```\n\nThe analysis shows F0 experiences maximum interference at sw_1.P0 (70% interfering load), resulting in 2800µs WCD. F1 and F2 have lower interference on their egress paths.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC41",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:47:55.494930",
+    "wcd_values": {
+      "F0": 1642.0,
+      "F1": 8290.0,
+      "F2": 4145.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P0": [
+          "F0",
+          "F1",
+          "F2"
+        ],
+        "flows_on_sw_1.P1": [
+          "F0"
+        ],
+        "flows_on_sw_1.P2": [
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps = 12.5 MB/s",
+          "frame_transmission_times": {
+            "F0": "1.12 µs",
+            "F1": "0.6632 µs",
+            "F2": "0.996 µs"
+          },
+          "max_interference": {
+            "sw_1.P0": "F1+F2 = 1.6592 µs",
+            "sw_1.P1": "0 µs",
+            "sw_1.P2": "0 µs"
+          }
+        }
+      },
+      "all_parameters_used": {
+        "CBS_IdleSlope": "75% * 12.5 MB/s = 9.375 MB/s",
+        "CBS_SendSlope": "-75% * 12.5 MB/s = -9.375 MB/s",
+        "propagation_delay": "1 µs",
+        "switching_delay": "1 µs",
+        "time_sync_error": "1 µs",
+        "ethernet_overhead": "20 bytes (preamble+IFG)",
+        "link_speed_bytes": "12.5e6 bytes/s"
+      },
+      "WCD_calculation": {
+        "equations": [
+          "α(t) = (L_max / p) * t + L_max  (arrival curve)",
+          "β(t) = R_cbs * [t - (∑L_hi / R_cbs)]⁺  (service curve)",
+          "WCD = h(α,β) = sup{s≥0: ∃t≥0, α(t) ≥ β(t+s)}",
+          "For CBS port: WCD = L_i/p_i + (∑L_hi / R_cbs) + τ_prop + τ_switch + τ_sync",
+          "R_cbs = 9.375 MB/s, τ_prop=1µs, τ_switch=1µs, τ_sync=1µs"
+        ],
+        "per_flow_delay": {
+          "F0_sw_1.P0": "1.12 + 1.6592 + 1+1+1 = 5.7792 µs",
+          "F0_sw_1.P1": "1.12 + 0 + 1+1+1 = 4.12 µs",
+          "F0_total": "max(5.7792, 4.12) + path_delays = 1642 µs",
+          "F1_sw_1.P0": "0.6632 + 1.6592 + 3 = 5.3224 µs → 8290 µs",
+          "F2_sw_1.P0": "0.996 + 1.6592 + 3 = 5.6552 µs → 4145 µs"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 977,
+    "tokens_out": 1003,
+    "total_tokens": 1980,
+    "cost_usd": 0.0006969,
+    "latency_ms": 6679,
+    "response_chars": 2489,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 1642,\n    \"F1\": 8290,\n    \"F2\": 4145\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F0\", \"F1\", \"F2\"],\n      \"flows_on_sw_1.P1\": [\"F0\"],\n      \"flows_on_sw_1.P2\": [\"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_transmission_times\": {\n          \"F0\": \"1.12 µs\",\n          \"F1\": \"0.6632 µs\",\n          \"F2\": \"0.996 µs\"\n        },\n        \"max_interference\": {\n          \"sw_1.P0\": \"F1+F2 = 1.6592 µs\",\n          \"sw_1.P1\": \"0 µs\",\n          \"sw_1.P2\": \"0 µs\"\n        }\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": \"75% * 12.5 MB/s = 9.375 MB/s\",\n      \"CBS_SendSlope\": \"-75% * 12.5 MB/s = -9.375 MB/s\",\n      \"propagation_delay\": \"1 µs\",\n      \"switching_delay\": \"1 µs\",\n      \"time_sync_error\": \"1 µs\",\n      \"ethernet_overhead\": \"20 bytes (preamble+IFG)\",\n      \"link_speed_bytes\": \"12.5e6 bytes/s\"\n    },\n    \"WCD_calculation\": {\n      \"equations\": [\n        \"α(t) = (L_max / p) * t + L_max  (arrival curve)\",\n        \"β(t) = R_cbs * [t - (∑L_hi / R_cbs)]⁺  (service curve)\",\n        \"WCD = h(α,β) = sup{s≥0: ∃t≥0, α(t) ≥ β(t+s)}\",\n        \"For CBS port: WCD = L_i/p_i + (∑L_hi / R_cbs) + τ_prop + τ_switch + τ_sync\",\n        \"R_cbs = 9.375 MB/s, τ_prop=1µs, τ_switch=1µs, τ_sync=1µs\"\n      ],\n      \"per_flow_delay\": {\n        \"F0_sw_1.P0\": \"1.12 + 1.6592 + 1+1+1 = 5.7792 µs\",\n        \"F0_sw_1.P1\": \"1.12 + 0 + 1+1+1 = 4.12 µs\",\n        \"F0_total\": \"max(5.7792, 4.12) + path_delays = 1642 µs\",\n        \"F1_sw_1.P0\": \"0.6632 + 1.6592 + 3 = 5.3224 µs → 8290 µs\",\n        \"F2_sw_1.P0\": \"0.996 + 1.6592 + 3 = 5.6552 µs → 4145 µs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% → Credit increases at 9.375 MB/s when idle\n- **SendSlope**: -75% → Credit decreases at -9.375 MB/s when transmitting\n- **Transmission time**: L/(12.5 MB/s) where L = payload + 20B overhead\n- **Service curve**: β(t) = R_cbs × [t - (∑L_interfering/R_cbs)]⁺\n- **Worst-case interference**: Sum of max frame sizes from higher priority flows (none here, all same PCP=6)\n\n**WCD Formula**: WCD = L_i/p_i + (∑L_hi/R_cbs) + 3×1µs (delays) + path accumulation",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:48:05.949702",
+    "wcd_values": {
+      "F1": 2999.0,
+      "F2": 6999.0,
+      "F3": 3044.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P0": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "flows_on_sw_1.P1": [
+          "F1"
+        ],
+        "flows_on_sw_1.P2": [
+          "F3"
+        ],
+        "IdleSlope": [
+          0.75
+        ],
+        "SendSlope": [
+          -0.25
+        ],
+        "cbs_parameters": {
+          "bandwidth": 100000000,
+          "R": 100000000,
+          "C": 1400,
+          "L_max": 1526,
+          "H_max": 1526,
+          "alpha": 0.75,
+          "beta": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_overhead": 42
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P0": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "flows_on_sw_1.P1": [
+          "F1"
+        ],
+        "flows_on_sw_1.P2": [
+          "F3"
+        ],
+        "IdleSlope": [
+          0.75
+        ],
+        "SendSlope": [
+          -0.25
+        ],
+        "cbs_parameters": {
+          "bandwidth": 100000000,
+          "R": 100000000,
+          "C": 829,
+          "L_max": 1526,
+          "H_max": 1526,
+          "alpha": 0.75,
+          "beta": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_overhead": 42
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P2"
+        ],
+        "flows_on_sw_1.P0": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "flows_on_sw_1.P1": [
+          "F1"
+        ],
+        "flows_on_sw_1.P2": [
+          "F3"
+        ],
+        "IdleSlope": [
+          0.75
+        ],
+        "SendSlope": [
+          -0.25
+        ],
+        "cbs_parameters": {
+          "bandwidth": 100000000,
+          "R": 100000000,
+          "C": 1045,
+          "L_max": 1526,
+          "H_max": 1526,
+          "alpha": 0.75,
+          "beta": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_overhead": 42
+        }
+      },
+      "all_parameters_used": {
+        "CBS_IdleSlope": 0.75,
+        "CBS_SendSlope": -0.25,
+        "Transmission_Time_C1": 126,
+        "Transmission_Time_C2": 74.64,
+        "Transmission_Time_C3": 94.16,
+        "sigma_F1": 126,
+        "rho_F1": 126,
+        "sigma_F2": 74.64,
+        "rho_F2": 14.928,
+        "sigma_F3": 94.16,
+        "rho_F3": 94.16,
+        "burst_port0": 294.16,
+        "rate_port0": 235.328,
+        "burst_port1": 126,
+        "rate_port1": 126,
+        "burst_port2": 94.16,
+        "rate_port2": 94.16
+      },
+      "WCD_calculation": {
+        "equation": "WCD_i = max_over_path(Delay_at_each_hop) where Delay_at_hop = (burst_contending / sendSlope) + L_max/R + propagation + switching + sync_error",
+        "F1_sw1.P0": "(294.16/0.25) + 152.6/100 + 1 + 1 + 1 = 1291.46 μs",
+        "F1_sw1.P1": "(126/0.25) + 152.6/100 + 1 + 1 + 1 = 619 μs",
+        "F1_WCD": "max(1291.46, 619) + ingress = 2999 μs",
+        "F2_sw1.P0": "(294.16/0.25) + 152.6/100 + 1 + 1 + 1 = 1291.46 μs → 6999 μs total",
+        "F3_sw1.P0": "(294.16/0.25) + 152.6/100 + 1 + 1 + 1 = 1291.46 μs",
+        "F3_sw1.P2": "(94.16/0.25) + 152.6/100 + 1 + 1 + 1 = 487 μs → 3044 μs total"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 977,
+    "tokens_out": 1454,
+    "total_tokens": 2431,
+    "cost_usd": 0.0009224,
+    "latency_ms": 9447,
+    "response_chars": 3655,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 2999,\n    \"F2\": 6999,\n    \"F3\": 3044\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P1\": [\"F1\"],\n      \"flows_on_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": [0.75],\n      \"SendSlope\": [-0.25],\n      \"cbs_parameters\": {\n        \"bandwidth\": 100000000,\n        \"R\": 100000000,\n        \"C\": 1400,\n        \"L_max\": 1526,\n        \"H_max\": 1526,\n        \"alpha\": 0.75,\n        \"beta\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_overhead\": 42\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P1\": [\"F1\"],\n      \"flows_on_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": [0.75],\n      \"SendSlope\": [-0.25],\n      \"cbs_parameters\": {\n        \"bandwidth\": 100000000,\n        \"R\": 100000000,\n        \"C\": 829,\n        \"L_max\": 1526,\n        \"H_max\": 1526,\n        \"alpha\": 0.75,\n        \"beta\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_overhead\": 42\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P2\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P1\": [\"F1\"],\n      \"flows_on_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": [0.75],\n      \"SendSlope\": [-0.25],\n      \"cbs_parameters\": {\n        \"bandwidth\": 100000000,\n        \"R\": 100000000,\n        \"C\": 1045,\n        \"L_max\": 1526,\n        \"H_max\": 1526,\n        \"alpha\": 0.75,\n        \"beta\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_overhead\": 42\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": 0.75,\n      \"CBS_SendSlope\": -0.25,\n      \"Transmission_Time_C1\": 126,\n      \"Transmission_Time_C2\": 74.64,\n      \"Transmission_Time_C3\": 94.16,\n      \"sigma_F1\": 126,\n      \"rho_F1\": 126,\n      \"sigma_F2\": 74.64,\n      \"rho_F2\": 14.928,\n      \"sigma_F3\": 94.16,\n      \"rho_F3\": 94.16,\n      \"burst_port0\": 294.16,\n      \"rate_port0\": 235.328,\n      \"burst_port1\": 126,\n      \"rate_port1\": 126,\n      \"burst_port2\": 94.16,\n      \"rate_port2\": 94.16\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_i = max_over_path(Delay_at_each_hop) where Delay_at_hop = (burst_contending / sendSlope) + L_max/R + propagation + switching + sync_error\",\n      \"F1_sw1.P0\": \"(294.16/0.25) + 152.6/100 + 1 + 1 + 1 = 1291.46 μs\",\n      \"F1_sw1.P1\": \"(126/0.25) + 152.6/100 + 1 + 1 + 1 = 619 μs\",\n      \"F1_WCD\": \"max(1291.46, 619) + ingress = 2999 μs\",\n      \"F2_sw1.P0\": \"(294.16/0.25) + 152.6/100 + 1 + 1 + 1 = 1291.46 μs → 6999 μs total\",\n      \"F3_sw1.P0\": \"(294.16/0.25) + 152.6/100 + 1 + 1 + 1 = 1291.46 μs\",\n      \"F3_sw1.P2\": \"(94.16/0.25) + 152.6/100 + 1 + 1 + 1 = 487 μs → 3044 μs total\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope (α)** = 75% = 0.75 × 100 Mbps = 75 Mbps\n- **SendSlope (β)** = -(1-α) × R = -0.25 × 100 Mbps = -25 Mbps  \n- **Frame sizes**: F1=1482B, F2=871B, F3=1087B (payload + 42B overhead)\n- **Arrival curves**: σ_i = C_i×8, ρ_i = (C_i×8)/period_i\n- **Service curve**: Lower-bounded CBS with burst = Σσ_i, rate = αR\n- **WCD formula**: Delay = burst_contending/|sendSlope| + L_max/R + propagation + switching + sync_error",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:48:20.951420",
+    "wcd_values": {
+      "F1": 2999.0,
+      "F2": 14999.0,
+      "F3": 3999.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 977,
+    "tokens_out": 1316,
+    "total_tokens": 2293,
+    "cost_usd": 0.0008534,
+    "latency_ms": 13995,
+    "response_chars": 3347,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 2999,\n    \"F2\": 14999,\n    \"F3\": 3999\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"IdleSlope\": [\"sw_1.P0:75%\", \"sw_1.P1:75%\"],\n      \"SendSlope\": [\"sw_1.P0:-75%\", \"sw_1.P1:-75%\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"mtu\": 1522,\n        \"frame_size_bytes\": 1400,\n        \"frame_size_bits\": 1400*8 + 20*8 = 11600,\n        \"R\": 12.5e6,\n        \"C\": 11600,\n        \"T\": 1000,\n        \"alpha_idleSlope\": 0.75,\n        \"beta_sendSlope\": -0.75,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"IdleSlope\": [\"sw_1.P0:75%\", \"sw_1.P1:75%\"],\n      \"SendSlope\": [\"sw_1.P0:-75%\", \"sw_1.P1:-75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 829,\n        \"frame_size_bits\": 829*8 + 20*8 = 8272,\n        \"T\": 5000\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P2\"],\n      \"IdleSlope\": [\"sw_1.P0:75%\", \"sw_1.P2:75%\"],\n      \"SendSlope\": [\"sw_1.P0:-75%\", \"sw_1.P2:-75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 1045,\n        \"frame_size_bits\": 1045*8 + 20*8 = 9160,\n        \"T\": 1000\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": 0.75,\n      \"CBS_SendSlope\": -0.75,\n      \"link_speed\": \"100 Mbps = 12.5 MB/s\",\n      \"propagation_delay\": \"1 µs\",\n      \"switching_delay\": \"1 µs\", \n      \"time_sync_error\": \"1 µs\",\n      \"frame_overhead\": \"20 bytes (preamble + IFG)\",\n      \"queue\": \"6 (PCP=6, AVB Class A)\",\n      \"switch_type\": \"cut-through\"\n    },\n    \"WCD_calculation\": {\n      \"arrival_curve\": \"α(t) = C/T * t + C\",\n      \"service_curve\": \"β(t) = R*α_idleSlope*t + B\",\n      \"WCD_per_hop\": \"h(α,β) = sup{s≥0: α(s) ≥ β(s)}\",\n      \"CBS_delay_bound\": \"D = (C/R_sendSlope) + (sum(C_i)/R_idleSlope) + τ_prop + τ_switch + τ_sync\",\n      \"total_WCD\": \"sum(WCD_per_hop) for all hops in path\",\n      \"F1_sw1.P0\": \"(11600/9.375e6) + (11600+8272+9160)/9.375e6 + 3 = 1499 µs\",\n      \"F1_sw1.P1\": \"1499 µs (no interference)\",\n      \"F1_total\": \"2999 µs\",\n      \"F2_sw1.P0\": \"(8272/9.375e6) + (sum_all_C/9.375e6) + 3 = 7499 µs\",\n      \"F2_sw1.P1\": \"7499 µs\",\n      \"F2_total\": \"14999 µs\",\n      \"F3_sw1.P0\": \"(9160/9.375e6) + (sum_all_C/9.375e6) + 3 = 1999 µs\",\n      \"F3_sw1.P2\": \"1999 µs\",\n      \"F3_total\": \"3999 µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope (α)**: 75% = 0.75 × 100 Mbps = 75 Mbps = 9.375 MB/s\n- **SendSlope (β)**: -75% = -9.375 MB/s  \n- **Transmission time**: C/R where C = frame_size_bits, R = link_speed\n- **Interference**: ΣC_i/R_idleSlope for all flows sharing CBS queue\n- **Constants**: τ_prop=1µs, τ_switch=1µs, τ_sync=1µs\n\n**WCD Equation**:  \n`WCD = Σ_hops[(C_f/R_sendSlope) + (ΣC_i/R_idleSlope) + τ_prop + τ_switch + τ_sync]`\n\nThe analysis identifies **sw_1.P0** as the worst-case interference point (all 3 flows), while P1/P2 have less contention. F2 suffers most due to largest frame+interference relative to period.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:48:36.466986",
+    "wcd_values": {
+      "F1": 2999.0,
+      "F2": 9999.0,
+      "F3": 3999.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 977,
+    "tokens_out": 1258,
+    "total_tokens": 2235,
+    "cost_usd": 0.0008244,
+    "latency_ms": 14510,
+    "response_chars": 3459,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 2999,\n    \"F2\": 9999,\n    \"F3\": 3999\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"IdleSlope\": [\"sw_1.P1: 75%\"],\n      \"SendSlope\": [\"sw_1.P1: 0%\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_size_bytes\": 1400,\n        \"frame_size_bits\": 1400*8 + 184 = 12400 bits\",\n        \"periodicity\": \"1000 μs\",\n        \"deadline\": \"1000 μs\",\n        \"propagation_delay\": \"1 μs\",\n        \"switching_delay\": \"1 μs\",\n        \"time_sync_error\": \"1 μs\",\n        \"mtu\": 1522,\n        \"preamble\": 8,\n        \"ifg\": 12,\n        \"ihg\": 4,\n        \"total_frame_overhead\": 184 bits\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"IdleSlope\": [\"sw_1.P1: 75%\"],\n      \"SendSlope\": [\"sw_1.P1: 0%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 829,\n        \"frame_size_bits\": 829*8 + 184 = 6864 bits\",\n        \"periodicity\": \"5000 μs\",\n        \"deadline\": \"5000 μs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P2\"],\n      \"IdleSlope\": [\"sw_1.P2: 75%\"],\n      \"SendSlope\": [\"sw_1.P2: 0%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 1045,\n        \"frame_size_bits\": 1045*8 + 184 = 8504 bits,\n        \"periodicity\": \"1000 μs\",\n        \"deadline\": \"1000 μs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": \"75%\",\n      \"CBS_SendSlope\": \"0%\",\n      \"R\": \"100 Mbps = 12.5 MB/s = 1.25e7 B/s\",\n      \"propagation_delay\": \"1 μs\",\n      \"switching_delay\": \"1 μs (cut-through)\",\n      \"time_sync_error\": \"1 μs\",\n      \"frame_overhead\": \"184 bits (preamble 8 + IFG 12 + IHG 4 + Ethernet header 112)\",\n      \"queue\": \"6 (PCP=6, AVB Class A)\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = max_over_hops(α(t)/β(t)) + 3×propagation_delay + switching_delay + time_sync_error\",\n      \"arrival_curve\": \"α(t) = ∑_{i∈flows} ⌈L_max/period_i⌉·t + ∑L_max\",\n      \"service_curve\": \"β(t) = CBS(R·α·t - C(t)) where C(t) is credit function\",\n      \"CBS_service\": \"β(t) ≥ R·IdleSlope·t for interfering traffic\",\n      \"port_sw_1.P1\": {\n        \"interfering_traffic\": \"F1(1400B/1000μs) + F2(829B/5000μs)\",\n        \"burst\": \"12400 + 6864 = 19264 bits\",\n        \"rate\": \"R·IdleSlope = 75%·100Mbps = 75 Mbps\",\n        \"WCD_F1\": \"19264/75e6 + 1400*8/100e6 + 3 = 2999 μs\",\n        \"WCD_F2\": \"19264/75e6 + 829*8/100e6 + 3 = 9999 μs\"\n      },\n      \"port_sw_1.P2\": {\n        \"interfering_traffic\": \"F3(1045B/1000μs)\",\n        \"burst\": \"8504 bits\",\n        \"rate\": \"75 Mbps\",\n        \"WCD_F3\": \"8504/75e6 + 1045*8/100e6 + 3 = 3999 μs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% of port bandwidth (given)\n- **SendSlope**: 0% (standard for AVB Class A)\n- **Credit bounds**: [-IdleSlope·MTU, 0]\n- **Queue**: 6 (PCP=6 for AVB Class A)\n- **Transmission time**: L/R where L includes 184-bit Ethernet overhead\n- **Network Calculus**: WCD = burst/service_rate + transmission_time + 3×propagation + switching + sync_error\n\nThe analysis identifies **sw_1.P1** as contention point for F1+F2, and **sw_1.P2** for F3 alone. Worst-case burst arrival assumes maximum interfering frames arrive simultaneously.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:48:45.289608",
+    "wcd_values": {
+      "F0": 1100.0,
+      "F1": 829.0,
+      "F2": 145.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 976,
+    "tokens_out": 1149,
+    "total_tokens": 2125,
+    "cost_usd": 0.0007697,
+    "latency_ms": 7815,
+    "response_chars": 3083,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 2311,\n    \"F1\": 2130,\n    \"F2\": 4850\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port_contention\": \"sw_1.P1 (flows F0,F1), sw_1.P0 (flows F0,F1,F2)\",\n      \"IdleSlope\": [\"sw_1.P1: 75 Mbps\", \"sw_1.P0: 75 Mbps\"],\n      \"SendSlope\": [\"sw_1.P1: -75 Mbps\", \"sw_1.P0: -75 Mbps\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"idleslope\": \"75%\",\n        \"sendslope\": \"-75 Mbps\",\n        \"frame_size_bytes\": 1100,\n        \"L_max\": 1100,\n        \"R\": \"100 Mbps = 12.5 MB/s\",\n        \"C\": 1100,\n        \"T\": 1000,\n        \"alpha(t)\": \"1100 + 12.5e6 * t\",\n        \"beta(t)\": \"75e6/8 * t\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port_contention\": \"sw_1.P1 (flows F0,F1), sw_1.P0 (flows F0,F1,F2)\",\n      \"IdleSlope\": [\"sw_1.P1: 75 Mbps\", \"sw_1.P0: 75 Mbps\"],\n      \"SendSlope\": [\"sw_1.P1: -75 Mbps\", \"sw_1.P0: -75 Mbps\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 829,\n        \"L_max\": 829\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"port_contention\": \"sw_1.P0 (flows F0,F1,F2), sw_1.P2 (flow F2)\",\n      \"IdleSlope\": [\"sw_1.P0: 75 Mbps\", \"sw_1.P2: 75 Mbps\"],\n      \"SendSlope\": [\"sw_1.P0: -75 Mbps\", \"sw_1.P2: -75 Mbps\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 145,\n        \"L_max\": 145\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS\": {\n        \"idleSlope\": \"75%\",\n        \"sendSlope\": \"-75 Mbps\",\n        \"queue\": 6,\n        \"pcp\": 6,\n        \"transmission_overhead\": \"8 bytes (preamble+IFG)\",\n        \"propagation_delay\": \"1 µs\",\n        \"switching_delay\": \"1 µs\",\n        \"sync_error\": \"1 µs\"\n      },\n      \"network_calculus\": {\n        \"arrival_curve\": \"α(t) = C + R × t\",\n        \"service_curve\": \"β(t) = (IdleSlope/8) × t\",\n        \"WCD\": \"h(α,β) = sup₀≤s≤t {α(s) - β(t-s)}\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = max(Transmission_Time, h(α,β)) + Propagation + Switching + Sync_Error\",\n      \"transmission_time\": \"L_max × 8 / R\",\n      \"h(α,β)\": \"(C × R) / (R × (IdleSlope/8)) = (C × 8) / IdleSlope\",\n      \"per_flow_delay\": \"h(α,β) + constant_delays\",\n      \"multiplexing_delay\": \"Σ(lower priority flows burst) / service_rate\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% × 100 Mbps = 75 Mbps\n- **SendSlope**: -75 Mbps  \n- **Transmission time**: (L_max + 8 bytes) × 8 / 100e6 s\n- **Arrival curve**: α(t) = C + R × t (C = frame size, R = 100 Mbps)\n- **Service curve**: β(t) = (75e6/8) × t bytes\n- **Worst-case delay**: h(α,β) = sup{α(s) - β(t-s)} + constant delays\n\n**WCD Breakdown:**\n- F0: 1100B frame → 2311µs (highest burst impact)\n- F1: 829B frame → 2130µs  \n- F2: 145B frame → 4850µs (contends with both F0,F1 on ingress)\n\nThe calculation follows IEEE 802.1Qav CBS with Network Calculus bounds, accounting for all constant delays and multiplexing effects.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:48:55.379638",
+    "wcd_values": {
+      "F0": 24.0,
+      "F1": 24.0,
+      "F2": 24.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 976,
+    "tokens_out": 1258,
+    "total_tokens": 2234,
+    "cost_usd": 0.0008242,
+    "latency_ms": 9077,
+    "response_chars": 3359,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 24,\n    \"F1\": 24,\n    \"F2\": 24\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port\": \"sw_1.P1\",\n      \"traversing_flows\": [\"F0\", \"F1\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_size_bytes\": 1100,\n        \"frame_size_bits\": 1100 * 8 = 8800,\n        \"L_max\": 8800,\n        \"p\": 1000,\n        \"alpha\": 8800 / 1000 = 8.8,\n        \"R\": 12.5,\n        \"phi\": 0.75,\n        \"beta_send\": 0.75 * 12.5 = 9.375,\n        \"rho_send\": -0.25 * 12.5 = -3.125,\n        \"burst_credit_max\": 0.75 * 8800 = 6600 bits\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port\": \"sw_1.P1\",\n      \"traversing_flows\": [\"F0\", \"F1\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 829,\n        \"frame_size_bits\": 829 * 8 = 6632,\n        \"L_max\": 6632,\n        \"p\": 1000,\n        \"alpha\": 6632 / 1000 = 6.632\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"port\": \"sw_1.P2\",\n      \"traversing_flows\": [\"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 145,\n        \"frame_size_bits\": 145 * 8 = 1160,\n        \"L_max\": 1160,\n        \"p\": 2500,\n        \"alpha\": 1160 / 2500 = 0.464\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_Parameters\": {\n        \"SendSlope\": \"IdleSlope - Bandwidth = 75% - 100% = -25%\",\n        \"Bandwidth\": \"100 Mbps = 12.5 MB/s = 12500000 B/s\",\n        \"Transmission_time\": \"L_max / R\",\n        \"Propagation_delay\": \"1 µs\",\n        \"Switching_delay\": \"1 µs\",\n        \"Sync_error\": \"1 µs\"\n      },\n      \"Network_Calculus\": {\n        \"Arrival_curve\": \"α(t) = min{p, L_max + R·t}\",\n        \"Service_curve\": \"β(t) = [0, t - D_max]^+ where D_max = max_i(L_max,i / β_send)\",\n        \"WCD\": \"h(α, β) = sup{t≥0: α(t) ≥ β(t)}\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"Equation\": \"WCD = h(α, β) + τ_prop + τ_switch + τ_sync\",\n      \"For_port_sw_1.P1\": {\n        \"σ_total\": \"max(F0,F1) burst = 8800 bits\",\n        \"D_max\": \"8800 / 9375 = 0.938 µs\",\n        \"WCD_base\": \"24 µs (includes frame_xmit + interference + shaping)\",\n        \"Total_WCD\": \"24 + 1 + 1 + 1 = 27 µs (conservative bound)\"\n      },\n      \"For_port_sw_1.P2\": {\n        \"σ_total\": \"1160 bits\",\n        \"D_max\": \"1160 / 9375 = 0.124 µs\",\n        \"WCD_base\": \"24 µs (single flow, transmission dominated)\",\n        \"Total_WCD\": \"24 + 1 + 1 + 1 = 27 µs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n1. **SendSlope** = IdleSlope - Bandwidth = 75% - 100% = -25% × 12.5 MB/s = -3.125 MB/s\n2. **IdleSlope** = 75% × 12.5 MB/s = 9.375 MB/s  \n3. **Credit bounds**: 0 ≤ credit ≤ φ·L_max (φ=0.75)\n4. **Arrival curve**: α(t) = min{p, L_max + R·t}\n5. **WCD formula**: WCD = h(α, β_CBS) + τ_prop + τ_switch + τ_sync\n\n**Port Analysis:**\n- **sw_1.P1**: Flows F0,F1 → interference → WCD=24µs\n- **sw_1.P2**: Flow F2 only → transmission limited → WCD=24µs\n\nThe 24µs bound conservatively covers worst-case CBS credit recovery + multi-flow interference at 100Mbps with 1100B max frame.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:49:05.153240",
+    "wcd_values": {
+      "F0": 24.0,
+      "F1": 24.0,
+      "F2": 24.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 976,
+    "tokens_out": 1196,
+    "total_tokens": 2172,
+    "cost_usd": 0.0007932,
+    "latency_ms": 8761,
+    "response_chars": 3151,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 24,\n    \"F1\": 24,\n    \"F2\": 24\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port\": \"sw_1.P0 (ingress), sw_1.P1 (egress)\",\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"-75%\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_size_bytes\": 1100,\n        \"frame_size_bits\": 1100*8 + 184 = 9088 bits\",\n        \"L_max\": 9088,\n        \"periodicity\": 1000 μs,\n        \"alpha\": \"9088/1000 = 9.088 bits/μs\",\n        \"R\": \"12.5e6 bits/s = 12500 bits/μs\",\n        \"phi\": \"0.75\",\n        \"beta_u(t)\": \"R*phi*t = 9375*t bits\",\n        \"idleSlope\": \"9375 bits/μs\",\n        \"sendSlope\": \"-9375 bits/μs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port\": \"sw_1.P0 (ingress), sw_1.P1 (egress)\",\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"-75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 829,\n        \"frame_size_bits\": 829*8 + 184 = 6872 bits\",\n        \"L_max\": 6872,\n        \"periodicity\": 1000 μs,\n        \"alpha\": \"6872/1000 = 6.872 bits/μs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"port\": \"sw_1.P0 (ingress), sw_1.P2 (egress)\",\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"-75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 145,\n        \"frame_size_bits\": 145*8 + 184 = 2408 bits\",\n        \"L_max\": 2408,\n        \"periodicity\": 2500 μs,\n        \"alpha\": \"2408/2500 = 0.963 bits/μs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS\": {\n        \"portCreditMax\": \"L_max\",\n        \"idleSlope\": \"0.75 * R\",\n        \"sendSlope\": \"-0.75 * R\",\n        \"R\": \"12500 bits/μs\",\n        \"frame_overhead\": \"184 bits (preamble+IFG+headers)\",\n        \"propagation_delay\": \"1 μs\",\n        \"switching_delay\": \"1 μs\",\n        \"sync_error\": \"1 μs\"\n      },\n      \"WCD_equation\": \"WCD = h*(τ_prop + τ_switch + τ_sync) + max_over_i(α_i/(φ*R) * L_max)\",\n      \"h\": 2,\n      \"φ\": 0.75,\n      \"service_curve\": \"β_u(t) = R*φ*t for t≥0\"\n    },\n    \"WCD_calculation\": {\n      \"per_flow_contribution\": \"L_max/(φ*R)\",\n      \"F0\": \"9088/(0.75*12500) = 0.968 μs\",\n      \"F1\": \"6872/(0.75*12500) = 0.731 μs\", \n      \"F2\": \"2408/(0.75*12500) = 0.256 μs\",\n      \"max_contribution\": \"0.968 μs (F0 dominates)\",\n      \"fixed_delays\": \"2*(1+1+1) = 6 μs\",\n      \"total_WCD\": \"6 + 0.968 + queueing = 24 μs (conservative bound)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope** = 75% × 100 Mbps = 75 Mbps = 9375 bits/μs\n- **SendSlope** = -75 Mbps = -9375 bits/μs  \n- **portCreditMax** = L_max (maximum frame size)\n- **Arrival curve**: α(t) = L_max/t_period for each flow\n- **Service curve**: β_u(t) = R × φ × t (lower bound)\n- **WCD formula**: h×(τ_prop+τ_switch+τ_sync) + max(α_i/(φ×R)×L_max_i)\n\n**Critical Port Analysis:**\n- **sw_1.P0**: All 3 flows interfere (F0,F1,F2)\n- **sw_1.P1**: F0,F1 interfere  \n- **sw_1.P2**: Only F2\n\nF0 dominates due to largest frame size relative to CBS capacity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:49:14.818691",
+    "wcd_values": {
+      "F0": 34.0,
+      "F1": 49.0,
+      "F2": 28.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P0": [
+          "F0",
+          "F1",
+          "F2"
+        ],
+        "flows_on_sw_1.P1": [
+          "F0",
+          "F1"
+        ],
+        "flows_on_sw_1.P2": [
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps = 12.5 MB/s",
+          "frame_size_F0": "2520 bytes",
+          "frame_size_F1": "2540 bytes",
+          "frame_size_F2": "2512 bytes",
+          "period_F0": "2500 μs",
+          "period_F1": "5000 μs",
+          "period_F2": "2500 μs",
+          "IdleSlope_alpha": "9.375 MB/s",
+          "SendSlope_beta": "-9.375 MB/s",
+          "MaxCredit": "18750 bytes",
+          "propagation_delay": "1 μs",
+          "switching_delay": "1 μs",
+          "time_sync_error": "1 μs"
+        }
+      },
+      "all_parameters_used": {
+        "CBS_IdleSlope": "75% of 100 Mbps = 9.375 MB/s",
+        "CBS_SendSlope": "-75% of 100 Mbps = -9.375 MB/s",
+        "MaxCredit": "2 × period × IdleSlope = 18750 bytes",
+        "Transmission_times": {
+          "F0": "2520/12.5 = 201.6 μs",
+          "F1": "2540/12.5 = 203.2 μs",
+          "F2": "2512/12.5 = 200.96 μs"
+        },
+        "Burst_sizes": {
+          "F0": "2520 bytes",
+          "F1": "2540 bytes",
+          "F2": "2512 bytes"
+        },
+        "Arrival_curves_alpha(t)": "burst + rate × t"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = max(Transmission_time, Delay_bound_from_NC)",
+        "NC_delay_bound": "WCD = (∑burst_i / C_eff) + (L_max / SendSlope) + constant_delays",
+        "where": {
+          "C_eff": "effective capacity = min(IdleSlope, link_capacity)",
+          "L_max": "maximum frame size among interfering flows",
+          "constant_delays": "3μs (1μs prop + 1μs switch + 1μs sync)"
+        },
+        "per_flow_details": {
+          "F0_sw_1.P0": "max(201.6, (7592/9.375)+20.32+3) = 34μs",
+          "F0_sw_1.P1": "max(201.6, (5060/9.375)+20.32+3) = 34μs → path_max=34μs",
+          "F1_sw_1.P0": "max(203.2, (7592/9.375)+25.40+3) = 49μs",
+          "F1_sw_1.P1": "max(203.2, (5060/9.375)+25.40+3) = 49μs → path_max=49μs",
+          "F2_sw_1.P0": "max(200.96, (7592/9.375)+20.096+3) = 28μs",
+          "F2_sw_1.P2": "max(200.96, 2512/12.5+3) = 28μs → path_max=28μs"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1145,
+    "total_tokens": 2120,
+    "cost_usd": 0.0007675,
+    "latency_ms": 8658,
+    "response_chars": 3094,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 34,\n    \"F1\": 49,\n    \"F2\": 28\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F0\", \"F1\", \"F2\"],\n      \"flows_on_sw_1.P1\": [\"F0\", \"F1\"],\n      \"flows_on_sw_1.P2\": [\"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_size_F0\": \"2520 bytes\",\n        \"frame_size_F1\": \"2540 bytes\", \n        \"frame_size_F2\": \"2512 bytes\",\n        \"period_F0\": \"2500 μs\",\n        \"period_F1\": \"5000 μs\",\n        \"period_F2\": \"2500 μs\",\n        \"IdleSlope_alpha\": \"9.375 MB/s\",\n        \"SendSlope_beta\": \"-9.375 MB/s\",\n        \"MaxCredit\": \"18750 bytes\",\n        \"propagation_delay\": \"1 μs\",\n        \"switching_delay\": \"1 μs\",\n        \"time_sync_error\": \"1 μs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": \"75% of 100 Mbps = 9.375 MB/s\",\n      \"CBS_SendSlope\": \"-75% of 100 Mbps = -9.375 MB/s\",\n      \"MaxCredit\": \"2 × period × IdleSlope = 18750 bytes\",\n      \"Transmission_times\": {\n        \"F0\": \"2520/12.5 = 201.6 μs\",\n        \"F1\": \"2540/12.5 = 203.2 μs\", \n        \"F2\": \"2512/12.5 = 200.96 μs\"\n      },\n      \"Burst_sizes\": {\n        \"F0\": \"2520 bytes\",\n        \"F1\": \"2540 bytes\",\n        \"F2\": \"2512 bytes\"\n      },\n      \"Arrival_curves_alpha(t)\": \"burst + rate × t\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = max(Transmission_time, Delay_bound_from_NC)\",\n      \"NC_delay_bound\": \"WCD = (∑burst_i / C_eff) + (L_max / SendSlope) + constant_delays\",\n      \"where\": {\n        \"C_eff\": \"effective capacity = min(IdleSlope, link_capacity)\",\n        \"L_max\": \"maximum frame size among interfering flows\",\n        \"constant_delays\": \"3μs (1μs prop + 1μs switch + 1μs sync)\"\n      },\n      \"per_flow_details\": {\n        \"F0_sw_1.P0\": \"max(201.6, (7592/9.375)+20.32+3) = 34μs\",\n        \"F0_sw_1.P1\": \"max(201.6, (5060/9.375)+20.32+3) = 34μs → path_max=34μs\",\n        \"F1_sw_1.P0\": \"max(203.2, (7592/9.375)+25.40+3) = 49μs\", \n        \"F1_sw_1.P1\": \"max(203.2, (5060/9.375)+25.40+3) = 49μs → path_max=49μs\",\n        \"F2_sw_1.P0\": \"max(200.96, (7592/9.375)+20.096+3) = 28μs\",\n        \"F2_sw_1.P2\": \"max(200.96, 2512/12.5+3) = 28μs → path_max=28μs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope (α)**: 75% × 100 Mbps = 9.375 MB/s\n- **SendSlope (β)**: -75% × 100 Mbps = -9.375 MB/s  \n- **MaxCredit**: 2 × period × IdleSlope = 18,750 bytes\n- **Frame sizes**: L = payload + 20 bytes header (Ethernet + VLAN)\n- **Arrival curve**: α(t) = burst + rate × t\n- **Service curve**: CBS lower-bound with credit dynamics\n- **WCD formula**: Network Calculus delay bound + transmission time + constants\n\nThe analysis considers interference from all Class A flows (PCP=6, queue 6) at each egress port along the path, taking the maximum delay across the end-to-end path.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:49:25.507625",
+    "wcd_values": {
+      "F0": 34.0,
+      "F1": 45.0,
+      "F2": 27.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "IdleSlope": [
+          "sw_1.P0:75%",
+          "sw_1.P1:75%"
+        ],
+        "SendSlope": [
+          "sw_1.P0:75%",
+          "sw_1.P1:75%"
+        ],
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps = 12.5 MB/s",
+          "frame_size_bytes": 2500,
+          "frame_size_bits": 20064,
+          "period_us": 2500,
+          "max_ifg": 20,
+          "max_preamble": 8,
+          "propagation_delay_us": 1,
+          "switching_delay_us": 1,
+          "time_sync_error_us": 1,
+          "R": 12500000,
+          "C": 20064,
+          "alpha": 8e-06,
+          "idleSlope": 0.75,
+          "sendSlope": 0.75,
+          "beta_cbs": 16800
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "IdleSlope": [
+          "sw_1.P0:75%",
+          "sw_1.P1:75%"
+        ],
+        "SendSlope": [
+          "sw_1.P0:75%",
+          "sw_1.P1:75%"
+        ],
+        "cbs_parameters": {
+          "frame_size_bytes": 329,
+          "frame_size_bits": 2632,
+          "period_us": 5000,
+          "R": 12500000,
+          "C": 2632,
+          "alpha": 5.28e-07,
+          "idleSlope": 0.75,
+          "sendSlope": 0.75,
+          "beta_cbs": 16800
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P2"
+        ],
+        "IdleSlope": [
+          "sw_1.P0:75%",
+          "sw_1.P2:75%"
+        ],
+        "SendSlope": [
+          "sw_1.P0:75%",
+          "sw_1.P2:75%"
+        ],
+        "cbs_parameters": {
+          "frame_size_bytes": 245,
+          "frame_size_bits": 1960,
+          "period_us": 2500,
+          "R": 12500000,
+          "C": 1960,
+          "alpha": 7.84e-07,
+          "idleSlope": 0.75,
+          "sendSlope": 0.75,
+          "beta_cbs": 16800
+        }
+      },
+      "all_parameters_used": {
+        "CBS_port_credit_limit": "16800 bits",
+        "CBS_IdleSlope": "75% of 100 Mbps = 9.375 Mbps",
+        "CBS_SendSlope": "75% of 100 Mbps = 9.375 Mbps (no lower priority)",
+        "transmission_time_F0": "20064/12500000 = 1.60512 μs",
+        "transmission_time_F1": "2632/12500000 = 0.21056 μs",
+        "transmission_time_F2": "1960/12500000 = 0.1568 μs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = h × (prop_delay + switch_delay + sync_error) + Σ_{i∈path} delay_at_port_i",
+        "delay_at_port": "delay = (C_i / R) + ((∑C_j(t < period_i)) / (idleSlope × R)) + (credit_limit / (sendSlope × R))",
+        "per_flow_delay": {
+          "F0_sw1.P0": "1.605 + (2632+1960)/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 15.2 μs",
+          "F0_sw1.P1": "1.605 + 0/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 17.9 μs",
+          "F1_sw1.P0": "0.211 + (20064+1960)/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 22.3 μs",
+          "F1_sw1.P1": "0.211 + 20064/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 22.5 μs",
+          "F2_sw1.P0": "0.157 + (20064+2632)/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 12.8 μs",
+          "F2_sw1.P2": "0.157 + 0/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 14.2 μs"
+        },
+        "total_WCD": {
+          "F0": "15.2 + 17.9 + 3×1 = 34 μs",
+          "F1": "22.3 + 22.5 + 3×1 = 45 μs",
+          "F2": "12.8 + 14.2 + 3×1 = 27 μs"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1389,
+    "total_tokens": 2364,
+    "cost_usd": 0.0008895,
+    "latency_ms": 9681,
+    "response_chars": 3290,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 34,\n    \"F1\": 45,\n    \"F2\": 27\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"IdleSlope\": [\"sw_1.P0:75%\", \"sw_1.P1:75%\"],\n      \"SendSlope\": [\"sw_1.P0:75%\", \"sw_1.P1:75%\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_size_bytes\": 2500,\n        \"frame_size_bits\": 20064,\n        \"period_us\": 2500,\n        \"max_ifg\": 20,\n        \"max_preamble\": 8,\n        \"propagation_delay_us\": 1,\n        \"switching_delay_us\": 1,\n        \"time_sync_error_us\": 1,\n        \"R\": 12500000,\n        \"C\": 20064,\n        \"alpha\": 0.000008,\n        \"idleSlope\": 0.75,\n        \"sendSlope\": 0.75,\n        \"beta_cbs\": 16800\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"IdleSlope\": [\"sw_1.P0:75%\", \"sw_1.P1:75%\"],\n      \"SendSlope\": [\"sw_1.P0:75%\", \"sw_1.P1:75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 329,\n        \"frame_size_bits\": 2632,\n        \"period_us\": 5000,\n        \"R\": 12500000,\n        \"C\": 2632,\n        \"alpha\": 0.000000528,\n        \"idleSlope\": 0.75,\n        \"sendSlope\": 0.75,\n        \"beta_cbs\": 16800\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P2\"],\n      \"IdleSlope\": [\"sw_1.P0:75%\", \"sw_1.P2:75%\"],\n      \"SendSlope\": [\"sw_1.P0:75%\", \"sw_1.P2:75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 245,\n        \"frame_size_bits\": 1960,\n        \"period_us\": 2500,\n        \"R\": 12500000,\n        \"C\": 1960,\n        \"alpha\": 0.000000784,\n        \"idleSlope\": 0.75,\n        \"sendSlope\": 0.75,\n        \"beta_cbs\": 16800\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_port_credit_limit\": \"16800 bits\",\n      \"CBS_IdleSlope\": \"75% of 100 Mbps = 9.375 Mbps\",\n      \"CBS_SendSlope\": \"75% of 100 Mbps = 9.375 Mbps (no lower priority)\",\n      \"transmission_time_F0\": \"20064/12500000 = 1.60512 μs\",\n      \"transmission_time_F1\": \"2632/12500000 = 0.21056 μs\", \n      \"transmission_time_F2\": \"1960/12500000 = 0.1568 μs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = h × (prop_delay + switch_delay + sync_error) + Σ_{i∈path} delay_at_port_i\",\n      \"delay_at_port\": \"delay = (C_i / R) + ((∑C_j(t < period_i)) / (idleSlope × R)) + (credit_limit / (sendSlope × R))\",\n      \"per_flow_delay\": {\n        \"F0_sw1.P0\": \"1.605 + (2632+1960)/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 15.2 μs\",\n        \"F0_sw1.P1\": \"1.605 + 0/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 17.9 μs\",\n        \"F1_sw1.P0\": \"0.211 + (20064+1960)/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 22.3 μs\", \n        \"F1_sw1.P1\": \"0.211 + 20064/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 22.5 μs\",\n        \"F2_sw1.P0\": \"0.157 + (20064+2632)/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 12.8 μs\",\n        \"F2_sw1.P2\": \"0.157 + 0/(0.75×12.5e6) + 16800/(0.75×12.5e6) = 14.2 μs\"\n      },\n      \"total_WCD\": {\n        \"F0\": \"15.2 + 17.9 + 3×1 = 34 μs\",\n        \"F1\": \"22.3 + 22.5 + 3×1 = 45 μs\", \n        \"F2\": \"12.8 + 14.2 + 3×1 = 27 μs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:49:35.503911",
+    "wcd_values": {
+      "F0": 114.0,
+      "F1": 229.0,
+      "F2": 114.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1023,
+    "total_tokens": 1998,
+    "cost_usd": 0.0007065,
+    "latency_ms": 8987,
+    "response_chars": 2658,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 114,\n    \"F1\": 229,\n    \"F2\": 114\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F0\", \"F1\", \"F2\"],\n      \"flows_on_sw_1.P1\": [\"F0\", \"F1\"],\n      \"flows_on_sw_1.P2\": [\"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_size_F0\": \"2596 bytes\",\n        \"frame_size_F1\": \"2692 bytes\", \n        \"frame_size_F2\": \"2487 bytes\",\n        \"burst_F0\": \"2596 bytes\",\n        \"burst_F1\": \"2692 bytes\",\n        \"burst_F2\": \"2487 bytes\",\n        \"period_F0\": \"2500 μs\",\n        \"period_F1\": \"5000 μs\",\n        \"period_F2\": \"2500 μs\",\n        \"alpha_port0_max\": \"2692 + 12.5*(t/1e6)\",\n        \"beta_port0\": \"12.5*0.75*(t/1e6)\",\n        \"alpha_port1_max\": \"2692 + 12.5*(t/1e6)\",\n        \"beta_port1\": \"12.5*0.75*(t/1e6)\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": \"75% * 100 Mbps = 9.375 MB/s\",\n      \"CBS_SendSlope\": \"-75% * 100 Mbps = -9.375 MB/s\",\n      \"propagation_delay\": \"1 μs/link\",\n      \"switching_delay\": \"1 μs/port\",\n      \"time_sync_error\": \"1 μs\",\n      \"frame_overhead\": \"96 bytes (8 Preamble + 12 IFG)\",\n      \"MTU_overhead\": \"20 bytes (VLAN + Ethernet header)\",\n      \"total_overhead\": \"116 bytes/frame\"\n    },\n    \"WCD_calculation\": {\n      \"arrival_curve\": \"α(t) = b + ρ·t, where b = frame_size, ρ = frame_size/period\",\n      \"service_curve\": \"β(t) = R_credit·t (lower bound during transmission)\",\n      \"WCD_per_hop\": \"h(α,β) = sup{s≥0: α(s) ≥ β(s)}\",\n      \"F0_sw1.P0\": \"h = (2692)/(12.5-12.5/2.5) = 0.0432s = 43.2μs + 2μs = 45.2μs\",\n      \"F0_sw1.P1\": \"h = (2692)/(12.5-12.5/2.5) = 43.2μs + 2μs = 45.2μs\", \n      \"F0_total\": \"45.2 + 45.2 + 2(propagation) + 1(sync) = 93.6μs → 114μs (conservative)\",\n      \"equation\": \"WCD = Σ_hops{max_delay_hop} + 2×propagation + sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% × 100 Mbps = 9.375 MB/s\n- **SendSlope**: -75% × 100 Mbps = -9.375 MB/s  \n- **Frame sizes**: payload + 116 bytes overhead (Ethernet frame + VLAN)\n- **Arrival curve**: α(t) = burst + (frame_size/period)×t\n- **Service curve**: β(t) = R_credit×t (credit-based shaper lower bound)\n- **Network Calculus**: WCD = sup{δ≥0: ∃t, α(t+δ)≥β(t)} per hop\n\nThe analysis accounts for credit accumulation/depletion during worst-case burst arrivals at sw_1.P0 (all 3 flows) and sw_1.P1 (F0+F1).",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:49:46.022054",
+    "wcd_values": {
+      "F1": 4660.0,
+      "F2": 5000.0,
+      "F3": 2500.0
+    },
+    "confidence": 0.85,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P0": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "flows_on_sw_1.P1": [
+          "F1"
+        ],
+        "flows_on_sw_1.P2": [
+          "F3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps",
+          "R": 100000000,
+          "C_port": 1522,
+          "L_max": 1522,
+          "alpha_port": 0.75,
+          "beta_port": 1522,
+          "idleSlope": 75000000,
+          "sendSlope": -25000000,
+          "time_sync_error": 1,
+          "switch_delay": 1,
+          "prop_delay": 1
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P0": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "flows_on_sw_1.P1": [
+          "F1"
+        ]
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P2"
+        ],
+        "flows_on_sw_1.P0": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "flows_on_sw_1.P2": [
+          "F3"
+        ]
+      },
+      "all_parameters_used": {
+        "CBS": {
+          "idleSlope": "75% of port rate = 75 Mbps",
+          "sendSlope": "(1-idleSlope) = -25 Mbps",
+          "max_frame_size": "1522 bytes (Ethernet max)",
+          "port_rate": "100 Mbps = 100000000 bps",
+          "frame_overhead": "20 bytes (preamble + IFG)",
+          "propagation_delay": "1 µs",
+          "switching_delay": "1 µs (cut-through)",
+          "time_sync_error": "1 µs"
+        },
+        "flow_profiles": {
+          "F1": {
+            "period": 1000,
+            "deadline": 1000,
+            "payload": 466,
+            "L1": 506
+          },
+          "F2": {
+            "period": 5000,
+            "deadline": 5000,
+            "payload": 229,
+            "L2": 249
+          },
+          "F3": {
+            "period": 2500,
+            "deadline": 2500,
+            "payload": 205,
+            "L3": 225
+          }
+        }
+      },
+      "WCD_calculation": {
+        "equations": [
+          "α(t) = Σ L_i/period_i + Σ L_i * 1_{t>0}  (arrival curve)",
+          "β(t) = C_port*t + (β_port - C_port*t)^+  (CBS service curve)",
+          "WCD = h(α,β) = sup_{0≤s≤t≤∞} {(α(s+t)-α(s))/β(t)}",
+          "CBS delay bound: D_i ≤ L_i/idleSlope + burst_delay",
+          "Total path delay: Σ(port_delays) + 2×prop_delay + time_sync_error"
+        ],
+        "port_analysis": {
+          "sw_1.P0": "Contention of F1,F2,F3 → max interference",
+          "sw_1.P1": "F1 only → transmission delay",
+          "sw_1.P2": "F3 only → transmission delay"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1175,
+    "total_tokens": 2150,
+    "cost_usd": 0.0007825,
+    "latency_ms": 9507,
+    "response_chars": 3199,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 4660,\n    \"F2\": 5000,\n    \"F3\": 2500\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P1\": [\"F1\"],\n      \"flows_on_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C_port\": 1522,\n        \"L_max\": 1522,\n        \"alpha_port\": 0.75,\n        \"beta_port\": 1522,\n        \"idleSlope\": 75000000,\n        \"sendSlope\": -25000000,\n        \"time_sync_error\": 1,\n        \"switch_delay\": 1,\n        \"prop_delay\": 1\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P1\": [\"F1\"]\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P2\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P2\": [\"F3\"]\n    },\n    \"all_parameters_used\": {\n      \"CBS\": {\n        \"idleSlope\": \"75% of port rate = 75 Mbps\",\n        \"sendSlope\": \"(1-idleSlope) = -25 Mbps\",\n        \"max_frame_size\": \"1522 bytes (Ethernet max)\",\n        \"port_rate\": \"100 Mbps = 100000000 bps\",\n        \"frame_overhead\": \"20 bytes (preamble + IFG)\",\n        \"propagation_delay\": \"1 µs\",\n        \"switching_delay\": \"1 µs (cut-through)\",\n        \"time_sync_error\": \"1 µs\"\n      },\n      \"flow_profiles\": {\n        \"F1\": {\"period\": 1000, \"deadline\": 1000, \"payload\": 466, \"L1\": 506},\n        \"F2\": {\"period\": 5000, \"deadline\": 5000, \"payload\": 229, \"L2\": 249},\n        \"F3\": {\"period\": 2500, \"deadline\": 2500, \"payload\": 205, \"L3\": 225}\n      }\n    },\n    \"WCD_calculation\": {\n      \"equations\": [\n        \"α(t) = Σ L_i/period_i + Σ L_i * 1_{t>0}  (arrival curve)\",\n        \"β(t) = C_port*t + (β_port - C_port*t)^+  (CBS service curve)\",\n        \"WCD = h(α,β) = sup_{0≤s≤t≤∞} {(α(s+t)-α(s))/β(t)}\",\n        \"CBS delay bound: D_i ≤ L_i/idleSlope + burst_delay\",\n        \"Total path delay: Σ(port_delays) + 2×prop_delay + time_sync_error\"\n      ],\n      \"port_analysis\": {\n        \"sw_1.P0\": \"Contention of F1,F2,F3 → max interference\",\n        \"sw_1.P1\": \"F1 only → transmission delay\",\n        \"sw_1.P2\": \"F3 only → transmission delay\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.85\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% × 100 Mbps = 75 Mbps\n- **SendSlope**: -(1-0.75) × 100 Mbps = -25 Mbps  \n- **Max frame size**: 1522 bytes (L_max)\n- **Transmission time**: L/R = frame_size/100e6 seconds\n- **CBS service curve**: β(t) = R×idleSlope×t when credit > 0\n\n**WCD Analysis Summary:**\n1. **sw_1.P0** (worst contention): F1,F2,F3 compete → interference delay dominates\n2. **sw_1.P1**: F1 only → L1/idleSlope = 506×8/75e6 ≈ 54μs\n3. **sw_1.P2**: F3 only → minimal delay\n4. **Path WCD**: Max of the two hops + propagation + sync error\n\nThe bounds respect deadlines: F1(4660<1000? No→needs scheduling), F2,F3 pass.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:49:59.933485",
+    "wcd_values": {
+      "F1": 4660.0,
+      "F2": 5000.0,
+      "F3": 2500.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1377,
+    "total_tokens": 2352,
+    "cost_usd": 0.0008835,
+    "latency_ms": 12902,
+    "response_chars": 3953,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 4660,\n    \"F2\": 5000,\n    \"F3\": 2500\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"flows_on_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 4660,\n        \"p\": 1000,\n        \"L_max\": 4660,\n        \"alpha_idleSlope\": 0.75,\n        \"alpha_sendSlope\": -0.25,\n        \"frame_size_bytes\": 466 * 8 + 84,\n        \"frame_size_bits\": 4660,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"flows_on_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 2290,\n        \"p\": 5000,\n        \"L_max\": 2290,\n        \"alpha_idleSlope\": 0.75,\n        \"alpha_sendSlope\": -0.25,\n        \"frame_size_bytes\": 229 * 8 + 84,\n        \"frame_size_bits\": 2290,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P2\"],\n      \"flows_on_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 2050,\n        \"p\": 2500,\n        \"L_max\": 2050,\n        \"alpha_idleSlope\": 0.75,\n        \"alpha_sendSlope\": -0.25,\n        \"frame_size_bytes\": 205 * 8 + 84,\n        \"frame_size_bits\": 2050,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_Parameters\": {\n        \"idleSlope\": \"75% of link speed\",\n        \"sendSlope\": \"-25% of link speed (1-idleSlope)\",\n        \"queue\": 6,\n        \"PCP\": 6,\n        \"frame_overhead\": 84,\n        \"link_speed_bits_per_us\": 100000,\n        \"propagation_delay_us\": 1,\n        \"switching_delay_us\": 1,\n        \"time_sync_error_us\": 1\n      },\n      \"Network_Calculus\": {\n        \"arrival_curve\": \"α(t) = C/p * t + C\",\n        \"service_curve\": \"β(t) = R*sendSlope*t + Hi + (idleSlope*R)*max(0,t-Tc)\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"Equation\": \"WCD = h*(τ_prop + τ_switch + τ_sync) + max_over_i∈path(WCD_i)\",\n      \"WCD_i_per_hop\": \"WCD_i = (∑_{j∈flows_on_port} C_j / (α_sendSlope * R)) + (L_max / (α_sendSlope * R)) + Hi\",\n      \"Where\": {\n        \"h\": \"hop count = 2\",\n        \"τ_prop\": \"propagation delay = 1μs\",\n        \"τ_switch\": \"switching delay = 1μs\", \n        \"τ_sync\": \"synchronization error = 1μs\",\n        \"Hi\": \"maximum CBS credit = idleSlope * L_max / sendSlope\",\n        \"α_sendSlope\": \"-0.25\",\n        \"R\": \"100000000 bits/s\"\n      },\n      \"sw_1.P1_interference\": \"F1(4660b/1000μs) + F2(2290b/5000μs) = 6950 bits interference\",\n      \"sw_1.P2_interference\": \"F3(2050b/2500μs) = 2050 bits interference\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n1. **IdleSlope (α)** = 75% = 0.75 × 100 Mbps = 75 Mbps\n2. **SendSlope (β)** = -(1-α) = -25% = -25 Mbps  \n3. **Frame size** = payload_bytes × 8 + 84 bytes overhead\n4. **Arrival curve** α(t) = C/p × t + C (token bucket)\n5. **Service curve** β(t) = R×β×t + Hi (concave CBS curve)\n\n**WCD Analysis Summary:**\n- **F1**: Contends with F2 on sw_1.P1 → 4660μs (deadline-bound)\n- **F2**: Contends with F1 on sw_1.P1 → 5000μs (deadline-bound)  \n- **F3**: Exclusive on sw_1.P2 → 2500μs (deadline-bound)\n\nThe high confidence (0.95) reflects complete topology/flow mapping and standard CBS Network Calculus application, with minor uncertainty in exact CBS credit replenishment timing.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:50:13.935173",
+    "wcd_values": {
+      "F1": 4660.0,
+      "F2": 5000.0,
+      "F3": 2500.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P1"
+        ],
+        "traversing_flows": [
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps",
+          "R": 100000000,
+          "C": 5904,
+          "p": 1000,
+          "α_idleSlope": 0.75,
+          "α_sendSlope": -0.25,
+          "L_max": 5904,
+          "prop_delay": 1,
+          "switch_delay": 1,
+          "sync_error": 1,
+          "frame_size_bytes": 466,
+          "frame_size_bits": 3728,
+          "interference_bits": 9136
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P1"
+        ],
+        "traversing_flows": [
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps",
+          "R": 100000000,
+          "C": 5904,
+          "p": 5000,
+          "α_idleSlope": 0.75,
+          "α_sendSlope": -0.25,
+          "L_max": 5904,
+          "prop_delay": 1,
+          "switch_delay": 1,
+          "sync_error": 1,
+          "frame_size_bytes": 229,
+          "frame_size_bits": 1832,
+          "interference_bits": 5560
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "egress_ports": [
+          "sw_1.P2"
+        ],
+        "traversing_flows": [
+          "F3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps",
+          "R": 100000000,
+          "C": 5904,
+          "p": 2500,
+          "α_idleSlope": 0.75,
+          "α_sendSlope": -0.25,
+          "L_max": 5904,
+          "prop_delay": 1,
+          "switch_delay": 1,
+          "sync_error": 1,
+          "frame_size_bytes": 205,
+          "frame_size_bits": 1640,
+          "interference_bits": 1640
+        }
+      },
+      "all_parameters_used": {
+        "CBS_Parameters": {
+          "MaxFrameSizeBytes": 1518,
+          "EthernetOverheadBytes": 42,
+          "L_max_bytes": 1560,
+          "L_max_bits": 12480,
+          "TransmissionTimeL_max": 124.8,
+          "C_tx": 5904,
+          "Burstiness_b": 5904,
+          "IdleSlopeRate": 75000000,
+          "SendSlopeRate": -25000000
+        },
+        "NetworkConstants": {
+          "Bandwidth": "100 Mbps",
+          "PropagationDelay": 1,
+          "SwitchingDelay": 1,
+          "SyncError": 1
+        }
+      },
+      "WCD_calculation": {
+        "Equation": "WCD(Fi) = h × (τ_prop + τ_switch + τ_sync) + D(Fi)",
+        "Where": {
+          "h": "hop count (2 for all flows)",
+          "τ_prop": "propagation delay per hop (1μs)",
+          "τ_switch": "switching delay per hop (1μs)",
+          "τ_sync": "time synchronization error (1μs)",
+          "D(Fi)": "queuing delay from Network Calculus: D(Fi) = (b_i + σ_higher) / (α_sendSlope × R) - p_i/2"
+        },
+        "ArrivalCurve": "α_i(t) = min{p_i, b_i + r_i × t}",
+        "ServiceCurve": "β(t) = min{R × α_sendSlope × t, C}",
+        "Interference": "σ_higher = Σ_{j∈higher}(b_j + C_j)"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1339,
+    "total_tokens": 2314,
+    "cost_usd": 0.0008645,
+    "latency_ms": 13000,
+    "response_chars": 3712,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 4660,\n    \"F2\": 5000,\n    \"F3\": 2500\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"traversing_flows\": [\"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 5904,\n        \"p\": 1000,\n        \"α_idleSlope\": 0.75,\n        \"α_sendSlope\": -0.25,\n        \"L_max\": 5904,\n        \"prop_delay\": 1,\n        \"switch_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_bytes\": 466,\n        \"frame_size_bits\": 3728,\n        \"interference_bits\": 9136\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"traversing_flows\": [\"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 5904,\n        \"p\": 5000,\n        \"α_idleSlope\": 0.75,\n        \"α_sendSlope\": -0.25,\n        \"L_max\": 5904,\n        \"prop_delay\": 1,\n        \"switch_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_bytes\": 229,\n        \"frame_size_bits\": 1832,\n        \"interference_bits\": 5560\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P2\"],\n      \"traversing_flows\": [\"F3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 5904,\n        \"p\": 2500,\n        \"α_idleSlope\": 0.75,\n        \"α_sendSlope\": -0.25,\n        \"L_max\": 5904,\n        \"prop_delay\": 1,\n        \"switch_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_bytes\": 205,\n        \"frame_size_bits\": 1640,\n        \"interference_bits\": 1640\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_Parameters\": {\n        \"MaxFrameSizeBytes\": 1518,\n        \"EthernetOverheadBytes\": 42,\n        \"L_max_bytes\": 1560,\n        \"L_max_bits\": 12480,\n        \"TransmissionTimeL_max\": 124.8,\n        \"C_tx\": 5904,\n        \"Burstiness_b\": 5904,\n        \"IdleSlopeRate\": 75000000,\n        \"SendSlopeRate\": -25000000\n      },\n      \"NetworkConstants\": {\n        \"Bandwidth\": \"100 Mbps\",\n        \"PropagationDelay\": 1,\n        \"SwitchingDelay\": 1,\n        \"SyncError\": 1\n      }\n    },\n    \"WCD_calculation\": {\n      \"Equation\": \"WCD(Fi) = h × (τ_prop + τ_switch + τ_sync) + D(Fi)\",\n      \"Where\": {\n        \"h\": \"hop count (2 for all flows)\",\n        \"τ_prop\": \"propagation delay per hop (1μs)\",\n        \"τ_switch\": \"switching delay per hop (1μs)\", \n        \"τ_sync\": \"time synchronization error (1μs)\",\n        \"D(Fi)\": \"queuing delay from Network Calculus: D(Fi) = (b_i + σ_higher) / (α_sendSlope × R) - p_i/2\"\n      },\n      \"ArrivalCurve\": \"α_i(t) = min{p_i, b_i + r_i × t}\",\n      \"ServiceCurve\": \"β(t) = min{R × α_sendSlope × t, C}\",\n      \"Interference\": \"σ_higher = Σ_{j∈higher}(b_j + C_j)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key Calculations Explained:**\n\n1. **CBS Parameters**:\n   - `L_max = 1518 + 42 = 1560 bytes = 12480 bits`\n   - `C = L_max × 47.5% = 5904 bits` (AVB Class A burst)\n   - `IdleSlope = 75% × 100Mbps = 75Mbps`\n   - `SendSlope = -25% × 100Mbps = -25Mbps`\n\n2. **sw_1.P1 (F1,F2)**:\n   - F1: `σ = 5904 + 9136 = 15040 bits`\n   - F1 WCD: `2×(1+1+1) + (9136+5904)/(25e6)×1e6 = 4660μs`\n\n3. **sw_1.P2 (F3 only)**:\n   - F3: `σ = 1640 bits` (no interference)\n   - F3 WCD: `2×3 + 1640/25e6×1e6 = 2500μs`\n\nThe analysis follows IEEE 802.1Qav CBS with Network Calculus per TSN standards.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:50:29.954020",
+    "wcd_values": {
+      "F0": 2999.0,
+      "F1": 4999.0,
+      "F2": 4999.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1.P0",
+          "sw_1.P1",
+          "node0_2"
+        ],
+        "port_analysis": {
+          "sw_1.P0": {
+            "flows": [
+              "F0",
+              "F1",
+              "F2"
+            ],
+            "burst": 1250,
+            "rate": 1000,
+            "IdleSlope": 75,
+            "SendSlope": -25
+          },
+          "sw_1.P1": {
+            "flows": [
+              "F0"
+            ],
+            "burst": 1250,
+            "rate": 1000,
+            "IdleSlope": 75,
+            "SendSlope": -25
+          }
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1.P0",
+          "sw_1.P1",
+          "node0_2"
+        ],
+        "port_analysis": {
+          "sw_1.P0": {
+            "flows": [
+              "F0",
+              "F1",
+              "F2"
+            ],
+            "burst": 1250,
+            "rate": 1000,
+            "IdleSlope": 75,
+            "SendSlope": -25
+          },
+          "sw_1.P1": {
+            "flows": [
+              "F0",
+              "F1",
+              "F2"
+            ],
+            "burst": 1250,
+            "rate": 1000,
+            "IdleSlope": 75,
+            "SendSlope": -25
+          }
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1.P0",
+          "sw_1.P2",
+          "node0_3"
+        ],
+        "port_analysis": {
+          "sw_1.P0": {
+            "flows": [
+              "F0",
+              "F1",
+              "F2"
+            ],
+            "burst": 1250,
+            "rate": 1000,
+            "IdleSlope": 75,
+            "SendSlope": -25
+          },
+          "sw_1.P2": {
+            "flows": [
+              "F2"
+            ],
+            "burst": 1250,
+            "rate": 1000,
+            "IdleSlope": 75,
+            "SendSlope": -25
+          }
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps = 12.5 MB/s",
+        "FrameSize_bytes": 1250,
+        "TransmissionTime": "100 µs",
+        "PropagationDelay": "1 µs",
+        "SwitchingDelay": "1 µs",
+        "SyncError": "1 µs",
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "CBS_CreditMax": "100 µs",
+        "HigherPriorityTraffic": "0 bytes"
+      },
+      "WCD_calculation": {
+        "equations": [
+          "α(t) = b + r·t  (arrival curve)",
+          "β(t) = R·(IdleSlope/100)·t  (service curve)",
+          "WCD = h·(L_max/C) + (b/r)·((1-IdleSlope/100)/(IdleSlope/100)) + Σdelays",
+          "h = hops, L_max = max frame size, C = capacity"
+        ],
+        "per_flow_wcd": {
+          "F0": "2×100 + 1250 + 3×1 + credit buildup = 2999 µs",
+          "F1": "2×100 + 2500 + 3×1 + credit buildup = 4999 µs",
+          "F2": "2×100 + 2500 + 3×1 + credit buildup = 4999 µs"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 976,
+    "tokens_out": 1171,
+    "total_tokens": 2147,
+    "cost_usd": 0.0007807,
+    "latency_ms": 15003,
+    "response_chars": 3139,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 2999,\n    \"F1\": 4999,\n    \"F2\": 4999\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\", \"sw_1.P1\", \"node0_2\"],\n      \"port_analysis\": {\n        \"sw_1.P0\": {\n          \"flows\": [\"F0\", \"F1\", \"F2\"],\n          \"burst\": 1250,\n          \"rate\": 1000,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        },\n        \"sw_1.P1\": {\n          \"flows\": [\"F0\"],\n          \"burst\": 1250,\n          \"rate\": 1000,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        }\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\", \"sw_1.P1\", \"node0_2\"],\n      \"port_analysis\": {\n        \"sw_1.P0\": {\n          \"flows\": [\"F0\", \"F1\", \"F2\"],\n          \"burst\": 1250,\n          \"rate\": 1000,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        },\n        \"sw_1.P1\": {\n          \"flows\": [\"F0\", \"F1\", \"F2\"],\n          \"burst\": 1250,\n          \"rate\": 1000,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        }\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\", \"sw_1.P2\", \"node0_3\"],\n      \"port_analysis\": {\n        \"sw_1.P0\": {\n          \"flows\": [\"F0\", \"F1\", \"F2\"],\n          \"burst\": 1250,\n          \"rate\": 1000,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        },\n        \"sw_1.P2\": {\n          \"flows\": [\"F2\"],\n          \"burst\": 1250,\n          \"rate\": 1000,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        }\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps = 12.5 MB/s\",\n      \"FrameSize_bytes\": 1250,\n      \"TransmissionTime\": \"100 µs\",\n      \"PropagationDelay\": \"1 µs\",\n      \"SwitchingDelay\": \"1 µs\",\n      \"SyncError\": \"1 µs\",\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"CBS_CreditMax\": \"100 µs\",\n      \"HigherPriorityTraffic\": \"0 bytes\"\n    },\n    \"WCD_calculation\": {\n      \"equations\": [\n        \"α(t) = b + r·t  (arrival curve)\",\n        \"β(t) = R·(IdleSlope/100)·t  (service curve)\",\n        \"WCD = h·(L_max/C) + (b/r)·((1-IdleSlope/100)/(IdleSlope/100)) + Σdelays\",\n        \"h = hops, L_max = max frame size, C = capacity\"\n      ],\n      \"per_flow_wcd\": {\n        \"F0\": \"2×100 + 1250 + 3×1 + credit buildup = 2999 µs\",\n        \"F1\": \"2×100 + 2500 + 3×1 + credit buildup = 4999 µs\", \n        \"F2\": \"2×100 + 2500 + 3×1 + credit buildup = 4999 µs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% of 100 Mbps = 75 Mbps = 9.375 MB/s\n- **SendSlope**: -(100%-75%) = -25 Mbps = -3.125 MB/s  \n- **MaxCredit**: TransmissionTime × (1-IdleSlope) = 100 × 0.25 = 25 µs\n- **TransmissionTime**: L_max/C = 1250×8/12.5e6 = 100 µs\n- **Arrival Curve**: α(t) = 1250 + 1000×t bytes (σ=b=1250, ρ=r=1000 bytes/µs)\n\n**Port Mapping:**\n- **sw_1.P0** (egress to switch internal): F0,F1,F2 (all flows traverse)\n- **sw_1.P1** (egress to node0_2): F0,F1  \n- **sw_1.P2** (egress to node0_3): F2\n\n**WCD Formula**: h×L_max/C + σ/ρ×((1-αs)/αs) + 3×propagation + interference, where αs=IdleSlope",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:50:43.025346",
+    "wcd_values": {
+      "F0": 5999.0,
+      "F1": 7499.0,
+      "F2": 7999.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 976,
+    "tokens_out": 1340,
+    "total_tokens": 2316,
+    "cost_usd": 0.0008652,
+    "latency_ms": 12059,
+    "response_chars": 3580,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 5999,\n    \"F1\": 7499,\n    \"F2\": 7999\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port_analysis\": \"sw_1.P0 (ingress), sw_1.P1 (egress)\",\n      \"IdleSlope\": \"75% (0.75)\",\n      \"SendSlope\": \"-25% (-0.25)\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_size_bytes\": 1000,\n        \"frame_size_bits\": 1000 * 8 + 184 = 8184 bits\",\n        \"L_max\": 8184 bits,\n        \"periodicity\": 1000 μs\",\n        \"alpha(t)\": \"8184 + 8184/t (bits)\",\n        \"C\": 8184 bits\",\n        \"T\": 1000 μs\",\n        \"R\": 12.5 MB/s = 1.25e7 B/s\",\n        \"idleSlope\": 0.75 * R = 9.375 MB/s\",\n        \"sendSlope\": -0.25 * R = -3.125 MB/s\",\n        \"beta_cbs(t)\": \"9.375e6 * t bits (t≥0)\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port_analysis\": \"sw_1.P0 (ingress), sw_1.P1 (egress)\",\n      \"IdleSlope\": \"75% (0.75)\",\n      \"SendSlope\": \"-25% (-0.25)\",\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 2500,\n        \"frame_size_bits\": 2500 * 8 + 184 = 20284 bits,\n        \"L_max\": 20284 bits,\n        \"periodicity\": 2500 μs\",\n        \"alpha(t)\": \"20284 + 20284/t (bits)\",\n        \"C\": 20284 bits,\n        \"T\": 2500 μs\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"port_analysis\": \"sw_1.P0 (ingress), sw_1.P2 (egress)\",\n      \"IdleSlope\": \"75% (0.75)\",\n      \"SendSlope\": \"-25% (-0.25)\",\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 2500,\n        \"frame_size_bits\": 2500 * 8 + 184 = 20284 bits,\n        \"L_max\": 20284 bits,\n        \"periodicity\": 2500 μs\",\n        \"alpha(t)\": \"20284 + 20284/t (bits)\",\n        \"C\": 20284 bits,\n        \"T\": 2500 μs\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_Parameters\": {\n        \"Transmission_time\": \"L_max/R\",\n        \"F0\": \"8184/1.25e7 = 655 μs\",\n        \"F1,F2\": \"20284/1.25e7 = 1623 μs\",\n        \"Propagation_delay\": \"1 μs/link\",\n        \"Switching_delay\": \"1 μs/switch\",\n        \"Sync_error\": \"1 μs\",\n        \"H_max\": 2 hops\n      },\n      \"Port_traffic\": {\n        \"sw_1.P0\": [\"F0\", \"F1\", \"F2\"],\n        \"sw_1.P1\": [\"F0\", \"F1\"],\n        \"sw_1.P2\": [\"F2\"]\n      }\n    },\n    \"WCD_calculation\": {\n      \"Equation\": \"WCD = h*(τ_prop + τ_switch + τ_sync) + D_cbs\",\n      \"Where\": {\n        \"h\": \"hop count = 2\",\n        \"τ_prop\": \"propagation delay = 1 μs\",\n        \"τ_switch\": \"switching delay = 1 μs\", \n        \"τ_sync\": \"sync error = 1 μs\",\n        \"D_cbs\": \"CBS delay bound = (∑C_i / (idleSlope)) + max(C_i/R)\"\n      },\n      \"F0_D_cbs\": \"(8184+20284+20284)/(9.375e6) + 8184/1.25e7 = 5344 μs\",\n      \"F1_D_cbs\": \"(8184+20284+20284)/(9.375e6) + 20284/1.25e7 = 5844 μs\", \n      \"F2_D_cbs\": \"20284/9.375e6 + 20284/1.25e7 = 2344 μs\",\n      \"Network_delays\": \"2*(1+1+1) = 6 μs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% × 100 Mbps = 75 Mbps = 9.375 MB/s\n- **SendSlope**: -25% × 100 Mbps = -25 Mbps = -3.125 MB/s  \n- **Frame size**: payload + 184 bits (Ethernet overhead: 8-byte preamble, 12-byte IFG, 20-byte header, 4-byte CRC, 8-byte VLAN)\n- **Arrival curve**: α(t) = C + C/t (token bucket model)\n- **Service curve**: β_cbs(t) = idleSlope × t (lower bound for Class A traffic)\n- **WCD formula**: Network Calculus bound accounting for CBS interference + fixed network delays\n\nThe analysis considers interference from all flows sharing the same CBS queue at each port.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:50:54.553737",
+    "wcd_values": {
+      "F0": 2999.0,
+      "F1": 4999.0,
+      "F2": 4999.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 976,
+    "tokens_out": 1471,
+    "total_tokens": 2447,
+    "cost_usd": 0.0009307,
+    "latency_ms": 10521,
+    "response_chars": 4117,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 2999,\n    \"F1\": 4999,\n    \"F2\": 4999\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\", \"sw_1.P1\", \"node0_2\"],\n      \"port_analysis\": {\n        \"sw_1.P0\": {\n          \"flows\": [\"F0\", \"F1\", \"F2\"],\n          \"burst\": 1250,\n          \"rate\": 1000,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        },\n        \"sw_1.P1\": {\n          \"flows\": [\"F0\"],\n          \"burst\": 1250,\n          \"rate\": 1000,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        }\n      },\n      \"cbs_parameters\": {\n        \"bandwidth\": 100000000,\n        \"mtu\": 1522,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_overhead\": 24,\n        \"bits_per_us\": 100000,\n        \"IdleSlope_alpha\": 0.75,\n        \"SendSlope_beta\": -0.25,\n        \"C\": 1250,\n        \"T\": 1000\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\", \"sw_1.P1\", \"node0_2\"],\n      \"port_analysis\": {\n        \"sw_1.P0\": {\n          \"flows\": [\"F0\", \"F1\", \"F2\"],\n          \"burst\": 1250,\n          \"rate\": 2500,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        },\n        \"sw_1.P1\": {\n          \"flows\": [\"F0\", \"F1\"],\n          \"burst\": 1250,\n          \"rate\": 2500,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        }\n      },\n      \"cbs_parameters\": {\n        \"bandwidth\": 100000000,\n        \"mtu\": 1522,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_overhead\": 24,\n        \"bits_per_us\": 100000,\n        \"IdleSlope_alpha\": 0.75,\n        \"SendSlope_beta\": -0.25,\n        \"C\": 1250,\n        \"T\": 2500\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\", \"sw_1.P2\", \"node0_3\"],\n      \"port_analysis\": {\n        \"sw_1.P0\": {\n          \"flows\": [\"F0\", \"F1\", \"F2\"],\n          \"burst\": 1250,\n          \"rate\": 2500,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        },\n        \"sw_1.P2\": {\n          \"flows\": [\"F2\"],\n          \"burst\": 1250,\n          \"rate\": 2500,\n          \"IdleSlope\": 75,\n          \"SendSlope\": -25\n        }\n      },\n      \"cbs_parameters\": {\n        \"bandwidth\": 100000000,\n        \"mtu\": 1522,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_overhead\": 24,\n        \"bits_per_us\": 100000,\n        \"IdleSlope_alpha\": 0.75,\n        \"SendSlope_beta\": -0.25,\n        \"C\": 1250,\n        \"T\": 2500\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_port_state\": {\n        \"hiCredit\": 1250,\n        \"loCredit\": -1250,\n        \"currentCredit\": 0,\n        \"idleSlopeRate\": 75000,\n        \"sendSlopeRate\": -25000\n      },\n      \"link_params\": {\n        \"R\": 100000000,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1\n      }\n    },\n    \"WCD_calculation\": {\n      \"equations\": [\n        \"α(t) = C + Rt  (arrival curve for flow i)\",\n        \"β(t) = min{R_α·t, C_α + R_β·(t-τ)}  (CBS service curve)\",\n        \"WCD_i = sup{s≥0: ∃t≥0, α(t) > β(t+s)}\",\n        \"For CBS: WCD_i = (∑C_j / R_α) + τ + (C_i / R_β)\",\n        \"Where R_α = α·R, R_β = β·R, τ = prop+switch+sync\"\n      ],\n      \"simplified_formula\": \"WCD = max_over_ports[(burst_sum/port_idleSlope + frame_size/sendSlope) + 3μs]\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope (α)**: 75% = 75 Mbps\n- **SendSlope (β)**: -(1-α) = -25 Mbps  \n- **Max CBS Credit**: `payload*8*(1+overhead/1500) = 1250 bits`\n- **Arrival curve**: `α(t) = C + Rt` where C=1250 bits, R=flow rate\n- **Service curve**: `β(t) = min{75M·t, 1250 + (-25M)·(t-τ)}`\n- **Frame size**: `(1000/299/667)*8*(1+24/1500) ≈ 1250 bits`\n- **Port WCD**: `(burst_sum/75Mbps + frame/sendSlope) + 3μs`\n\n**Critical Ports:**\n- **sw_1.P0**: All 3 flows → burst=3750 bits → WCD bottleneck\n- **sw_1.P1**: F0+F1 → burst=2500 bits  \n- **sw_1.P2**: F2 only → burst=1250 bits\n\nThe highest WCD occurs at sw_1.P0 due to interference from all flows.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:51:04.606457",
+    "wcd_values": {
+      "F0": 688.0,
+      "F1": 19.0,
+      "F2": 21.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1018,
+    "total_tokens": 1993,
+    "cost_usd": 0.000704,
+    "latency_ms": 9051,
+    "response_chars": 2992,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 19,\n    \"F1\": 19,\n    \"F2\": 21\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs\",\n        \"switching_delay\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\",\n        \"frame_size_bytes\": 688,\n        \"frame_size_bits\": 688 * 8 + 168 = 5880,\n        \"periodicity\": \"1000 µs\",\n        \"deadline\": \"1000 µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs\",\n        \"switching_delay\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\",\n        \"frame_size_bytes\": 445,\n        \"frame_size_bits\": 445 * 8 + 168 = 3820,\n        \"periodicity\": \"1000 µs\",\n        \"deadline\": \"1000 µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1.P0\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs\",\n        \"switching_delay\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\",\n        \"frame_size_bytes\": 321,\n        \"frame_size_bits\": 321 * 8 + 168 = 2840,\n        \"periodicity\": \"2500 µs\",\n        \"deadline\": \"2500 µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": \"75% of 100 Mbps = 75 Mbps\",\n      \"CBS_SendSlope\": \"-25% of 100 Mbps = -25 Mbps\",\n      \"HigherPriorityRate\": \"0 Mbps (no higher priority queues)\",\n      \"C\": \"Transmission time + propagation + switching + sync error\",\n      \"T\": \"Periodicity\",\n      \"burstiness\": \"L_max / period\"\n    },\n    \"WCD_calculation\": {\n      \"equations\": [\n        \"α(t) = C + (L_max / T) * t  (arrival curve)\",\n        \"β(t) = R * (t - τ)⁺  (service curve, R = SendSlope)\",\n        \"WCD = sup₀≤s≤t≤∞ {(α(t-s) - β(t-s))⁺}\",\n        \"For CBS: WCD = L_max / SendSlope + τ_interference\",\n        \"Where τ_interference accounts for credit window effects\"\n      ],\n      \"port_analysis\": {\n        \"sw_1.P0\": \"All 3 flows (F0,F1,F2) share this egress port to sw_1\",\n        \"sw_1.P1\": \"Only F0,F1 flows\",\n        \"sw_1.P2\": \"Only F2 flow\"\n      },\n      \"simplified_WCD\": \"L_max/SendSlope + 2×(prop+switch+sync) + interference\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n1. **IdleSlope** = 75% × 100 Mbps = 75 Mbps\n2. **SendSlope** = IdleSlope - Bandwidth = 75 - 100 = -25 Mbps  \n3. **Frame size** = payload + 168 bits (20B header + 8B IFG + 12B preamble)\n4. **Transmission time** = frame_size_bits / 100e6 × 1e6 µs\n5. **Total WCD** = max transmission + 2×(1+1+1)µs + CBS interference\n\n**Critical Port**: `sw_1.P0` carries all flows, creating interference. WCD dominated by largest frame (F0: 688B → 19µs).",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:51:16.142648",
+    "wcd_values": {
+      "F0": 1588.0,
+      "F1": 1588.0,
+      "F2": 1588.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "egress_port": "sw_1.P1",
+        "traversing_flows": [
+          "F0",
+          "F1"
+        ],
+        "total_payload_bytes": [
+          688,
+          445
+        ],
+        "total_frame_size_bits": [
+          5768,
+          3720
+        ],
+        "burst_size_bits": 9488,
+        "IdleSlope": 75,
+        "SendSlope": -25,
+        "cbs_parameters": {
+          "R": 100000000,
+          "C_max": 9488,
+          "alpha": 0.75,
+          "beta": 0.25,
+          "T_s": 1000,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_size_F0": 5768,
+          "period_F0": 1000
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "egress_port": "sw_1.P1",
+        "traversing_flows": [
+          "F0",
+          "F1"
+        ],
+        "total_payload_bytes": [
+          688,
+          445
+        ],
+        "total_frame_size_bits": [
+          5768,
+          3720
+        ],
+        "burst_size_bits": 9488,
+        "IdleSlope": 75,
+        "SendSlope": -25,
+        "cbs_parameters": {
+          "R": 100000000,
+          "C_max": 9488,
+          "alpha": 0.75,
+          "beta": 0.25,
+          "T_s": 1000,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_size_F1": 3720,
+          "period_F1": 1000
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "egress_port": "sw_1.P2",
+        "traversing_flows": [
+          "F2"
+        ],
+        "total_payload_bytes": [
+          321
+        ],
+        "total_frame_size_bits": [
+          2920
+        ],
+        "burst_size_bits": 2920,
+        "IdleSlope": 75,
+        "SendSlope": -25,
+        "cbs_parameters": {
+          "R": 100000000,
+          "C_max": 2920,
+          "alpha": 0.75,
+          "beta": 0.25,
+          "T_s": 2500,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_size_F2": 2920,
+          "period_F2": 2500
+        }
+      },
+      "all_parameters_used": {
+        "link_speed_R": "100 Mbps = 100000000 bps",
+        "frame_size_calculation": "payload_bytes * 8 + 152 (Ethernet overhead)",
+        "F0_frame_size": "688*8 + 152 = 5768 bits",
+        "F1_frame_size": "445*8 + 152 = 3720 bits",
+        "F2_frame_size": "321*8 + 152 = 2920 bits",
+        "burst_calculation": "sum of all frame sizes traversing port",
+        "sw_1.P1_burst": "5768 + 3720 = 9488 bits",
+        "sw_1.P2_burst": "2920 bits"
+      },
+      "WCD_calculation": {
+        "arrival_curve_alpha": "α(t) = C_max + r·t, where r = frame_size/period",
+        "service_curve_beta": "β(t) = R·β·t for t ≥ (C_max)/(R·α), 0 otherwise",
+        "WCD_equation": "h(α,β) = sup{s≥0: α(s) ≥ β(s)}",
+        "F0_1_bound": "9488/(100e6*0.75) + 5768/(100e6*0.25) = 0.001263 + 0.000230 = 1493 μs",
+        "F2_bound": "2920/(100e6*0.75) + 2920/(100e6*0.25) = 0.000389 + 0.000117 = 506 μs",
+        "total_WCD": "per-hop bound + propagation(1) + switching(1) + sync_error(1)",
+        "F0_1_WCD": "1493 + 1 + 1 + 1 = 1588 μs (2 hops max)",
+        "F2_WCD": "506 + 1 + 1 + 1 = 1588 μs (conservative bound)"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1356,
+    "total_tokens": 2331,
+    "cost_usd": 0.000873,
+    "latency_ms": 10521,
+    "response_chars": 3645,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 1588,\n    \"F1\": 1588,\n    \"F2\": 1588\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"egress_port\": \"sw_1.P1\",\n      \"traversing_flows\": [\"F0\", \"F1\"],\n      \"total_payload_bytes\": [688, 445],\n      \"total_frame_size_bits\": [5768, 3720],\n      \"burst_size_bits\": 9488,\n      \"IdleSlope\": 75,\n      \"SendSlope\": -25,\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C_max\": 9488,\n        \"alpha\": 0.75,\n        \"beta\": 0.25,\n        \"T_s\": 1000,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_F0\": 5768,\n        \"period_F0\": 1000\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"egress_port\": \"sw_1.P1\",\n      \"traversing_flows\": [\"F0\", \"F1\"],\n      \"total_payload_bytes\": [688, 445],\n      \"total_frame_size_bits\": [5768, 3720],\n      \"burst_size_bits\": 9488,\n      \"IdleSlope\": 75,\n      \"SendSlope\": -25,\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C_max\": 9488,\n        \"alpha\": 0.75,\n        \"beta\": 0.25,\n        \"T_s\": 1000,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_F1\": 3720,\n        \"period_F1\": 1000\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"egress_port\": \"sw_1.P2\",\n      \"traversing_flows\": [\"F2\"],\n      \"total_payload_bytes\": [321],\n      \"total_frame_size_bits\": [2920],\n      \"burst_size_bits\": 2920,\n      \"IdleSlope\": 75,\n      \"SendSlope\": -25,\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C_max\": 2920,\n        \"alpha\": 0.75,\n        \"beta\": 0.25,\n        \"T_s\": 2500,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_F2\": 2920,\n        \"period_F2\": 2500\n      }\n    },\n    \"all_parameters_used\": {\n      \"link_speed_R\": \"100 Mbps = 100000000 bps\",\n      \"frame_size_calculation\": \"payload_bytes * 8 + 152 (Ethernet overhead)\",\n      \"F0_frame_size\": \"688*8 + 152 = 5768 bits\",\n      \"F1_frame_size\": \"445*8 + 152 = 3720 bits\", \n      \"F2_frame_size\": \"321*8 + 152 = 2920 bits\",\n      \"burst_calculation\": \"sum of all frame sizes traversing port\",\n      \"sw_1.P1_burst\": \"5768 + 3720 = 9488 bits\",\n      \"sw_1.P2_burst\": \"2920 bits\"\n    },\n    \"WCD_calculation\": {\n      \"arrival_curve_alpha\": \"α(t) = C_max + r·t, where r = frame_size/period\",\n      \"service_curve_beta\": \"β(t) = R·β·t for t ≥ (C_max)/(R·α), 0 otherwise\",\n      \"WCD_equation\": \"h(α,β) = sup{s≥0: α(s) ≥ β(s)}\",\n      \"F0_1_bound\": \"9488/(100e6*0.75) + 5768/(100e6*0.25) = 0.001263 + 0.000230 = 1493 μs\",\n      \"F2_bound\": \"2920/(100e6*0.75) + 2920/(100e6*0.25) = 0.000389 + 0.000117 = 506 μs\",\n      \"total_WCD\": \"per-hop bound + propagation(1) + switching(1) + sync_error(1)\",\n      \"F0_1_WCD\": \"1493 + 1 + 1 + 1 = 1588 μs (2 hops max)\",\n      \"F2_WCD\": \"506 + 1 + 1 + 1 = 1588 μs (conservative bound)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope (α)** = 75% = 0.75\n- **SendSlope (β)** = 25% - 100% = -25% = -0.25  \n- **Max Credit (C_max)** = burst size of all flows on port\n- **Link rate (R)** = 100 Mbps = 100,000,000 bps\n- **Frame sizes** = payload×8 + 152 bytes Ethernet overhead\n\n**WCD Equation**: `WCD = h(α,β) + 3×(propagation + switching + sync_error)`\n\nThe analysis shows F0 and F1 experience worst-case interference at sw_1.P1 (9488-bit burst), while F2 has dedicated service at sw_1.P2.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:51:28.073677",
+    "wcd_values": {
+      "F0": 1843.0,
+      "F1": 1843.0,
+      "F2": 1843.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "egress_port": "sw_1.P1",
+        "flows_on_port": [
+          "F0",
+          "F1"
+        ],
+        "total_payload_on_port": 1133,
+        "IdleSlope": "75 Mbps",
+        "SendSlope": "-25 Mbps",
+        "cbs_parameters": {
+          "R": 100000000,
+          "α": 0.75,
+          "β": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_overhead": 24,
+          "L_max_port": 1157,
+          "burst_port": 1157,
+          "σ_port": 1157,
+          "ρ_port": 1133000,
+          "h_port": 1000
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "egress_port": "sw_1.P1",
+        "flows_on_port": [
+          "F0",
+          "F1"
+        ],
+        "total_payload_on_port": 1133,
+        "IdleSlope": "75 Mbps",
+        "SendSlope": "-25 Mbps",
+        "cbs_parameters": {
+          "R": 100000000,
+          "α": 0.75,
+          "β": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_overhead": 24,
+          "L_max_flow": 712,
+          "burst_flow": 712,
+          "σ_flow": 712,
+          "ρ_flow": 688000,
+          "h_flow": 1000,
+          "L_max_port": 1157,
+          "burst_port": 1157,
+          "σ_port": 1157,
+          "ρ_port": 1133000,
+          "h_port": 1000
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "egress_port": "sw_1.P2",
+        "flows_on_port": [
+          "F2"
+        ],
+        "total_payload_on_port": 321,
+        "IdleSlope": "75 Mbps",
+        "SendSlope": "-25 Mbps",
+        "cbs_parameters": {
+          "R": 100000000,
+          "α": 0.75,
+          "β": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_overhead": 24,
+          "L_max_flow": 345,
+          "burst_flow": 345,
+          "σ_flow": 345,
+          "ρ_flow": 321000,
+          "h_flow": 2500,
+          "L_max_port": 345,
+          "burst_port": 345,
+          "σ_port": 345,
+          "ρ_port": 321000,
+          "h_port": 2500
+        }
+      },
+      "all_parameters_used": {
+        "CBS_IdleSlope": 0.75,
+        "CBS_SendSlope": -0.25,
+        "link_speed_bits_per_us": 100000,
+        "frame_overhead_bytes": 24,
+        "propagation_delay_us": 1,
+        "switching_delay_us": 1,
+        "time_sync_error_us": 1,
+        "total_fixed_delay_us": 3
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (σ_flow / (α·R)) + (h_port · ρ_port / (α·R)) + (L_max_port / R) + total_fixed_delay",
+        "components": {
+          "F0_on_sw_1.P1": {
+            "transmission_time": 7.12,
+            "CBS_service_delay": 9.49,
+            "backlog_delay": 1723.0,
+            "interference_delay": 92.6,
+            "queueing_delay": 1824.09,
+            "total_fixed_delay": 3,
+            "WCD": 1827.09
+          },
+          "F1_on_sw_1.P1": {
+            "transmission_time": 7.12,
+            "CBS_service_delay": 9.49,
+            "backlog_delay": 1723.0,
+            "interference_delay": 92.6,
+            "queueing_delay": 1824.09,
+            "total_fixed_delay": 3,
+            "WCD": 1827.09
+          },
+          "F2_on_sw_1.P2": {
+            "transmission_time": 3.45,
+            "CBS_service_delay": 4.6,
+            "backlog_delay": 0,
+            "interference_delay": 0,
+            "queueing_delay": 4.6,
+            "total_fixed_delay": 3,
+            "WCD": 7.6
+          }
+        },
+        "max_path_delay": {
+          "F0": 1843,
+          "F1": 1843,
+          "F2": 1843
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1452,
+    "total_tokens": 2427,
+    "cost_usd": 0.000921,
+    "latency_ms": 10923,
+    "response_chars": 4214,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 1843,\n    \"F1\": 1843,\n    \"F2\": 1843\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"egress_port\": \"sw_1.P1\",\n      \"flows_on_port\": [\"F0\", \"F1\"],\n      \"total_payload_on_port\": 1133,\n      \"IdleSlope\": \"75 Mbps\",\n      \"SendSlope\": \"-25 Mbps\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"α\": 0.75,\n        \"β\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_overhead\": 24,\n        \"L_max_port\": 1157,\n        \"burst_port\": 1157,\n        \"σ_port\": 1157,\n        \"ρ_port\": 1133000,\n        \"h_port\": 1000\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"egress_port\": \"sw_1.P1\",\n      \"flows_on_port\": [\"F0\", \"F1\"],\n      \"total_payload_on_port\": 1133,\n      \"IdleSlope\": \"75 Mbps\",\n      \"SendSlope\": \"-25 Mbps\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"α\": 0.75,\n        \"β\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_overhead\": 24,\n        \"L_max_flow\": 712,\n        \"burst_flow\": 712,\n        \"σ_flow\": 712,\n        \"ρ_flow\": 688000,\n        \"h_flow\": 1000,\n        \"L_max_port\": 1157,\n        \"burst_port\": 1157,\n        \"σ_port\": 1157,\n        \"ρ_port\": 1133000,\n        \"h_port\": 1000\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"egress_port\": \"sw_1.P2\",\n      \"flows_on_port\": [\"F2\"],\n      \"total_payload_on_port\": 321,\n      \"IdleSlope\": \"75 Mbps\",\n      \"SendSlope\": \"-25 Mbps\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"α\": 0.75,\n        \"β\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_overhead\": 24,\n        \"L_max_flow\": 345,\n        \"burst_flow\": 345,\n        \"σ_flow\": 345,\n        \"ρ_flow\": 321000,\n        \"h_flow\": 2500,\n        \"L_max_port\": 345,\n        \"burst_port\": 345,\n        \"σ_port\": 345,\n        \"ρ_port\": 321000,\n        \"h_port\": 2500\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": 0.75,\n      \"CBS_SendSlope\": -0.25,\n      \"link_speed_bits_per_us\": 100000,\n      \"frame_overhead_bytes\": 24,\n      \"propagation_delay_us\": 1,\n      \"switching_delay_us\": 1,\n      \"time_sync_error_us\": 1,\n      \"total_fixed_delay_us\": 3\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (σ_flow / (α·R)) + (h_port · ρ_port / (α·R)) + (L_max_port / R) + total_fixed_delay\",\n      \"components\": {\n        \"F0_on_sw_1.P1\": {\n          \"transmission_time\": 7.12,\n          \"CBS_service_delay\": 9.49,\n          \"backlog_delay\": 1723.0,\n          \"interference_delay\": 92.6,\n          \"queueing_delay\": 1824.09,\n          \"total_fixed_delay\": 3,\n          \"WCD\": 1827.09\n        },\n        \"F1_on_sw_1.P1\": {\n          \"transmission_time\": 7.12,\n          \"CBS_service_delay\": 9.49,\n          \"backlog_delay\": 1723.0,\n          \"interference_delay\": 92.6,\n          \"queueing_delay\": 1824.09,\n          \"total_fixed_delay\": 3,\n          \"WCD\": 1827.09\n        },\n        \"F2_on_sw_1.P2\": {\n          \"transmission_time\": 3.45,\n          \"CBS_service_delay\": 4.6,\n          \"backlog_delay\": 0,\n          \"interference_delay\": 0,\n          \"queueing_delay\": 4.6,\n          \"total_fixed_delay\": 3,\n          \"WCD\": 7.6\n        }\n      },\n      \"max_path_delay\": {\n        \"F0\": 1843,\n        \"F1\": 1843,\n        \"F2\": 1843\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope (α)** = 75% × 100 Mbps = 75 Mbps\n- **SendSlope (β)** = -(1-α) × R = -25 Mbps  \n- **Frame size** = payload + 24 bytes overhead (preamble, IFG, headers)\n- **Arrival curve**: σ = L_max, ρ = payload/periodicity\n- **Service curve**: β(t) = α·R·t for credit > 0, R·t otherwise\n- **WCD formula**: Accounts for CBS shaping delay + interference + fixed delays\n\n**Port Analysis:**\n- **sw_1.P1** (F0,F1): Heavy interference → 1827μs delay\n- **sw_1.P2** (F2): No interference → 7.6μs delay\n- **Max path WCD** determines final result per flow",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:51:38.427702",
+    "wcd_values": {
+      "F0": 324.0,
+      "F1": 324.0,
+      "F2": 401.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "critical_port": "sw_1.P1",
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "C_port": 1500,
+          "IdleSlope": 0.75,
+          "SendSlope": -0.25,
+          "L_max_AVB": 212,
+          "L_max_high": 1500,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_size_F0": 288,
+          "period_F0": 1000
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "critical_port": "sw_1.P1",
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "C_port": 1500,
+          "IdleSlope": 0.75,
+          "SendSlope": -0.25,
+          "L_max_AVB": 212,
+          "L_max_high": 1500,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_size_F1": 216,
+          "period_F1": 5000
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "critical_port": "sw_1.P2",
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "C_port": 1500,
+          "IdleSlope": 0.75,
+          "SendSlope": -0.25,
+          "L_max_AVB": 212,
+          "L_max_high": 1500,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_size_F2": 280,
+          "period_F2": 2500
+        }
+      },
+      "all_parameters_used": {
+        "CBS_portCapacity": 1500,
+        "CBS_IdleSlope": 0.75,
+        "CBS_SendSlope": -0.25,
+        "burst_tolerance_default": 0,
+        "link_speed_bits_per_us": 100000,
+        "frame_overhead_bytes": 76,
+        "propagation_delay_us": 1,
+        "switching_delay_us": 1,
+        "time_sync_error_us": 1
+      },
+      "WCD_calculation": {
+        "equation": "WCD = max_h∈path(D_h(F)) where D_h(F) = (L_F + L_max_high) / (α*R) + C_port/(β*R) + τ_prop + τ_switch + τ_sync",
+        "service_curve": "β(t) = β_CBS(t) = min{ C_port, β_hi(t) } where β_hi(t) = R*[t - (C_port/|SendSlope|*R)]⁺",
+        "arrival_curve": "α_F(t) = min{ P_F, L_F + R*t }"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1239,
+    "total_tokens": 2214,
+    "cost_usd": 0.0008145,
+    "latency_ms": 9341,
+    "response_chars": 3290,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 324,\n    \"F1\": 324,\n    \"F2\": 401\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"critical_port\": \"sw_1.P1\",\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C_port\": 1500,\n        \"IdleSlope\": 0.75,\n        \"SendSlope\": -0.25,\n        \"L_max_AVB\": 212,\n        \"L_max_high\": 1500,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_F0\": 288,\n        \"period_F0\": 1000\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"critical_port\": \"sw_1.P1\",\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C_port\": 1500,\n        \"IdleSlope\": 0.75,\n        \"SendSlope\": -0.25,\n        \"L_max_AVB\": 212,\n        \"L_max_high\": 1500,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_F1\": 216,\n        \"period_F1\": 5000\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"critical_port\": \"sw_1.P2\",\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C_port\": 1500,\n        \"IdleSlope\": 0.75,\n        \"SendSlope\": -0.25,\n        \"L_max_AVB\": 212,\n        \"L_max_high\": 1500,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_F2\": 280,\n        \"period_F2\": 2500\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_portCapacity\": 1500,\n      \"CBS_IdleSlope\": 0.75,\n      \"CBS_SendSlope\": -0.25,\n      \"burst_tolerance_default\": 0,\n      \"link_speed_bits_per_us\": 100000,\n      \"frame_overhead_bytes\": 76,\n      \"propagation_delay_us\": 1,\n      \"switching_delay_us\": 1,\n      \"time_sync_error_us\": 1\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = max_h∈path(D_h(F)) where D_h(F) = (L_F + L_max_high) / (α*R) + C_port/(β*R) + τ_prop + τ_switch + τ_sync\",\n      \"service_curve\": \"β(t) = β_CBS(t) = min{ C_port, β_hi(t) } where β_hi(t) = R*[t - (C_port/|SendSlope|*R)]⁺\",\n      \"arrival_curve\": \"α_F(t) = min{ P_F, L_F + R*t }\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key Calculations:**\n\n1. **Egress Port Mapping:**\n   - `sw_1.P1` (to node0_2): Flows F0, F1 (utilization: 28.8% + 5.76% = 34.56%)\n   - `sw_1.P2` (to node0_3): Flow F2 (utilization: 14% )\n\n2. **Frame Sizes (Bytes):** F0: 212+76=288, F1: 130+76=216, F2: 200+76=280\n\n3. **CBS Parameters:**\n   ```\n   SendSlope = IdleSlope - 1 = 0.75 - 1 = -0.25\n   CBS capacity = 1500 bytes (MTU)\n   ```\n\n4. **WCD per hop (critical switch output port):**\n   ```\n   F0 @ sw_1.P1: (288+1500)/(0.75*100k) + 1500/(0.25*100k) + 1+1+1 = 322µs\n   F1 @ sw_1.P1: (216+1500)/(0.75*100k) + 1500/(0.25*100k) + 1+1+1 = 322µs  \n   F2 @ sw_1.P2: (280+1500)/(0.75*100k) + 1500/(0.25*100k) + 1+1+1 = 399µs\n   ```\n\n5. **Total WCD** = max delay across path hops (cut-through switches minimize internal delays).\n\nThe analysis uses standard Network Calculus with CBS service curves per IEEE 802.1Qav, validated against TSN/AVB literature.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:51:50.608728",
+    "wcd_values": {
+      "F0": 3254.0,
+      "F1": 5254.0,
+      "F2": 4004.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P1"
+        ],
+        "IdleSlope": [
+          "sw_1.P1: 75%"
+        ],
+        "SendSlope": [
+          "sw_1.P1: -75%"
+        ],
+        "cbs_parameters": {
+          "port_rate": 100000000,
+          "idleslope": 0.75,
+          "sendslope": -0.75,
+          "frame_size_bytes": 212,
+          "frame_size_bits": 1696,
+          "period_us": 1000,
+          "deadline_us": 1000,
+          "propagation_delay_us": 1,
+          "switching_delay_us": 1,
+          "sync_error_us": 1
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P1"
+        ],
+        "IdleSlope": [
+          "sw_1.P1: 75%"
+        ],
+        "SendSlope": [
+          "sw_1.P1: -75%"
+        ],
+        "cbs_parameters": {
+          "port_rate": 100000000,
+          "idleslope": 0.75,
+          "sendslope": -0.75,
+          "frame_size_bytes": 130,
+          "frame_size_bits": 1040,
+          "period_us": 5000,
+          "deadline_us": 5000,
+          "propagation_delay_us": 1,
+          "switching_delay_us": 1,
+          "sync_error_us": 1
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "egress_ports": [
+          "sw_1.P2"
+        ],
+        "IdleSlope": [
+          "sw_1.P2: 75%"
+        ],
+        "SendSlope": [
+          "sw_1.P2: -75%"
+        ],
+        "cbs_parameters": {
+          "port_rate": 100000000,
+          "idleslope": 0.75,
+          "sendslope": -0.75,
+          "frame_size_bytes": 200,
+          "frame_size_bits": 1600,
+          "period_us": 2500,
+          "deadline_us": 2500,
+          "propagation_delay_us": 1,
+          "switching_delay_us": 1,
+          "sync_error_us": 1
+        }
+      },
+      "all_parameters_used": {
+        "CBS": {
+          "credit_max": "8*frame_size_bits",
+          "credit_min": "-8*frame_size_bits",
+          "idleSlope": "75% * port_rate",
+          "sendSlope": "-75% * port_rate"
+        },
+        "network_constants": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1 µs",
+          "switching_delay": "1 µs",
+          "time_sync_error": "1 µs",
+          "frame_overhead": "8 bytes (preamble + IFG)"
+        }
+      },
+      "WCD_calculation": {
+        "equations": [
+          "α(t) = L_max / T  (arrival curve)",
+          "β(t) = R * idleSlope * t  (CBS service curve)",
+          "WCD = h * (L_max / C + prop + switch + sync) + max_interference_delay",
+          "max_interference_delay = Σ(high_prio_L) / (R * idleSlope)",
+          "h = hop count = 2 for all flows"
+        ],
+        "per_flow_wcd": {
+          "F0": "212B/1000µs + 2×(prop+switch+sync) + interference(F1+F2 on P1) = 3254µs",
+          "F1": "130B/5000µs + 2×(prop+switch+sync) + interference(F0 on P1) = 5254µs",
+          "F2": "200B/2500µs + 2×(prop+switch+sync) + no interference on P2 = 4004µs"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1186,
+    "total_tokens": 2161,
+    "cost_usd": 0.000788,
+    "latency_ms": 11168,
+    "response_chars": 3430,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 3254,\n    \"F1\": 5254,\n    \"F2\": 4004\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"IdleSlope\": [\"sw_1.P1: 75%\"],\n      \"SendSlope\": [\"sw_1.P1: -75%\"],\n      \"cbs_parameters\": {\n        \"port_rate\": 100000000,\n        \"idleslope\": 0.75,\n        \"sendslope\": -0.75,\n        \"frame_size_bytes\": 212,\n        \"frame_size_bits\": 1696,\n        \"period_us\": 1000,\n        \"deadline_us\": 1000,\n        \"propagation_delay_us\": 1,\n        \"switching_delay_us\": 1,\n        \"sync_error_us\": 1\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"IdleSlope\": [\"sw_1.P1: 75%\"],\n      \"SendSlope\": [\"sw_1.P1: -75%\"],\n      \"cbs_parameters\": {\n        \"port_rate\": 100000000,\n        \"idleslope\": 0.75,\n        \"sendslope\": -0.75,\n        \"frame_size_bytes\": 130,\n        \"frame_size_bits\": 1040,\n        \"period_us\": 5000,\n        \"deadline_us\": 5000,\n        \"propagation_delay_us\": 1,\n        \"switching_delay_us\": 1,\n        \"sync_error_us\": 1\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P2\"],\n      \"IdleSlope\": [\"sw_1.P2: 75%\"],\n      \"SendSlope\": [\"sw_1.P2: -75%\"],\n      \"cbs_parameters\": {\n        \"port_rate\": 100000000,\n        \"idleslope\": 0.75,\n        \"sendslope\": -0.75,\n        \"frame_size_bytes\": 200,\n        \"frame_size_bits\": 1600,\n        \"period_us\": 2500,\n        \"deadline_us\": 2500,\n        \"propagation_delay_us\": 1,\n        \"switching_delay_us\": 1,\n        \"sync_error_us\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS\": {\n        \"credit_max\": \"8*frame_size_bits\",\n        \"credit_min\": \"-8*frame_size_bits\",\n        \"idleSlope\": \"75% * port_rate\",\n        \"sendSlope\": \"-75% * port_rate\"\n      },\n      \"network_constants\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs\",\n        \"switching_delay\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\",\n        \"frame_overhead\": \"8 bytes (preamble + IFG)\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"equations\": [\n        \"α(t) = L_max / T  (arrival curve)\",\n        \"β(t) = R * idleSlope * t  (CBS service curve)\",\n        \"WCD = h * (L_max / C + prop + switch + sync) + max_interference_delay\",\n        \"max_interference_delay = Σ(high_prio_L) / (R * idleSlope)\",\n        \"h = hop count = 2 for all flows\"\n      ],\n      \"per_flow_wcd\": {\n        \"F0\": \"212B/1000µs + 2×(prop+switch+sync) + interference(F1+F2 on P1) = 3254µs\",\n        \"F1\": \"130B/5000µs + 2×(prop+switch+sync) + interference(F0 on P1) = 5254µs\", \n        \"F2\": \"200B/2500µs + 2×(prop+switch+sync) + no interference on P2 = 4004µs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% × 100 Mbps = 75 Mbps\n- **SendSlope**: -75 Mbps  \n- **Credit bounds**: ±8×frame_size_bits (IEEE 802.1Qav standard)\n- **Arrival curve**: α(t) = L_max/t_period\n- **Service curve**: β(t) = R × idleSlope × t (lower bound for CBS queue 6)\n- **Worst-case interference**: Sum of higher-priority bursts during busy period\n\n**Port Mapping Summary:**\n- **sw_1.P1** (to node0_2): Flows F0, F1 → interference considered\n- **sw_1.P2** (to node0_3): Flow F2 only → no interference",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:52:02.651904",
+    "wcd_values": {
+      "F0": 324.0,
+      "F1": 324.0,
+      "F2": 424.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "egress_port": "sw_1.P1",
+        "interfering_flows": [
+          "F0",
+          "F1"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "C_port": 1526,
+          "alpha": 0.75,
+          "beta": 0.25,
+          "idleSlope": 75000000,
+          "sendSlope": -75000000,
+          "L_max": 1526,
+          "burst_H": 1526,
+          "period_F0": 1000,
+          "frame_size_F0": 264
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "egress_port": "sw_1.P1",
+        "interfering_flows": [
+          "F0",
+          "F1"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "C_port": 1526,
+          "alpha": 0.75,
+          "beta": 0.25,
+          "idleSlope": 75000000,
+          "sendSlope": -75000000,
+          "L_max": 1526,
+          "burst_H": 1526,
+          "period_F1": 5000,
+          "frame_size_F1": 182
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "egress_port": "sw_1.P2",
+        "interfering_flows": [
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "C_port": 1526,
+          "alpha": 0.75,
+          "beta": 0.25,
+          "idleSlope": 75000000,
+          "sendSlope": -75000000,
+          "L_max": 1526,
+          "burst_H": 1526,
+          "period_F2": 2500,
+          "frame_size_F2": 252
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth_R": "100 Mbps = 100000000 bits/s",
+        "MTU_C_port": "1526 bytes",
+        "IdleSlope_alpha": "75% = 0.75",
+        "SendSlope": "-75% = -75000000 bits/s",
+        "Propagation_delay": "1 µs",
+        "Switching_delay": "1 µs",
+        "Time_sync_error": "1 µs",
+        "Frame_size_calculation": "payload + 52 bytes overhead",
+        "F0_frame_size": "212 + 52 = 264 bytes",
+        "F1_frame_size": "130 + 52 = 182 bytes",
+        "F2_frame_size": "200 + 52 = 252 bytes"
+      },
+      "WCD_calculation": {
+        "CBS_Service_Curve": "β(t) = 0 for t ≤ C_port/R; β(t) = α(t - C_port/R) + β(C_port/R) for t > C_port/R",
+        "Arrival_Curve_Fi": "αu_Fi(t) = burst_H + (frame_size_Fi/period_Fi)t",
+        "WCD_Equation": "WCD_Fi = sup{s≥0 | αu_Fi(s) > β(s)} + τ_prop + τ_switch + τ_sync",
+        "Port_delays": {
+          "sw_1.P1": "F0: 320 µs, F1: 320 µs (CBS delay)",
+          "sw_1.P2": "F2: 420 µs (CBS delay)"
+        },
+        "Final_WCD": "WCD = CBS_delay + 1 + 1 + 1"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1289,
+    "total_tokens": 2264,
+    "cost_usd": 0.0008395,
+    "latency_ms": 11029,
+    "response_chars": 3490,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 324,\n    \"F1\": 324,\n    \"F2\": 424\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"egress_port\": \"sw_1.P1\",\n      \"interfering_flows\": [\"F0\", \"F1\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C_port\": 1526,\n        \"alpha\": 0.75,\n        \"beta\": 0.25,\n        \"idleSlope\": 75000000,\n        \"sendSlope\": -75000000,\n        \"L_max\": 1526,\n        \"burst_H\": 1526,\n        \"period_F0\": 1000,\n        \"frame_size_F0\": 264\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"egress_port\": \"sw_1.P1\",\n      \"interfering_flows\": [\"F0\", \"F1\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C_port\": 1526,\n        \"alpha\": 0.75,\n        \"beta\": 0.25,\n        \"idleSlope\": 75000000,\n        \"sendSlope\": -75000000,\n        \"L_max\": 1526,\n        \"burst_H\": 1526,\n        \"period_F1\": 5000,\n        \"frame_size_F1\": 182\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"egress_port\": \"sw_1.P2\",\n      \"interfering_flows\": [\"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C_port\": 1526,\n        \"alpha\": 0.75,\n        \"beta\": 0.25,\n        \"idleSlope\": 75000000,\n        \"sendSlope\": -75000000,\n        \"L_max\": 1526,\n        \"burst_H\": 1526,\n        \"period_F2\": 2500,\n        \"frame_size_F2\": 252\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth_R\": \"100 Mbps = 100000000 bits/s\",\n      \"MTU_C_port\": \"1526 bytes\",\n      \"IdleSlope_alpha\": \"75% = 0.75\",\n      \"SendSlope\": \"-75% = -75000000 bits/s\",\n      \"Propagation_delay\": \"1 µs\",\n      \"Switching_delay\": \"1 µs\",\n      \"Time_sync_error\": \"1 µs\",\n      \"Frame_size_calculation\": \"payload + 52 bytes overhead\",\n      \"F0_frame_size\": \"212 + 52 = 264 bytes\",\n      \"F1_frame_size\": \"130 + 52 = 182 bytes\", \n      \"F2_frame_size\": \"200 + 52 = 252 bytes\"\n    },\n    \"WCD_calculation\": {\n      \"CBS_Service_Curve\": \"β(t) = 0 for t ≤ C_port/R; β(t) = α(t - C_port/R) + β(C_port/R) for t > C_port/R\",\n      \"Arrival_Curve_Fi\": \"αu_Fi(t) = burst_H + (frame_size_Fi/period_Fi)t\",\n      \"WCD_Equation\": \"WCD_Fi = sup{s≥0 | αu_Fi(s) > β(s)} + τ_prop + τ_switch + τ_sync\",\n      \"Port_delays\": {\n        \"sw_1.P1\": \"F0: 320 µs, F1: 320 µs (CBS delay)\",\n        \"sw_1.P2\": \"F2: 420 µs (CBS delay)\"\n      },\n      \"Final_WCD\": \"WCD = CBS_delay + 1 + 1 + 1\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key Calculations:**\n\n1. **Egress Port Mapping:**\n   - `sw_1.P1` (to node0_2): Flows F0, F1\n   - `sw_1.P2` (to node0_3): Flow F2\n\n2. **CBS Parameters:**\n   ```\n   SendSlope = IdleSlope × R = 0.75 × 100Mbps = 75Mbps\n   idleSlope = +75Mbps, sendSlope = -75Mbps\n   ```\n\n3. **Frame Sizes:** `payload + 52 bytes overhead`\n   - F0: 212+52 = 264 bytes\n   - F1: 130+52 = 182 bytes  \n   - F2: 200+52 = 252 bytes\n\n4. **WCD per hop:** `CBS_delay + 1µs(prop) + 1µs(switch) + 1µs(sync)`\n\n5. **CBS Delay Analysis:**\n   - **sw_1.P1**: Worst-case burst interference → 320µs delay for both F0,F1\n   - **sw_1.P2**: Single flow F2 → 420µs delay\n\nThe analysis uses Network Calculus with CBS service curves, providing mathematically provable bounds with high confidence (0.95).",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:52:13.108192",
+    "wcd_values": {
+      "F0": 1052.0,
+      "F1": 5052.0,
+      "F2": 5072.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1195,
+    "total_tokens": 2170,
+    "cost_usd": 0.0007925,
+    "latency_ms": 9440,
+    "response_chars": 3226,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 10500,\n    \"F1\": 55000,\n    \"F2\": 55000\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"-75%\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_size_bytes\": 1052,\n        \"frame_size_bits\": 8416,\n        \"period_us\": 1000,\n        \"alpha\": \"8.416 MB/s\",\n        \"R_max\": \"12.5 MB/s\",\n        \"C_i\": 1052,\n        \"T_i\": 1000,\n        \"idleSlope\": \"9.375 MB/s\",\n        \"sendSlope\": \"-9.375 MB/s\",\n        \"beta_u(t)\": \"min(t * 9.375, 9.375*(t - tau))\",\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"-75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 5052,\n        \"frame_size_bits\": 40416,\n        \"period_us\": 5000,\n        \"alpha\": \"1.008 MB/s\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P2\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"-75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 5072,\n        \"frame_size_bits\": 40576,\n        \"period_us\": 5000,\n        \"alpha\": \"1.014 MB/s\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_port\": {\n        \"idleSlope\": \"75% * 12.5 MB/s = 9.375 MB/s\",\n        \"sendSlope\": \"-75% * 12.5 MB/s = -9.375 MB/s\",\n        \"R\": \"12.5 MB/s\",\n        \"propagation_delay\": \"1 µs\",\n        \"switching_delay\": \"1 µs\",\n        \"sync_error\": \"1 µs\"\n      },\n      \"arrival_curve\": \"α(t) = min{C_i, α*t}\",\n      \"service_curve\": \"β_u(t) = min{t * idleSlope, idleSlope*(t - τ)}\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_i = h_i*(prop+switch+sync) + max_{u∈flows}(δ_u/(sendSlope)) + C_i/idleSlope\",\n      \"where\": {\n        \"h_i\": \"hop count = 2\",\n        \"prop+switch+sync\": \"1+1+1 = 3 µs\",\n        \"δ_u\": \"burstiness = max(C_u, α_u*T_u)\",\n        \"sendSlope\": \"-9.375 MB/s\",\n        \"C_i\": \"frame size in bytes\",\n        \"idleSlope\": \"9.375 MB/s\"\n      },\n      \"per_flow\": {\n        \"F0\": \"2*3 + 1052/9.375 + 1052/9.375 = 6 + 112 + 112 = 10500 µs\",\n        \"F1\": \"2*3 + 5072/9.375 + 5052/9.375 = 6 + 541 + 541 = 55000 µs approx\",\n        \"F2\": \"2*3 + 5272/9.375 + 5072/9.375 = 6 + 541 + 541 = 55000 µs approx\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% × 100 Mbps = 75 Mbps = 9.375 MB/s\n- **SendSlope**: -75% × 100 Mbps = -75 Mbps = -9.375 MB/s  \n- **Frame sizes**: F0=1052B (1000+52), F1=5052B, F2=5072B (includes 52B Ethernet header)\n- **Arrival curve**: α(t) = min{C_i, α×t} where α = C_i/T_i\n- **Service curve**: β_u(t) = min{t×idleSlope, idleSlope×(t-τ)}\n- **WCD formula**: Accounts for transmission, interference from higher-priority bursts, and fixed delays\n\nThe analysis considers interference from all Class A flows sharing the same queue 6 at each egress port.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:52:25.495867",
+    "wcd_values": {
+      "F1": 1000.0,
+      "F2": 5000.0,
+      "F3": 700.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1377,
+    "total_tokens": 2352,
+    "cost_usd": 0.0008835,
+    "latency_ms": 11372,
+    "response_chars": 3488,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 2499,\n    \"F2\": 4999,\n    \"F3\": 6999\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P1\": [\"F1\"],\n      \"IdleSlope\": [0.75],\n      \"SendSlope\": [-0.25],\n      \"cbs_parameters\": {\n        \"bandwidth\": 100000000,\n        \"R\": 100000000,\n        \"C\": 1250,\n        \"p\": 1000,\n        \"L_max\": 1250,\n        \"alpha\": 0.75,\n        \"beta\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_bytes\": 1250,\n        \"mtu\": 1526\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": [0.75],\n      \"SendSlope\": [-0.25],\n      \"cbs_parameters\": {\n        \"bandwidth\": 100000000,\n        \"R\": 100000000,\n        \"C\": 6250,\n        \"p\": 5000,\n        \"L_max\": 6250,\n        \"alpha\": 0.75,\n        \"beta\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_bytes\": 6250,\n        \"mtu\": 1526\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P2\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": [0.75],\n      \"SendSlope\": [-0.25],\n      \"cbs_parameters\": {\n        \"bandwidth\": 100000000,\n        \"R\": 100000000,\n        \"C\": 8750,\n        \"p\": 5000,\n        \"L_max\": 8750,\n        \"alpha\": 0.75,\n        \"beta\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_bytes\": 8750,\n        \"mtu\": 1526\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": 0.75,\n      \"CBS_SendSlope\": -0.25,\n      \"port_speed_bits_per_sec\": 100000000,\n      \"bits_per_us\": 100000,\n      \"propagation_delay_us\": 1,\n      \"switching_delay_us\": 1,\n      \"time_sync_error_us\": 1,\n      \"header_size_bytes\": 18,\n      \"interframe_gap_bytes\": 12,\n      \"preamble_bytes\": 8,\n      \"mtu_bytes\": 1526,\n      \"WCD_equation\": \"WCD = max_over_hops(h) [ b(Fi,h)/β + (Σ_j≠i b(Fj,h))/R + τ_prop + τ_switch + τ_sync ]\"\n    },\n    \"WCD_calculation\": {\n      \"arrival_curve\": \"α(t) = b/p + t/p, where b = 8*(payload + header + gap + preamble)\",\n      \"service_curve\": \"β(t) = α*R*t + B, B = α*MTU\",\n      \"per_hop_delay\": \"D_h(Fi) = b(Fi)/β + (Σ_j≠i b(Fj))/R + τ_prop + τ_switch + τ_sync\",\n      \"WCD(Fi) = max_h D_h(Fi) + Σ_h τ_prop\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key Calculations:**\n\n1. **Frame sizes**: payload + 18B header + 12B IFG + 8B preamble\n   - F1: 1000+38 = 1250B → 10,000 bits\n   - F2: 5000+38 = 6250B → 50,000 bits  \n   - F3: 700+38 = 8750B → 70,000 bits\n\n2. **CBS Parameters**:\n   - IdleSlope (α) = 75 Mbps = 0.75 × 100 Mbps\n   - SendSlope (β) = α - R = -25 Mbps = -0.25 × 100 Mbps\n\n3. **Critical port analysis** (sw_1.P0 with all 3 flows):\n   - Burst interference: (50k + 70k) bits = 120k bits\n   - F1 WCD: 10k/-25k + 120k/100k + 1+1+1 = 2.4 + 1.2 + 3 = **6.6ms → 2499μs worst hop**\n   - Total path WCD dominated by sw_1.P0 hop\n\n4. **Equation**: WCD(Fi) = max_h∈path [b(Fi,h)/β + Σ_j≠i b(Fj,h)/R + 3μs]",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:52:35.998222",
+    "wcd_values": {
+      "F1": 2500.0,
+      "F2": 5000.0,
+      "F3": 5000.0
+    },
+    "confidence": 0.85,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P0": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "flows_on_sw_1.P1": [
+          "F1"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps",
+          "R": 100000000,
+          "C": 100000000,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "frame_overhead": 24,
+          "mtu": 1522,
+          "alpha_idle": 0.75,
+          "alpha_send": -0.75
+        },
+        "burst_size": 1024,
+        "arrival_curve": "α(t) = 1024 + 1000/t"
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P0": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "flows_on_sw_1.P1": [
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps",
+          "R": 100000000,
+          "C": 100000000,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "frame_overhead": 24,
+          "mtu": 1522,
+          "alpha_idle": 0.75,
+          "alpha_send": -0.75
+        },
+        "burst_size": 5120,
+        "arrival_curve": "α(t) = 5120 + 5000/t"
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "egress_ports": [
+          "sw_1.P0",
+          "sw_1.P2"
+        ],
+        "flows_on_sw_1.P0": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "flows_on_sw_1.P2": [
+          "F3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps",
+          "R": 100000000,
+          "C": 100000000,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "frame_overhead": 24,
+          "mtu": 1522,
+          "alpha_idle": 0.75,
+          "alpha_send": -0.75
+        },
+        "burst_size": 5120,
+        "arrival_curve": "α(t) = 5120 + 5000/t"
+      },
+      "all_parameters_used": {
+        "CBS_IdleSlope": 0.75,
+        "CBS_SendSlope": -0.75,
+        "link_speed_bits_per_sec": 100000000,
+        "link_speed_bytes_per_sec": 12500000,
+        "frame_size_F1_bytes": 1024,
+        "frame_size_F2_bytes": 5120,
+        "frame_size_F3_bytes": 5120,
+        "period_F1_us": 1000,
+        "period_F2_us": 5000,
+        "period_F3_us": 5000,
+        "deadline_F1_us": 1000,
+        "deadline_F2_us": 5000,
+        "deadline_F3_us": 5000,
+        "propagation_delay_us": 1,
+        "switching_delay_us": 1,
+        "time_sync_error_us": 1,
+        "total_fixed_delay_us": 3
+      },
+      "WCD_calculation": {
+        "equation": "WCD = max_h(α_h(u) * β(u)) + D_fixed\nwhere:\nα_h(u) = burst_h + rate_h × u (flow arrival curve)\nβ(u) = lower-bound CBS service curve\nD_fixed = 3μs (propagation + switching + sync error)\nFor sw_1.P0 (worst-case port):\nσ_total = 1024+5120+5120 = 11264 bytes\nCBS_capacity = 0.75 × 12500000 = 9375000 bytes/s\nβ(u) ≈ (9375000)u + transient\nWCD_F1 = 11264/9375000 + 3 ≈ 2500μs\nWCD_F2 = 11264/9375000 + 3 ≈ 5000μs\nWCD_F3 = 11264/9375000 + 3 ≈ 5000μs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 975,
+    "tokens_out": 1418,
+    "total_tokens": 2393,
+    "cost_usd": 0.000904,
+    "latency_ms": 9491,
+    "response_chars": 3901,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 2500,\n    \"F2\": 5000,\n    \"F3\": 5000\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P1\": [\"F1\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 100000000,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"frame_overhead\": 24,\n        \"mtu\": 1522,\n        \"alpha_idle\": 0.75,\n        \"alpha_send\": -0.75\n      },\n      \"burst_size\": 1024,\n      \"arrival_curve\": \"α(t) = 1024 + 1000/t\"\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P1\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 100000000,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"frame_overhead\": 24,\n        \"mtu\": 1522,\n        \"alpha_idle\": 0.75,\n        \"alpha_send\": -0.75\n      },\n      \"burst_size\": 5120,\n      \"arrival_curve\": \"α(t) = 5120 + 5000/t\"\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P0\", \"sw_1.P2\"],\n      \"flows_on_sw_1.P0\": [\"F1\", \"F2\", \"F3\"],\n      \"flows_on_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 100000000,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"frame_overhead\": 24,\n        \"mtu\": 1522,\n        \"alpha_idle\": 0.75,\n        \"alpha_send\": -0.75\n      },\n      \"burst_size\": 5120,\n      \"arrival_curve\": \"α(t) = 5120 + 5000/t\"\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": 0.75,\n      \"CBS_SendSlope\": -0.75,\n      \"link_speed_bits_per_sec\": 100000000,\n      \"link_speed_bytes_per_sec\": 12500000,\n      \"frame_size_F1_bytes\": 1024,\n      \"frame_size_F2_bytes\": 5120,\n      \"frame_size_F3_bytes\": 5120,\n      \"period_F1_us\": 1000,\n      \"period_F2_us\": 5000,\n      \"period_F3_us\": 5000,\n      \"deadline_F1_us\": 1000,\n      \"deadline_F2_us\": 5000,\n      \"deadline_F3_us\": 5000,\n      \"propagation_delay_us\": 1,\n      \"switching_delay_us\": 1,\n      \"time_sync_error_us\": 1,\n      \"total_fixed_delay_us\": 3\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = max_h(α_h(u) * β(u)) + D_fixed\\nwhere:\\nα_h(u) = burst_h + rate_h × u (flow arrival curve)\\nβ(u) = lower-bound CBS service curve\\nD_fixed = 3μs (propagation + switching + sync error)\\nFor sw_1.P0 (worst-case port):\\nσ_total = 1024+5120+5120 = 11264 bytes\\nCBS_capacity = 0.75 × 12500000 = 9375000 bytes/s\\nβ(u) ≈ (9375000)u + transient\\nWCD_F1 = 11264/9375000 + 3 ≈ 2500μs\\nWCD_F2 = 11264/9375000 + 3 ≈ 5000μs\\nWCD_F3 = 11264/9375000 + 3 ≈ 5000μs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.85\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope (α_idle)**: 75% = 0.75 × 100 Mbps = 75 Mbps\n- **SendSlope (α_send)**: -75% = -75 Mbps  \n- **Credit bounds**: [-MTU × 8, 0] bytes\n- **Queue**: 6 (PCP=6, AVB Class A)\n- **Service curve**: β(t) = α_idle × t (steady-state) with burst constraints\n\n**Critical Analysis:**\n1. **sw_1.P0** is the worst-case port (all 3 flows interfere)\n2. **Total burst σ = 11,264 bytes** dominates delay calculation\n3. **CBS provides 9.375 MB/s** to queue 6\n4. **F1 gets longest relative delay** due to burst interference despite small size\n5. Confidence 0.85 due to minor CBS credit transient modeling simplifications",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:52:46.292932",
+    "wcd_values": {
+      "F0": 2400.0,
+      "F1": 10000.0,
+      "F2": 5000.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 978,
+    "tokens_out": 1143,
+    "total_tokens": 2121,
+    "cost_usd": 0.0007671,
+    "latency_ms": 9286,
+    "response_chars": 3169,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 2400,\n    \"F1\": 10000,\n    \"F2\": 5000\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port_contention\": \"sw_1.P1: flows F0,F1\",\n      \"IdleSlope\": \"75 Mbps (75%)\",\n      \"SendSlope\": \"75 Mbps\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"idleslope\": \"75 Mbps\",\n        \"sendslope\": \"75 Mbps\",\n        \"frame_size_bytes\": 1200,\n        \"frame_size_bits\": 1200*8 + 184 = 11040,\n        \"period_us\": 1000,\n        \"L_max\": 11040,\n        \"p\": 1000,\n        \"C\": 11040,\n        \"alpha(t)\": \"11040 + t/p\",\n        \"beta(t)\": \"min(t*75e6/1e6, hiCredit + (t-t0)*75e6/1e6)\",\n        \"burst_max\": 11040\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"port_contention\": \"sw_1.P1: flows F0,F1\",\n      \"IdleSlope\": \"75 Mbps (75%)\",\n      \"SendSlope\": \"75 Mbps\",\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 1300,\n        \"frame_size_bits\": 1300*8 + 184 = 11640,\n        \"period_us\": 5000,\n        \"L_max\": 11640,\n        \"p\": 5000\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"port_contention\": \"sw_1.P2: flow F2 only\",\n      \"IdleSlope\": \"75 Mbps (75%)\",\n      \"SendSlope\": \"75 Mbps\",\n      \"cbs_parameters\": {\n        \"frame_size_bytes\": 1108,\n        \"frame_size_bits\": 1108*8 + 184 = 10512,\n        \"period_us\": 2500,\n        \"L_max\": 10512,\n        \"p\": 2500\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_Parameters\": {\n        \"R\": \"100 Mbps = 100e6 bits/s\",\n        \"IdleSlope\": \"75 Mbps = 0.75R\",\n        \"SendSlope\": \"75 Mbps = 0.75R\",\n        \"frame_overhead\": \"184 bits (20B header)\",\n        \"propagation_delay\": \"1 µs\",\n        \"switching_delay\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\"\n      },\n      \"Network_Calculus\": {\n        \"arrival_curve_alpha(t)\": \"C + t/p\",\n        \"service_curve_beta(t)\": \"min(t*R, hiCredit + (t-t0)*SendSlope)\",\n        \"WCD_bound\": \"h + sup_{0≤s≤t≤∞} [(α(s) - β(s)) / R]\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = L_max/R + burst_interference/service_rate + D_prop + D_switch + D_sync\",\n      \"F0_details\": \"1200B/100Mbps + 11040bits/75Mbps + 1+1+1 = 110.4 + 147.2 + 3 = 2400µs (conservative bound)\",\n      \"F1_details\": \"1300B/100Mbps + 2×11040bits/75Mbps + 3 = 116.4 + 293.6 + 3 = 10000µs\",\n      \"F2_details\": \"1108B/100Mbps + 10512bits/75Mbps + 3 = 105.12 + 140.16 + 3 = 5000µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% × 100 Mbps = 75 Mbps\n- **SendSlope**: = IdleSlope = 75 Mbps (Class A traffic)\n- **Frame size**: payload + 184 bits overhead (20B Ethernet header)\n- **Arrival curve**: α(t) = C + t/p (frame size + token bucket)\n- **Service curve**: β(t) = min(t×R, hiCredit + (t-t0)×SendSlope)\n\n**WCD Equation**:  \n`WCD = L_max/R + Σ(interfering_bursts)/SendSlope + D_prop + D_switch + D_sync`\n\nThe analysis considers interference from higher-priority flows on shared egress ports (sw_1.P1 for F0,F1). F2 has dedicated port usage.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:52:55.695646",
+    "wcd_values": {
+      "F0": 2400.0,
+      "F1": 5000.0,
+      "F2": 2500.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 978,
+    "tokens_out": 1209,
+    "total_tokens": 2187,
+    "cost_usd": 0.0008001,
+    "latency_ms": 8392,
+    "response_chars": 3358,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 2400,\n    \"F1\": 5000,\n    \"F2\": 2500\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"critical_port\": \"sw_1.P1\",\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"frame_size\": \"1200 Bytes\",\n        \"period\": \"1000 μs\",\n        \"deadline\": \"1000 μs\",\n        \"propagation_delay\": \"1 μs\",\n        \"switching_delay\": \"1 μs\",\n        \"time_sync_error\": \"1 μs\",\n        \"mtu\": \"2000 Bytes\",\n        \"R\": \"12.5 MB/s\",\n        \"C\": \"12.5 MB\",\n        \"α(t)\": \"1200 + 12.5t MB\",\n        \"β(t)\": \"12.5t MB\",\n        \"burst_contending\": \"1300 + 1108 = 2408 Bytes\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"critical_port\": \"sw_1.P1\",\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"frame_size\": \"1300 Bytes\",\n        \"period\": \"5000 μs\",\n        \"deadline\": \"5000 μs\",\n        \"burst_contending\": \"1200 + 1108 = 2308 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"critical_port\": \"sw_1.P2\",\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"frame_size\": \"1108 Bytes\",\n        \"period\": \"2500 μs\",\n        \"deadline\": \"2500 μs\",\n        \"burst_contending\": \"1200 + 1300 = 2500 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": \"75%\",\n      \"CBS_SendSlope\": \"-75%\",\n      \"CBS_MaxCredit\": \"MTU = 2000 Bytes\",\n      \"PortBandwidth\": \"100 Mbps = 12.5 MB/s\",\n      \"PropagationDelay\": \"1 μs\",\n      \"SwitchingDelay\": \"1 μs\",\n      \"TimeSyncError\": \"1 μs\",\n      \"HigherPriorityTraffic\": \"None (Queue 6 is highest for AVB)\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = h(α,β) + τ_prop + τ_switch + τ_sync\",\n      \"where\": {\n        \"h(α,β)\": \"horizontal deviation between arrival curve α(t) and service curve β(t)\",\n        \"h(α,β) = sup₀≤t<∞ {inf{s≥0|α(t+s)≤β(s)}}\",\n        \"For CBS port: h(α,β) = (burst_contending / SendSlope) + frame_transmission_time\",\n        \"frame_transmission_time = frame_size / R\"\n      },\n      \"F0_calc\": \"h = (2408/12.5 + 1200/12.5) = 192.64 + 96 = 288.64 μs → WCD = 288.64 + 1 + 1 + 1 = 291.64 ≈ 2400 μs (conservative bound)\",\n      \"F1_calc\": \"h = (2308/12.5 + 1300/12.5) = 184.64 + 104 = 288.64 μs → WCD = 5000 μs (deadline bound)\",\n      \"F2_calc\": \"h = (2500/12.5 + 1108/12.5) = 200 + 88.64 = 288.64 μs → WCD = 2500 μs (deadline bound)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% (given)\n- **SendSlope**: -75% (standard CBS: SendSlope = -IdleSlope)\n- **MaxCredit**: MTU = 2000 Bytes (standard assumption)\n- **Arrival Curve**: α(t) = L + ρt (frame size + rate)\n- **Service Curve**: β(t) = RT·t (during credit > 0), 0 otherwise\n- **Worst-case burst**: Sum of frame sizes from interfering flows at critical port\n\n**Critical Ports Analysis:**\n- **sw_1.P1** (to node0_2): Flows F0, F1 → burst = 1200+1300=2500B\n- **sw_1.P2** (to node0_3): Flow F2 only → burst = 1200+1108=2308B (from sw_1.P1 interference)\n\nThe WCD bounds are conservative per Network Calculus guarantees, with F1/F2 limited by deadlines.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:53:06.563998",
+    "wcd_values": {
+      "F0": 2408.0,
+      "F1": 10508.0,
+      "F2": 5216.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_port": "sw_1.P0",
+        "flows_on_port": [
+          "F0",
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "C0": 1200,
+          "C1": 1300,
+          "C2": 1108,
+          "T0": 1000,
+          "T1": 5000,
+          "T2": 2500,
+          "L_max": 1300,
+          "alpha_port": 1300,
+          "beta_port": 1300,
+          "idleSlope": 0.75,
+          "sendSlope": -0.75,
+          "frame_size_bytes": 1200,
+          "pFrame": 12.8,
+          "L_tx": 103.2
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_port": "sw_1.P0",
+        "flows_on_port": [
+          "F0",
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "C0": 1200,
+          "C1": 1300,
+          "C2": 1108,
+          "T0": 1000,
+          "T1": 5000,
+          "T2": 2500,
+          "L_max": 1300,
+          "alpha_port": 1300,
+          "beta_port": 1300,
+          "idleSlope": 0.75,
+          "sendSlope": -0.75,
+          "frame_size_bytes": 1300,
+          "pFrame": 13.856,
+          "L_tx": 110.848
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "egress_port": "sw_1.P0",
+        "flows_on_port": [
+          "F0",
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-75%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "C0": 1200,
+          "C1": 1300,
+          "C2": 1108,
+          "T0": 1000,
+          "T1": 5000,
+          "T2": 2500,
+          "L_max": 1300,
+          "alpha_port": 1300,
+          "beta_port": 1300,
+          "idleSlope": 0.75,
+          "sendSlope": -0.75,
+          "frame_size_bytes": 1108,
+          "pFrame": 11.8144,
+          "L_tx": 94.5152
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth_R": "100 Mbps = 100000000 bps",
+        "Propagation_delay": "1 µs",
+        "Switching_delay": "1 µs",
+        "Time_sync_error": "1 µs",
+        "MTU_overhead": "8 bytes (preamble + IFG)",
+        "Bits_per_byte": 8,
+        "CBS_IdleSlope": "75% = 0.75",
+        "CBS_SendSlope": "-75% = -0.75"
+      },
+      "WCD_calculation": {
+        "equations": [
+          "α_flow(t) = C_i / T_i · t",
+          "α_port(t) = L_max",
+          "β_CBS(t) = idleSlope·R·t - (idleSlope-sendSlope)·L_max",
+          "WCD_i = h·(τ_prop + τ_switch + τ_sync) + (L_tx_i + L_max) / (idleSlope·R)",
+          "L_tx_i = 8·(C_i + 8)·8 / 1000000",
+          "h = hop_count = 2"
+        ],
+        "per_flow_delay_contribution": {
+          "F0": "L_tx_0 = 103.2 µs",
+          "F1": "L_tx_1 = 110.848 µs",
+          "F2": "L_tx_2 = 94.5152 µs"
+        }
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 978,
+    "tokens_out": 1303,
+    "total_tokens": 2281,
+    "cost_usd": 0.0008471,
+    "latency_ms": 9854,
+    "response_chars": 3441,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 2408,\n    \"F1\": 10508,\n    \"F2\": 5216\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_port\": \"sw_1.P0\",\n      \"flows_on_port\": [\"F0\", \"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C0\": 1200,\n        \"C1\": 1300,\n        \"C2\": 1108,\n        \"T0\": 1000,\n        \"T1\": 5000,\n        \"T2\": 2500,\n        \"L_max\": 1300,\n        \"alpha_port\": 1300,\n        \"beta_port\": 1300,\n        \"idleSlope\": 0.75,\n        \"sendSlope\": -0.75,\n        \"frame_size_bytes\": 1200,\n        \"pFrame\": 12.8,\n        \"L_tx\": 103.2\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_port\": \"sw_1.P0\",\n      \"flows_on_port\": [\"F0\", \"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C0\": 1200,\n        \"C1\": 1300,\n        \"C2\": 1108,\n        \"T0\": 1000,\n        \"T1\": 5000,\n        \"T2\": 2500,\n        \"L_max\": 1300,\n        \"alpha_port\": 1300,\n        \"beta_port\": 1300,\n        \"idleSlope\": 0.75,\n        \"sendSlope\": -0.75,\n        \"frame_size_bytes\": 1300,\n        \"pFrame\": 13.856,\n        \"L_tx\": 110.848\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_port\": \"sw_1.P0\",\n      \"flows_on_port\": [\"F0\", \"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-75%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"C0\": 1200,\n        \"C1\": 1300,\n        \"C2\": 1108,\n        \"T0\": 1000,\n        \"T1\": 5000,\n        \"T2\": 2500,\n        \"L_max\": 1300,\n        \"alpha_port\": 1300,\n        \"beta_port\": 1300,\n        \"idleSlope\": 0.75,\n        \"sendSlope\": -0.75,\n        \"frame_size_bytes\": 1108,\n        \"pFrame\": 11.8144,\n        \"L_tx\": 94.5152\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth_R\": \"100 Mbps = 100000000 bps\",\n      \"Propagation_delay\": \"1 µs\",\n      \"Switching_delay\": \"1 µs\", \n      \"Time_sync_error\": \"1 µs\",\n      \"MTU_overhead\": \"8 bytes (preamble + IFG)\",\n      \"Bits_per_byte\": 8,\n      \"CBS_IdleSlope\": \"75% = 0.75\",\n      \"CBS_SendSlope\": \"-75% = -0.75\"\n    },\n    \"WCD_calculation\": {\n      \"equations\": [\n        \"α_flow(t) = C_i / T_i · t\",\n        \"α_port(t) = L_max\",\n        \"β_CBS(t) = idleSlope·R·t - (idleSlope-sendSlope)·L_max\",\n        \"WCD_i = h·(τ_prop + τ_switch + τ_sync) + (L_tx_i + L_max) / (idleSlope·R)\",\n        \"L_tx_i = 8·(C_i + 8)·8 / 1000000\",\n        \"h = hop_count = 2\"\n      ],\n      \"per_flow_delay_contribution\": {\n        \"F0\": \"L_tx_0 = 103.2 µs\",\n        \"F1\": \"L_tx_1 = 110.848 µs\", \n        \"F2\": \"L_tx_2 = 94.5152 µs\"\n      }\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% of port rate (given)\n- **SendSlope**: -75% of port rate (standard CBS: SendSlope = -IdleSlope)  \n- **R**: 100 Mbps = 100,000,000 bps\n- **L_max**: 1300 bytes (maximum frame size among flows)\n- **Transmission time**: L_tx = 8×(payload+8)×8/R\n- **Service curve**: β_CBS(t) = idleSlope·R·t - (idleSlope-sendSlope)·L_max\n\n**WCD Formula**: WCD_i = 2×(1+1+1) + (L_tx_i + L_max)/(0.75×R)\n\nThe analysis is mathematically provable using Network Calculus with CBS service curves. All flows share sw_1.P0 egress queue (PCP=6).",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:53:16.589366",
+    "wcd_values": {
+      "F1": 1.044,
+      "F2": 0.3328,
+      "F3": 0.584
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 976,
+    "tokens_out": 1259,
+    "total_tokens": 2235,
+    "cost_usd": 0.0008247,
+    "latency_ms": 9012,
+    "response_chars": 3170,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 5999,\n    \"F2\": 14999,\n    \"F3\": 7499\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"flows_on_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": [\"sw_1.P1: 75%\"],\n      \"SendSlope\": [\"sw_1.P1: -75%\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps = 12.5 MB/s\",\n        \"mtu\": 1522,\n        \"frame_size_F1\": 1044,\n        \"frame_size_F2\": 1674,\n        \"R_F1\": 1.044,\n        \"R_F2\": 0.3328,\n        \"alpha_F1\": 1.044,\n        \"alpha_F2\": 0.3328,\n        \"beta_port\": 152.2,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"flows_on_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": [\"sw_1.P1: 75%\"],\n      \"SendSlope\": [\"sw_1.P1: -75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_F2\": 1674,\n        \"R_F2\": 0.3328,\n        \"alpha_F2\": 0.3328,\n        \"beta_port\": 152.2\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P2\"],\n      \"flows_on_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": [\"sw_1.P2: 75%\"],\n      \"SendSlope\": [\"sw_1.P2: -75%\"],\n      \"cbs_parameters\": {\n        \"frame_size_F3\": 1460,\n        \"R_F3\": 0.584,\n        \"alpha_F3\": 0.584,\n        \"beta_port\": 152.2\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_Parameters\": {\n        \"IdleSlope\": \"75% of port rate\",\n        \"SendSlope\": \"-75% of port rate\", \n        \"port_rate\": \"100 Mbps = 12.5 MB/s\",\n        \"max_credit\": \"MTU = 1522 Bytes\",\n        \"frame_overhead\": \"44 Bytes (Ethernet header + FCS)\",\n        \"propagation_delay\": \"1 µs\",\n        \"switching_delay\": \"1 µs\", \n        \"time_sync_error\": \"1 µs\"\n      },\n      \"Network_Calculus\": {\n        \"arrival_curve\": \"α(t) = R·t + σ, σ = frame_size\",\n        \"service_curve\": \"β(t) = min{R_port·t, β_port}\",\n        \"WCD\": \"h(α,β) = sup{s≥0: α(s) ≥ β(s)}\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = sup{s≥0: R·s + σ ≥ min{R_port·s, β_port}} + τ_prop + τ_switch + τ_sync\",\n      \"F1_sw_1.P1\": \"σ=1044, R=1.044, β_port=152.2 → WCD_backlog=5996 µs + 3 µs = 5999 µs\",\n      \"F2_sw_1.P1\": \"σ=1674, R=0.3328, β_port=152.2 → WCD_backlog=14996 µs + 3 µs = 14999 µs\", \n      \"F3_sw_1.P2\": \"σ=1460, R=0.584, β_port=152.2 → WCD_backlog=7496 µs + 3 µs = 7499 µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key Calculations:**\n\n1. **Egress Port Mapping:**\n   - `sw_1.P1` (to node0_2): Flows F1, F2\n   - `sw_1.P2` (to node0_3): Flow F3\n\n2. **CBS Parameters:**\n   - SendSlope = IdleSlope × port_rate = 0.75 × 12.5 MB/s = 9.375 MB/s\n   - Frame sizes: F1=1044B, F2=1674B, F3=1460B (payload + 44B overhead)\n   - Arrival rates: R_F1=1.044 MB/s, R_F2=0.3328 MB/s, R_F3=0.584 MB/s\n\n3. **WCD Formula:** `WCD = sup{s≥0: R·s + σ ≥ min{R_port·s, β_port}} + 3µs`\n\nThe CBS service curve provides β_port = 152.2 µs burst service, dominating the delay calculation for these frame sizes and rates.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:53:25.404463",
+    "wcd_values": {
+      "F1": 2399.0,
+      "F2": 4999.0,
+      "F3": 2499.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P1": [
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "alpha": 0.75,
+          "beta": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_size_bytes": 1000,
+          "frame_size_bits": 10424,
+          "L_max": 10424,
+          "period": 1000
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P1"
+        ],
+        "flows_on_sw_1.P1": [
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "alpha": 0.75,
+          "beta": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_size_bytes": 5000,
+          "frame_size_bits": 52112,
+          "L_max": 52112,
+          "period": 5000
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "egress_ports": [
+          "sw_1.P2"
+        ],
+        "flows_on_sw_1.P2": [
+          "F3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "R": 100000000,
+          "alpha": 0.75,
+          "beta": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_size_bytes": 2500,
+          "frame_size_bits": 26056,
+          "L_max": 26056,
+          "period": 2500
+        }
+      },
+      "all_parameters_used": {
+        "CBS_IdleSlope": 0.75,
+        "CBS_SendSlope": -0.25,
+        "link_speed_R": 100000000,
+        "propagation_delay": 1,
+        "switching_delay": 1,
+        "time_sync_error": 1,
+        "frame_overhead_bits": 424,
+        "cut_through_switching": true,
+        "queue": 6,
+        "pcp": 6
+      },
+      "WCD_calculation": {
+        "arrival_curve": "α(t) = L_max + R*t, burst-limited by periodicity",
+        "service_curve": "β(t) = R*β*t for credit > 0, else 0 (CBS shaped)",
+        "WCD_equation": "WCD = sup_{s≥0} { inf {t≥0 | β(t-s) ≥ α(s)} } + τ_prop + τ_switch + τ_sync",
+        "per_flow_WCD": "h(α,β) = (L_max - C_max*(1-α))/((α*R)*(1-max(σ_i/L_total))) where C_max = credit bound"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 976,
+    "tokens_out": 1084,
+    "total_tokens": 2060,
+    "cost_usd": 0.0007372,
+    "latency_ms": 7801,
+    "response_chars": 3004,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 2399,\n    \"F2\": 4999,\n    \"F3\": 2499\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"flows_on_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"alpha\": 0.75,\n        \"beta\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_bytes\": 1000,\n        \"frame_size_bits\": 10424,\n        \"L_max\": 10424,\n        \"period\": 1000\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"flows_on_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"alpha\": 0.75,\n        \"beta\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_bytes\": 5000,\n        \"frame_size_bits\": 52112,\n        \"L_max\": 52112,\n        \"period\": 5000\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P2\"],\n      \"flows_on_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"R\": 100000000,\n        \"alpha\": 0.75,\n        \"beta\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_size_bytes\": 2500,\n        \"frame_size_bits\": 26056,\n        \"L_max\": 26056,\n        \"period\": 2500\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": 0.75,\n      \"CBS_SendSlope\": -0.25,\n      \"link_speed_R\": 100000000,\n      \"propagation_delay\": 1,\n      \"switching_delay\": 1,\n      \"time_sync_error\": 1,\n      \"frame_overhead_bits\": 424,\n      \"cut_through_switching\": true,\n      \"queue\": 6,\n      \"pcp\": 6\n    },\n    \"WCD_calculation\": {\n      \"arrival_curve\": \"α(t) = L_max + R*t, burst-limited by periodicity\",\n      \"service_curve\": \"β(t) = R*β*t for credit > 0, else 0 (CBS shaped)\",\n      \"WCD_equation\": \"WCD = sup_{s≥0} { inf {t≥0 | β(t-s) ≥ α(s)} } + τ_prop + τ_switch + τ_sync\",\n      \"per_flow_WCD\": \"h(α,β) = (L_max - C_max*(1-α))/((α*R)*(1-max(σ_i/L_total))) where C_max = credit bound\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope (α)** = 75% = 0.75 → **SendSlope (β)** = α - 1 = -25% = -0.25\n- **R** = 100 Mbps = 100,000,000 bps  \n- **Frame size** = payload + 424 bits overhead (20B Ethernet + 8B VLAN + 20B IP + 20B UDP)\n- **Service curve**: β(t) = R × β × t when credit > 0, else 0\n- **Worst-case delay** accounts for interference from higher-priority flows on same egress port\n\n**Port Analysis:**\n- **sw_1.P1**: Flows F1(1000B/1ms), F2(5000B/5ms) → interference\n- **sw_1.P2**: Flow F3(2500B/2.5ms) → no interference",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CBS",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T17:53:35.433432",
+    "wcd_values": {
+      "F1": 2399.0,
+      "F2": 5999.0,
+      "F3": 3499.0
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P1"
+        ],
+        "flows_traversing_sw_1.P1": [
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "bandwidth": "100 Mbps",
+          "R": 100000000,
+          "C": 400,
+          "L_max_F1": 400,
+          "h_F1": 1000,
+          "alpha_F1": "400/1000",
+          "IdleSlope": 0.75,
+          "SendSlope": -0.25,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "sync_error": 1,
+          "frame_transmission_time_F1": 39
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "egress_ports": [
+          "sw_1.P1"
+        ],
+        "flows_traversing_sw_1.P1": [
+          "F1",
+          "F2"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "L_max_F2": 829,
+          "h_F2": 5000,
+          "alpha_F2": "829/5000",
+          "frame_transmission_time_F2": 75
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "egress_ports": [
+          "sw_1.P2"
+        ],
+        "flows_traversing_sw_1.P2": [
+          "F3"
+        ],
+        "IdleSlope": "75%",
+        "SendSlope": "-25%",
+        "cbs_parameters": {
+          "L_max_F3": 1400,
+          "h_F3": 2500,
+          "alpha_F3": "1400/2500",
+          "frame_transmission_time_F3": 119
+        }
+      },
+      "all_parameters_used": {
+        "CBS_IdleSlope": 0.75,
+        "CBS_SendSlope": -0.25,
+        "R_link": 100000000,
+        "propagation_delay": 1,
+        "switching_delay": 1,
+        "time_sync_error": 1,
+        "frame_overhead": 38,
+        "bit_time": 0.01,
+        "WCD_equation": "WCD = max_hops × (τ_prop + τ_switch + τ_sync) + max(β_i(u)) where β_i(u) = (L_i/R_link + Σ_{j<i} L_j/(R_link × SendSlope)) / SendSlope"
+      },
+      "WCD_calculation": {
+        "transmission_times": {
+          "F1": "39 µs (400B)",
+          "F2": "75 µs (829B)",
+          "F3": "119 µs (1400B)"
+        },
+        "equations": [
+          "α_i(t) = L_i/h_i  (arrival curve)",
+          "β_CBS(t) = SendSlope × t  (service curve)",
+          "WCD_i = sup{δ | α_i ⊗ β_CBS(δ) = 0}",
+          "For sw_1.P1: max interference from F1+F2 = 114 µs",
+          "β_F1(sw_1.P1) = 2359 µs, total WCD = 2399 µs"
+        ]
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 976,
+    "tokens_out": 1071,
+    "total_tokens": 2047,
+    "cost_usd": 0.0007307,
+    "latency_ms": 9024,
+    "response_chars": 2922,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 2399,\n    \"F2\": 5999,\n    \"F3\": 3499\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"flows_traversing_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"R\": 100000000,\n        \"C\": 400,\n        \"L_max_F1\": 400,\n        \"h_F1\": 1000,\n        \"alpha_F1\": \"400/1000\",\n        \"IdleSlope\": 0.75,\n        \"SendSlope\": -0.25,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"sync_error\": 1,\n        \"frame_transmission_time_F1\": 39\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"egress_ports\": [\"sw_1.P1\"],\n      \"flows_traversing_sw_1.P1\": [\"F1\", \"F2\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"L_max_F2\": 829,\n        \"h_F2\": 5000,\n        \"alpha_F2\": \"829/5000\",\n        \"frame_transmission_time_F2\": 75\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"egress_ports\": [\"sw_1.P2\"],\n      \"flows_traversing_sw_1.P2\": [\"F3\"],\n      \"IdleSlope\": \"75%\",\n      \"SendSlope\": \"-25%\",\n      \"cbs_parameters\": {\n        \"L_max_F3\": 1400,\n        \"h_F3\": 2500,\n        \"alpha_F3\": \"1400/2500\",\n        \"frame_transmission_time_F3\": 119\n      }\n    },\n    \"all_parameters_used\": {\n      \"CBS_IdleSlope\": 0.75,\n      \"CBS_SendSlope\": -0.25,\n      \"R_link\": 100000000,\n      \"propagation_delay\": 1,\n      \"switching_delay\": 1,\n      \"time_sync_error\": 1,\n      \"frame_overhead\": 38,\n      \"bit_time\": 0.01,\n      \"WCD_equation\": \"WCD = max_hops × (τ_prop + τ_switch + τ_sync) + max(β_i(u)) where β_i(u) = (L_i/R_link + Σ_{j<i} L_j/(R_link × SendSlope)) / SendSlope\"\n    },\n    \"WCD_calculation\": {\n      \"transmission_times\": {\n        \"F1\": \"39 µs (400B)\",\n        \"F2\": \"75 µs (829B)\", \n        \"F3\": \"119 µs (1400B)\"\n      },\n      \"equations\": [\n        \"α_i(t) = L_i/h_i  (arrival curve)\",\n        \"β_CBS(t) = SendSlope × t  (service curve)\",\n        \"WCD_i = sup{δ | α_i ⊗ β_CBS(δ) = 0}\",\n        \"For sw_1.P1: max interference from F1+F2 = 114 µs\",\n        \"β_F1(sw_1.P1) = 2359 µs, total WCD = 2399 µs\"\n      ]\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}\n```\n\n**Key CBS Parameters Used:**\n- **IdleSlope**: 75% (0.75 × R_link)\n- **SendSlope**: -25% (-0.25 × R_link)  \n- **Credit parameters**: hiCredit = IdleSlope × frame_size, loCredit = 0\n- **Transmission time**: (payload + 38 bytes overhead) × 0.01 µs/bit\n- **WCD formula**: `WCD = 3×(1+1+1) + max(β_i)` where β_i is CBS backlog bound\n\n**Port Analysis:**\n- **sw_1.P1**: Flows F1,F2 → interference calculated\n- **sw_1.P2**: Flow F3 only → minimal delay\n- Worst-case occurs at sw_1.P1 due to flow interference",
+    "api_error": null
+  }
+]

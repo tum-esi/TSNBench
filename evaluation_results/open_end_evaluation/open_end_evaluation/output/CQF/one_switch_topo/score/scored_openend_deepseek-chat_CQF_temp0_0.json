@@ -1,0 +1,1136 @@
+{
+  "model": "deepseek-chat",
+  "prompt_type": "CQF",
+  "temperature_label": "temp0_0",
+  "timestamp": "2026-05-04T10:21:11.081707",
+  "total_tcs": 11,
+  "scored_tcs": 10,
+  "trivial_tcs": 0,
+  "invalid_tcs": 1,
+  "coverage_failed_tcs": 1,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0909,
+  "coverage_failed_rate": 0.0909,
+  "enough_tcs": true,
+  "min_scored_tcs": 5,
+  "mae_us_majority": 118.6667,
+  "mape_pct_majority": 115.2104,
+  "mae_us_average": 90.428,
+  "mape_pct_average": 87.7942,
+  "exact_match_rate": 0.0,
+  "error_min": 16.0,
+  "error_q1": 89.0,
+  "error_median": 95.0,
+  "error_q3": 97.0,
+  "error_max": 897.0,
+  "error_mean": 118.6667,
+  "total_flow_errors": 30,
+  "total_tokens_in": 28146,
+  "total_tokens_out": 67443,
+  "total_tokens": 95589,
+  "avg_tokens_in": 852.9,
+  "avg_tokens_out": 2043.7,
+  "avg_latency_ms": 24489.6,
+  "max_latency_ms": 55771,
+  "total_time_seconds": 808.16,
+  "tc_results": {
+    "TC41": {
+      "metrics": {
+        "mae_us": 89.0,
+        "mape_pct": 86.4078,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 38.3778,
+        "mape_pct": 37.26,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F3",
+          "values": [
+            14.0,
+            14.0,
+            255.6
+          ],
+          "ratio": 18.3
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            14.0,
+            14.0,
+            400.0
+          ],
+          "ratio": 28.6
+        }
+      ]
+    },
+    "TC42": {
+      "metrics": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC43": {
+      "metrics": {
+        "mae_us": 318.3333,
+        "mape_pct": 309.0615,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 198.2356,
+        "mape_pct": 192.4617,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            1000.0,
+            220.08,
+            8.0
+          ],
+          "ratio": 125.0
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            145.0,
+            203.04,
+            8.0
+          ],
+          "ratio": 25.4
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            119.0,
+            1000.0,
+            8.0
+          ],
+          "ratio": 125.0
+        }
+      ]
+    },
+    "TC44": {
+      "metrics": {
+        "mae_us": 165.0,
+        "mape_pct": 160.1942,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 45.7778,
+        "mape_pct": 44.4445,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            2.0,
+            14.0,
+            400.0
+          ],
+          "ratio": 200.0
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            200.0,
+            14.0,
+            245.0
+          ],
+          "ratio": 17.5
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            400.0,
+            14.0,
+            50.0
+          ],
+          "ratio": 28.6
+        }
+      ]
+    },
+    "TC45": {
+      "metrics": {
+        "mae_us": 41.0,
+        "mape_pct": 39.8058,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 41.0,
+        "mape_pct": 39.8058,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC46": {
+      "metrics": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC47": {
+      "metrics": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC48": {
+      "metrics": {
+        "mae_us": 98.3333,
+        "mape_pct": 95.4693,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 57.0,
+        "mape_pct": 55.3398,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F3",
+          "values": [
+            200.0,
+            14.0,
+            200.0
+          ],
+          "ratio": 14.3
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            200.0,
+            14.0,
+            200.0
+          ],
+          "ratio": 14.3
+        }
+      ]
+    },
+    "TC49": {
+      "metrics": {
+        "mae_us": 89.0,
+        "mape_pct": 86.4078,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 89.0,
+        "mape_pct": 86.4078,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC50": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 2,
+        "missing_flows": 1,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.6667,
+        "coverage_failed": true
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 2,
+        "missing_flows": 1,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.6667,
+        "coverage_failed": true
+      },
+      "hv_flags": []
+    },
+    "TC51": {
+      "metrics": {
+        "mae_us": 101.0,
+        "mape_pct": 98.0583,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 149.8889,
+        "mape_pct": 145.5232,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            2.0,
+            1000.0,
+            50.0
+          ],
+          "ratio": 500.0
+        }
+      ]
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 1000.0,
+      "abs_error": 897.0,
+      "pct_error": 870.8738,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 119.0,
+      "abs_error": 16.0,
+      "pct_error": 15.534,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 145.0,
+      "abs_error": 42.0,
+      "pct_error": 40.7767,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 2.0,
+      "abs_error": 101.0,
+      "pct_error": 98.0583,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 400.0,
+      "abs_error": 297.0,
+      "pct_error": 288.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 200.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 80.0,
+      "abs_error": 23.0,
+      "pct_error": 22.3301,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 53.0,
+      "abs_error": 50.0,
+      "pct_error": 48.5437,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 53.0,
+      "abs_error": 50.0,
+      "pct_error": 48.5437,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 2.0,
+      "abs_error": 101.0,
+      "pct_error": 98.0583,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 200.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 200.0,
+      "abs_error": 97.0,
+      "pct_error": 94.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC50",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 2.0,
+      "abs_error": 101.0,
+      "pct_error": 98.0583,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 2.0,
+      "abs_error": 101.0,
+      "pct_error": 98.0583,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 2.0,
+      "abs_error": 101.0,
+      "pct_error": 98.0583,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "deepseek-chat"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 36.0,
+      "abs_error": 67.0,
+      "pct_error": 65.0485,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 142.6667,
+      "abs_error": 39.6667,
+      "pct_error": 38.5114,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 94.5333,
+      "abs_error": 8.4667,
+      "pct_error": 8.2201,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 409.36,
+      "abs_error": 306.36,
+      "pct_error": 297.4369,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 375.6667,
+      "abs_error": 272.6667,
+      "pct_error": 264.725,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 118.68,
+      "abs_error": 15.68,
+      "pct_error": 15.2233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 138.6667,
+      "abs_error": 35.6667,
+      "pct_error": 34.6279,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 154.6667,
+      "abs_error": 51.6667,
+      "pct_error": 50.1618,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 153.0,
+      "abs_error": 50.0,
+      "pct_error": 48.5437,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 80.0,
+      "abs_error": 23.0,
+      "pct_error": 22.3301,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 53.0,
+      "abs_error": 50.0,
+      "pct_error": 48.5437,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 53.0,
+      "abs_error": 50.0,
+      "pct_error": 48.5437,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 2.0,
+      "abs_error": 101.0,
+      "pct_error": 98.0583,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 138.0,
+      "abs_error": 35.0,
+      "pct_error": 33.9806,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 138.0,
+      "abs_error": 35.0,
+      "pct_error": 33.9806,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 350.6667,
+      "abs_error": 247.6667,
+      "pct_error": 240.4531,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 2.0,
+      "abs_error": 101.0,
+      "pct_error": 98.0583,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "deepseek-chat"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 2.0,
+      "abs_error": 101.0,
+      "pct_error": 98.0583,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "deepseek-chat"
+    }
+  ]
+}

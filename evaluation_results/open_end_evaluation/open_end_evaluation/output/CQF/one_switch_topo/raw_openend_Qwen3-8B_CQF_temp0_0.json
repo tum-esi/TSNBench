@@ -1,0 +1,3412 @@
+[
+  {
+    "tc_name": "TC41",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T03:24:56.526667",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362174,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC41",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T03:28:48.504868",
+    "wcd_values": {
+      "F0": 84.0,
+      "F1": 404.0,
+      "F2": 204.0
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": "7 (odd), 6 (even)"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number of hops * propagation delay) + (number of switches * switching delay) + (payload / bandwidth) + time synchronization error",
+          "parameters": {
+            "propagation_delay": "1µs",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs",
+            "bandwidth": "100 Mbps",
+            "payload": "1000 bytes"
+          },
+          "calculation": "WCD = (2 * 1) + (1 * 1) + (1000 * 8 / 100e6) + 1 = 84 µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": "7 (odd), 6 (even)"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number of hops * propagation delay) + (number of switches * switching delay) + (payload / bandwidth) + time synchronization error",
+          "parameters": {
+            "propagation_delay": "1µs",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs",
+            "bandwidth": "100 Mbps",
+            "payload": "5000 bytes"
+          },
+          "calculation": "WCD = (2 * 1) + (1 * 1) + (5000 * 8 / 100e6) + 1 = 404 µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": "7 (odd), 6 (even)"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number of hops * propagation delay) + (number of switches * switching delay) + (payload / bandwidth) + time synchronization error",
+          "parameters": {
+            "propagation_delay": "1µs",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs",
+            "bandwidth": "100 Mbps",
+            "payload": "2500 bytes"
+          },
+          "calculation": "WCD = (2 * 1) + (1 * 1) + (2500 * 8 / 100e6) + 1 = 204 µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "bandwidth": "100 Mbps",
+        "queues": "7 (odd), 6 (even)",
+        "priority": "PCP:7"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 851,
+    "tokens_out": 7466,
+    "total_tokens": 8317,
+    "cost_usd": 0.0023249,
+    "latency_ms": 230977,
+    "response_chars": 2769,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 84,\n    \"F1\": 404,\n    \"F2\": 204\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"7 (odd), 6 (even)\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number of hops * propagation delay) + (number of switches * switching delay) + (payload / bandwidth) + time synchronization error\",\n        \"parameters\": {\n          \"propagation_delay\": \"1µs\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\",\n          \"bandwidth\": \"100 Mbps\",\n          \"payload\": \"1000 bytes\"\n        },\n        \"calculation\": \"WCD = (2 * 1) + (1 * 1) + (1000 * 8 / 100e6) + 1 = 84 µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"7 (odd), 6 (even)\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number of hops * propagation delay) + (number of switches * switching delay) + (payload / bandwidth) + time synchronization error\",\n        \"parameters\": {\n          \"propagation_delay\": \"1µs\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\",\n          \"bandwidth\": \"100 Mbps\",\n          \"payload\": \"5000 bytes\"\n        },\n        \"calculation\": \"WCD = (2 * 1) + (1 * 1) + (5000 * 8 / 100e6) + 1 = 404 µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"7 (odd), 6 (even)\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number of hops * propagation delay) + (number of switches * switching delay) + (payload / bandwidth) + time synchronization error\",\n        \"parameters\": {\n          \"propagation_delay\": \"1µs\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\",\n          \"bandwidth\": \"100 Mbps\",\n          \"payload\": \"2500 bytes\"\n        },\n        \"calculation\": \"WCD = (2 * 1) + (1 * 1) + (2500 * 8 / 100e6) + 1 = 204 µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100 Mbps\",\n      \"queues\": \"7 (odd), 6 (even)\",\n      \"priority\": \"PCP:7\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC41",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T03:34:45.911654",
+    "wcd_values": {
+      "F0": 3.08,
+      "F1": 3.08,
+      "F2": 3.2
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "queues": [
+            "6",
+            "7"
+          ],
+          "priority_levels": "0-7",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "transmission_delay": "payload / bandwidth",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "queues": [
+            "6",
+            "7"
+          ],
+          "priority_levels": "0-7",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "transmission_delay": "payload / bandwidth",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "queues": [
+            "6",
+            "7"
+          ],
+          "priority_levels": "0-7",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "transmission_delay": "payload / bandwidth",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "queues": [
+          "6",
+          "7"
+        ],
+        "priority_levels": "0-7",
+        "switching_delay": "1µs",
+        "propagation_delay": "1µs",
+        "time_sync_error": "1µs",
+        "bandwidth": "100Mbps"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 851,
+    "tokens_out": 7601,
+    "total_tokens": 8452,
+    "cost_usd": 0.0023654,
+    "latency_ms": 356403,
+    "response_chars": 2579,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 3.08,\n    \"F1\": 3.08,\n    \"F2\": 3.2\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"queues\": [\"6\", \"7\"],\n        \"priority_levels\": \"0-7\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"transmission_delay\": \"payload / bandwidth\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"queues\": [\"6\", \"7\"],\n        \"priority_levels\": \"0-7\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"transmission_delay\": \"payload / bandwidth\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"queues\": [\"6\", \"7\"],\n        \"priority_levels\": \"0-7\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"transmission_delay\": \"payload / bandwidth\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"queues\": [\"6\", \"7\"],\n      \"priority_levels\": \"0-7\",\n      \"switching_delay\": \"1µs\",\n      \"propagation_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100Mbps\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T03:40:48.985699",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362071,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC42",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T03:46:52.190352",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362200,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC42",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T03:52:55.313162",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362117,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC43",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T03:54:53.736485",
+    "wcd_values": {
+      "F0": 5.36,
+      "F1": 5.32,
+      "F2": 5.28
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "5000µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (propagation + switching) + transmission + contention + time_sync_error",
+          "components": {
+            "propagation": "2 links * 1µs = 2µs",
+            "switching": "2 switches * 1µs = 2µs",
+            "transmission": "1000B * 8 / 100Mbps = 0.08µs",
+            "contention": "Flow3 (0.2µs) + Flow2 (0.08µs) = 0.28µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "2 + 2 + 0.08 + 0.28 + 1 = 5.36µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "5000µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (propagation + switching) + transmission + contention + time_sync_error",
+          "components": {
+            "propagation": "2 links * 1µs = 2µs",
+            "switching": "2 switches * 1µs = 2µs",
+            "transmission": "1000B * 8 / 100Mbps = 0.08µs",
+            "contention": "Flow1 (0.08µs) + Flow2 (0.08µs) = 0.16µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "2 + 2 + 0.08 + 0.16 + 1 = 5.32µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "5000µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (propagation + switching) + transmission + contention + time_sync_error",
+          "components": {
+            "propagation": "2 links * 1µs = 2µs",
+            "switching": "2 switches * 1µs = 2µs",
+            "transmission": "2500B * 8 / 100Mbps = 0.2µs",
+            "contention": "Flow1 (0.08µs) = 0.08µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "2 + 2 + 0.2 + 0.08 + 1 = 5.28µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "hypercycle": "5000µs",
+        "pcp": "7",
+        "queue": "7",
+        "time_sync_error": "1µs",
+        "bandwidth": "100Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 850,
+    "tokens_out": 7894,
+    "total_tokens": 8744,
+    "cost_usd": 0.0024532,
+    "latency_ms": 117353,
+    "response_chars": 3174,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 5.36,\n    \"F1\": 5.32,\n    \"F2\": 5.28\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"5000µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (propagation + switching) + transmission + contention + time_sync_error\",\n        \"components\": {\n          \"propagation\": \"2 links * 1µs = 2µs\",\n          \"switching\": \"2 switches * 1µs = 2µs\",\n          \"transmission\": \"1000B * 8 / 100Mbps = 0.08µs\",\n          \"contention\": \"Flow3 (0.2µs) + Flow2 (0.08µs) = 0.28µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"2 + 2 + 0.08 + 0.28 + 1 = 5.36µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"5000µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (propagation + switching) + transmission + contention + time_sync_error\",\n        \"components\": {\n          \"propagation\": \"2 links * 1µs = 2µs\",\n          \"switching\": \"2 switches * 1µs = 2µs\",\n          \"transmission\": \"1000B * 8 / 100Mbps = 0.08µs\",\n          \"contention\": \"Flow1 (0.08µs) + Flow2 (0.08µs) = 0.16µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"2 + 2 + 0.08 + 0.16 + 1 = 5.32µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"5000µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (propagation + switching) + transmission + contention + time_sync_error\",\n        \"components\": {\n          \"propagation\": \"2 links * 1µs = 2µs\",\n          \"switching\": \"2 switches * 1µs = 2µs\",\n          \"transmission\": \"2500B * 8 / 100Mbps = 0.2µs\",\n          \"contention\": \"Flow1 (0.08µs) = 0.08µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"2 + 2 + 0.2 + 0.08 + 1 = 5.28µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"5000µs\",\n      \"pcp\": \"7\",\n      \"queue\": \"7\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:00:56.955498",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362207,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC43",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:02:54.981994",
+    "wcd_values": {
+      "F0": 5.36,
+      "F1": 5.32,
+      "F2": 5.28
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "5000µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (propagation + switching) + transmission + contention + time_sync_error",
+          "components": {
+            "propagation": "2 links * 1µs = 2µs",
+            "switching": "2 switches * 1µs = 2µs",
+            "transmission": "1000B * 8 / 100Mbps = 0.08µs",
+            "contention": "Flow3 (0.2µs) + Flow2 (0.08µs) = 0.28µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "2 + 2 + 0.08 + 0.28 + 1 = 5.36µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "5000µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (propagation + switching) + transmission + contention + time_sync_error",
+          "components": {
+            "propagation": "2 links * 1µs = 2µs",
+            "switching": "2 switches * 1µs = 2µs",
+            "transmission": "1000B * 8 / 100Mbps = 0.08µs",
+            "contention": "Flow1 (0.08µs) + Flow2 (0.08µs) = 0.16µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "2 + 2 + 0.08 + 0.16 + 1 = 5.32µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "5000µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (propagation + switching) + transmission + contention + time_sync_error",
+          "components": {
+            "propagation": "2 links * 1µs = 2µs",
+            "switching": "2 switches * 1µs = 2µs",
+            "transmission": "2500B * 8 / 100Mbps = 0.2µs",
+            "contention": "Flow1 (0.08µs) = 0.08µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "2 + 2 + 0.2 + 0.08 + 1 = 5.28µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "hypercycle": "5000µs",
+        "pcp": "7",
+        "queue": "7",
+        "time_sync_error": "1µs",
+        "bandwidth": "100Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 850,
+    "tokens_out": 7894,
+    "total_tokens": 8744,
+    "cost_usd": 0.0024532,
+    "latency_ms": 117012,
+    "response_chars": 3174,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 5.36,\n    \"F1\": 5.32,\n    \"F2\": 5.28\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"5000µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (propagation + switching) + transmission + contention + time_sync_error\",\n        \"components\": {\n          \"propagation\": \"2 links * 1µs = 2µs\",\n          \"switching\": \"2 switches * 1µs = 2µs\",\n          \"transmission\": \"1000B * 8 / 100Mbps = 0.08µs\",\n          \"contention\": \"Flow3 (0.2µs) + Flow2 (0.08µs) = 0.28µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"2 + 2 + 0.08 + 0.28 + 1 = 5.36µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"5000µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (propagation + switching) + transmission + contention + time_sync_error\",\n        \"components\": {\n          \"propagation\": \"2 links * 1µs = 2µs\",\n          \"switching\": \"2 switches * 1µs = 2µs\",\n          \"transmission\": \"1000B * 8 / 100Mbps = 0.08µs\",\n          \"contention\": \"Flow1 (0.08µs) + Flow2 (0.08µs) = 0.16µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"2 + 2 + 0.08 + 0.16 + 1 = 5.32µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"5000µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (propagation + switching) + transmission + contention + time_sync_error\",\n        \"components\": {\n          \"propagation\": \"2 links * 1µs = 2µs\",\n          \"switching\": \"2 switches * 1µs = 2µs\",\n          \"transmission\": \"2500B * 8 / 100Mbps = 0.2µs\",\n          \"contention\": \"Flow1 (0.08µs) = 0.08µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"2 + 2 + 0.2 + 0.08 + 1 = 5.28µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"5000µs\",\n      \"pcp\": \"7\",\n      \"queue\": \"7\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:04:20.094176",
+    "wcd_values": {
+      "F0": 4.2,
+      "F1": 4.4,
+      "F2": 4.2
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "transmission_delay": "payload * 8 / 100Mbps",
+          "propagation_delay": "hop_count * 1µs",
+          "switching_delay": "(hop_count - 1) * 1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "transmission_delay": "payload * 8 / 100Mbps",
+          "propagation_delay": "hop_count * 1µs",
+          "switching_delay": "(hop_count - 1) * 1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "transmission_delay": "payload * 8 / 100Mbps",
+          "propagation_delay": "hop_count * 1µs",
+          "switching_delay": "(hop_count - 1) * 1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "all_parameters_used": {
+        "Bandwidth_link": "100 Mbps",
+        "Propagation_delay": "1µs",
+        "Switching_delay": "1µs",
+        "Time_sync_error": "1µs",
+        "Cycle_duration": "50µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 5774,
+    "total_tokens": 6623,
+    "cost_usd": 0.0018171,
+    "latency_ms": 84086,
+    "response_chars": 1827,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.2,\n    \"F1\": 4.4,\n    \"F2\": 4.2\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"transmission_delay\": \"payload * 8 / 100Mbps\",\n        \"propagation_delay\": \"hop_count * 1µs\",\n        \"switching_delay\": \"(hop_count - 1) * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"transmission_delay\": \"payload * 8 / 100Mbps\",\n        \"propagation_delay\": \"hop_count * 1µs\",\n        \"switching_delay\": \"(hop_count - 1) * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"transmission_delay\": \"payload * 8 / 100Mbps\",\n        \"propagation_delay\": \"hop_count * 1µs\",\n        \"switching_delay\": \"(hop_count - 1) * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth_link\": \"100 Mbps\",\n      \"Propagation_delay\": \"1µs\",\n      \"Switching_delay\": \"1µs\",\n      \"Time_sync_error\": \"1µs\",\n      \"Cycle_duration\": \"50µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:05:45.124301",
+    "wcd_values": {
+      "F0": 4.2,
+      "F1": 4.4,
+      "F2": 4.2
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "transmission_delay": "payload * 8 / 100Mbps",
+          "propagation_delay": "hop_count * 1µs",
+          "switching_delay": "(hop_count - 1) * 1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "transmission_delay": "payload * 8 / 100Mbps",
+          "propagation_delay": "hop_count * 1µs",
+          "switching_delay": "(hop_count - 1) * 1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "transmission_delay": "payload * 8 / 100Mbps",
+          "propagation_delay": "hop_count * 1µs",
+          "switching_delay": "(hop_count - 1) * 1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "all_parameters_used": {
+        "Bandwidth_link": "100 Mbps",
+        "Propagation_delay": "1µs",
+        "Switching_delay": "1µs",
+        "Time_sync_error": "1µs",
+        "Cycle_duration": "50µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 5774,
+    "total_tokens": 6623,
+    "cost_usd": 0.0018171,
+    "latency_ms": 84014,
+    "response_chars": 1827,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.2,\n    \"F1\": 4.4,\n    \"F2\": 4.2\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"transmission_delay\": \"payload * 8 / 100Mbps\",\n        \"propagation_delay\": \"hop_count * 1µs\",\n        \"switching_delay\": \"(hop_count - 1) * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"transmission_delay\": \"payload * 8 / 100Mbps\",\n        \"propagation_delay\": \"hop_count * 1µs\",\n        \"switching_delay\": \"(hop_count - 1) * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"transmission_delay\": \"payload * 8 / 100Mbps\",\n        \"propagation_delay\": \"hop_count * 1µs\",\n        \"switching_delay\": \"(hop_count - 1) * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth_link\": \"100 Mbps\",\n      \"Propagation_delay\": \"1µs\",\n      \"Switching_delay\": \"1µs\",\n      \"Time_sync_error\": \"1µs\",\n      \"Cycle_duration\": \"50µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:07:10.024592",
+    "wcd_values": {
+      "F0": 4.2,
+      "F1": 4.4,
+      "F2": 4.2
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "transmission_delay": "payload * 8 / 100Mbps",
+          "propagation_delay": "hop_count * 1µs",
+          "switching_delay": "(hop_count - 1) * 1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "transmission_delay": "payload * 8 / 100Mbps",
+          "propagation_delay": "hop_count * 1µs",
+          "switching_delay": "(hop_count - 1) * 1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "transmission_delay": "payload * 8 / 100Mbps",
+          "propagation_delay": "hop_count * 1µs",
+          "switching_delay": "(hop_count - 1) * 1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "all_parameters_used": {
+        "Bandwidth_link": "100 Mbps",
+        "Propagation_delay": "1µs",
+        "Switching_delay": "1µs",
+        "Time_sync_error": "1µs",
+        "Cycle_duration": "50µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 5774,
+    "total_tokens": 6623,
+    "cost_usd": 0.0018171,
+    "latency_ms": 83885,
+    "response_chars": 1827,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.2,\n    \"F1\": 4.4,\n    \"F2\": 4.2\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"transmission_delay\": \"payload * 8 / 100Mbps\",\n        \"propagation_delay\": \"hop_count * 1µs\",\n        \"switching_delay\": \"(hop_count - 1) * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"transmission_delay\": \"payload * 8 / 100Mbps\",\n        \"propagation_delay\": \"hop_count * 1µs\",\n        \"switching_delay\": \"(hop_count - 1) * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"transmission_delay\": \"payload * 8 / 100Mbps\",\n        \"propagation_delay\": \"hop_count * 1µs\",\n        \"switching_delay\": \"(hop_count - 1) * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth_link\": \"100 Mbps\",\n      \"Propagation_delay\": \"1µs\",\n      \"Switching_delay\": \"1µs\",\n      \"Time_sync_error\": \"1µs\",\n      \"Cycle_duration\": \"50µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:08:51.723515",
+    "wcd_values": {
+      "F0": 4.08,
+      "F1": 4.4,
+      "F2": 4.2
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": [
+            "7 (odd)",
+            "6 (even)"
+          ],
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error",
+          "transmission_delay": "0.08µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": [
+            "7 (odd)",
+            "6 (even)"
+          ],
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error",
+          "transmission_delay": "0.4µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": [
+            "7 (odd)",
+            "6 (even)"
+          ],
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error",
+          "transmission_delay": "0.2µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth_link": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs"
+      },
+      "missing_inputs": [
+        "Number of flows in each queue (queuing delay calculation)"
+      ]
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 6870,
+    "total_tokens": 7719,
+    "cost_usd": 0.0021459,
+    "latency_ms": 100673,
+    "response_chars": 2533,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.08,\n    \"F1\": 4.4,\n    \"F2\": 4.2\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": [\"7 (odd)\", \"6 (even)\"],\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error\",\n        \"transmission_delay\": \"0.08µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": [\"7 (odd)\", \"6 (even)\"],\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error\",\n        \"transmission_delay\": \"0.4µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": [\"7 (odd)\", \"6 (even)\"],\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error\",\n        \"transmission_delay\": \"0.2µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth_link\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    },\n    \"missing_inputs\": [\n      \"Number of flows in each queue (queuing delay calculation)\"\n    ]\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:10:33.393899",
+    "wcd_values": {
+      "F0": 4.08,
+      "F1": 4.4,
+      "F2": 4.2
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": [
+            "7 (odd)",
+            "6 (even)"
+          ],
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error",
+          "transmission_delay": "0.08µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": [
+            "7 (odd)",
+            "6 (even)"
+          ],
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error",
+          "transmission_delay": "0.4µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": [
+            "7 (odd)",
+            "6 (even)"
+          ],
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error",
+          "transmission_delay": "0.2µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth_link": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs"
+      },
+      "missing_inputs": [
+        "Number of flows in each queue (queuing delay calculation)"
+      ]
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 6870,
+    "total_tokens": 7719,
+    "cost_usd": 0.0021459,
+    "latency_ms": 100667,
+    "response_chars": 2533,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.08,\n    \"F1\": 4.4,\n    \"F2\": 4.2\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": [\"7 (odd)\", \"6 (even)\"],\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error\",\n        \"transmission_delay\": \"0.08µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": [\"7 (odd)\", \"6 (even)\"],\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error\",\n        \"transmission_delay\": \"0.4µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": [\"7 (odd)\", \"6 (even)\"],\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error\",\n        \"transmission_delay\": \"0.2µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth_link\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    },\n    \"missing_inputs\": [\n      \"Number of flows in each queue (queuing delay calculation)\"\n    ]\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:12:14.966296",
+    "wcd_values": {
+      "F0": 4.08,
+      "F1": 4.4,
+      "F2": 4.2
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": [
+            "7 (odd)",
+            "6 (even)"
+          ],
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error",
+          "transmission_delay": "0.08µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": [
+            "7 (odd)",
+            "6 (even)"
+          ],
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error",
+          "transmission_delay": "0.4µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "CQF",
+          "priority": "PCP:7",
+          "queues": [
+            "7 (odd)",
+            "6 (even)"
+          ],
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error",
+          "transmission_delay": "0.2µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth_link": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs"
+      },
+      "missing_inputs": [
+        "Number of flows in each queue (queuing delay calculation)"
+      ]
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 6870,
+    "total_tokens": 7719,
+    "cost_usd": 0.0021459,
+    "latency_ms": 100561,
+    "response_chars": 2533,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.08,\n    \"F1\": 4.4,\n    \"F2\": 4.2\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": [\"7 (odd)\", \"6 (even)\"],\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error\",\n        \"transmission_delay\": \"0.08µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": [\"7 (odd)\", \"6 (even)\"],\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error\",\n        \"transmission_delay\": \"0.4µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"CQF\",\n        \"priority\": \"PCP:7\",\n        \"queues\": [\"7 (odd)\", \"6 (even)\"],\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (h * propagation_delay) + (switches * switching_delay) + transmission_delay + time_sync_error\",\n        \"transmission_delay\": \"0.2µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth_link\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    },\n    \"missing_inputs\": [\n      \"Number of flows in each queue (queuing delay calculation)\"\n    ]\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:13:58.366368",
+    "wcd_values": {
+      "F0": 4.0,
+      "F1": 4.0,
+      "F2": 4.0
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "priority_levels": "0-7",
+          "queue_strategy": "odd/even queues (7/6)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs/link",
+          "time_sync_error": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = propagation_delay + switching_delay + time_sync_error",
+          "components": {
+            "propagation_delay": "2µs (2 links)",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "4µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "priority_levels": "0-7",
+          "queue_strategy": "odd/even queues (7/6)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs/link",
+          "time_sync_error": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = propagation_delay + switching_delay + time_sync_error",
+          "components": {
+            "propagation_delay": "2µs (2 links)",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "4µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "priority_levels": "0-7",
+          "queue_strategy": "odd/even queues (7/6)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs/link",
+          "time_sync_error": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = propagation_delay + switching_delay + time_sync_error",
+          "components": {
+            "propagation_delay": "2µs (2 links)",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "4µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "priority_levels": "0-7",
+        "queue_strategy": "odd/even queues (7/6)",
+        "switching_delay": "1µs",
+        "propagation_delay": "1µs/link",
+        "time_sync_error": "1µs",
+        "bandwidth": "100 Mbps"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 850,
+    "tokens_out": 6972,
+    "total_tokens": 7822,
+    "cost_usd": 0.0021766,
+    "latency_ms": 102381,
+    "response_chars": 2697,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4,\n    \"F1\": 4,\n    \"F2\": 4\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"priority_levels\": \"0-7\",\n        \"queue_strategy\": \"odd/even queues (7/6)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs/link\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = propagation_delay + switching_delay + time_sync_error\",\n        \"components\": {\n          \"propagation_delay\": \"2µs (2 links)\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"4µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"priority_levels\": \"0-7\",\n        \"queue_strategy\": \"odd/even queues (7/6)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs/link\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = propagation_delay + switching_delay + time_sync_error\",\n        \"components\": {\n          \"propagation_delay\": \"2µs (2 links)\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"4µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"priority_levels\": \"0-7\",\n        \"queue_strategy\": \"odd/even queues (7/6)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs/link\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = propagation_delay + switching_delay + time_sync_error\",\n        \"components\": {\n          \"propagation_delay\": \"2µs (2 links)\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"4µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"priority_levels\": \"0-7\",\n      \"queue_strategy\": \"odd/even queues (7/6)\",\n      \"switching_delay\": \"1µs\",\n      \"propagation_delay\": \"1µs/link\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100 Mbps\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:15:41.408268",
+    "wcd_values": {
+      "F0": 4.0,
+      "F1": 4.0,
+      "F2": 4.0
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "priority_levels": "0-7",
+          "queue_strategy": "odd/even queues (7/6)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs/link",
+          "time_sync_error": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = propagation_delay + switching_delay + time_sync_error",
+          "components": {
+            "propagation_delay": "2µs (2 links)",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "4µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "priority_levels": "0-7",
+          "queue_strategy": "odd/even queues (7/6)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs/link",
+          "time_sync_error": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = propagation_delay + switching_delay + time_sync_error",
+          "components": {
+            "propagation_delay": "2µs (2 links)",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "4µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "priority_levels": "0-7",
+          "queue_strategy": "odd/even queues (7/6)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs/link",
+          "time_sync_error": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = propagation_delay + switching_delay + time_sync_error",
+          "components": {
+            "propagation_delay": "2µs (2 links)",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "4µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "priority_levels": "0-7",
+        "queue_strategy": "odd/even queues (7/6)",
+        "switching_delay": "1µs",
+        "propagation_delay": "1µs/link",
+        "time_sync_error": "1µs",
+        "bandwidth": "100 Mbps"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 850,
+    "tokens_out": 6972,
+    "total_tokens": 7822,
+    "cost_usd": 0.0021766,
+    "latency_ms": 102027,
+    "response_chars": 2697,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4,\n    \"F1\": 4,\n    \"F2\": 4\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"priority_levels\": \"0-7\",\n        \"queue_strategy\": \"odd/even queues (7/6)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs/link\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = propagation_delay + switching_delay + time_sync_error\",\n        \"components\": {\n          \"propagation_delay\": \"2µs (2 links)\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"4µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"priority_levels\": \"0-7\",\n        \"queue_strategy\": \"odd/even queues (7/6)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs/link\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = propagation_delay + switching_delay + time_sync_error\",\n        \"components\": {\n          \"propagation_delay\": \"2µs (2 links)\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"4µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"priority_levels\": \"0-7\",\n        \"queue_strategy\": \"odd/even queues (7/6)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs/link\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = propagation_delay + switching_delay + time_sync_error\",\n        \"components\": {\n          \"propagation_delay\": \"2µs (2 links)\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"4µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"priority_levels\": \"0-7\",\n      \"queue_strategy\": \"odd/even queues (7/6)\",\n      \"switching_delay\": \"1µs\",\n      \"propagation_delay\": \"1µs/link\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100 Mbps\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:17:24.661258",
+    "wcd_values": {
+      "F0": 4.0,
+      "F1": 4.0,
+      "F2": 4.0
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "priority_levels": "0-7",
+          "queue_strategy": "odd/even queues (7/6)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs/link",
+          "time_sync_error": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = propagation_delay + switching_delay + time_sync_error",
+          "components": {
+            "propagation_delay": "2µs (2 links)",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "4µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "priority_levels": "0-7",
+          "queue_strategy": "odd/even queues (7/6)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs/link",
+          "time_sync_error": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = propagation_delay + switching_delay + time_sync_error",
+          "components": {
+            "propagation_delay": "2µs (2 links)",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "4µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "priority_levels": "0-7",
+          "queue_strategy": "odd/even queues (7/6)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs/link",
+          "time_sync_error": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = propagation_delay + switching_delay + time_sync_error",
+          "components": {
+            "propagation_delay": "2µs (2 links)",
+            "switching_delay": "1µs",
+            "time_sync_error": "1µs"
+          },
+          "total": "4µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "priority_levels": "0-7",
+        "queue_strategy": "odd/even queues (7/6)",
+        "switching_delay": "1µs",
+        "propagation_delay": "1µs/link",
+        "time_sync_error": "1µs",
+        "bandwidth": "100 Mbps"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 850,
+    "tokens_out": 6972,
+    "total_tokens": 7822,
+    "cost_usd": 0.0021766,
+    "latency_ms": 102241,
+    "response_chars": 2697,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4,\n    \"F1\": 4,\n    \"F2\": 4\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"priority_levels\": \"0-7\",\n        \"queue_strategy\": \"odd/even queues (7/6)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs/link\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = propagation_delay + switching_delay + time_sync_error\",\n        \"components\": {\n          \"propagation_delay\": \"2µs (2 links)\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"4µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"priority_levels\": \"0-7\",\n        \"queue_strategy\": \"odd/even queues (7/6)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs/link\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = propagation_delay + switching_delay + time_sync_error\",\n        \"components\": {\n          \"propagation_delay\": \"2µs (2 links)\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"4µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"priority_levels\": \"0-7\",\n        \"queue_strategy\": \"odd/even queues (7/6)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs/link\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = propagation_delay + switching_delay + time_sync_error\",\n        \"components\": {\n          \"propagation_delay\": \"2µs (2 links)\",\n          \"switching_delay\": \"1µs\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"total\": \"4µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"priority_levels\": \"0-7\",\n      \"queue_strategy\": \"odd/even queues (7/6)\",\n      \"switching_delay\": \"1µs\",\n      \"propagation_delay\": \"1µs/link\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100 Mbps\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:19:24.988008",
+    "wcd_values": {
+      "F0": 94.64,
+      "F1": 94.64,
+      "F2": 29.68
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Cyclic_Queuing_Forwarding": "CQF",
+          "Time_Triggered": "TT",
+          "PCP": "7",
+          "Queue": "7 (odd)",
+          "Cycle_Duration": "50µs",
+          "Propagation_Delay": "1µs",
+          "Switching_Delay": "1µs",
+          "Time_Synchronization_Error": "1µs",
+          "Bandwidth_Link": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "WCD_equation": "WCD = (sum of transmission times of flows in same queue scheduled before) + transmission delay + propagation delay + switching delay + time synchronization error",
+          "F0": {
+            "Transmission_Delay": "55.04µs",
+            "Propagation_Delay": "2µs",
+            "Switching_Delay": "1µs",
+            "Time_Synchronization_Error": "1µs",
+            "Queuing_Delay": "35.6µs (flow F1's transmission time)"
+          }
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Cyclic_Queuing_Forwarding": "CQF",
+          "Time_Triggered": "TT",
+          "PCP": "7",
+          "Queue": "7 (odd)",
+          "Cycle_Duration": "50µs",
+          "Propagation_Delay": "1µs",
+          "Switching_Delay": "1µs",
+          "Time_Synchronization_Error": "1µs",
+          "Bandwidth_Link": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "WCD_equation": "WCD = (sum of transmission times of flows in same queue scheduled before) + transmission delay + propagation delay + switching delay + time synchronization error",
+          "F1": {
+            "Transmission_Delay": "35.6µs",
+            "Propagation_Delay": "2µs",
+            "Switching_Delay": "1µs",
+            "Time_Synchronization_Error": "1µs",
+            "Queuing_Delay": "55.04µs (flow F0's transmission time)"
+          }
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "Cyclic_Queuing_Forwarding": "CQF",
+          "Time_Triggered": "TT",
+          "PCP": "7",
+          "Queue": "7 (odd)",
+          "Cycle_Duration": "50µs",
+          "Propagation_Delay": "1µs",
+          "Switching_Delay": "1µs",
+          "Time_Synchronization_Error": "1µs",
+          "Bandwidth_Link": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "WCD_equation": "WCD = (sum of transmission times of flows in same queue scheduled before) + transmission delay + propagation delay + switching delay + time synchronization error",
+          "F2": {
+            "Transmission_Delay": "25.68µs",
+            "Propagation_Delay": "2µs",
+            "Switching_Delay": "1µs",
+            "Time_Synchronization_Error": "1µs",
+            "Queuing_Delay": "0µs (no other flows in same queue)"
+          }
+        }
+      },
+      "all_parameters_used": {
+        "Cycle_Duration": "50µs",
+        "Hypercycle": "50µs",
+        "Propagation_Delay": "1µs",
+        "Switching_Delay": "1µs",
+        "Time_Synchronization_Error": "1µs",
+        "Bandwidth_Link": "100 Mbps",
+        "CQF": "Cyclic Queuing and Forwarding",
+        "TT": "Time Triggered",
+        "PCP": "7",
+        "Queue": "7 (odd)"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 8048,
+    "total_tokens": 8897,
+    "cost_usd": 0.0024993,
+    "latency_ms": 119307,
+    "response_chars": 3484,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 94.64,\n    \"F1\": 94.64,\n    \"F2\": 29.68\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Cyclic_Queuing_Forwarding\": \"CQF\",\n        \"Time_Triggered\": \"TT\",\n        \"PCP\": \"7\",\n        \"Queue\": \"7 (odd)\",\n        \"Cycle_Duration\": \"50µs\",\n        \"Propagation_Delay\": \"1µs\",\n        \"Switching_Delay\": \"1µs\",\n        \"Time_Synchronization_Error\": \"1µs\",\n        \"Bandwidth_Link\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"WCD_equation\": \"WCD = (sum of transmission times of flows in same queue scheduled before) + transmission delay + propagation delay + switching delay + time synchronization error\",\n        \"F0\": {\n          \"Transmission_Delay\": \"55.04µs\",\n          \"Propagation_Delay\": \"2µs\",\n          \"Switching_Delay\": \"1µs\",\n          \"Time_Synchronization_Error\": \"1µs\",\n          \"Queuing_Delay\": \"35.6µs (flow F1's transmission time)\"\n        }\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Cyclic_Queuing_Forwarding\": \"CQF\",\n        \"Time_Triggered\": \"TT\",\n        \"PCP\": \"7\",\n        \"Queue\": \"7 (odd)\",\n        \"Cycle_Duration\": \"50µs\",\n        \"Propagation_Delay\": \"1µs\",\n        \"Switching_Delay\": \"1µs\",\n        \"Time_Synchronization_Error\": \"1µs\",\n        \"Bandwidth_Link\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"WCD_equation\": \"WCD = (sum of transmission times of flows in same queue scheduled before) + transmission delay + propagation delay + switching delay + time synchronization error\",\n        \"F1\": {\n          \"Transmission_Delay\": \"35.6µs\",\n          \"Propagation_Delay\": \"2µs\",\n          \"Switching_Delay\": \"1µs\",\n          \"Time_Synchronization_Error\": \"1µs\",\n          \"Queuing_Delay\": \"55.04µs (flow F0's transmission time)\"\n        }\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"Cyclic_Queuing_Forwarding\": \"CQF\",\n        \"Time_Triggered\": \"TT\",\n        \"PCP\": \"7\",\n        \"Queue\": \"7 (odd)\",\n        \"Cycle_Duration\": \"50µs\",\n        \"Propagation_Delay\": \"1µs\",\n        \"Switching_Delay\": \"1µs\",\n        \"Time_Synchronization_Error\": \"1µs\",\n        \"Bandwidth_Link\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"WCD_equation\": \"WCD = (sum of transmission times of flows in same queue scheduled before) + transmission delay + propagation delay + switching delay + time synchronization error\",\n        \"F2\": {\n          \"Transmission_Delay\": \"25.68µs\",\n          \"Propagation_Delay\": \"2µs\",\n          \"Switching_Delay\": \"1µs\",\n          \"Time_Synchronization_Error\": \"1µs\",\n          \"Queuing_Delay\": \"0µs (no other flows in same queue)\"\n        }\n      }\n    },\n    \"all_parameters_used\": {\n      \"Cycle_Duration\": \"50µs\",\n      \"Hypercycle\": \"50µs\",\n      \"Propagation_Delay\": \"1µs\",\n      \"Switching_Delay\": \"1µs\",\n      \"Time_Synchronization_Error\": \"1µs\",\n      \"Bandwidth_Link\": \"100 Mbps\",\n      \"CQF\": \"Cyclic Queuing and Forwarding\",\n      \"TT\": \"Time Triggered\",\n      \"PCP\": \"7\",\n      \"Queue\": \"7 (odd)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:23:18.642783",
+    "wcd_values": {
+      "F0": 5.08,
+      "F1": 5.08,
+      "F2": 5.2
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "queue": "7 (odd)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error. Transmission delay = (payload / bandwidth) * 1000 = (1000 bytes / 100 Mbps) = 0.08µs. Propagation delay = 2 hops * 1µs = 2µs. Switching delay = 2 hops * 1µs = 2µs. Time sync error = 1µs. Total WCD = 0.08 + 2 + 2 + 1 = 5.08µs."
+      },
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "queue": "7 (odd)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "Same as F0 since identical parameters."
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "queue": "7 (odd)",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": "Transmission delay = (2500 bytes / 100 Mbps) = 0.2µs. Propagation delay = 2µs. Switching delay = 2µs. Time sync error = 1µs. Total WCD = 0.2 + 2 + 2 + 1 = 5.2µs."
+      },
+      "all_parameters_used": {
+        "bandwidth_link": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs",
+        "queue": "7 (odd)"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 7486,
+    "total_tokens": 8335,
+    "cost_usd": 0.0023307,
+    "latency_ms": 232640,
+    "response_chars": 2170,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 5.08,\n    \"F1\": 5.08,\n    \"F2\": 5.2\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"queue\": \"7 (odd)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error. Transmission delay = (payload / bandwidth) * 1000 = (1000 bytes / 100 Mbps) = 0.08µs. Propagation delay = 2 hops * 1µs = 2µs. Switching delay = 2 hops * 1µs = 2µs. Time sync error = 1µs. Total WCD = 0.08 + 2 + 2 + 1 = 5.08µs.\"\n    },\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"queue\": \"7 (odd)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"Same as F0 since identical parameters.\"\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"queue\": \"7 (odd)\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": \"Transmission delay = (2500 bytes / 100 Mbps) = 0.2µs. Propagation delay = 2µs. Switching delay = 2µs. Time sync error = 1µs. Total WCD = 0.2 + 2 + 2 + 1 = 5.2µs.\"\n    },\n    \"all_parameters_used\": {\n      \"bandwidth_link\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\",\n      \"queue\": \"7 (odd)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:25:18.140829",
+    "wcd_values": {
+      "F0": 4.08,
+      "F1": 4.08,
+      "F2": 4.03
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "transmission_delay": "0.08µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "values": {
+            "transmission_delay": 0.08,
+            "propagation_delay": 2,
+            "switching_delay": 1,
+            "time_sync_error": 1
+          },
+          "result": 4.08
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "transmission_delay": "0.08µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "values": {
+            "transmission_delay": 0.08,
+            "propagation_delay": 2,
+            "switching_delay": 1,
+            "time_sync_error": 1
+          },
+          "result": 4.08
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "transmission_delay": "0.02568µs",
+          "propagation_delay": "2µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "values": {
+            "transmission_delay": 0.02568,
+            "propagation_delay": 2,
+            "switching_delay": 1,
+            "time_sync_error": 1
+          },
+          "result": 4.02568
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "Hypercycle": "50µs",
+        "transmission_delay": "calculated based on payload and bandwidth",
+        "propagation_delay": "1µs per link",
+        "switching_delay": "1µs per switch",
+        "time_sync_error": "1µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 7910,
+    "total_tokens": 8759,
+    "cost_usd": 0.0024579,
+    "latency_ms": 118483,
+    "response_chars": 2653,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.08,\n    \"F1\": 4.08,\n    \"F2\": 4.03\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"transmission_delay\": \"0.08µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"values\": {\n          \"transmission_delay\": 0.08,\n          \"propagation_delay\": 2,\n          \"switching_delay\": 1,\n          \"time_sync_error\": 1\n        },\n        \"result\": 4.08\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"transmission_delay\": \"0.08µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"values\": {\n          \"transmission_delay\": 0.08,\n          \"propagation_delay\": 2,\n          \"switching_delay\": 1,\n          \"time_sync_error\": 1\n        },\n        \"result\": 4.08\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"transmission_delay\": \"0.02568µs\",\n        \"propagation_delay\": \"2µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"values\": {\n          \"transmission_delay\": 0.02568,\n          \"propagation_delay\": 2,\n          \"switching_delay\": 1,\n          \"time_sync_error\": 1\n        },\n        \"result\": 4.02568\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"Hypercycle\": \"50µs\",\n      \"transmission_delay\": \"calculated based on payload and bandwidth\",\n      \"propagation_delay\": \"1µs per link\",\n      \"switching_delay\": \"1µs per switch\",\n      \"time_sync_error\": \"1µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:29:19.058495",
+    "wcd_values": {
+      "F0": 4.28,
+      "F1": 4.68,
+      "F2": 4.2
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "queue_assignment": "PCP:7 (queue 7)",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (hops * propagation_delay) + (switches * switching_delay) + time_sync_error + queuing_delay + transmission_time",
+          "components": {
+            "hops": 2,
+            "propagation_delay": 2,
+            "switches": 1,
+            "switching_delay": 1,
+            "time_sync_error": 1,
+            "queuing_delay": 0.2,
+            "transmission_time": 0.08
+          }
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "queue_assignment": "PCP:7 (queue 7)",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (hops * propagation_delay) + (switches * switching_delay) + time_sync_error + queuing_delay + transmission_time",
+          "components": {
+            "hops": 2,
+            "propagation_delay": 2,
+            "switches": 1,
+            "switching_delay": 1,
+            "time_sync_error": 1,
+            "queuing_delay": 0.28,
+            "transmission_time": 0.4
+          }
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "queue_assignment": "PCP:7 (queue 7)",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (hops * propagation_delay) + (switches * switching_delay) + time_sync_error + queuing_delay + transmission_time",
+          "components": {
+            "hops": 2,
+            "propagation_delay": 2,
+            "switches": 1,
+            "switching_delay": 1,
+            "time_sync_error": 1,
+            "queuing_delay": 0,
+            "transmission_time": 0.2
+          }
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "Hypercycle": "50µs",
+        "queue_assignment": "PCP:7 (queue 7)",
+        "time_sync_error": "1µs",
+        "switching_delay": "1µs",
+        "propagation_delay": "1µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 7480,
+    "total_tokens": 8329,
+    "cost_usd": 0.0023289,
+    "latency_ms": 239895,
+    "response_chars": 2805,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.28,\n    \"F1\": 4.68,\n    \"F2\": 4.2\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"queue_assignment\": \"PCP:7 (queue 7)\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (hops * propagation_delay) + (switches * switching_delay) + time_sync_error + queuing_delay + transmission_time\",\n        \"components\": {\n          \"hops\": 2,\n          \"propagation_delay\": 2,\n          \"switches\": 1,\n          \"switching_delay\": 1,\n          \"time_sync_error\": 1,\n          \"queuing_delay\": 0.2,\n          \"transmission_time\": 0.08\n        }\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"queue_assignment\": \"PCP:7 (queue 7)\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (hops * propagation_delay) + (switches * switching_delay) + time_sync_error + queuing_delay + transmission_time\",\n        \"components\": {\n          \"hops\": 2,\n          \"propagation_delay\": 2,\n          \"switches\": 1,\n          \"switching_delay\": 1,\n          \"time_sync_error\": 1,\n          \"queuing_delay\": 0.28,\n          \"transmission_time\": 0.4\n        }\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"queue_assignment\": \"PCP:7 (queue 7)\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (hops * propagation_delay) + (switches * switching_delay) + time_sync_error + queuing_delay + transmission_time\",\n        \"components\": {\n          \"hops\": 2,\n          \"propagation_delay\": 2,\n          \"switches\": 1,\n          \"switching_delay\": 1,\n          \"time_sync_error\": 1,\n          \"queuing_delay\": 0,\n          \"transmission_time\": 0.2\n        }\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"Hypercycle\": \"50µs\",\n      \"queue_assignment\": \"PCP:7 (queue 7)\",\n      \"time_sync_error\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"propagation_delay\": \"1µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:35:22.132277",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362071,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC48",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:41:25.519582",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362377,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC49",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:47:28.730467",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362190,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC49",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:49:04.204920",
+    "wcd_values": {
+      "F0": 4.16,
+      "F1": 4.8,
+      "F2": 4.8
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number_of_links * (payload / bandwidth)) + (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_sync_error",
+          "flow_0": "WCD = 2*(1000*8/100e6) + 2*1 + 1*1 + 1 = 4.16µs",
+          "flow_1": "WCD = 2*(5000*8/100e6) + 2*1 + 1*1 + 1 = 4.8µs",
+          "flow_2": "WCD = 2*(5000*8/100e6) + 2*1 + 1*1 + 1 = 4.8µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs",
+        "time_sync_error": "1µs",
+        "switching_delay": "1µs",
+        "propagation_delay": "1µs",
+        "bandwidth": "100 Mbps",
+        "queue_assignment": "PCP:7 uses queue 7 (odd) and 6 (even) as per input"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 6366,
+    "total_tokens": 7215,
+    "cost_usd": 0.0019947,
+    "latency_ms": 94458,
+    "response_chars": 1332,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.16,\n    \"F1\": 4.8,\n    \"F2\": 4.8\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number_of_links * (payload / bandwidth)) + (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_sync_error\",\n        \"flow_0\": \"WCD = 2*(1000*8/100e6) + 2*1 + 1*1 + 1 = 4.16µs\",\n        \"flow_1\": \"WCD = 2*(5000*8/100e6) + 2*1 + 1*1 + 1 = 4.8µs\",\n        \"flow_2\": \"WCD = 2*(5000*8/100e6) + 2*1 + 1*1 + 1 = 4.8µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\",\n      \"time_sync_error\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"propagation_delay\": \"1µs\",\n      \"bandwidth\": \"100 Mbps\",\n      \"queue_assignment\": \"PCP:7 uses queue 7 (odd) and 6 (even) as per input\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.8\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:52:40.253052",
+    "wcd_values": {
+      "F0": 4.16,
+      "F1": 4.8,
+      "F2": 4.8
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number_of_links * (payload / bandwidth)) + (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_sync_error",
+          "flow_0": "WCD = 2*(1000*8/100e6) + 2*1 + 1*1 + 1 = 4.16µs",
+          "flow_1": "WCD = 2*(5000*8/100e6) + 2*1 + 1*1 + 1 = 4.8µs",
+          "flow_2": "WCD = 2*(5000*8/100e6) + 2*1 + 1*1 + 1 = 4.8µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs",
+        "time_sync_error": "1µs",
+        "switching_delay": "1µs",
+        "propagation_delay": "1µs",
+        "bandwidth": "100 Mbps",
+        "queue_assignment": "PCP:7 uses queue 7 (odd) and 6 (even) as per input"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 849,
+    "tokens_out": 6366,
+    "total_tokens": 7215,
+    "cost_usd": 0.0019947,
+    "latency_ms": 215039,
+    "response_chars": 1332,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 4.16,\n    \"F1\": 4.8,\n    \"F2\": 4.8\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number_of_links * (payload / bandwidth)) + (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_sync_error\",\n        \"flow_0\": \"WCD = 2*(1000*8/100e6) + 2*1 + 1*1 + 1 = 4.16µs\",\n        \"flow_1\": \"WCD = 2*(5000*8/100e6) + 2*1 + 1*1 + 1 = 4.8µs\",\n        \"flow_2\": \"WCD = 2*(5000*8/100e6) + 2*1 + 1*1 + 1 = 4.8µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\",\n      \"time_sync_error\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"propagation_delay\": \"1µs\",\n      \"bandwidth\": \"100 Mbps\",\n      \"queue_assignment\": \"PCP:7 uses queue 7 (odd) and 6 (even) as per input\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.8\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:56:39.223549",
+    "wcd_values": {
+      "F0": 484.0,
+      "F1": 484.0,
+      "F2": 204.0
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error",
+          "transmission_delay": "0.08 * payload (µs)",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "queueing_delay": "sum of transmission delays of flows in same queue/egress port",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error",
+          "transmission_delay": "0.08 * payload (µs)",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "queueing_delay": "sum of transmission delays of flows in same queue/egress port",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error",
+          "transmission_delay": "0.08 * payload (µs)",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "queueing_delay": "sum of transmission delays of flows in same queue/egress port",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "pcp": "7",
+        "queue": "7",
+        "time_sync_error": "1µs",
+        "bandwidth": "100Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 852,
+    "tokens_out": 7829,
+    "total_tokens": 8681,
+    "cost_usd": 0.0024339,
+    "latency_ms": 237953,
+    "response_chars": 2945,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 484,\n    \"F1\": 484,\n    \"F2\": 204\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error\",\n        \"transmission_delay\": \"0.08 * payload (µs)\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"queueing_delay\": \"sum of transmission delays of flows in same queue/egress port\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error\",\n        \"transmission_delay\": \"0.08 * payload (µs)\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"queueing_delay\": \"sum of transmission delays of flows in same queue/egress port\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error\",\n        \"transmission_delay\": \"0.08 * payload (µs)\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"queueing_delay\": \"sum of transmission delays of flows in same queue/egress port\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"pcp\": \"7\",\n      \"queue\": \"7\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T04:58:37.403102",
+    "wcd_values": {
+      "F0": 484.0,
+      "F1": 484.0,
+      "F2": 204.0
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error",
+          "transmission_delay": "0.08 * payload (µs)",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "queueing_delay": "sum of transmission delays of flows in same queue/egress port",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error",
+          "transmission_delay": "0.08 * payload (µs)",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "queueing_delay": "sum of transmission delays of flows in same queue/egress port",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "pcp": "7",
+          "queue": "7",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error",
+          "transmission_delay": "0.08 * payload (µs)",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "queueing_delay": "sum of transmission delays of flows in same queue/egress port",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "pcp": "7",
+        "queue": "7",
+        "time_sync_error": "1µs",
+        "bandwidth": "100Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 852,
+    "tokens_out": 7829,
+    "total_tokens": 8681,
+    "cost_usd": 0.0024339,
+    "latency_ms": 117167,
+    "response_chars": 2945,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 484,\n    \"F1\": 484,\n    \"F2\": 204\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error\",\n        \"transmission_delay\": \"0.08 * payload (µs)\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"queueing_delay\": \"sum of transmission delays of flows in same queue/egress port\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error\",\n        \"transmission_delay\": \"0.08 * payload (µs)\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"queueing_delay\": \"sum of transmission delays of flows in same queue/egress port\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"pcp\": \"7\",\n        \"queue\": \"7\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + queueing_delay + time_sync_error\",\n        \"transmission_delay\": \"0.08 * payload (µs)\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"queueing_delay\": \"sum of transmission delays of flows in same queue/egress port\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"pcp\": \"7\",\n      \"queue\": \"7\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T05:04:40.410284",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 361998,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC51",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T05:06:09.377835",
+    "wcd_values": {
+      "F0": 404.0,
+      "F1": 84.0,
+      "F2": 4.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "hypercycle": 5000,
+          "bandwidth_link": 100,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "queueing_delay": "sum of transmission times of flows in same queue on same port"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "hypercycle": 5000,
+          "bandwidth_link": 100,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "queueing_delay": "sum of transmission times of flows in same queue on same port"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "hypercycle": 5000,
+          "bandwidth_link": 100,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "queueing_delay": "sum of transmission times of flows in same queue on same port"
+        }
+      },
+      "WCD_calculation": {
+        "equation": "WCD = propagation_delay + switching_delay + queueing_delay + time_sync_error",
+        "components": {
+          "propagation_delay": "number_of_links * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "queueing_delay": "sum of transmission times of flows in same queue on same port",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": 50,
+        "hypercycle": 5000,
+        "bandwidth_link": 100,
+        "propagation_delay": 1,
+        "switching_delay": 1,
+        "time_sync_error": 1,
+        "queueing_delay": "sum of transmission times of flows in same queue on same port"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 850,
+    "tokens_out": 6002,
+    "total_tokens": 6852,
+    "cost_usd": 0.0018856,
+    "latency_ms": 87919,
+    "response_chars": 2249,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 404,\n    \"F1\": 84,\n    \"F2\": 4\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"hypercycle\": 5000,\n        \"bandwidth_link\": 100,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"hypercycle\": 5000,\n        \"bandwidth_link\": 100,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"hypercycle\": 5000,\n        \"bandwidth_link\": 100,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = propagation_delay + switching_delay + queueing_delay + time_sync_error\",\n      \"components\": {\n        \"propagation_delay\": \"number_of_links * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": 50,\n      \"hypercycle\": 5000,\n      \"bandwidth_link\": 100,\n      \"propagation_delay\": 1,\n      \"switching_delay\": 1,\n      \"time_sync_error\": 1,\n      \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T05:07:37.986765",
+    "wcd_values": {
+      "F0": 404.0,
+      "F1": 84.0,
+      "F2": 4.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "hypercycle": 5000,
+          "bandwidth_link": 100,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "queueing_delay": "sum of transmission times of flows in same queue on same port"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "hypercycle": 5000,
+          "bandwidth_link": 100,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "queueing_delay": "sum of transmission times of flows in same queue on same port"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "hypercycle": 5000,
+          "bandwidth_link": 100,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "queueing_delay": "sum of transmission times of flows in same queue on same port"
+        }
+      },
+      "WCD_calculation": {
+        "equation": "WCD = propagation_delay + switching_delay + queueing_delay + time_sync_error",
+        "components": {
+          "propagation_delay": "number_of_links * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "queueing_delay": "sum of transmission times of flows in same queue on same port",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": 50,
+        "hypercycle": 5000,
+        "bandwidth_link": 100,
+        "propagation_delay": 1,
+        "switching_delay": 1,
+        "time_sync_error": 1,
+        "queueing_delay": "sum of transmission times of flows in same queue on same port"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 850,
+    "tokens_out": 6002,
+    "total_tokens": 6852,
+    "cost_usd": 0.0018856,
+    "latency_ms": 87603,
+    "response_chars": 2249,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 404,\n    \"F1\": 84,\n    \"F2\": 4\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"hypercycle\": 5000,\n        \"bandwidth_link\": 100,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"hypercycle\": 5000,\n        \"bandwidth_link\": 100,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"hypercycle\": 5000,\n        \"bandwidth_link\": 100,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = propagation_delay + switching_delay + queueing_delay + time_sync_error\",\n      \"components\": {\n        \"propagation_delay\": \"number_of_links * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": 50,\n      \"hypercycle\": 5000,\n      \"bandwidth_link\": 100,\n      \"propagation_delay\": 1,\n      \"switching_delay\": 1,\n      \"time_sync_error\": 1,\n      \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-02T05:09:06.357435",
+    "wcd_values": {
+      "F0": 404.0,
+      "F1": 84.0,
+      "F2": 4.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "hypercycle": 5000,
+          "bandwidth_link": 100,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "queueing_delay": "sum of transmission times of flows in same queue on same port"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "hypercycle": 5000,
+          "bandwidth_link": 100,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "queueing_delay": "sum of transmission times of flows in same queue on same port"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "hypercycle": 5000,
+          "bandwidth_link": 100,
+          "propagation_delay": 1,
+          "switching_delay": 1,
+          "time_sync_error": 1,
+          "queueing_delay": "sum of transmission times of flows in same queue on same port"
+        }
+      },
+      "WCD_calculation": {
+        "equation": "WCD = propagation_delay + switching_delay + queueing_delay + time_sync_error",
+        "components": {
+          "propagation_delay": "number_of_links * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "queueing_delay": "sum of transmission times of flows in same queue on same port",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": 50,
+        "hypercycle": 5000,
+        "bandwidth_link": 100,
+        "propagation_delay": 1,
+        "switching_delay": 1,
+        "time_sync_error": 1,
+        "queueing_delay": "sum of transmission times of flows in same queue on same port"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 850,
+    "tokens_out": 6002,
+    "total_tokens": 6852,
+    "cost_usd": 0.0018856,
+    "latency_ms": 87364,
+    "response_chars": 2249,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 404,\n    \"F1\": 84,\n    \"F2\": 4\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"hypercycle\": 5000,\n        \"bandwidth_link\": 100,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"hypercycle\": 5000,\n        \"bandwidth_link\": 100,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"hypercycle\": 5000,\n        \"bandwidth_link\": 100,\n        \"propagation_delay\": 1,\n        \"switching_delay\": 1,\n        \"time_sync_error\": 1,\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n      }\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = propagation_delay + switching_delay + queueing_delay + time_sync_error\",\n      \"components\": {\n        \"propagation_delay\": \"number_of_links * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": 50,\n      \"hypercycle\": 5000,\n      \"bandwidth_link\": 100,\n      \"propagation_delay\": 1,\n      \"switching_delay\": 1,\n      \"time_sync_error\": 1,\n      \"queueing_delay\": \"sum of transmission times of flows in same queue on same port\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  }
+]

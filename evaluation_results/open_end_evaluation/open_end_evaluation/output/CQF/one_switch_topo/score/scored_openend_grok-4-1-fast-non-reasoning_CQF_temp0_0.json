@@ -1,0 +1,1060 @@
+{
+  "model": "grok-4-1-fast-non-reasoning",
+  "prompt_type": "CQF",
+  "temperature_label": "temp0_0",
+  "timestamp": "2026-05-04T10:21:11.220036",
+  "total_tcs": 11,
+  "scored_tcs": 10,
+  "trivial_tcs": 0,
+  "invalid_tcs": 1,
+  "coverage_failed_tcs": 1,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0909,
+  "coverage_failed_rate": 0.0909,
+  "enough_tcs": true,
+  "min_scored_tcs": 5,
+  "mae_us_majority": 93.2,
+  "mape_pct_majority": 90.4854,
+  "mae_us_average": 85.2033,
+  "mape_pct_average": 82.7217,
+  "exact_match_rate": 0.0,
+  "error_min": 89.0,
+  "error_q1": 91.0,
+  "error_median": 95.0,
+  "error_q3": 95.0,
+  "error_max": 95.0,
+  "error_mean": 93.2,
+  "total_flow_errors": 30,
+  "total_tokens_in": 32139,
+  "total_tokens_out": 35008,
+  "total_tokens": 67147,
+  "avg_tokens_in": 973.9,
+  "avg_tokens_out": 1060.8,
+  "avg_latency_ms": 8684.6,
+  "max_latency_ms": 14400,
+  "total_time_seconds": 286.59,
+  "tc_results": {
+    "TC41": {
+      "metrics": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC42": {
+      "metrics": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 93.6667,
+        "mape_pct": 90.9385,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC43": {
+      "metrics": {
+        "mae_us": 89.0,
+        "mape_pct": 86.4078,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 71.0889,
+        "mape_pct": 69.0183,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC44": {
+      "metrics": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC45": {
+      "metrics": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 36.1111,
+        "mape_pct": 35.0593,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            466.0,
+            8.0,
+            8.0
+          ],
+          "ratio": 58.2
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            205.0,
+            8.0,
+            8.0
+          ],
+          "ratio": 25.6
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            229.0,
+            8.0,
+            8.0
+          ],
+          "ratio": 28.6
+        }
+      ]
+    },
+    "TC46": {
+      "metrics": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 94.5,
+        "mape_pct": 91.7475,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC47": {
+      "metrics": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC48": {
+      "metrics": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC49": {
+      "metrics": {
+        "mae_us": 95.0,
+        "mape_pct": 92.233,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 93.6667,
+        "mape_pct": 90.9385,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC50": {
+      "metrics": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 2,
+        "missing_flows": 1,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.6667,
+        "coverage_failed": true
+      },
+      "metrics_avg": {
+        "mae_us": null,
+        "mape_pct": null,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 2,
+        "missing_flows": 1,
+        "trivial": false,
+        "scenario": "invalid_missing",
+        "coverage": 0.6667,
+        "coverage_failed": true
+      },
+      "hv_flags": []
+    },
+    "TC51": {
+      "metrics": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 91.0,
+        "mape_pct": 88.3495,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": null,
+      "abs_error": null,
+      "pct_error": null,
+      "exact_match": false,
+      "missing": true,
+      "tc_name": "TC50",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-non-reasoning"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 9.3333,
+      "abs_error": 93.6667,
+      "pct_error": 90.9385,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 9.3333,
+      "abs_error": 93.6667,
+      "pct_error": 90.9385,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 9.3333,
+      "abs_error": 93.6667,
+      "pct_error": 90.9385,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 42.9333,
+      "abs_error": 60.0667,
+      "pct_error": 58.3172,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 35.5733,
+      "abs_error": 67.4267,
+      "pct_error": 65.4628,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 17.2267,
+      "abs_error": 85.7733,
+      "pct_error": 83.275,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 160.6667,
+      "abs_error": 57.6667,
+      "pct_error": 55.9871,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 81.6667,
+      "abs_error": 21.3333,
+      "pct_error": 20.7119,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 73.6667,
+      "abs_error": 29.3333,
+      "pct_error": 28.4789,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 9.0,
+      "abs_error": 94.0,
+      "pct_error": 91.2621,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 9.0,
+      "abs_error": 94.0,
+      "pct_error": 91.2621,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 7.5,
+      "abs_error": 95.5,
+      "pct_error": 92.7184,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 8.0,
+      "abs_error": 95.0,
+      "pct_error": 92.233,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 9.3333,
+      "abs_error": 93.6667,
+      "pct_error": 90.9385,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 9.3333,
+      "abs_error": 93.6667,
+      "pct_error": 90.9385,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 9.3333,
+      "abs_error": 93.6667,
+      "pct_error": 90.9385,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-non-reasoning"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 12.0,
+      "abs_error": 91.0,
+      "pct_error": 88.3495,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "grok-4-1-fast-non-reasoning"
+    }
+  ]
+}

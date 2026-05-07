@@ -1,0 +1,1261 @@
+{
+  "model": "Llama-3.3-70B-Instruct",
+  "prompt_type": "CQF",
+  "temperature_label": "temp0_0",
+  "timestamp": "2026-05-04T10:21:10.881270",
+  "total_tcs": 11,
+  "scored_tcs": 11,
+  "trivial_tcs": 0,
+  "invalid_tcs": 0,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": true,
+  "min_scored_tcs": 5,
+  "mae_us_majority": 312.9636,
+  "mape_pct_majority": 303.8482,
+  "mae_us_average": 140.4637,
+  "mape_pct_average": 136.3726,
+  "exact_match_rate": 0.0,
+  "error_min": 12.0,
+  "error_q1": 84.0,
+  "error_median": 99.0,
+  "error_q3": 100.0,
+  "error_max": 2350.1,
+  "error_mean": 312.9636,
+  "total_flow_errors": 33,
+  "total_tokens_in": 28113,
+  "total_tokens_out": 49019,
+  "total_tokens": 77132,
+  "avg_tokens_in": 851.9,
+  "avg_tokens_out": 1485.4,
+  "avg_latency_ms": 3801.3,
+  "max_latency_ms": 4740,
+  "total_time_seconds": 125.44,
+  "tc_results": {
+    "TC41": {
+      "metrics": {
+        "mae_us": 99.0,
+        "mape_pct": 96.1165,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 67.725,
+        "mape_pct": 65.7524,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            4.0,
+            115.0,
+            6.224
+          ],
+          "ratio": 28.8
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            4.0,
+            102.6,
+            6.1984
+          ],
+          "ratio": 25.6
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            4.0,
+            69.32,
+            6.13264
+          ],
+          "ratio": 17.3
+        }
+      ]
+    },
+    "TC42": {
+      "metrics": {
+        "mae_us": 96.8,
+        "mape_pct": 93.9806,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 97.72,
+        "mape_pct": 94.8738,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC43": {
+      "metrics": {
+        "mae_us": 45.0,
+        "mape_pct": 43.6893,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 29.2622,
+        "mape_pct": 28.4099,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            91.0,
+            164.0,
+            3.000188
+          ],
+          "ratio": 54.7
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            14.0,
+            404.0,
+            3.0000616
+          ],
+          "ratio": 134.7
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            69.0,
+            136.64,
+            3.000166
+          ],
+          "ratio": 45.5
+        }
+      ]
+    },
+    "TC44": {
+      "metrics": {
+        "mae_us": 100.0,
+        "mape_pct": 97.0874,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 66.8221,
+        "mape_pct": 64.8758,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            3.0002,
+            53.2,
+            52.2
+          ],
+          "ratio": 17.7
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            3.0002,
+            53.2,
+            52.2
+          ],
+          "ratio": 17.7
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            3.0004,
+            53.4,
+            52.4
+          ],
+          "ratio": 17.8
+        }
+      ]
+    },
+    "TC45": {
+      "metrics": {
+        "mae_us": 99.0,
+        "mape_pct": 96.1165,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 99.3253,
+        "mape_pct": 96.4324,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC46": {
+      "metrics": {
+        "mae_us": 73.0,
+        "mape_pct": 70.8738,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 37.7378,
+        "mape_pct": 36.6386,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            82.0,
+            4.16,
+            82.0
+          ],
+          "ratio": 19.7
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            202.0,
+            4.4,
+            202.0
+          ],
+          "ratio": 45.9
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            202.0,
+            4.4,
+            202.0
+          ],
+          "ratio": 45.9
+        }
+      ]
+    },
+    "TC47": {
+      "metrics": {
+        "mae_us": 100.0,
+        "mape_pct": 97.0874,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 57.9422,
+        "mape_pct": 56.2546,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            3.00005504,
+            114.08,
+            59.16
+          ],
+          "ratio": 38.0
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            3.00002568,
+            64.32,
+            29.8
+          ],
+          "ratio": 21.4
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            3.0000356,
+            89.44,
+            39.72
+          ],
+          "ratio": 29.8
+        }
+      ]
+    },
+    "TC48": {
+      "metrics": {
+        "mae_us": 85.5333,
+        "mape_pct": 83.0421,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 90.2533,
+        "mape_pct": 87.6246,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC49": {
+      "metrics": {
+        "mae_us": 2350.0333,
+        "mape_pct": 2281.5858,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 717.3132,
+        "mape_pct": 696.4206,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            2453.04208,
+            4.16,
+            3.12
+          ],
+          "ratio": 786.2
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            2453.05808,
+            4.8,
+            3.4
+          ],
+          "ratio": 721.5
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            2453.03808,
+            4.8,
+            3.4
+          ],
+          "ratio": 721.5
+        }
+      ]
+    },
+    "TC50": {
+      "metrics": {
+        "mae_us": 356.3333,
+        "mape_pct": 345.9547,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 171.2934,
+        "mape_pct": 166.3042,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    },
+    "TC51": {
+      "metrics": {
+        "mae_us": 37.9,
+        "mape_pct": 36.7961,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 109.7066,
+        "mape_pct": 106.5113,
+        "exact_match_rate": 0.0,
+        "total_flows": 3,
+        "valid_flows": 3,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": [
+        {
+          "flow_id": "F1",
+          "values": [
+            35.0,
+            6.16,
+            68.0
+          ],
+          "ratio": 11.0
+        },
+        {
+          "flow_id": "F3",
+          "values": [
+            115.0,
+            6.4,
+            404.0
+          ],
+          "ratio": 63.1
+        },
+        {
+          "flow_id": "F2",
+          "values": [
+            69.32,
+            6.8,
+            804.0
+          ],
+          "ratio": 118.2
+        }
+      ]
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 4.2,
+      "abs_error": 98.8,
+      "pct_error": 95.9223,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 10.2,
+      "abs_error": 92.8,
+      "pct_error": 90.0971,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 4.2,
+      "abs_error": 98.8,
+      "pct_error": 95.9223,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 91.0,
+      "abs_error": 12.0,
+      "pct_error": 11.6505,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 69.0,
+      "abs_error": 34.0,
+      "pct_error": 33.0097,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 14.0,
+      "abs_error": 89.0,
+      "pct_error": 86.4078,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 3.0,
+      "abs_error": 100.0,
+      "pct_error": 97.0874,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 3.0,
+      "abs_error": 100.0,
+      "pct_error": 97.0874,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 3.0,
+      "abs_error": 100.0,
+      "pct_error": 97.0874,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 4.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 82.0,
+      "abs_error": 21.0,
+      "pct_error": 20.3883,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 202.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 202.0,
+      "abs_error": 99.0,
+      "pct_error": 96.1165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 3.0,
+      "abs_error": 100.0,
+      "pct_error": 97.0874,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 3.0,
+      "abs_error": 100.0,
+      "pct_error": 97.0874,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 3.0,
+      "abs_error": 100.0,
+      "pct_error": 97.0874,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 20.0,
+      "abs_error": 83.0,
+      "pct_error": 80.5825,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 13.4,
+      "abs_error": 89.6,
+      "pct_error": 86.9903,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 19.0,
+      "abs_error": 84.0,
+      "pct_error": 81.5534,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 2453.0,
+      "abs_error": 2350.0,
+      "pct_error": 2281.5534,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 2453.0,
+      "abs_error": 2350.0,
+      "pct_error": 2281.5534,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 2453.1,
+      "abs_error": 2350.1,
+      "pct_error": 2281.6505,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 166.0,
+      "abs_error": 63.0,
+      "pct_error": 61.165,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 806.0,
+      "abs_error": 703.0,
+      "pct_error": 682.5243,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 406.0,
+      "abs_error": 303.0,
+      "pct_error": 294.1748,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 35.0,
+      "abs_error": 68.0,
+      "pct_error": 66.0194,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 69.3,
+      "abs_error": 33.7,
+      "pct_error": 32.7184,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 115.0,
+      "abs_error": 12.0,
+      "pct_error": 11.6505,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "Llama-3.3-70B-Instruct"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 41.7413,
+      "abs_error": 61.2587,
+      "pct_error": 59.4745,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 26.4842,
+      "abs_error": 76.5158,
+      "pct_error": 74.2872,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 37.5995,
+      "abs_error": 65.4005,
+      "pct_error": 63.4956,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC41",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 4.16,
+      "abs_error": 98.84,
+      "pct_error": 95.9612,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 7.52,
+      "abs_error": 95.48,
+      "pct_error": 92.699,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 4.16,
+      "abs_error": 98.84,
+      "pct_error": 95.9612,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC42",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 86.0001,
+      "abs_error": 16.9999,
+      "pct_error": 16.5048,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 69.5467,
+      "abs_error": 33.4533,
+      "pct_error": 32.4789,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 140.3334,
+      "abs_error": 37.3334,
+      "pct_error": 36.246,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC43",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 36.1334,
+      "abs_error": 66.8666,
+      "pct_error": 64.919,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 36.2668,
+      "abs_error": 66.7332,
+      "pct_error": 64.7895,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 36.1334,
+      "abs_error": 66.8666,
+      "pct_error": 64.919,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC44",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 3.6791,
+      "abs_error": 99.3209,
+      "pct_error": 96.4281,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 3.6728,
+      "abs_error": 99.3272,
+      "pct_error": 96.4342,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 3.6722,
+      "abs_error": 99.3278,
+      "pct_error": 96.4348,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC45",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 56.0533,
+      "abs_error": 46.9467,
+      "pct_error": 45.5793,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 136.1333,
+      "abs_error": 33.1333,
+      "pct_error": 32.1683,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 136.1333,
+      "abs_error": 33.1333,
+      "pct_error": 32.1683,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC46",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 58.7467,
+      "abs_error": 44.2533,
+      "pct_error": 42.9644,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 44.0533,
+      "abs_error": 58.9467,
+      "pct_error": 57.2298,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 32.3733,
+      "abs_error": 70.6267,
+      "pct_error": 68.5696,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC47",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 14.64,
+      "abs_error": 88.36,
+      "pct_error": 85.7864,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 9.9333,
+      "abs_error": 93.0667,
+      "pct_error": 90.356,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 13.6667,
+      "abs_error": 89.3333,
+      "pct_error": 86.7314,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC48",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 820.1074,
+      "abs_error": 717.1074,
+      "pct_error": 696.2208,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 820.4127,
+      "abs_error": 717.4127,
+      "pct_error": 696.5172,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 820.4194,
+      "abs_error": 717.4194,
+      "pct_error": 696.5237,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC49",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 150.6667,
+      "abs_error": 47.6667,
+      "pct_error": 46.2783,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 438.6667,
+      "abs_error": 335.6667,
+      "pct_error": 325.89,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 233.5467,
+      "abs_error": 130.5467,
+      "pct_error": 126.7444,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC50",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F1",
+      "ground_truth": 103,
+      "predicted": 36.3867,
+      "abs_error": 66.6133,
+      "pct_error": 64.6731,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 103,
+      "predicted": 293.3733,
+      "abs_error": 190.3733,
+      "pct_error": 184.8284,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 103,
+      "predicted": 175.1333,
+      "abs_error": 72.1333,
+      "pct_error": 70.0323,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC51",
+      "model": "Llama-3.3-70B-Instruct"
+    }
+  ]
+}

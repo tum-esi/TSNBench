@@ -1,0 +1,201 @@
+{
+  "model": "gemini-2.5-flash",
+  "prompt_type": "CQF",
+  "temperature_label": "temp0_0",
+  "timestamp": "2026-05-05T22:59:42.010545",
+  "total_tcs": 1,
+  "scored_tcs": 1,
+  "trivial_tcs": 0,
+  "invalid_tcs": 0,
+  "coverage_failed_tcs": 0,
+  "trivial_rate": 0.0,
+  "invalid_rate": 0.0,
+  "coverage_failed_rate": 0.0,
+  "enough_tcs": false,
+  "min_scored_tcs": 50,
+  "mae_us_majority": null,
+  "mape_pct_majority": null,
+  "mae_us_average": null,
+  "mape_pct_average": null,
+  "exact_match_rate": null,
+  "error_min": null,
+  "error_q1": null,
+  "error_median": null,
+  "error_q3": null,
+  "error_max": null,
+  "error_mean": null,
+  "total_flow_errors": 6,
+  "total_tokens_in": 2418,
+  "total_tokens_out": 3224,
+  "total_tokens": 5642,
+  "avg_tokens_in": 2418,
+  "avg_tokens_out": 3224,
+  "avg_latency_ms": 66301,
+  "max_latency_ms": 66301,
+  "total_time_seconds": 66.3,
+  "tc_results": {
+    "TC5": {
+      "metrics": {
+        "mae_us": 18.3167,
+        "mape_pct": 9.2347,
+        "exact_match_rate": 0.0,
+        "total_flows": 6,
+        "valid_flows": 6,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "metrics_avg": {
+        "mae_us": 18.32,
+        "mape_pct": 9.2341,
+        "exact_match_rate": 0.0,
+        "total_flows": 6,
+        "valid_flows": 6,
+        "missing_flows": 0,
+        "trivial": false,
+        "scenario": "genuine_attempt",
+        "coverage": 1.0,
+        "coverage_failed": false
+      },
+      "hv_flags": []
+    }
+  },
+  "flow_records": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 205,
+      "predicted": 172.2,
+      "abs_error": 32.8,
+      "pct_error": 16.0,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 154,
+      "predicted": 132.4,
+      "abs_error": 21.6,
+      "pct_error": 14.026,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 205,
+      "predicted": 207.4,
+      "abs_error": 2.4,
+      "pct_error": 1.1707,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F4",
+      "ground_truth": 154,
+      "predicted": 146.9,
+      "abs_error": 7.1,
+      "pct_error": 4.6104,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F5",
+      "ground_truth": 205,
+      "predicted": 221.8,
+      "abs_error": 16.8,
+      "pct_error": 8.1951,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F6",
+      "ground_truth": 256,
+      "predicted": 226.8,
+      "abs_error": 29.2,
+      "pct_error": 11.4062,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    }
+  ],
+  "flow_records_avg": [
+    {
+      "flow_id": "F1",
+      "ground_truth": 205,
+      "predicted": 172.16,
+      "abs_error": 32.84,
+      "pct_error": 16.0195,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F2",
+      "ground_truth": 154,
+      "predicted": 132.44,
+      "abs_error": 21.56,
+      "pct_error": 14.0,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F3",
+      "ground_truth": 205,
+      "predicted": 207.44,
+      "abs_error": 2.44,
+      "pct_error": 1.1902,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F4",
+      "ground_truth": 154,
+      "predicted": 146.92,
+      "abs_error": 7.08,
+      "pct_error": 4.5974,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F5",
+      "ground_truth": 205,
+      "predicted": 221.76,
+      "abs_error": 16.76,
+      "pct_error": 8.1756,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "flow_id": "F6",
+      "ground_truth": 256,
+      "predicted": 226.76,
+      "abs_error": 29.24,
+      "pct_error": 11.4219,
+      "exact_match": false,
+      "missing": false,
+      "tc_name": "TC5",
+      "model": "gemini-2.5-flash"
+    }
+  ]
+}

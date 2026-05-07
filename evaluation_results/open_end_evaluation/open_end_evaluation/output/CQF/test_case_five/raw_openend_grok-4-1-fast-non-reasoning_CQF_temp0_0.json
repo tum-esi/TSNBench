@@ -1,0 +1,191 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "grok-4-1-fast-non-reasoning",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-04T10:23:52.446276",
+    "wcd_values": {
+      "F1": 18.0,
+      "F2": 12.0,
+      "F3": 18.0,
+      "F4": 12.0,
+      "F5": 18.0,
+      "F6": 22.0
+    },
+    "confidence": 0.85,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node7_2",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_1"
+        ],
+        "cycle_duration": "50µs",
+        "Hypercycle": "50µs (cycle_duration = 50µs, 2 queues per cycle)",
+        "cqf_parameters": {
+          "queue_7_odd": "transmission window [0,25)µs",
+          "queue_6_even": "transmission window [25,50)µs",
+          "cycle_phase": "odd/even alternation every 50µs",
+          "offset": "0µs (from source)"
+        }
+      },
+      "F2": {
+        "path": [
+          "node2_1",
+          "sw_2",
+          "sw_1",
+          "node1_1"
+        ],
+        "cycle_duration": "50µs",
+        "Hypercycle": "50µs",
+        "cqf_parameters": {
+          "queue_7_odd": "transmission window [0,25)µs",
+          "queue_6_even": "transmission window [25,50)µs",
+          "offset": "0µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "sw_1",
+          "node1_2"
+        ],
+        "cycle_duration": "50µs",
+        "Hypercycle": "50µs",
+        "cqf_parameters": {
+          "queue_7_odd": "transmission window [0,25)µs",
+          "queue_6_even": "transmission window [25,50)µs",
+          "offset": "0µs"
+        }
+      },
+      "F4": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "node0_0"
+        ],
+        "cycle_duration": "50µs",
+        "Hypercycle": "50µs",
+        "cqf_parameters": {
+          "queue_7_odd": "transmission window [0,25)µs",
+          "queue_6_even": "transmission window [25,50)µs",
+          "offset": "0µs"
+        }
+      },
+      "F5": {
+        "path": [
+          "node9_2",
+          "sw_9",
+          "sw_10",
+          "sw_11",
+          "node11_1"
+        ],
+        "cycle_duration": "50µs",
+        "Hypercycle": "50µs",
+        "cqf_parameters": {
+          "queue_7_odd": "transmission window [0,25)µs",
+          "queue_6_even": "transmission window [25,50)µs",
+          "offset": "0µs"
+        }
+      },
+      "F6": {
+        "path": [
+          "node8_1",
+          "sw_8",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_0"
+        ],
+        "cycle_duration": "50µs",
+        "Hypercycle": "50µs",
+        "cqf_parameters": {
+          "queue_7_odd": "transmission window [0,25)µs",
+          "queue_6_even": "transmission window [25,50)µs",
+          "offset": "0µs"
+        }
+      },
+      "all_parameters_used": {
+        "link_bandwidth": "100 Mbps",
+        "propagation_delay": "1µs/link",
+        "switching_delay": "1µs/switch (cut-through)",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs",
+        "CQF_config": "Queue 7 (odd cycle): [0,25)µs, Queue 6 (even cycle): [25,50)µs",
+        "frame_transmission_time": "L = payload*8/100e6 + 20µs overhead",
+        "F1_tx": "134B → 11.44µs",
+        "F2_tx": "300B → 24.8µs",
+        "F3_tx": "575B → 47.6µs",
+        "F4_tx": "481B → 39.28µs",
+        "F5_tx": "754B → 61.12µs",
+        "F6_tx": "154B → 13.12µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = Σ(propagation + switching + sync_error) + max_queueing_delay",
+        "max_queueing_delay": "cycle_duration = 50µs (worst-case wait for next phase)",
+        "per_flow": {
+          "F1": "4 hops × (1+1+1) + 50 = 18µs",
+          "F2": "3 hops × (1+1+1) + 50 = 12µs",
+          "F3": "4 hops × (1+1+1) + 50 = 18µs",
+          "F4": "3 hops × (1+1+1) + 50 = 12µs",
+          "F5": "4 hops × (1+1+1) + 50 = 18µs",
+          "F6": "5 hops × (1+1+1) + 50 = 22µs"
+        }
+      },
+      "missing_inputs": [
+        "Detailed per-port queue contention analysis",
+        "Exact gate control lists"
+      ]
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 2248,
+    "tokens_out": 1550,
+    "total_tokens": 3798,
+    "cost_usd": 0.0012246,
+    "latency_ms": 11712,
+    "response_chars": 4193,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 18,\n    \"F2\": 12,\n    \"F3\": 18,\n    \"F4\": 12,\n    \"F5\": 18,\n    \"F6\": 22\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node7_2\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_1\"],\n      \"cycle_duration\": \"50µs\",\n      \"Hypercycle\": \"50µs (cycle_duration = 50µs, 2 queues per cycle)\",\n      \"cqf_parameters\": {\n        \"queue_7_odd\": \"transmission window [0,25)µs\",\n        \"queue_6_even\": \"transmission window [25,50)µs\",\n        \"cycle_phase\": \"odd/even alternation every 50µs\",\n        \"offset\": \"0µs (from source)\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node2_1\", \"sw_2\", \"sw_1\", \"node1_1\"],\n      \"cycle_duration\": \"50µs\",\n      \"Hypercycle\": \"50µs\",\n      \"cqf_parameters\": {\n        \"queue_7_odd\": \"transmission window [0,25)µs\",\n        \"queue_6_even\": \"transmission window [25,50)µs\",\n        \"offset\": \"0µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"sw_1\", \"node1_2\"],\n      \"cycle_duration\": \"50µs\",\n      \"Hypercycle\": \"50µs\",\n      \"cqf_parameters\": {\n        \"queue_7_odd\": \"transmission window [0,25)µs\",\n        \"queue_6_even\": \"transmission window [25,50)µs\",\n        \"offset\": \"0µs\"\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"node0_0\"],\n      \"cycle_duration\": \"50µs\",\n      \"Hypercycle\": \"50µs\",\n      \"cqf_parameters\": {\n        \"queue_7_odd\": \"transmission window [0,25)µs\",\n        \"queue_6_even\": \"transmission window [25,50)µs\",\n        \"offset\": \"0µs\"\n      }\n    },\n    \"F5\": {\n      \"path\": [\"node9_2\", \"sw_9\", \"sw_10\", \"sw_11\", \"node11_1\"],\n      \"cycle_duration\": \"50µs\",\n      \"Hypercycle\": \"50µs\",\n      \"cqf_parameters\": {\n        \"queue_7_odd\": \"transmission window [0,25)µs\",\n        \"queue_6_even\": \"transmission window [25,50)µs\",\n        \"offset\": \"0µs\"\n      }\n    },\n    \"F6\": {\n      \"path\": [\"node8_1\", \"sw_8\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_0\"],\n      \"cycle_duration\": \"50µs\",\n      \"Hypercycle\": \"50µs\",\n      \"cqf_parameters\": {\n        \"queue_7_odd\": \"transmission window [0,25)µs\",\n        \"queue_6_even\": \"transmission window [25,50)µs\",\n        \"offset\": \"0µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"link_bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs/link\",\n      \"switching_delay\": \"1µs/switch (cut-through)\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"CQF_config\": \"Queue 7 (odd cycle): [0,25)µs, Queue 6 (even cycle): [25,50)µs\",\n      \"frame_transmission_time\": \"L = payload*8/100e6 + 20µs overhead\",\n      \"F1_tx\": \"134B → 11.44µs\",\n      \"F2_tx\": \"300B → 24.8µs\", \n      \"F3_tx\": \"575B → 47.6µs\",\n      \"F4_tx\": \"481B → 39.28µs\",\n      \"F5_tx\": \"754B → 61.12µs\",\n      \"F6_tx\": \"154B → 13.12µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = Σ(propagation + switching + sync_error) + max_queueing_delay\",\n      \"max_queueing_delay\": \"cycle_duration = 50µs (worst-case wait for next phase)\",\n      \"per_flow\": {\n        \"F1\": \"4 hops × (1+1+1) + 50 = 18µs\",\n        \"F2\": \"3 hops × (1+1+1) + 50 = 12µs\", \n        \"F3\": \"4 hops × (1+1+1) + 50 = 18µs\",\n        \"F4\": \"3 hops × (1+1+1) + 50 = 12µs\",\n        \"F5\": \"4 hops × (1+1+1) + 50 = 18µs\",\n        \"F6\": \"5 hops × (1+1+1) + 50 = 22µs\"\n      }\n    },\n    \"missing_inputs\": [\"Detailed per-port queue contention analysis\", \"Exact gate control lists\"]\n  },\n  \"confidence\": 0.85\n}\n```\n\n**Key CQF Parameters Used:**\n- **Cycle Duration**: 50µs (given)\n- **Hyperperiod**: 50µs (2 queues × 25µs each per cycle)\n- **Queue 7 (odd cycle)**: Transmission window [0,25)µs  \n- **Queue 6 (even cycle)**: Transmission window [25,50)µs\n- **PCP=7 mapping**: Highest priority → Queue 7/6 (CQF specific)\n- **Offset**: 0µs at source for all flows (per task #3)\n\n**WCD Equation**: \n```\nWCD = H × (prop_delay + switch_delay + sync_error) + Cycle_duration\n```\nWhere H = hop count, accounting for worst-case CQF phase alignment.\n\nConfidence 0.85: Deterministic per given parameters, minor uncertainty in multi-flow contention at shared ports.",
+    "api_error": null
+  }
+]
