@@ -1,0 +1,425 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "gemini-2.5-flash",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-04T10:21:00.539731",
+    "wcd_values": {
+      "F1": 172.16,
+      "F2": 132.44,
+      "F3": 207.44,
+      "F4": 146.92,
+      "F5": 221.76,
+      "F6": 226.76
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node7_2",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_1"
+        ],
+        "cycle_duration_us": 50,
+        "Hypercycle_us": 5000,
+        "cqf_parameters": {
+          "queues_per_priority": 2,
+          "priority_code_point": 7,
+          "queue_ids_used": [
+            "Q6",
+            "Q7"
+          ],
+          "gate_control_mechanism": "cyclic_queuing_and_forwarding"
+        },
+        "egress_ports_for_this_flow": [
+          {
+            "switch": "sw_7",
+            "port": "P1",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_6",
+            "port": "P1",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_11",
+            "port": "P3",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          }
+        ],
+        "WCD_calculation_details": {
+          "payload_bytes": 134,
+          "ethernet_overhead_bytes": 18,
+          "frame_size_bytes": 152,
+          "frame_size_bits": 1216,
+          "transmission_delay_us": 12.16,
+          "num_hops": 4,
+          "num_switches": 3,
+          "total_propagation_delay_us": 4,
+          "total_switching_delay_us": 3,
+          "total_queuing_delay_cqf_us": 150,
+          "total_sync_error_us": 3,
+          "final_wcd_us": 172.16
+        }
+      },
+      "F2": {
+        "path": [
+          "node2_1",
+          "sw_2",
+          "sw_1",
+          "node1_1"
+        ],
+        "cycle_duration_us": 50,
+        "Hypercycle_us": 5000,
+        "cqf_parameters": {
+          "queues_per_priority": 2,
+          "priority_code_point": 7,
+          "queue_ids_used": [
+            "Q6",
+            "Q7"
+          ],
+          "gate_control_mechanism": "cyclic_queuing_and_forwarding"
+        },
+        "egress_ports_for_this_flow": [
+          {
+            "switch": "sw_2",
+            "port": "P0",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_1",
+            "port": "P3",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          }
+        ],
+        "WCD_calculation_details": {
+          "payload_bytes": 300,
+          "ethernet_overhead_bytes": 18,
+          "frame_size_bytes": 318,
+          "frame_size_bits": 2544,
+          "transmission_delay_us": 25.44,
+          "num_hops": 3,
+          "num_switches": 2,
+          "total_propagation_delay_us": 3,
+          "total_switching_delay_us": 2,
+          "total_queuing_delay_cqf_us": 100,
+          "total_sync_error_us": 2,
+          "final_wcd_us": 132.44
+        }
+      },
+      "F3": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "sw_1",
+          "node1_2"
+        ],
+        "cycle_duration_us": 50,
+        "Hypercycle_us": 5000,
+        "cqf_parameters": {
+          "queues_per_priority": 2,
+          "priority_code_point": 7,
+          "queue_ids_used": [
+            "Q6",
+            "Q7"
+          ],
+          "gate_control_mechanism": "cyclic_queuing_and_forwarding"
+        },
+        "egress_ports_for_this_flow": [
+          {
+            "switch": "sw_5",
+            "port": "P0",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_0",
+            "port": "P0",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_1",
+            "port": "P4",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          }
+        ],
+        "WCD_calculation_details": {
+          "payload_bytes": 575,
+          "ethernet_overhead_bytes": 18,
+          "frame_size_bytes": 593,
+          "frame_size_bits": 4744,
+          "transmission_delay_us": 47.44,
+          "num_hops": 4,
+          "num_switches": 3,
+          "total_propagation_delay_us": 4,
+          "total_switching_delay_us": 3,
+          "total_queuing_delay_cqf_us": 150,
+          "total_sync_error_us": 3,
+          "final_wcd_us": 207.44
+        }
+      },
+      "F4": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "node0_0"
+        ],
+        "cycle_duration_us": 50,
+        "Hypercycle_us": 5000,
+        "cqf_parameters": {
+          "queues_per_priority": 2,
+          "priority_code_point": 7,
+          "queue_ids_used": [
+            "Q6",
+            "Q7"
+          ],
+          "gate_control_mechanism": "cyclic_queuing_and_forwarding"
+        },
+        "egress_ports_for_this_flow": [
+          {
+            "switch": "sw_5",
+            "port": "P0",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_0",
+            "port": "P3",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          }
+        ],
+        "WCD_calculation_details": {
+          "payload_bytes": 481,
+          "ethernet_overhead_bytes": 18,
+          "frame_size_bytes": 499,
+          "frame_size_bits": 3992,
+          "transmission_delay_us": 39.92,
+          "num_hops": 3,
+          "num_switches": 2,
+          "total_propagation_delay_us": 3,
+          "total_switching_delay_us": 2,
+          "total_queuing_delay_cqf_us": 100,
+          "total_sync_error_us": 2,
+          "final_wcd_us": 146.92
+        }
+      },
+      "F5": {
+        "path": [
+          "node9_2",
+          "sw_9",
+          "sw_10",
+          "sw_11",
+          "node11_1"
+        ],
+        "cycle_duration_us": 50,
+        "Hypercycle_us": 5000,
+        "cqf_parameters": {
+          "queues_per_priority": 2,
+          "priority_code_point": 7,
+          "queue_ids_used": [
+            "Q6",
+            "Q7"
+          ],
+          "gate_control_mechanism": "cyclic_queuing_and_forwarding"
+        },
+        "egress_ports_for_this_flow": [
+          {
+            "switch": "sw_9",
+            "port": "P2",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_10",
+            "port": "P1",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_11",
+            "port": "P3",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          }
+        ],
+        "WCD_calculation_details": {
+          "payload_bytes": 754,
+          "ethernet_overhead_bytes": 18,
+          "frame_size_bytes": 772,
+          "frame_size_bits": 6176,
+          "transmission_delay_us": 61.76,
+          "num_hops": 4,
+          "num_switches": 3,
+          "total_propagation_delay_us": 4,
+          "total_switching_delay_us": 3,
+          "total_queuing_delay_cqf_us": 150,
+          "total_sync_error_us": 3,
+          "final_wcd_us": 221.76
+        }
+      },
+      "F6": {
+        "path": [
+          "node8_1",
+          "sw_8",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_0"
+        ],
+        "cycle_duration_us": 50,
+        "Hypercycle_us": 5000,
+        "cqf_parameters": {
+          "queues_per_priority": 2,
+          "priority_code_point": 7,
+          "queue_ids_used": [
+            "Q6",
+            "Q7"
+          ],
+          "gate_control_mechanism": "cyclic_queuing_and_forwarding"
+        },
+        "egress_ports_for_this_flow": [
+          {
+            "switch": "sw_8",
+            "port": "P1",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_7",
+            "port": "P1",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_6",
+            "port": "P1",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          },
+          {
+            "switch": "sw_11",
+            "port": "P2",
+            "queues_used": [
+              "Q6",
+              "Q7"
+            ]
+          }
+        ],
+        "WCD_calculation_details": {
+          "payload_bytes": 154,
+          "ethernet_overhead_bytes": 18,
+          "frame_size_bytes": 172,
+          "frame_size_bits": 1376,
+          "transmission_delay_us": 13.76,
+          "num_hops": 5,
+          "num_switches": 4,
+          "total_propagation_delay_us": 5,
+          "total_switching_delay_us": 4,
+          "total_queuing_delay_cqf_us": 200,
+          "total_sync_error_us": 4,
+          "final_wcd_us": 226.76
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth_link_Mbps": 100,
+        "propagation_delay_per_link_us": 1,
+        "switching_delay_per_switch_us": 1,
+        "time_synchronization_error_per_switch_us": 1,
+        "cycle_duration_us": 50,
+        "ethernet_frame_overhead_bytes": 18
+      },
+      "WCD_calculation_equation": "WCD_f = t_tx_f + (N_hops_f * t_prop) + ((N_hops_f - 1) * t_sw) + ((N_hops_f - 1) * T_cycle) + ((N_hops_f - 1) * t_sync)\nWhere:\n  t_tx_f = ( (payload_bytes_f + ethernet_overhead_bytes) * 8 ) / (bandwidth_link_bps)\n  N_hops_f = Number of links in the flow's path\n  N_switches_f = Number of switches in the flow's path (N_hops_f - 1)\n  t_prop = Propagation delay per link\n  t_sw = Switching delay per switch (cut-through)\n  T_cycle = CQF cycle duration (worst-case queuing delay per switch)\n  t_sync = Time synchronization error per switch",
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 2418,
+    "tokens_out": 3224,
+    "total_tokens": 5642,
+    "cost_usd": 0.0087854,
+    "latency_ms": 66301,
+    "response_chars": 7649,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 172.16,\n    \"F2\": 132.44,\n    \"F3\": 207.44,\n    \"F4\": 146.92,\n    \"F5\": 221.76,\n    \"F6\": 226.76\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node7_2\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_1\"],\n      \"cycle_duration_us\": 50,\n      \"Hypercycle_us\": 5000,\n      \"cqf_parameters\": {\n        \"queues_per_priority\": 2,\n        \"priority_code_point\": 7,\n        \"queue_ids_used\": [\"Q6\", \"Q7\"],\n        \"gate_control_mechanism\": \"cyclic_queuing_and_forwarding\"\n      },\n      \"egress_ports_for_this_flow\": [\n        { \"switch\": \"sw_7\", \"port\": \"P1\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_6\", \"port\": \"P1\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_11\", \"port\": \"P3\", \"queues_used\": [\"Q6\", \"Q7\"] }\n      ],\n      \"WCD_calculation_details\": {\n        \"payload_bytes\": 134,\n        \"ethernet_overhead_bytes\": 18,\n        \"frame_size_bytes\": 152,\n        \"frame_size_bits\": 1216,\n        \"transmission_delay_us\": 12.16,\n        \"num_hops\": 4,\n        \"num_switches\": 3,\n        \"total_propagation_delay_us\": 4,\n        \"total_switching_delay_us\": 3,\n        \"total_queuing_delay_cqf_us\": 150,\n        \"total_sync_error_us\": 3,\n        \"final_wcd_us\": 172.16\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node2_1\", \"sw_2\", \"sw_1\", \"node1_1\"],\n      \"cycle_duration_us\": 50,\n      \"Hypercycle_us\": 5000,\n      \"cqf_parameters\": {\n        \"queues_per_priority\": 2,\n        \"priority_code_point\": 7,\n        \"queue_ids_used\": [\"Q6\", \"Q7\"],\n        \"gate_control_mechanism\": \"cyclic_queuing_and_forwarding\"\n      },\n      \"egress_ports_for_this_flow\": [\n        { \"switch\": \"sw_2\", \"port\": \"P0\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_1\", \"port\": \"P3\", \"queues_used\": [\"Q6\", \"Q7\"] }\n      ],\n      \"WCD_calculation_details\": {\n        \"payload_bytes\": 300,\n        \"ethernet_overhead_bytes\": 18,\n        \"frame_size_bytes\": 318,\n        \"frame_size_bits\": 2544,\n        \"transmission_delay_us\": 25.44,\n        \"num_hops\": 3,\n        \"num_switches\": 2,\n        \"total_propagation_delay_us\": 3,\n        \"total_switching_delay_us\": 2,\n        \"total_queuing_delay_cqf_us\": 100,\n        \"total_sync_error_us\": 2,\n        \"final_wcd_us\": 132.44\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"sw_1\", \"node1_2\"],\n      \"cycle_duration_us\": 50,\n      \"Hypercycle_us\": 5000,\n      \"cqf_parameters\": {\n        \"queues_per_priority\": 2,\n        \"priority_code_point\": 7,\n        \"queue_ids_used\": [\"Q6\", \"Q7\"],\n        \"gate_control_mechanism\": \"cyclic_queuing_and_forwarding\"\n      },\n      \"egress_ports_for_this_flow\": [\n        { \"switch\": \"sw_5\", \"port\": \"P0\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_0\", \"port\": \"P0\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_1\", \"port\": \"P4\", \"queues_used\": [\"Q6\", \"Q7\"] }\n      ],\n      \"WCD_calculation_details\": {\n        \"payload_bytes\": 575,\n        \"ethernet_overhead_bytes\": 18,\n        \"frame_size_bytes\": 593,\n        \"frame_size_bits\": 4744,\n        \"transmission_delay_us\": 47.44,\n        \"num_hops\": 4,\n        \"num_switches\": 3,\n        \"total_propagation_delay_us\": 4,\n        \"total_switching_delay_us\": 3,\n        \"total_queuing_delay_cqf_us\": 150,\n        \"total_sync_error_us\": 3,\n        \"final_wcd_us\": 207.44\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"node0_0\"],\n      \"cycle_duration_us\": 50,\n      \"Hypercycle_us\": 5000,\n      \"cqf_parameters\": {\n        \"queues_per_priority\": 2,\n        \"priority_code_point\": 7,\n        \"queue_ids_used\": [\"Q6\", \"Q7\"],\n        \"gate_control_mechanism\": \"cyclic_queuing_and_forwarding\"\n      },\n      \"egress_ports_for_this_flow\": [\n        { \"switch\": \"sw_5\", \"port\": \"P0\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_0\", \"port\": \"P3\", \"queues_used\": [\"Q6\", \"Q7\"] }\n      ],\n      \"WCD_calculation_details\": {\n        \"payload_bytes\": 481,\n        \"ethernet_overhead_bytes\": 18,\n        \"frame_size_bytes\": 499,\n        \"frame_size_bits\": 3992,\n        \"transmission_delay_us\": 39.92,\n        \"num_hops\": 3,\n        \"num_switches\": 2,\n        \"total_propagation_delay_us\": 3,\n        \"total_switching_delay_us\": 2,\n        \"total_queuing_delay_cqf_us\": 100,\n        \"total_sync_error_us\": 2,\n        \"final_wcd_us\": 146.92\n      }\n    },\n    \"F5\": {\n      \"path\": [\"node9_2\", \"sw_9\", \"sw_10\", \"sw_11\", \"node11_1\"],\n      \"cycle_duration_us\": 50,\n      \"Hypercycle_us\": 5000,\n      \"cqf_parameters\": {\n        \"queues_per_priority\": 2,\n        \"priority_code_point\": 7,\n        \"queue_ids_used\": [\"Q6\", \"Q7\"],\n        \"gate_control_mechanism\": \"cyclic_queuing_and_forwarding\"\n      },\n      \"egress_ports_for_this_flow\": [\n        { \"switch\": \"sw_9\", \"port\": \"P2\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_10\", \"port\": \"P1\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_11\", \"port\": \"P3\", \"queues_used\": [\"Q6\", \"Q7\"] }\n      ],\n      \"WCD_calculation_details\": {\n        \"payload_bytes\": 754,\n        \"ethernet_overhead_bytes\": 18,\n        \"frame_size_bytes\": 772,\n        \"frame_size_bits\": 6176,\n        \"transmission_delay_us\": 61.76,\n        \"num_hops\": 4,\n        \"num_switches\": 3,\n        \"total_propagation_delay_us\": 4,\n        \"total_switching_delay_us\": 3,\n        \"total_queuing_delay_cqf_us\": 150,\n        \"total_sync_error_us\": 3,\n        \"final_wcd_us\": 221.76\n      }\n    },\n    \"F6\": {\n      \"path\": [\"node8_1\", \"sw_8\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_0\"],\n      \"cycle_duration_us\": 50,\n      \"Hypercycle_us\": 5000,\n      \"cqf_parameters\": {\n        \"queues_per_priority\": 2,\n        \"priority_code_point\": 7,\n        \"queue_ids_used\": [\"Q6\", \"Q7\"],\n        \"gate_control_mechanism\": \"cyclic_queuing_and_forwarding\"\n      },\n      \"egress_ports_for_this_flow\": [\n        { \"switch\": \"sw_8\", \"port\": \"P1\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_7\", \"port\": \"P1\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_6\", \"port\": \"P1\", \"queues_used\": [\"Q6\", \"Q7\"] },\n        { \"switch\": \"sw_11\", \"port\": \"P2\", \"queues_used\": [\"Q6\", \"Q7\"] }\n      ],\n      \"WCD_calculation_details\": {\n        \"payload_bytes\": 154,\n        \"ethernet_overhead_bytes\": 18,\n        \"frame_size_bytes\": 172,\n        \"frame_size_bits\": 1376,\n        \"transmission_delay_us\": 13.76,\n        \"num_hops\": 5,\n        \"num_switches\": 4,\n        \"total_propagation_delay_us\": 5,\n        \"total_switching_delay_us\": 4,\n        \"total_queuing_delay_cqf_us\": 200,\n        \"total_sync_error_us\": 4,\n        \"final_wcd_us\": 226.76\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth_link_Mbps\": 100,\n      \"propagation_delay_per_link_us\": 1,\n      \"switching_delay_per_switch_us\": 1,\n      \"time_synchronization_error_per_switch_us\": 1,\n      \"cycle_duration_us\": 50,\n      \"ethernet_frame_overhead_bytes\": 18\n    },\n    \"WCD_calculation_equation\": \"WCD_f = t_tx_f + (N_hops_f * t_prop) + ((N_hops_f - 1) * t_sw) + ((N_hops_f - 1) * T_cycle) + ((N_hops_f - 1) * t_sync)\\nWhere:\\n  t_tx_f = ( (payload_bytes_f + ethernet_overhead_bytes) * 8 ) / (bandwidth_link_bps)\\n  N_hops_f = Number of links in the flow's path\\n  N_switches_f = Number of switches in the flow's path (N_hops_f - 1)\\n  t_prop = Propagation delay per link\\n  t_sw = Switching delay per switch (cut-through)\\n  T_cycle = CQF cycle duration (worst-case queuing delay per switch)\\n  t_sync = Time synchronization error per switch\",\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  }
+]

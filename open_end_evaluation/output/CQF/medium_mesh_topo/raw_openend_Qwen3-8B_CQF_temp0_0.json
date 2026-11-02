@@ -1,0 +1,2228 @@
+[
+  {
+    "tc_name": "TC71",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T04:48:17.418696",
+    "wcd_values": {
+      "F0": 6.08,
+      "F1": 6.02,
+      "F2": 6.02,
+      "F3": 6.08,
+      "F4": 6.04
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "sw_2",
+          "node0_5"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "Queue 7 (odd) and 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_10",
+          "sw_4",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "Queue 7 (odd) and 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_11",
+          "sw_4",
+          "sw_2",
+          "node0_6"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "Queue 7 (odd) and 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_3",
+          "sw_1",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "Queue 7 (odd) and 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F4": {
+        "path": [
+          "node0_4",
+          "sw_2",
+          "sw_3",
+          "node0_9"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "Queue 7 (odd) and 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth_link": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (Transmission delay) + (Propagation delay) + (Switching delay) + (Time synchronization error)",
+        "transmission_delay": "(payload * 8) / bandwidth",
+        "propagation_delay": "number_of_links * 1µs",
+        "switching_delay": "number_of_switches * 1µs",
+        "time_sync_error": "1µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 1352,
+    "tokens_out": 6841,
+    "total_tokens": 8193,
+    "cost_usd": 0.0021875,
+    "latency_ms": 345673,
+    "response_chars": 3065,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 6.08,\n    \"F1\": 6.02,\n    \"F2\": 6.02,\n    \"F3\": 6.08,\n    \"F4\": 6.04\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"sw_2\", \"node0_5\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"Queue 7 (odd) and 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_10\", \"sw_4\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"Queue 7 (odd) and 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_11\", \"sw_4\", \"sw_2\", \"node0_6\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"Queue 7 (odd) and 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_3\", \"sw_1\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"Queue 7 (odd) and 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node0_4\", \"sw_2\", \"sw_3\", \"node0_9\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"Queue 7 (odd) and 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth_link\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (Transmission delay) + (Propagation delay) + (Switching delay) + (Time synchronization error)\",\n      \"transmission_delay\": \"(payload * 8) / bandwidth\",\n      \"propagation_delay\": \"number_of_links * 1µs\",\n      \"switching_delay\": \"number_of_switches * 1µs\",\n      \"time_sync_error\": \"1µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC72",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T04:51:45.560534",
+    "wcd_values": {
+      "F0": 86.0,
+      "F1": 406.0,
+      "F2": 206.0,
+      "F3": 206.0,
+      "F4": 86.0,
+      "F5": 206.0,
+      "F6": 86.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "sw_2",
+          "node0_5"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "0.08 * payload (µs)"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs"
+      },
+      "F1": {
+        "path": [
+          "node0_10",
+          "sw_4",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "0.08 * payload (µs)"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs"
+      },
+      "F2": {
+        "path": [
+          "node0_11",
+          "sw_4",
+          "sw_2",
+          "node0_6"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "0.08 * payload (µs)"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs"
+      },
+      "F3": {
+        "path": [
+          "node0_3",
+          "sw_1",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "0.08 * payload (µs)"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs"
+      },
+      "F4": {
+        "path": [
+          "node0_4",
+          "sw_2",
+          "sw_3",
+          "node0_9"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "0.08 * payload (µs)"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs"
+      },
+      "F5": {
+        "path": [
+          "node0_3",
+          "sw_1",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "0.08 * payload (µs)"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs"
+      },
+      "F6": {
+        "path": [
+          "node0_4",
+          "sw_2",
+          "sw_3",
+          "node0_9"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "0.08 * payload (µs)"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs"
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs",
+        "time_sync_error": "1µs",
+        "switching_delay": "1µs per switch",
+        "propagation_delay": "1µs per link",
+        "transmission_delay": "0.08 * payload (µs)"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 1459,
+    "tokens_out": 5875,
+    "total_tokens": 7334,
+    "cost_usd": 0.0019084,
+    "latency_ms": 207137,
+    "response_chars": 4714,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 86,\n    \"F1\": 406,\n    \"F2\": 206,\n    \"F3\": 206,\n    \"F4\": 86,\n    \"F5\": 206,\n    \"F6\": 86\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"sw_2\", \"node0_5\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"0.08 * payload (µs)\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs\"\n    },\n    \"F1\": {\n      \"path\": [\"node0_10\", \"sw_4\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"0.08 * payload (µs)\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs\"\n    },\n    \"F2\": {\n      \"path\": [\"node0_11\", \"sw_4\", \"sw_2\", \"node0_6\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"0.08 * payload (µs)\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs\"\n    },\n    \"F3\": {\n      \"path\": [\"node0_3\", \"sw_1\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"0.08 * payload (µs)\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs\"\n    },\n    \"F4\": {\n      \"path\": [\"node0_4\", \"sw_2\", \"sw_3\", \"node0_9\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"0.08 * payload (µs)\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs\"\n    },\n    \"F5\": {\n      \"path\": [\"node0_3\", \"sw_1\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"0.08 * payload (µs)\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs\"\n    },\n    \"F6\": {\n      \"path\": [\"node0_4\", \"sw_2\", \"sw_3\", \"node0_9\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"0.08 * payload (µs)\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error = (0.08 * payload) + 3 + 2 + 1 = 0.08 * payload + 6 µs\"\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\",\n      \"time_sync_error\": \"1µs\",\n      \"switching_delay\": \"1µs per switch\",\n      \"propagation_delay\": \"1µs per link\",\n      \"transmission_delay\": \"0.08 * payload (µs)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC73",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T04:57:48.702768",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362128,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC74",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:03:52.064736",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362350,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC75",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:05:51.406446",
+    "wcd_values": {
+      "F0": 6.08,
+      "F1": 6.4,
+      "F2": 6.2,
+      "F3": 6.2,
+      "F4": 6.08,
+      "F5": 6.2,
+      "F6": 6.08
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "sw_2",
+          "node0_5"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "pcp": "7",
+          "queue": "7 (odd) and 6 (even)"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_10",
+          "sw_4",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "pcp": "7",
+          "queue": "7 (odd) and 6 (even)"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_11",
+          "sw_4",
+          "sw_2",
+          "node0_6"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "pcp": "7",
+          "queue": "7 (odd) and 6 (even)"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_3",
+          "sw_1",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "pcp": "7",
+          "queue": "7 (odd) and 6 (even)"
+        }
+      },
+      "F4": {
+        "path": [
+          "node0_4",
+          "sw_2",
+          "sw_3",
+          "node0_9"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "pcp": "7",
+          "queue": "7 (odd) and 6 (even)"
+        }
+      },
+      "F5": {
+        "path": [
+          "node0_11",
+          "sw_4",
+          "sw_2",
+          "node0_6"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "pcp": "7",
+          "queue": "7 (odd) and 6 (even)"
+        }
+      },
+      "F6": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "sw_2",
+          "node0_5"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "bandwidth": "100Mbps",
+          "pcp": "7",
+          "queue": "7 (odd) and 6 (even)"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "bandwidth": "100Mbps",
+        "pcp": "7",
+        "queue": "7 (odd) and 6 (even)"
+      },
+      "WCD_calculation": {
+        "equation": "WCD = (payload * 8 / bandwidth) + (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_sync_error + (number_of_flows_in_queue * transmission_delay)"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 1461,
+    "tokens_out": 7840,
+    "total_tokens": 9301,
+    "cost_usd": 0.0024981,
+    "latency_ms": 118331,
+    "response_chars": 3752,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 6.08,\n    \"F1\": 6.4,\n    \"F2\": 6.2,\n    \"F3\": 6.2,\n    \"F4\": 6.08,\n    \"F5\": 6.2,\n    \"F6\": 6.08\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"sw_2\", \"node0_5\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"pcp\": \"7\",\n        \"queue\": \"7 (odd) and 6 (even)\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_10\", \"sw_4\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"pcp\": \"7\",\n        \"queue\": \"7 (odd) and 6 (even)\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_11\", \"sw_4\", \"sw_2\", \"node0_6\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"pcp\": \"7\",\n        \"queue\": \"7 (odd) and 6 (even)\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_3\", \"sw_1\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"pcp\": \"7\",\n        \"queue\": \"7 (odd) and 6 (even)\"\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node0_4\", \"sw_2\", \"sw_3\", \"node0_9\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"pcp\": \"7\",\n        \"queue\": \"7 (odd) and 6 (even)\"\n      }\n    },\n    \"F5\": {\n      \"path\": [\"node0_11\", \"sw_4\", \"sw_2\", \"node0_6\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"pcp\": \"7\",\n        \"queue\": \"7 (odd) and 6 (even)\"\n      }\n    },\n    \"F6\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"sw_2\", \"node0_5\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"bandwidth\": \"100Mbps\",\n        \"pcp\": \"7\",\n        \"queue\": \"7 (odd) and 6 (even)\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"bandwidth\": \"100Mbps\",\n      \"pcp\": \"7\",\n      \"queue\": \"7 (odd) and 6 (even)\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (payload * 8 / bandwidth) + (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_sync_error + (number_of_flows_in_queue * transmission_delay)\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC76",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:11:54.338626",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 361926,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC77",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:17:57.751901",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362394,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC78",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:24:00.862031",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362105,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC79",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:30:03.950637",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362072,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC80",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:36:07.195570",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362237,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC81",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:42:10.370594",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362158,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC82",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:48:13.654662",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362279,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC83",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:51:50.935758",
+    "wcd_values": {
+      "F0": 6.11,
+      "F1": 6.08,
+      "F2": 6.07,
+      "F3": 6.08,
+      "F4": 6.08
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "sw_2",
+          "node0_5"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "payload * 8 / 100Mbps"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F1": {
+        "path": [
+          "node0_10",
+          "sw_4",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "payload * 8 / 100Mbps"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F2": {
+        "path": [
+          "node0_11",
+          "sw_4",
+          "sw_2",
+          "node0_6"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "payload * 8 / 100Mbps"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F3": {
+        "path": [
+          "node0_3",
+          "sw_1",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "payload * 8 / 100Mbps"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "F4": {
+        "path": [
+          "node0_4",
+          "sw_2",
+          "sw_3",
+          "node0_9"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "transmission_delay": "payload * 8 / 100Mbps"
+        },
+        "WCD_calculation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error"
+      },
+      "all_parameters_used": {
+        "Bandwidth_link": "100 Mbps",
+        "Propagation_delay": "1µs",
+        "Switching_delay": "1µs",
+        "Time_sync_error": "1µs",
+        "Cycle_duration": "50µs",
+        "Hypercycle": "50µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 1355,
+    "tokens_out": 6400,
+    "total_tokens": 7755,
+    "cost_usd": 0.0020555,
+    "latency_ms": 216273,
+    "response_chars": 3202,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 6.11,\n    \"F1\": 6.08,\n    \"F2\": 6.07,\n    \"F3\": 6.08,\n    \"F4\": 6.08\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"sw_2\", \"node0_5\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"payload * 8 / 100Mbps\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F1\": {\n      \"path\": [\"node0_10\", \"sw_4\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"payload * 8 / 100Mbps\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F2\": {\n      \"path\": [\"node0_11\", \"sw_4\", \"sw_2\", \"node0_6\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"payload * 8 / 100Mbps\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F3\": {\n      \"path\": [\"node0_3\", \"sw_1\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"payload * 8 / 100Mbps\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"F4\": {\n      \"path\": [\"node0_4\", \"sw_2\", \"sw_3\", \"node0_9\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"transmission_delay\": \"payload * 8 / 100Mbps\"\n      },\n      \"WCD_calculation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\"\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth_link\": \"100 Mbps\",\n      \"Propagation_delay\": \"1µs\",\n      \"Switching_delay\": \"1µs\",\n      \"Time_sync_error\": \"1µs\",\n      \"Cycle_duration\": \"50µs\",\n      \"Hypercycle\": \"50µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC84",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:57:54.009909",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362065,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC85",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T05:59:30.536628",
+    "wcd_values": {
+      "F0": 6.08,
+      "F1": 6.2,
+      "F2": 6.2,
+      "F3": 6.2,
+      "F4": 6.08
+    },
+    "confidence": 0.95,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "sw_2",
+          "node0_5"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "7 (odd), 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "transmission_delay": "payload * 8 / bandwidth",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_10",
+          "sw_4",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "7 (odd), 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "transmission_delay": "payload * 8 / bandwidth",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_11",
+          "sw_4",
+          "sw_2",
+          "node0_6"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "7 (odd), 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "transmission_delay": "payload * 8 / bandwidth",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_3",
+          "sw_1",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "7 (odd), 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "transmission_delay": "payload * 8 / bandwidth",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F4": {
+        "path": [
+          "node0_4",
+          "sw_2",
+          "sw_3",
+          "node0_9"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "priority": "PCP:7",
+          "queues": "7 (odd), 6 (even)",
+          "switching_delay": "1µs per switch",
+          "propagation_delay": "1µs per link",
+          "time_sync_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error",
+          "transmission_delay": "payload * 8 / bandwidth",
+          "propagation_delay": "number_of_hops * 1µs",
+          "switching_delay": "number_of_switches * 1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth_link": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "5000µs"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 1353,
+    "tokens_out": 6384,
+    "total_tokens": 7737,
+    "cost_usd": 0.0020505,
+    "latency_ms": 95510,
+    "response_chars": 4402,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 6.08,\n    \"F1\": 6.2,\n    \"F2\": 6.2,\n    \"F3\": 6.2,\n    \"F4\": 6.08\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"sw_2\", \"node0_5\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"7 (odd), 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"transmission_delay\": \"payload * 8 / bandwidth\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_10\", \"sw_4\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"7 (odd), 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"transmission_delay\": \"payload * 8 / bandwidth\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_11\", \"sw_4\", \"sw_2\", \"node0_6\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"7 (odd), 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"transmission_delay\": \"payload * 8 / bandwidth\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_3\", \"sw_1\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"7 (odd), 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"transmission_delay\": \"payload * 8 / bandwidth\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node0_4\", \"sw_2\", \"sw_3\", \"node0_9\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"priority\": \"PCP:7\",\n        \"queues\": \"7 (odd), 6 (even)\",\n        \"switching_delay\": \"1µs per switch\",\n        \"propagation_delay\": \"1µs per link\",\n        \"time_sync_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = transmission_delay + propagation_delay + switching_delay + time_sync_error\",\n        \"transmission_delay\": \"payload * 8 / bandwidth\",\n        \"propagation_delay\": \"number_of_hops * 1µs\",\n        \"switching_delay\": \"number_of_switches * 1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth_link\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"5000µs\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.95\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC86",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:05:33.570808",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362017,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC87",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:11:29.538547",
+    "wcd_values": {
+      "F0": 124.24,
+      "F1": 60.24,
+      "F2": 95.84,
+      "F3": 89.6,
+      "F4": 108.16
+    },
+    "confidence": 0.5,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "sw_2",
+          "node0_5"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "Cyclic Queuing and Forwarding": "CQF",
+          "Time Triggered": "TT",
+          "PCP": "7",
+          "Queue": "7",
+          "Cycle Duration": "50µs",
+          "Hypercycle": "5000µs",
+          "Bandwidth": "100 Mbps",
+          "Propagation Delay": "1µs",
+          "Switching Delay": "1µs",
+          "Time Synchronization Error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = 2h + 0.08 * payload",
+          "components": {
+            "propagation": "h * 1µs",
+            "switching": "(h - 1) * 1µs",
+            "transmission": "payload * 8 / 100 Mbps",
+            "time_sync": "1µs"
+          }
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_10",
+          "sw_4",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "Cyclic Queuing and Forwarding": "CQF",
+          "Time Triggered": "TT",
+          "PCP": "7",
+          "Queue": "7",
+          "Cycle Duration": "50µs",
+          "Hypercycle": "5000µs",
+          "Bandwidth": "100 Mbps",
+          "Propagation Delay": "1µs",
+          "Switching Delay": "1µs",
+          "Time Synchronization Error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = 2h + 0.08 * payload",
+          "components": {
+            "propagation": "h * 1µs",
+            "switching": "(h - 1) * 1µs",
+            "transmission": "payload * 8 / 100 Mbps",
+            "time_sync": "1µs"
+          }
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_11",
+          "sw_4",
+          "sw_2",
+          "node0_6"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "Cyclic Queuing and Forwarding": "CQF",
+          "Time Triggered": "TT",
+          "PCP": "7",
+          "Queue": "7",
+          "Cycle Duration": "50µs",
+          "Hypercycle": "5000µs",
+          "Bandwidth": "100 Mbps",
+          "Propagation Delay": "1µs",
+          "Switching Delay": "1µs",
+          "Time Synchronization Error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = 2h + 0.08 * payload",
+          "components": {
+            "propagation": "h * 1µs",
+            "switching": "(h - 1) * 1µs",
+            "transmission": "payload * 8 / 100 Mbps",
+            "time_sync": "1µs"
+          }
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_3",
+          "sw_1",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "Cyclic Queuing and Forwarding": "CQF",
+          "Time Triggered": "TT",
+          "PCP": "7",
+          "Queue": "7",
+          "Cycle Duration": "50µs",
+          "Hypercycle": "5000µs",
+          "Bandwidth": "100 Mbps",
+          "Propagation Delay": "1µs",
+          "Switching Delay": "1µs",
+          "Time Synchronization Error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = 2h + 0.08 * payload",
+          "components": {
+            "propagation": "h * 1µs",
+            "switching": "(h - 1) * 1µs",
+            "transmission": "payload * 8 / 100 Mbps",
+            "time_sync": "1µs"
+          }
+        }
+      },
+      "F4": {
+        "path": [
+          "node0_4",
+          "sw_2",
+          "sw_3",
+          "node0_9"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "5000µs"
+        ],
+        "cqf_parameters": {
+          "Cyclic Queuing and Forwarding": "CQF",
+          "Time Triggered": "TT",
+          "PCP": "7",
+          "Queue": "7",
+          "Cycle Duration": "50µs",
+          "Hypercycle": "5000µs",
+          "Bandwidth": "100 Mbps",
+          "Propagation Delay": "1µs",
+          "Switching Delay": "1µs",
+          "Time Synchronization Error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = 2h + 0.08 * payload",
+          "components": {
+            "propagation": "h * 1µs",
+            "switching": "(h - 1) * 1µs",
+            "transmission": "payload * 8 / 100 Mbps",
+            "time_sync": "1µs"
+          }
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 1355,
+    "tokens_out": 7445,
+    "total_tokens": 8800,
+    "cost_usd": 0.002369,
+    "latency_ms": 354951,
+    "response_chars": 4263,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 124.24,\n    \"F1\": 60.24,\n    \"F2\": 95.84,\n    \"F3\": 89.6,\n    \"F4\": 108.16\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"sw_2\", \"node0_5\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"Cyclic Queuing and Forwarding\": \"CQF\",\n        \"Time Triggered\": \"TT\",\n        \"PCP\": \"7\",\n        \"Queue\": \"7\",\n        \"Cycle Duration\": \"50µs\",\n        \"Hypercycle\": \"5000µs\",\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation Delay\": \"1µs\",\n        \"Switching Delay\": \"1µs\",\n        \"Time Synchronization Error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = 2h + 0.08 * payload\",\n        \"components\": {\n          \"propagation\": \"h * 1µs\",\n          \"switching\": \"(h - 1) * 1µs\",\n          \"transmission\": \"payload * 8 / 100 Mbps\",\n          \"time_sync\": \"1µs\"\n        }\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_10\", \"sw_4\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"Cyclic Queuing and Forwarding\": \"CQF\",\n        \"Time Triggered\": \"TT\",\n        \"PCP\": \"7\",\n        \"Queue\": \"7\",\n        \"Cycle Duration\": \"50µs\",\n        \"Hypercycle\": \"5000µs\",\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation Delay\": \"1µs\",\n        \"Switching Delay\": \"1µs\",\n        \"Time Synchronization Error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = 2h + 0.08 * payload\",\n        \"components\": {\n          \"propagation\": \"h * 1µs\",\n          \"switching\": \"(h - 1) * 1µs\",\n          \"transmission\": \"payload * 8 / 100 Mbps\",\n          \"time_sync\": \"1µs\"\n        }\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_11\", \"sw_4\", \"sw_2\", \"node0_6\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"Cyclic Queuing and Forwarding\": \"CQF\",\n        \"Time Triggered\": \"TT\",\n        \"PCP\": \"7\",\n        \"Queue\": \"7\",\n        \"Cycle Duration\": \"50µs\",\n        \"Hypercycle\": \"5000µs\",\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation Delay\": \"1µs\",\n        \"Switching Delay\": \"1µs\",\n        \"Time Synchronization Error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = 2h + 0.08 * payload\",\n        \"components\": {\n          \"propagation\": \"h * 1µs\",\n          \"switching\": \"(h - 1) * 1µs\",\n          \"transmission\": \"payload * 8 / 100 Mbps\",\n          \"time_sync\": \"1µs\"\n        }\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_3\", \"sw_1\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"Cyclic Queuing and Forwarding\": \"CQF\",\n        \"Time Triggered\": \"TT\",\n        \"PCP\": \"7\",\n        \"Queue\": \"7\",\n        \"Cycle Duration\": \"50µs\",\n        \"Hypercycle\": \"5000µs\",\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation Delay\": \"1µs\",\n        \"Switching Delay\": \"1µs\",\n        \"Time Synchronization Error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = 2h + 0.08 * payload\",\n        \"components\": {\n          \"propagation\": \"h * 1µs\",\n          \"switching\": \"(h - 1) * 1µs\",\n          \"transmission\": \"payload * 8 / 100 Mbps\",\n          \"time_sync\": \"1µs\"\n        }\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node0_4\", \"sw_2\", \"sw_3\", \"node0_9\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"5000µs\"],\n      \"cqf_parameters\": {\n        \"Cyclic Queuing and Forwarding\": \"CQF\",\n        \"Time Triggered\": \"TT\",\n        \"PCP\": \"7\",\n        \"Queue\": \"7\",\n        \"Cycle Duration\": \"50µs\",\n        \"Hypercycle\": \"5000µs\",\n        \"Bandwidth\": \"100 Mbps\",\n        \"Propagation Delay\": \"1µs\",\n        \"Switching Delay\": \"1µs\",\n        \"Time Synchronization Error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = 2h + 0.08 * payload\",\n        \"components\": {\n          \"propagation\": \"h * 1µs\",\n          \"switching\": \"(h - 1) * 1µs\",\n          \"transmission\": \"payload * 8 / 100 Mbps\",\n          \"time_sync\": \"1µs\"\n        }\n      }\n    }\n  },\n  \"confidence\": 0.5\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC88",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:17:32.833609",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362282,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC89",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:23:36.241574",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362394,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC90",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:29:39.506854",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362252,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC91",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:35:42.707595",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362192,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC92",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:41:46.104088",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362392,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC93",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:47:49.398995",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362287,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC94",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:53:52.603834",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362196,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC95",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T06:59:56.061787",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362441,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC96",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T07:05:59.307626",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362238,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC97",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T07:09:52.773215",
+    "wcd_values": {
+      "F0": 6.0,
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0,
+      "F4": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "sw_2",
+          "node0_5"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "PCP": "7",
+          "time_synchronization_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error",
+          "calculation": "3 links * 1µs + 2 switches * 1µs + 1µs = 6µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_10",
+          "sw_4",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "PCP": "7",
+          "time_synchronization_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error",
+          "calculation": "3 links * 1µs + 2 switches * 1µs + 1µs = 6µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_11",
+          "sw_4",
+          "sw_2",
+          "node0_6"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "PCP": "7",
+          "time_synchronization_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error",
+          "calculation": "3 links * 1µs + 2 switches * 1µs + 1µs = 6µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_3",
+          "sw_1",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "PCP": "7",
+          "time_synchronization_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error",
+          "calculation": "3 links * 1µs + 2 switches * 1µs + 1µs = 6µs"
+        }
+      },
+      "F4": {
+        "path": [
+          "node0_4",
+          "sw_2",
+          "sw_3",
+          "node0_9"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": "50µs",
+          "Hypercycle": "50µs",
+          "PCP": "7",
+          "time_synchronization_error": "1µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error",
+          "calculation": "3 links * 1µs + 2 switches * 1µs + 1µs = 6µs"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 1353,
+    "tokens_out": 6885,
+    "total_tokens": 8238,
+    "cost_usd": 0.0022008,
+    "latency_ms": 232459,
+    "response_chars": 3032,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 6,\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6,\n    \"F4\": 6\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"sw_2\", \"node0_5\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"PCP\": \"7\",\n        \"time_synchronization_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error\",\n        \"calculation\": \"3 links * 1µs + 2 switches * 1µs + 1µs = 6µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_10\", \"sw_4\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"PCP\": \"7\",\n        \"time_synchronization_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error\",\n        \"calculation\": \"3 links * 1µs + 2 switches * 1µs + 1µs = 6µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_11\", \"sw_4\", \"sw_2\", \"node0_6\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"PCP\": \"7\",\n        \"time_synchronization_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error\",\n        \"calculation\": \"3 links * 1µs + 2 switches * 1µs + 1µs = 6µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_3\", \"sw_1\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"PCP\": \"7\",\n        \"time_synchronization_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error\",\n        \"calculation\": \"3 links * 1µs + 2 switches * 1µs + 1µs = 6µs\"\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node0_4\", \"sw_2\", \"sw_3\", \"node0_9\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": \"50µs\",\n        \"Hypercycle\": \"50µs\",\n        \"PCP\": \"7\",\n        \"time_synchronization_error\": \"1µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (number_of_links * propagation_delay) + (number_of_switches * switching_delay) + time_synchronization_error\",\n        \"calculation\": \"3 links * 1µs + 2 switches * 1µs + 1µs = 6µs\"\n      }\n    }\n  },\n  \"confidence\": 1.0\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC98",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T07:15:55.840907",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362063,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  },
+  {
+    "tc_name": "TC99",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T07:19:52.228541",
+    "wcd_values": {
+      "F0": 6.24,
+      "F1": 7.2,
+      "F2": 6.6,
+      "F3": 6.6,
+      "F4": 6.24
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "node0_1",
+          "sw_1",
+          "sw_2",
+          "node0_5"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "flow_type": "TT",
+          "pcp": "7",
+          "queues": "6,7",
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error",
+          "components": {
+            "payload": "1000 bytes",
+            "bandwidth": "100 Mbps",
+            "hop_count": "3",
+            "propagation_delay": "1µs",
+            "switching_delay": "1µs",
+            "number_of_switches": "2",
+            "time_sync_error": "1µs"
+          },
+          "result": "6.24µs"
+        }
+      },
+      "F1": {
+        "path": [
+          "node0_10",
+          "sw_4",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "flow_type": "TT",
+          "pcp": "7",
+          "queues": "6,7",
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error",
+          "components": {
+            "payload": "5000 bytes",
+            "bandwidth": "100 Mbps",
+            "hop_count": "3",
+            "propagation_delay": "1µs",
+            "switching_delay": "1µs",
+            "number_of_switches": "2",
+            "time_sync_error": "1µs"
+          },
+          "result": "7.2µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_11",
+          "sw_4",
+          "sw_2",
+          "node0_6"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "flow_type": "TT",
+          "pcp": "7",
+          "queues": "6,7",
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error",
+          "components": {
+            "payload": "2500 bytes",
+            "bandwidth": "100 Mbps",
+            "hop_count": "3",
+            "propagation_delay": "1µs",
+            "switching_delay": "1µs",
+            "number_of_switches": "2",
+            "time_sync_error": "1µs"
+          },
+          "result": "6.6µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_3",
+          "sw_1",
+          "sw_3",
+          "node0_7"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "flow_type": "TT",
+          "pcp": "7",
+          "queues": "6,7",
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error",
+          "components": {
+            "payload": "2500 bytes",
+            "bandwidth": "100 Mbps",
+            "hop_count": "3",
+            "propagation_delay": "1µs",
+            "switching_delay": "1µs",
+            "number_of_switches": "2",
+            "time_sync_error": "1µs"
+          },
+          "result": "6.6µs"
+        }
+      },
+      "F4": {
+        "path": [
+          "node0_4",
+          "sw_2",
+          "sw_3",
+          "node0_9"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "50"
+        ],
+        "cqf_parameters": {
+          "mechanism": "Cyclic Queuing and Forwarding (CQF)",
+          "flow_type": "TT",
+          "pcp": "7",
+          "queues": "6,7",
+          "cycle_duration": "50µs",
+          "hypercycle": "50µs",
+          "time_sync_error": "1µs",
+          "switching_delay": "1µs",
+          "propagation_delay": "1µs",
+          "bandwidth": "100 Mbps"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error",
+          "components": {
+            "payload": "1000 bytes",
+            "bandwidth": "100 Mbps",
+            "hop_count": "3",
+            "propagation_delay": "1µs",
+            "switching_delay": "1µs",
+            "number_of_switches": "2",
+            "time_sync_error": "1µs"
+          },
+          "result": "6.24µs"
+        }
+      },
+      "all_parameters_used": {
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs",
+        "time_sync_error": "1µs",
+        "switching_delay": "1µs",
+        "propagation_delay": "1µs",
+        "bandwidth": "100 Mbps",
+        "queues": "6,7",
+        "pcp": "7"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 1354,
+    "tokens_out": 6751,
+    "total_tokens": 8105,
+    "cost_usd": 0.0021607,
+    "latency_ms": 235374,
+    "response_chars": 5617,
+    "raw_response": "\n\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F0\": 6.24,\n    \"F1\": 7.2,\n    \"F2\": 6.6,\n    \"F3\": 6.6,\n    \"F4\": 6.24\n  },\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"node0_1\", \"sw_1\", \"sw_2\", \"node0_5\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"flow_type\": \"TT\",\n        \"pcp\": \"7\",\n        \"queues\": \"6,7\",\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error\",\n        \"components\": {\n          \"payload\": \"1000 bytes\",\n          \"bandwidth\": \"100 Mbps\",\n          \"hop_count\": \"3\",\n          \"propagation_delay\": \"1µs\",\n          \"switching_delay\": \"1µs\",\n          \"number_of_switches\": \"2\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"result\": \"6.24µs\"\n      }\n    },\n    \"F1\": {\n      \"path\": [\"node0_10\", \"sw_4\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"flow_type\": \"TT\",\n        \"pcp\": \"7\",\n        \"queues\": \"6,7\",\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error\",\n        \"components\": {\n          \"payload\": \"5000 bytes\",\n          \"bandwidth\": \"100 Mbps\",\n          \"hop_count\": \"3\",\n          \"propagation_delay\": \"1µs\",\n          \"switching_delay\": \"1µs\",\n          \"number_of_switches\": \"2\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"result\": \"7.2µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_11\", \"sw_4\", \"sw_2\", \"node0_6\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"flow_type\": \"TT\",\n        \"pcp\": \"7\",\n        \"queues\": \"6,7\",\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error\",\n        \"components\": {\n          \"payload\": \"2500 bytes\",\n          \"bandwidth\": \"100 Mbps\",\n          \"hop_count\": \"3\",\n          \"propagation_delay\": \"1µs\",\n          \"switching_delay\": \"1µs\",\n          \"number_of_switches\": \"2\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"result\": \"6.6µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_3\", \"sw_1\", \"sw_3\", \"node0_7\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"flow_type\": \"TT\",\n        \"pcp\": \"7\",\n        \"queues\": \"6,7\",\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error\",\n        \"components\": {\n          \"payload\": \"2500 bytes\",\n          \"bandwidth\": \"100 Mbps\",\n          \"hop_count\": \"3\",\n          \"propagation_delay\": \"1µs\",\n          \"switching_delay\": \"1µs\",\n          \"number_of_switches\": \"2\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"result\": \"6.6µs\"\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node0_4\", \"sw_2\", \"sw_3\", \"node0_9\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"50\"],\n      \"cqf_parameters\": {\n        \"mechanism\": \"Cyclic Queuing and Forwarding (CQF)\",\n        \"flow_type\": \"TT\",\n        \"pcp\": \"7\",\n        \"queues\": \"6,7\",\n        \"cycle_duration\": \"50µs\",\n        \"hypercycle\": \"50µs\",\n        \"time_sync_error\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"propagation_delay\": \"1µs\",\n        \"bandwidth\": \"100 Mbps\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = (payload * 8 / bandwidth) * hop_count + propagation_delay * hop_count + switching_delay * (number_of_switches) + time_sync_error\",\n        \"components\": {\n          \"payload\": \"1000 bytes\",\n          \"bandwidth\": \"100 Mbps\",\n          \"hop_count\": \"3\",\n          \"propagation_delay\": \"1µs\",\n          \"switching_delay\": \"1µs\",\n          \"number_of_switches\": \"2\",\n          \"time_sync_error\": \"1µs\"\n        },\n        \"result\": \"6.24µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\",\n      \"time_sync_error\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"propagation_delay\": \"1µs\",\n      \"bandwidth\": \"100 Mbps\",\n      \"queues\": \"6,7\",\n      \"pcp\": \"7\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.9\n}",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC100",
+    "model": "Qwen3-8B",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-03T07:25:55.332237",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "empty_response",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0,
+    "latency_ms": 362082,
+    "response_chars": 0,
+    "raw_response": "",
+    "api_error": "<!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"fb:app_id\" content=\"1321688464574422\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:site\" content=\"@huggingface\" />\n    <meta\n            property=\"og:title\"\n            content=\"Hugging Face - The AI community building the future.\"\n    />\n    <meta property=\"og:type\" content=\"website\" />\n\n    <title>Hugging Face - The AI community building the future.</title>\n    <style>\n        body {\n            margin: 0;\n        }\n\n        main {\n            background-color: white;\n            min-height: 100vh;\n            padding: 7rem 1rem 8rem 1rem;\n            text-align: center;\n            font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,\n            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,\n            sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,\n            Noto Color Emoji;\n        }\n\n        img {\n            width: 6rem;\n            height: 6rem;\n            margin: 0 auto 1rem;\n        }\n\n        h1 {\n            font-size: 3.75rem;\n            line-height: 1;\n            color: rgba(31, 41, 55, 1);\n            font-weight: 700;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        p, a {\n            color: rgba(107, 114, 128, 1);\n            font-size: 1.125rem;\n            line-height: 1.75rem;\n            max-width: 28rem;\n            box-sizing: border-box;\n            margin: 0 auto;\n        }\n\n        .dark main {\n            background-color: rgb(11, 15, 25);\n        }\n        .dark h1 {\n            color: rgb(209, 213, 219);\n        }\n        .dark p, .dark a {\n            color: rgb(156, 163, 175);\n        }\n    </style>\n    <script>\n        // On page load or when changing themes, best to add inline in `head` to avoid FOUC\n        const key = \"_tb_global_settings\";\n        let theme = window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n            ? \"dark\"\n            : \"light\";\n        try {\n            const storageTheme = JSON.parse(window.localStorage.getItem(key)).theme;\n            if (storageTheme) {\n                theme = storageTheme === \"dark\" ? \"dark\" : \"light\";\n            }\n        } catch (e) {}\n        if (theme === \"dark\") {\n            document.documentElement.classList.add(\"dark\");\n        } else {\n            document.documentElement.classList.remove(\"dark\");\n        }\n    </script>\n</head>\n\n<body>\n<main>\n    <img\n            src=\"https://cdn-media.huggingface.co/assets/huggingface_logo.svg\"\n            alt=\"\"\n    />\n    <div>\n        <h1>504</h1>\n        <p>Gateway Timeout</p>\n    </div>\n</main>\n</body>\n</html>"
+  }
+]

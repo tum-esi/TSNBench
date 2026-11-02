@@ -1,0 +1,562 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "gpt-5-2025-08-07",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": null,
+    "timestamp": "2026-05-04T09:59:29.907459",
+    "wcd_values": {
+      "F1": 171.395,
+      "F2": 72.82,
+      "F3": 259.63,
+      "F4": 180.47,
+      "F5": 276.12,
+      "F6": 109.614
+    },
+    "confidence": 0.7,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F4": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F5": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F6": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node7_2",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_1"
+        ],
+        "egress_ports_traversed(queue_6)": [
+          "sw_7.P1",
+          "sw_6.P1",
+          "sw_11.P3"
+        ],
+        "IdleSlope": [
+          "75% of 100 Mbps = 75 Mbps (75,000,000 bps)"
+        ],
+        "SendSlope": [
+          "SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)"
+        ],
+        "arrival_curve": {
+          "r_bps": 1072000,
+          "b_bits": 1072
+        },
+        "per_port_delay_us": {
+          "sw_7.P1": 31.131,
+          "sw_6.P1": 31.131,
+          "sw_11.P3": 98.133
+        },
+        "fixed_delays_us": {
+          "propagation_total": 4,
+          "switching_total": 3,
+          "sync_error_total": 4,
+          "sum_fixed": 11
+        },
+        "cbs_parameters": {
+          "sw_7.P1": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -308,
+            "classA_max_bits_on_port": 1232,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_6.P1": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -308,
+            "classA_max_bits_on_port": 1232,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_11.P3": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -1508,
+            "classA_max_bits_on_port": 6032,
+            "non_preemptive_block_bits(L_block)": 0
+          }
+        }
+      },
+      "F2": {
+        "path": [
+          "node2_1",
+          "sw_2",
+          "sw_1",
+          "node1_1"
+        ],
+        "egress_ports_traversed(queue_6)": [
+          "sw_2.P0",
+          "sw_1.P3"
+        ],
+        "IdleSlope": [
+          "75% of 100 Mbps = 75 Mbps (75,000,000 bps)"
+        ],
+        "SendSlope": [
+          "SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)"
+        ],
+        "arrival_curve": {
+          "r_bps": 960000,
+          "b_bits": 2400
+        },
+        "per_port_delay_us": {
+          "sw_2.P0": 32.41,
+          "sw_1.P3": 32.41
+        },
+        "fixed_delays_us": {
+          "propagation_total": 3,
+          "switching_total": 2,
+          "sync_error_total": 3,
+          "sum_fixed": 8
+        },
+        "cbs_parameters": {
+          "sw_2.P0": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -600,
+            "classA_max_bits_on_port": 2400,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_1.P3": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -600,
+            "classA_max_bits_on_port": 2400,
+            "non_preemptive_block_bits(L_block)": 0
+          }
+        }
+      },
+      "F3": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "sw_1",
+          "node1_2"
+        ],
+        "egress_ports_traversed(queue_6)": [
+          "sw_5.P0",
+          "sw_0.P0",
+          "sw_1.P4"
+        ],
+        "IdleSlope": [
+          "75% of 100 Mbps = 75 Mbps (75,000,000 bps)"
+        ],
+        "SendSlope": [
+          "SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)"
+        ],
+        "arrival_curve": {
+          "r_bps": 4600000,
+          "b_bits": 4600
+        },
+        "per_port_delay_us": {
+          "sw_5.P0": 117.95,
+          "sw_0.P0": 65.34,
+          "sw_1.P4": 65.34
+        },
+        "fixed_delays_us": {
+          "propagation_total": 4,
+          "switching_total": 3,
+          "sync_error_total": 4,
+          "sum_fixed": 11
+        },
+        "cbs_parameters": {
+          "sw_5.P0": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -1150,
+            "classA_max_bits_on_port": 4600,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_0.P0": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -1150,
+            "classA_max_bits_on_port": 4600,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_1.P4": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -1150,
+            "classA_max_bits_on_port": 4600,
+            "non_preemptive_block_bits(L_block)": 0
+          }
+        }
+      },
+      "F4": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "node0_0"
+        ],
+        "egress_ports_traversed(queue_6)": [
+          "sw_5.P0",
+          "sw_0.P3"
+        ],
+        "IdleSlope": [
+          "75% of 100 Mbps = 75 Mbps (75,000,000 bps)"
+        ],
+        "SendSlope": [
+          "SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)"
+        ],
+        "arrival_curve": {
+          "r_bps": 769600,
+          "b_bits": 3848
+        },
+        "per_port_delay_us": {
+          "sw_5.P0": 120.61,
+          "sw_0.P3": 51.86
+        },
+        "fixed_delays_us": {
+          "propagation_total": 3,
+          "switching_total": 2,
+          "sync_error_total": 3,
+          "sum_fixed": 8
+        },
+        "cbs_parameters": {
+          "sw_5.P0": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -1150,
+            "classA_max_bits_on_port": 4600,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_0.P3": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -962,
+            "classA_max_bits_on_port": 3848,
+            "non_preemptive_block_bits(L_block)": 0
+          }
+        }
+      },
+      "F5": {
+        "path": [
+          "node9_2",
+          "sw_9",
+          "sw_10",
+          "sw_11",
+          "node11_1"
+        ],
+        "egress_ports_traversed(queue_6)": [
+          "sw_9.P2",
+          "sw_10.P1",
+          "sw_11.P3"
+        ],
+        "IdleSlope": [
+          "75% of 100 Mbps = 75 Mbps (75,000,000 bps)"
+        ],
+        "SendSlope": [
+          "SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)"
+        ],
+        "arrival_curve": {
+          "r_bps": 2412800,
+          "b_bits": 6032
+        },
+        "per_port_delay_us": {
+          "sw_9.P2": 83.143,
+          "sw_10.P1": 83.143,
+          "sw_11.P3": 98.834
+        },
+        "fixed_delays_us": {
+          "propagation_total": 4,
+          "switching_total": 3,
+          "sync_error_total": 4,
+          "sum_fixed": 11
+        },
+        "cbs_parameters": {
+          "sw_9.P2": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -1508,
+            "classA_max_bits_on_port": 6032,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_10.P1": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -1508,
+            "classA_max_bits_on_port": 6032,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_11.P3": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -1508,
+            "classA_max_bits_on_port": 6032,
+            "non_preemptive_block_bits(L_block)": 0
+          }
+        }
+      },
+      "F6": {
+        "path": [
+          "node8_1",
+          "sw_8",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_0"
+        ],
+        "egress_ports_traversed(queue_6)": [
+          "sw_8.P1",
+          "sw_7.P1",
+          "sw_6.P1",
+          "sw_11.P2"
+        ],
+        "IdleSlope": [
+          "75% of 100 Mbps = 75 Mbps (75,000,000 bps)"
+        ],
+        "SendSlope": [
+          "SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)"
+        ],
+        "arrival_curve": {
+          "r_bps": 492800,
+          "b_bits": 1232
+        },
+        "per_port_delay_us": {
+          "sw_8.P1": 16.536,
+          "sw_7.P1": 31.271,
+          "sw_6.P1": 31.271,
+          "sw_11.P2": 16.536
+        },
+        "fixed_delays_us": {
+          "propagation_total": 5,
+          "switching_total": 4,
+          "sync_error_total": 5,
+          "sum_fixed": 14
+        },
+        "cbs_parameters": {
+          "sw_8.P1": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -308,
+            "classA_max_bits_on_port": 1232,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_7.P1": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -308,
+            "classA_max_bits_on_port": 1232,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_6.P1": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -308,
+            "classA_max_bits_on_port": 1232,
+            "non_preemptive_block_bits(L_block)": 0
+          },
+          "sw_11.P2": {
+            "queue": 6,
+            "link_rate_bps": 100000000,
+            "idle_slope_bps": 75000000,
+            "send_slope_bps": -25000000,
+            "hiCredit_bits": 0,
+            "loCredit_bits": -308,
+            "classA_max_bits_on_port": 1232,
+            "non_preemptive_block_bits(L_block)": 0
+          }
+        }
+      },
+      "egress_queues_and_flows": {
+        "sw_7.P1": {
+          "queue": 6,
+          "flows": [
+            "F1",
+            "F6"
+          ]
+        },
+        "sw_6.P1": {
+          "queue": 6,
+          "flows": [
+            "F1",
+            "F6"
+          ]
+        },
+        "sw_11.P3": {
+          "queue": 6,
+          "flows": [
+            "F1",
+            "F5"
+          ]
+        },
+        "sw_2.P0": {
+          "queue": 6,
+          "flows": [
+            "F2"
+          ]
+        },
+        "sw_1.P3": {
+          "queue": 6,
+          "flows": [
+            "F2"
+          ]
+        },
+        "sw_5.P0": {
+          "queue": 6,
+          "flows": [
+            "F3",
+            "F4"
+          ]
+        },
+        "sw_0.P0": {
+          "queue": 6,
+          "flows": [
+            "F3"
+          ]
+        },
+        "sw_1.P4": {
+          "queue": 6,
+          "flows": [
+            "F3"
+          ]
+        },
+        "sw_0.P3": {
+          "queue": 6,
+          "flows": [
+            "F4"
+          ]
+        },
+        "sw_9.P2": {
+          "queue": 6,
+          "flows": [
+            "F5"
+          ]
+        },
+        "sw_10.P1": {
+          "queue": 6,
+          "flows": [
+            "F5"
+          ]
+        },
+        "sw_8.P1": {
+          "queue": 6,
+          "flows": [
+            "F6"
+          ]
+        },
+        "sw_11.P2": {
+          "queue": 6,
+          "flows": [
+            "F6"
+          ]
+        }
+      },
+      "all_parameters_used": {
+        "line_rate_bps": 100000000,
+        "IdleSlope_bps": 75000000,
+        "SendSlope_bps": -25000000,
+        "time_sync_error_us_per_link": 1,
+        "propagation_delay_us_per_link": 1,
+        "switching_delay_us_per_switch": 1,
+        "credit_bounds_assumption": "hiCredit = 0 (no lower-priority traffic given), loCredit = -(C - I) * L_A_max / C",
+        "cut_through_switching": true,
+        "queue_priority": 6,
+        "AVB_class": "A",
+        "IdleSlope_fraction": 0.75
+      },
+      "WCD_calculation": {
+        "arrival_curve_per_flow": "alpha_i(t) = b_i + r_i * t, with r_i = 8*Payload_i / Period_i, b_i = 8*Payload_i (bits)",
+        "CBS_service_curve_per_port": "beta_p(t) = I * (t - T0_p)^+, with I = IdleSlope, T0_p = L_block/c + Vmax/I; here L_block = 0, Vmax = I * L_block / (c - I) = 0 => T0_p = 0",
+        "leftover_service_per_flow_port": "Given cross-traffic on the same egress port (queue 6), sum rates r_x and bursts b_x over all other flows. Then R_{p,i} = I - r_x, T_{p,i} = T0_p + b_x / R_{p,i}",
+        "per_port_delay_bound": "D_{p,i} = T_{p,i} + b_i / (R_{p,i} - r_i)",
+        "end_to_end_WCD": "WCD_i = sum_over_ports_along_path(D_{p,i}) + (num_links * propagation_delay) + (num_switches * switching_delay) + (num_links * time_sync_error)"
+      },
+      "missing_inputs": [
+        "Maximum lower-priority (best-effort) frame size per port to compute non-preemptive blocking and hiCredit exactly (assumed none: L_block = 0, hiCredit = 0)",
+        "Explicit intra-queue scheduling policy (FIFO assumed for queue 6)",
+        "L2 overheads (e.g., Ethernet header, preamble) for precise serialization time; payload used as frame size as instructed"
+      ]
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 2097,
+    "tokens_out": 19300,
+    "total_tokens": 21397,
+    "cost_usd": 0.19562125,
+    "latency_ms": 242001,
+    "response_chars": 10514,
+    "raw_response": "{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F4\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F5\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F6\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 171.395,\n    \"F2\": 72.82,\n    \"F3\": 259.63,\n    \"F4\": 180.47,\n    \"F5\": 276.12,\n    \"F6\": 109.614\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node7_2\",\"sw_7\",\"sw_6\",\"sw_11\",\"node11_1\"],\n      \"egress_ports_traversed(queue_6)\": [\"sw_7.P1\",\"sw_6.P1\",\"sw_11.P3\"],\n      \"IdleSlope\": [\"75% of 100 Mbps = 75 Mbps (75,000,000 bps)\"],\n      \"SendSlope\": [\"SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)\"],\n      \"arrival_curve\": {\"r_bps\": 1072000, \"b_bits\": 1072},\n      \"per_port_delay_us\": {\n        \"sw_7.P1\": 31.131,\n        \"sw_6.P1\": 31.131,\n        \"sw_11.P3\": 98.133\n      },\n      \"fixed_delays_us\": {\"propagation_total\": 4, \"switching_total\": 3, \"sync_error_total\": 4, \"sum_fixed\": 11},\n      \"cbs_parameters\": {\n        \"sw_7.P1\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -308, \"classA_max_bits_on_port\": 1232, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_6.P1\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -308, \"classA_max_bits_on_port\": 1232, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_11.P3\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -1508, \"classA_max_bits_on_port\": 6032, \"non_preemptive_block_bits(L_block)\": 0}\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node2_1\",\"sw_2\",\"sw_1\",\"node1_1\"],\n      \"egress_ports_traversed(queue_6)\": [\"sw_2.P0\",\"sw_1.P3\"],\n      \"IdleSlope\": [\"75% of 100 Mbps = 75 Mbps (75,000,000 bps)\"],\n      \"SendSlope\": [\"SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)\"],\n      \"arrival_curve\": {\"r_bps\": 960000, \"b_bits\": 2400},\n      \"per_port_delay_us\": {\n        \"sw_2.P0\": 32.41,\n        \"sw_1.P3\": 32.41\n      },\n      \"fixed_delays_us\": {\"propagation_total\": 3, \"switching_total\": 2, \"sync_error_total\": 3, \"sum_fixed\": 8},\n      \"cbs_parameters\": {\n        \"sw_2.P0\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -600, \"classA_max_bits_on_port\": 2400, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_1.P3\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -600, \"classA_max_bits_on_port\": 2400, \"non_preemptive_block_bits(L_block)\": 0}\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node5_0\",\"sw_5\",\"sw_0\",\"sw_1\",\"node1_2\"],\n      \"egress_ports_traversed(queue_6)\": [\"sw_5.P0\",\"sw_0.P0\",\"sw_1.P4\"],\n      \"IdleSlope\": [\"75% of 100 Mbps = 75 Mbps (75,000,000 bps)\"],\n      \"SendSlope\": [\"SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)\"],\n      \"arrival_curve\": {\"r_bps\": 4600000, \"b_bits\": 4600},\n      \"per_port_delay_us\": {\n        \"sw_5.P0\": 117.95,\n        \"sw_0.P0\": 65.34,\n        \"sw_1.P4\": 65.34\n      },\n      \"fixed_delays_us\": {\"propagation_total\": 4, \"switching_total\": 3, \"sync_error_total\": 4, \"sum_fixed\": 11},\n      \"cbs_parameters\": {\n        \"sw_5.P0\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -1150, \"classA_max_bits_on_port\": 4600, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_0.P0\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -1150, \"classA_max_bits_on_port\": 4600, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_1.P4\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -1150, \"classA_max_bits_on_port\": 4600, \"non_preemptive_block_bits(L_block)\": 0}\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node5_0\",\"sw_5\",\"sw_0\",\"node0_0\"],\n      \"egress_ports_traversed(queue_6)\": [\"sw_5.P0\",\"sw_0.P3\"],\n      \"IdleSlope\": [\"75% of 100 Mbps = 75 Mbps (75,000,000 bps)\"],\n      \"SendSlope\": [\"SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)\"],\n      \"arrival_curve\": {\"r_bps\": 769600, \"b_bits\": 3848},\n      \"per_port_delay_us\": {\n        \"sw_5.P0\": 120.61,\n        \"sw_0.P3\": 51.86\n      },\n      \"fixed_delays_us\": {\"propagation_total\": 3, \"switching_total\": 2, \"sync_error_total\": 3, \"sum_fixed\": 8},\n      \"cbs_parameters\": {\n        \"sw_5.P0\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -1150, \"classA_max_bits_on_port\": 4600, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_0.P3\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -962, \"classA_max_bits_on_port\": 3848, \"non_preemptive_block_bits(L_block)\": 0}\n      }\n    },\n    \"F5\": {\n      \"path\": [\"node9_2\",\"sw_9\",\"sw_10\",\"sw_11\",\"node11_1\"],\n      \"egress_ports_traversed(queue_6)\": [\"sw_9.P2\",\"sw_10.P1\",\"sw_11.P3\"],\n      \"IdleSlope\": [\"75% of 100 Mbps = 75 Mbps (75,000,000 bps)\"],\n      \"SendSlope\": [\"SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)\"],\n      \"arrival_curve\": {\"r_bps\": 2412800, \"b_bits\": 6032},\n      \"per_port_delay_us\": {\n        \"sw_9.P2\": 83.143,\n        \"sw_10.P1\": 83.143,\n        \"sw_11.P3\": 98.834\n      },\n      \"fixed_delays_us\": {\"propagation_total\": 4, \"switching_total\": 3, \"sync_error_total\": 4, \"sum_fixed\": 11},\n      \"cbs_parameters\": {\n        \"sw_9.P2\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -1508, \"classA_max_bits_on_port\": 6032, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_10.P1\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -1508, \"classA_max_bits_on_port\": 6032, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_11.P3\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -1508, \"classA_max_bits_on_port\": 6032, \"non_preemptive_block_bits(L_block)\": 0}\n      }\n    },\n    \"F6\": {\n      \"path\": [\"node8_1\",\"sw_8\",\"sw_7\",\"sw_6\",\"sw_11\",\"node11_0\"],\n      \"egress_ports_traversed(queue_6)\": [\"sw_8.P1\",\"sw_7.P1\",\"sw_6.P1\",\"sw_11.P2\"],\n      \"IdleSlope\": [\"75% of 100 Mbps = 75 Mbps (75,000,000 bps)\"],\n      \"SendSlope\": [\"SendSlope = IdleSlope - LineRate = -25 Mbps (-25,000,000 bps)\"],\n      \"arrival_curve\": {\"r_bps\": 492800, \"b_bits\": 1232},\n      \"per_port_delay_us\": {\n        \"sw_8.P1\": 16.536,\n        \"sw_7.P1\": 31.271,\n        \"sw_6.P1\": 31.271,\n        \"sw_11.P2\": 16.536\n      },\n      \"fixed_delays_us\": {\"propagation_total\": 5, \"switching_total\": 4, \"sync_error_total\": 5, \"sum_fixed\": 14},\n      \"cbs_parameters\": {\n        \"sw_8.P1\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -308, \"classA_max_bits_on_port\": 1232, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_7.P1\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -308, \"classA_max_bits_on_port\": 1232, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_6.P1\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -308, \"classA_max_bits_on_port\": 1232, \"non_preemptive_block_bits(L_block)\": 0},\n        \"sw_11.P2\": {\"queue\": 6, \"link_rate_bps\": 100000000, \"idle_slope_bps\": 75000000, \"send_slope_bps\": -25000000, \"hiCredit_bits\": 0, \"loCredit_bits\": -308, \"classA_max_bits_on_port\": 1232, \"non_preemptive_block_bits(L_block)\": 0}\n      }\n    },\n    \"egress_queues_and_flows\": {\n      \"sw_7.P1\": {\"queue\": 6, \"flows\": [\"F1\",\"F6\"]},\n      \"sw_6.P1\": {\"queue\": 6, \"flows\": [\"F1\",\"F6\"]},\n      \"sw_11.P3\": {\"queue\": 6, \"flows\": [\"F1\",\"F5\"]},\n      \"sw_2.P0\": {\"queue\": 6, \"flows\": [\"F2\"]},\n      \"sw_1.P3\": {\"queue\": 6, \"flows\": [\"F2\"]},\n      \"sw_5.P0\": {\"queue\": 6, \"flows\": [\"F3\",\"F4\"]},\n      \"sw_0.P0\": {\"queue\": 6, \"flows\": [\"F3\"]},\n      \"sw_1.P4\": {\"queue\": 6, \"flows\": [\"F3\"]},\n      \"sw_0.P3\": {\"queue\": 6, \"flows\": [\"F4\"]},\n      \"sw_9.P2\": {\"queue\": 6, \"flows\": [\"F5\"]},\n      \"sw_10.P1\": {\"queue\": 6, \"flows\": [\"F5\"]},\n      \"sw_8.P1\": {\"queue\": 6, \"flows\": [\"F6\"]},\n      \"sw_11.P2\": {\"queue\": 6, \"flows\": [\"F6\"]}\n    },\n    \"all_parameters_used\": {\n      \"line_rate_bps\": 100000000,\n      \"IdleSlope_bps\": 75000000,\n      \"SendSlope_bps\": -25000000,\n      \"time_sync_error_us_per_link\": 1,\n      \"propagation_delay_us_per_link\": 1,\n      \"switching_delay_us_per_switch\": 1,\n      \"credit_bounds_assumption\": \"hiCredit = 0 (no lower-priority traffic given), loCredit = -(C - I) * L_A_max / C\",\n      \"cut_through_switching\": true,\n      \"queue_priority\": 6,\n      \"AVB_class\": \"A\",\n      \"IdleSlope_fraction\": 0.75\n    },\n    \"WCD_calculation\": {\n      \"arrival_curve_per_flow\": \"alpha_i(t) = b_i + r_i * t, with r_i = 8*Payload_i / Period_i, b_i = 8*Payload_i (bits)\",\n      \"CBS_service_curve_per_port\": \"beta_p(t) = I * (t - T0_p)^+, with I = IdleSlope, T0_p = L_block/c + Vmax/I; here L_block = 0, Vmax = I * L_block / (c - I) = 0 => T0_p = 0\",\n      \"leftover_service_per_flow_port\": \"Given cross-traffic on the same egress port (queue 6), sum rates r_x and bursts b_x over all other flows. Then R_{p,i} = I - r_x, T_{p,i} = T0_p + b_x / R_{p,i}\",\n      \"per_port_delay_bound\": \"D_{p,i} = T_{p,i} + b_i / (R_{p,i} - r_i)\",\n      \"end_to_end_WCD\": \"WCD_i = sum_over_ports_along_path(D_{p,i}) + (num_links * propagation_delay) + (num_switches * switching_delay) + (num_links * time_sync_error)\"\n    },\n    \"missing_inputs\": [\n      \"Maximum lower-priority (best-effort) frame size per port to compute non-preemptive blocking and hiCredit exactly (assumed none: L_block = 0, hiCredit = 0)\",\n      \"Explicit intra-queue scheduling policy (FIFO assumed for queue 6)\",\n      \"L2 overheads (e.g., Ethernet header, preamble) for precise serialization time; payload used as frame size as instructed\"\n    ]\n  },\n  \"confidence\": 0.7\n}",
+    "api_error": null
+  }
+]

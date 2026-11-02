@@ -1,0 +1,3571 @@
+[
+  {
+    "tc_name": "TC41",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:27:07.854132",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "deadline": "1000µs",
+          "payload": "1400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "deadline": "5000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "1245 Bytes"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 835,
+    "total_tokens": 1656,
+    "cost_usd": 0.00062415,
+    "latency_ms": 10636,
+    "response_chars": 2171,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"1400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"deadline\": \"5000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"1245 Bytes\"\n      }\n    }\n  },\n  \"all_parameters_used\": {\n    \"bandwidth\": \"100 Mbps\",\n    \"propagation_delay\": \"1µs\",\n    \"switching_delay\": \"1µs\",\n    \"time_synchronization_error\": \"1µs\",\n    \"cycle_duration\": \"50µs\",\n    \"hypercycle\": \"50µs\"\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (hop_count * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity - (cycle_duration % periodicity))\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs - (50µs % 1000µs)) = 4µs + 1µs + 7µs = 12µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs - (50µs % 5000µs)) = 4µs + 1µs + 7µs = 12µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs - (50µs % 2500µs)) = 4µs + 1µs + 7µs = 12µs\"\n    }\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC41",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:27:18.675313",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "1245 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 690,
+    "total_tokens": 1511,
+    "cost_usd": 0.00053715,
+    "latency_ms": 9814,
+    "response_chars": 1873,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"1245 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (hop_count * (switching_delay + propagation_delay)) + time_sync_error\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.8\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC41",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:27:30.036390",
+    "wcd_values": {
+      "F1": 20.0,
+      "F2": 20.0,
+      "F3": 20.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "1245 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 755,
+    "total_tokens": 1576,
+    "cost_usd": 0.00057615,
+    "latency_ms": 10354,
+    "response_chars": 2004,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 20,\n    \"F2\": 20,\n    \"F3\": 20\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"1245 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"WCD_equation\": \"WCD = (hop_count * (propagation_delay + switching_delay)) + time_sync_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"WCD_values\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 20µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 20µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs / 50µs) * 50µs = 20µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:27:41.842059",
+    "wcd_values": {
+      "F1": 20.0,
+      "F2": 20.0,
+      "F3": 20.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1045 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 764,
+    "total_tokens": 1585,
+    "cost_usd": 0.00058155,
+    "latency_ms": 10791,
+    "response_chars": 2061,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 20,\n    \"F2\": 20,\n    \"F3\": 20\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1045 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 20µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 20µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 20µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:27:53.951449",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1045 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 757,
+    "total_tokens": 1578,
+    "cost_usd": 0.00057735,
+    "latency_ms": 11107,
+    "response_chars": 2036,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1045 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"WCD_equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"WCD_values\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 12µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 12µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 12µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC42",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:28:03.959824",
+    "wcd_values": {
+      "F1": 20.0,
+      "F2": 20.0,
+      "F3": 20.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1045 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 821,
+    "tokens_out": 754,
+    "total_tokens": 1575,
+    "cost_usd": 0.00057555,
+    "latency_ms": 8994,
+    "response_chars": 2006,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 20,\n    \"F2\": 20,\n    \"F3\": 20\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1045 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_sync_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 20µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 20µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 20µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:28:14.493462",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1000 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "2500 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 809,
+    "total_tokens": 1629,
+    "cost_usd": 0.0006084,
+    "latency_ms": 9532,
+    "response_chars": 2118,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1000 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"2500 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 4µs + 1µs + 10µs = 12µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 4µs + 1µs + 10µs = 12µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs / 50µs) * 50µs = 4µs + 1µs + 50µs = 12µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.9\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:28:26.239011",
+    "wcd_values": {
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1000 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "145 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 629,
+    "total_tokens": 1449,
+    "cost_usd": 0.0005004,
+    "latency_ms": 10731,
+    "response_chars": 1824,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1000 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"145 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"WCD_equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error\",\n    \"WCD_values\": {\n      \"F1\": 6,\n      \"F2\": 6,\n      \"F3\": 6\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC43",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:28:36.503577",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1000 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "145 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 788,
+    "total_tokens": 1608,
+    "cost_usd": 0.0005958,
+    "latency_ms": 9252,
+    "response_chars": 2034,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1000 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"145 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_sync_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 4µs + 1µs + 10µs = 12µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 4µs + 1µs + 10µs = 12µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs / 50µs) * 50µs = 4µs + 1µs + 50µs = 12µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:28:45.754621",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "2500 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "5000 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "2500 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 685,
+    "total_tokens": 1504,
+    "cost_usd": 0.00053385,
+    "latency_ms": 8244,
+    "response_chars": 1850,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"2500 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"5000 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"2500 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (hop_count * (switching_delay + propagation_delay)) + time_sync_error\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\"\n    }\n  },\n  \"confidence\": 0.8\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:28:55.632057",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "2500 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "5000 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "2500 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 638,
+    "total_tokens": 1457,
+    "cost_usd": 0.00050565,
+    "latency_ms": 8871,
+    "response_chars": 1873,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"2500 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"5000 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"2500 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (hop_count * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"WCD_values\": {\n      \"F1\": 12,\n      \"F2\": 12,\n      \"F3\": 12\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC44",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:29:07.290287",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "2500 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "5000 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "2500 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 768,
+    "total_tokens": 1587,
+    "cost_usd": 0.00058365,
+    "latency_ms": 10646,
+    "response_chars": 2065,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"2500 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"5000 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"2500 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"WCD_equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"WCD_values\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs / 50µs) * 50µs = 12µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 12µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs / 50µs) * 50µs = 12µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:29:17.236889",
+    "wcd_values": {
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "deadline": "1000µs",
+          "payload": "466 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "deadline": "5000µs",
+          "payload": "229 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "205 Bytes"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 712,
+    "total_tokens": 1531,
+    "cost_usd": 0.00055005,
+    "latency_ms": 8924,
+    "response_chars": 1939,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"466 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"deadline\": \"5000µs\",\n        \"payload\": \"229 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"205 Bytes\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"F1\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Cycle Duration) = (2 * 1µs) + 1µs + 1µs + 2µs = 6µs\",\n    \"F2\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Cycle Duration) = (2 * 1µs) + 1µs + 1µs + 2µs = 6µs\",\n    \"F3\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Cycle Duration) = (2 * 1µs) + 1µs + 1µs + 2µs = 6µs\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:29:27.681154",
+    "wcd_values": {
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "deadline": "1000µs",
+          "payload": "466 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "deadline": "5000µs",
+          "payload": "229 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "205 Bytes"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 730,
+    "total_tokens": 1549,
+    "cost_usd": 0.00056085,
+    "latency_ms": 9429,
+    "response_chars": 1969,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"466 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"deadline\": \"5000µs\",\n        \"payload\": \"229 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"205 Bytes\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"F1\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Cycle Duration) = (2 * 1µs) + (1µs) + (1µs) + (2 * 1µs) = 6µs\",\n    \"F2\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Cycle Duration) = (2 * 1µs) + (1µs) + (1µs) + (2 * 1µs) = 6µs\",\n    \"F3\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Cycle Duration) = (2 * 1µs) + (1µs) + (1µs) + (2 * 1µs) = 6µs\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC45",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:29:38.622825",
+    "wcd_values": {
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "466 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "229 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "205 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 766,
+    "total_tokens": 1585,
+    "cost_usd": 0.00058245,
+    "latency_ms": 9931,
+    "response_chars": 2064,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"466 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"229 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"205 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity - (cycle_duration % periodicity))\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs - (50µs % 1000µs)) = 6µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs - (50µs % 5000µs)) = 6µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs - (50µs % 2500µs)) = 6µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:29:48.838278",
+    "wcd_values": {
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "deadline": "1000µs",
+          "payload": "1000 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "299 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "667 Bytes"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 713,
+    "total_tokens": 1533,
+    "cost_usd": 0.0005508,
+    "latency_ms": 9211,
+    "response_chars": 1940,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"1000 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"299 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"667 Bytes\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"F1\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Cycle Duration) = (2 * 1µs) + 1µs + 1µs + 2µs = 6µs\",\n    \"F2\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Cycle Duration) = (2 * 1µs) + 1µs + 1µs + 2µs = 6µs\",\n    \"F3\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Cycle Duration) = (2 * 1µs) + 1µs + 1µs + 2µs = 6µs\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:29:59.288205",
+    "wcd_values": {
+      "F1": 4.0,
+      "F2": 4.0,
+      "F3": 4.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "deadline": "1000µs",
+          "payload": "1000 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "299 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "667 Bytes"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 719,
+    "total_tokens": 1539,
+    "cost_usd": 0.0005544,
+    "latency_ms": 9434,
+    "response_chars": 1903,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 4,\n    \"F2\": 4,\n    \"F3\": 4\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"1000 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"299 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"667 Bytes\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (hop_count * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"WCD_values\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 4µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs / 50µs) * 50µs = 4µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs / 50µs) * 50µs = 4µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC46",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:30:09.017307",
+    "wcd_values": {
+      "F1": 4.0,
+      "F2": 4.0,
+      "F3": 4.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "1000µs",
+          "deadline": "1000µs",
+          "payload": "1000 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "299 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "667 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 721,
+    "total_tokens": 1541,
+    "cost_usd": 0.0005556,
+    "latency_ms": 8718,
+    "response_chars": 1964,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 4,\n    \"F2\": 4,\n    \"F3\": 4\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"1000 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"299 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"667 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_sync_error\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:30:18.595929",
+    "wcd_values": {
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "688 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "445 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "321 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 689,
+    "total_tokens": 1508,
+    "cost_usd": 0.00053625,
+    "latency_ms": 8562,
+    "response_chars": 1903,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"688 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"445 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"321 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error\",\n    \"WCD_values\": {\n      \"F1\": \"2 * (1µs + 1µs) + 1µs = 6µs\",\n      \"F2\": \"2 * (1µs + 1µs) + 1µs = 6µs\",\n      \"F3\": \"2 * (1µs + 1µs) + 1µs = 6µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:30:29.322176",
+    "wcd_values": {
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "688 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "445 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "321 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 768,
+    "total_tokens": 1587,
+    "cost_usd": 0.00058365,
+    "latency_ms": 9713,
+    "response_chars": 2081,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"688 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"445 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"321 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"WCD_equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity - (payload_size / bandwidth))\",\n    \"WCD_values\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs - (688 * 8 / 100000000)) = 6µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs - (445 * 8 / 100000000)) = 6µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs - (321 * 8 / 100000000)) = 6µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC47",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:30:38.129620",
+    "wcd_values": {
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "688 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "445 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "321 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 703,
+    "total_tokens": 1522,
+    "cost_usd": 0.00054465,
+    "latency_ms": 7802,
+    "response_chars": 1931,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"688 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"445 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"321 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"WCD_equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error\",\n    \"WCD_values\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 6µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 6µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 6µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:30:49.243745",
+    "wcd_values": {
+      "F1": 212.0,
+      "F2": 130.0,
+      "F3": 200.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "deadline": "1000µs",
+          "payload": "212 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "deadline": "5000µs",
+          "payload": "130 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "200 Bytes"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 844,
+    "total_tokens": 1663,
+    "cost_usd": 0.00062925,
+    "latency_ms": 10107,
+    "response_chars": 2197,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 212,\n    \"F2\": 130,\n    \"F3\": 200\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"212 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"deadline\": \"5000µs\",\n        \"payload\": \"130 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"200 Bytes\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"F1\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Payload Transmission Time) = (2 * 1µs) + 1µs + 1µs + (212 Bytes / (100 Mbps)) * 1,000,000µs = 2µs + 1µs + 1µs + 2.136µs = 6.136µs ≈ 212µs\",\n    \"F2\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Payload Transmission Time) = (2 * 1µs) + 1µs + 1µs + (130 Bytes / (100 Mbps)) * 1,000,000µs = 2µs + 1µs + 1µs + 1.04µs = 5.04µs ≈ 130µs\",\n    \"F3\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Payload Transmission Time) = (2 * 1µs) + 1µs + 1µs + (200 Bytes / (100 Mbps)) * 1,000,000µs = 2µs + 1µs + 1µs + 1.6µs = 5.6µs ≈ 200µs\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:31:21.835430",
+    "wcd_values": {
+      "F1": 212.0,
+      "F2": 130.0,
+      "F3": 200.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "deadline": "1000µs",
+          "payload": "212 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "deadline": "5000µs",
+          "payload": "130 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "200 Bytes"
+        }
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 1000,
+    "total_tokens": 1819,
+    "cost_usd": 0.00072285,
+    "latency_ms": 31587,
+    "response_chars": 2775,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 212,\n    \"F2\": 130,\n    \"F3\": 200\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"212 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"deadline\": \"5000µs\",\n        \"payload\": \"130 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"200 Bytes\"\n      }\n    }\n  },\n  \"WCD_calculation\": {\n    \"F1\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Payload Transmission Time) = (2 * 1µs) + 1µs + 1µs + (212 Bytes * 8 bits / 100 Mbps) = 2µs + 1µs + 1µs + 16.96µs = 20.96µs\",\n    \"F2\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Payload Transmission Time) = (2 * 1µs) + 1µs + 1µs + (130 Bytes * 8 bits / 100 Mbps) = 2µs + 1µs + 1µs + 10.4µs = 14.4µs\",\n    \"F3\": \"WCD = (2 * Propagation Delay) + (Switching Delay) + (Time Synchronization Error) + (Payload Transmission Time) = (2 * 1µs) + 1µs + 1µs + (200 Bytes * 8 bits / 100 Mbps) = 2µs + 1µs + 1µs + 16µs = 20µs\"\n  },\n  \"all_parameters_used\": {\n    \"bandwidth\": \"100 Mbps\",\n    \"propagation_delay\": \"1µs\",\n    \"switching_delay\": \"1µs\",\n    \"time_synchronization_error\": \"1µs\",\n    \"cycle_duration\": \"50µs\",\n    \"flows\": [\n      {\n        \"flow_number\": 1,\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"212 Bytes\"\n      },\n      {\n        \"flow_number\": 2,\n        \"periodicity\": \"5000µs\",\n        \"deadline\": \"5000µs\",\n        \"payload\": \"130 Bytes\"\n      },\n      {\n        \"flow_number\": 3,\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"200 Bytes\"\n      }\n    ]\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.9\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC48",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:31:34.891713",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "deadline": "1000µs",
+          "payload": "212 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "deadline": "5000µs",
+          "payload": "130 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "deadline": "2500µs",
+          "payload": "200 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 741,
+    "total_tokens": 1560,
+    "cost_usd": 0.00056745,
+    "latency_ms": 12047,
+    "response_chars": 2026,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"deadline\": \"1000µs\",\n        \"payload\": \"212 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"deadline\": \"5000µs\",\n        \"payload\": \"130 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"deadline\": \"2500µs\",\n        \"payload\": \"200 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * switching_delay) + (number_of_hops * propagation_delay) + time_synchronization_error\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * 1µs) + (2 * 1µs) + 1µs = 5µs\",\n      \"F2\": \"WCD = (2 * 1µs) + (2 * 1µs) + 1µs = 5µs\",\n      \"F3\": \"WCD = (2 * 1µs) + (2 * 1µs) + 1µs = 5µs\"\n    }\n  },\n  \"confidence\": 0.8\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:31:44.542969",
+    "wcd_values": {
+      "F1": 6.0,
+      "F2": 6.0,
+      "F3": 6.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1000 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "5000 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "5000 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 703,
+    "total_tokens": 1522,
+    "cost_usd": 0.00054465,
+    "latency_ms": 8637,
+    "response_chars": 1931,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 6,\n    \"F2\": 6,\n    \"F3\": 6\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1000 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"5000 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"5000 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 6µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 6µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 6µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:31:56.376636",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1000 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "5000 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "5000 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 802,
+    "total_tokens": 1621,
+    "cost_usd": 0.00060405,
+    "latency_ms": 10826,
+    "response_chars": 2092,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1000 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"5000 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"5000 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (hop_count * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 4µs + 1µs + 10µs = 12µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 4µs + 1µs + 100µs = 12µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 4µs + 1µs + 100µs = 12µs\"\n    }\n  },\n  \"confidence\": 0.9\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC49",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:32:07.321988",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1000 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "5000 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "5000 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 819,
+    "tokens_out": 804,
+    "total_tokens": 1623,
+    "cost_usd": 0.00060525,
+    "latency_ms": 9943,
+    "response_chars": 2097,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1000 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"5000 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"5000 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 4µs + 1µs + 10µs = 12µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 4µs + 1µs + 500µs = 12µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 4µs + 1µs + 500µs = 12µs\"\n    }\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:32:18.746293",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "periodicity": 1000,
+          "deadline": 1000,
+          "payload": 1200,
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "periodicity": 5000,
+          "deadline": 5000,
+          "payload": 1300,
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "periodicity": 2500,
+          "deadline": 2500,
+          "payload": 1108,
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 822,
+    "tokens_out": 692,
+    "total_tokens": 1514,
+    "cost_usd": 0.0005385,
+    "latency_ms": 10418,
+    "response_chars": 1869,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"periodicity\": 1000,\n        \"deadline\": 1000,\n        \"payload\": 1200,\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"periodicity\": 5000,\n        \"deadline\": 5000,\n        \"payload\": 1300,\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"periodicity\": 2500,\n        \"deadline\": 2500,\n        \"payload\": 1108,\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_sync_error\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs = 4µs\"\n    }\n  },\n  \"confidence\": 0.8\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:32:30.715957",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 0.8,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "periodicity": 1000,
+          "deadline": 1000,
+          "payload": 1200,
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "periodicity": 5000,
+          "deadline": 5000,
+          "payload": 1300,
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "periodicity": 2500,
+          "deadline": 2500,
+          "payload": 1108,
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_sync_error": "1µs"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_sync_error": "1µs",
+        "cycle_duration": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 822,
+    "tokens_out": 796,
+    "total_tokens": 1618,
+    "cost_usd": 0.0006009,
+    "latency_ms": 10956,
+    "response_chars": 2055,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"periodicity\": 1000,\n        \"deadline\": 1000,\n        \"payload\": 1200,\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"periodicity\": 5000,\n        \"deadline\": 5000,\n        \"payload\": 1300,\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"periodicity\": 2500,\n        \"deadline\": 2500,\n        \"payload\": 1108,\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_sync_error\": \"1µs\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_sync_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_sync_error + (payload_size / bandwidth)\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1200 * 8 / 100000000) = 4µs + 1µs + 0.096µs = 5.096µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1300 * 8 / 100000000) = 4µs + 1µs + 0.104µs = 5.104µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1108 * 8 / 100000000) = 4µs + 1µs + 0.08864µs = 5.08864µs\"\n    }\n  },\n  \"confidence\": 0.8\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC50",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:32:42.800473",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "1200 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "1300 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "1108 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 822,
+    "tokens_out": 800,
+    "total_tokens": 1622,
+    "cost_usd": 0.0006033,
+    "latency_ms": 11079,
+    "response_chars": 2092,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"1200 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"1300 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"1108 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (number_of_hops * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"calculation\": {\n      \"F1\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (1000µs / 50µs) * 50µs = 4µs + 1µs + 10µs = 12µs\",\n      \"F2\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (5000µs / 50µs) * 50µs = 4µs + 1µs + 100µs = 12µs\",\n      \"F3\": \"WCD = (2 * (1µs + 1µs)) + 1µs + (2500µs / 50µs) * 50µs = 4µs + 1µs + 50µs = 12µs\"\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:32:52.363635",
+    "wcd_values": {
+      "F1": 4.0,
+      "F2": 8.0,
+      "F3": 4.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "1400 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 745,
+    "total_tokens": 1565,
+    "cost_usd": 0.00057,
+    "latency_ms": 8549,
+    "response_chars": 2091,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 4,\n    \"F2\": 8,\n    \"F3\": 4\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"1400 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"F1\": \"WCD = (2 * propagation_delay) + (2 * switching_delay) + (time_synchronization_error) = (2 * 1) + (2 * 1) + 1 = 4µs\",\n    \"F2\": \"WCD = (2 * propagation_delay) + (2 * switching_delay) + (time_synchronization_error) + (periodicity / cycle_duration) * cycle_duration = (2 * 1) + (2 * 1) + 1 + (5000 / 50) * 50 = 8µs\",\n    \"F3\": \"WCD = (2 * propagation_delay) + (2 * switching_delay) + (time_synchronization_error) = (2 * 1) + (2 * 1) + 1 = 4µs\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.9\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:33:04.360429",
+    "wcd_values": {
+      "F1": 4.0,
+      "F2": 8.0,
+      "F3": 4.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "1400 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 739,
+    "total_tokens": 1559,
+    "cost_usd": 0.0005664,
+    "latency_ms": 10986,
+    "response_chars": 2094,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 4,\n    \"F2\": 8,\n    \"F3\": 4\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"1400 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"F1\": \"WCD = (2 * propagation_delay + switching_delay + time_synchronization_error) + (1 * cycle_duration) = (2 * 1 + 1 + 1) + 0 = 4µs\",\n    \"F2\": \"WCD = (2 * propagation_delay + switching_delay + time_synchronization_error) + (1 * cycle_duration) = (2 * 1 + 1 + 1) + 0 = 4µs + 4µs (due to periodicity) = 8µs\",\n    \"F3\": \"WCD = (2 * propagation_delay + switching_delay + time_synchronization_error) + (1 * cycle_duration) = (2 * 1 + 1 + 1) + 0 = 4µs\"\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC51",
+    "model": "gpt-4o-mini-2024-07-18",
+    "prompt_type": "CQF",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-05-01T21:33:14.098341",
+    "wcd_values": {
+      "F1": 12.0,
+      "F2": 12.0,
+      "F3": 12.0
+    },
+    "confidence": 0.9,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "1000µs",
+          "payload": "400 Bytes"
+        }
+      },
+      "F2": {
+        "path": [
+          "node0_1->sw_1->node0_2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "5000µs",
+          "payload": "829 Bytes"
+        }
+      },
+      "F3": {
+        "path": [
+          "node0_1->sw_1->node0_3"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "50µs"
+        ],
+        "cqf_parameters": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1µs",
+          "switching_delay": "1µs",
+          "time_synchronization_error": "1µs",
+          "periodicity": "2500µs",
+          "payload": "1400 Bytes"
+        }
+      },
+      "all_parameters_used": {
+        "bandwidth": "100 Mbps",
+        "propagation_delay": "1µs",
+        "switching_delay": "1µs",
+        "time_synchronization_error": "1µs",
+        "cycle_duration": "50µs",
+        "hypercycle": "50µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 820,
+    "tokens_out": 636,
+    "total_tokens": 1456,
+    "cost_usd": 0.0005046,
+    "latency_ms": 8727,
+    "response_chars": 1871,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 12,\n    \"F2\": 12,\n    \"F3\": 12\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"1000µs\",\n        \"payload\": \"400 Bytes\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node0_1->sw_1->node0_2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"5000µs\",\n        \"payload\": \"829 Bytes\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node0_1->sw_1->node0_3\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"50µs\"],\n      \"cqf_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1µs\",\n        \"switching_delay\": \"1µs\",\n        \"time_synchronization_error\": \"1µs\",\n        \"periodicity\": \"2500µs\",\n        \"payload\": \"1400 Bytes\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1µs\",\n      \"switching_delay\": \"1µs\",\n      \"time_synchronization_error\": \"1µs\",\n      \"cycle_duration\": \"50µs\",\n      \"hypercycle\": \"50µs\"\n    }\n  },\n  \"WCD_calculation\": {\n    \"equation\": \"WCD = (hop_count * (switching_delay + propagation_delay)) + time_synchronization_error + (periodicity / cycle_duration) * cycle_duration\",\n    \"WCD_values\": {\n      \"F1\": 12,\n      \"F2\": 12,\n      \"F3\": 12\n    }\n  },\n  \"missing_inputs\": [],\n  \"confidence\": 0.9\n}\n```",
+    "api_error": null
+  }
+]

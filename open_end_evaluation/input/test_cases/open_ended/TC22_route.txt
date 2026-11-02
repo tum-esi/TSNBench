@@ -1,0 +1,7 @@
+id,src,dst,hop_count,path
+0,node2_2,node3_2,3,node2_2->sw_2->sw_3->node3_2
+1,node2_0,node4_0,4,node2_0->sw_2->sw_3->sw_4->node4_0
+2,node2_2,node4_0,4,node2_2->sw_2->sw_3->sw_4->node4_0
+3,node2_2,node4_3,4,node2_2->sw_2->sw_3->sw_4->node4_3
+4,node5_0,node3_3,4,node5_0->sw_5->sw_4->sw_3->node3_3
+5,node5_1,node4_2,3,node5_1->sw_5->sw_4->node4_2

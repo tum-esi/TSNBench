@@ -1,0 +1,5503 @@
+[
+  {
+    "tc_name": "TC101",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:38:42.555144",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "375000"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_synchronization_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle duration + n * switching delay + propagation delay + time synchronization error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3281,
+    "tokens_out": 1089,
+    "total_tokens": 4370,
+    "cost_usd": 0.0190925,
+    "latency_ms": 9982,
+    "response_chars": 2914,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"375000\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_synchronization_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle duration + n * switching delay + propagation delay + time synchronization error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the given equation:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **Cycle Duration**: 50 µs\n     - **Switching Delay**: 1 µs\n     - **Propagation Delay**: 1 µs\n     - **Time Synchronization Error**: 1 µs\n   - **Offset**: Set to 0 for all flows as per the task requirement.\n   - **Hop Count**: Derived from the shortest route for each flow.\n\n3. **Hypercycle**: The least common multiple (LCM) of all flow periods is calculated to determine the hypercycle, which is 375000 µs.\n\n4. **Confidence**: The confidence score is set to 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC101",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:38:56.419358",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "375000"
+        ],
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3281,
+    "tokens_out": 1114,
+    "total_tokens": 4395,
+    "cost_usd": 0.0193425,
+    "latency_ms": 12853,
+    "response_chars": 2980,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"375000\"],\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **cycle duration**: 50 µs.\n     - **switching delay**: 1 µs.\n     - **propagation delay**: 1 µs.\n     - **time synchronization error**: 1 µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375,000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC101",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:39:07.012644",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3281,
+    "tokens_out": 1027,
+    "total_tokens": 4308,
+    "cost_usd": 0.0184725,
+    "latency_ms": 9583,
+    "response_chars": 2626,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: `WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error`\n   - **Parameters**:\n     - `offset_i`: 0 (start time at source)\n     - `n`: Number of switches in the route (hop count - 1)\n     - `cycle_duration`: 50µs\n     - `switching_delay`: 1µs\n     - `propagation_delay`: 1µs\n     - `time_sync_error`: 1µs\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC102",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:39:20.780660",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3285,
+    "tokens_out": 1076,
+    "total_tokens": 4361,
+    "cost_usd": 0.0189725,
+    "latency_ms": 12754,
+    "response_chars": 2804,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - `offset_i`: Set to 0 for all flows.\n     - `n`: Number of switches in the route (hop count - 1).\n     - `cycle_duration`: 50 µs.\n     - `switching_delay`: 1 µs.\n     - `propagation_delay`: 1 µs.\n     - `time_sync_error`: 1 µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC102",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:39:32.327861",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3285,
+    "tokens_out": 1107,
+    "total_tokens": 4392,
+    "cost_usd": 0.0192825,
+    "latency_ms": 10537,
+    "response_chars": 2948,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - `offset_i`: Set to 0 for all flows.\n     - `n`: Number of switches in the route (hop count - 1).\n     - `cycle_duration`: 50 µs.\n     - `switching_delay`: 1 µs.\n     - `propagation_delay`: 1 µs.\n     - `time_sync_error`: 1 µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC102",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:39:45.686497",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3285,
+    "tokens_out": 1106,
+    "total_tokens": 4391,
+    "cost_usd": 0.0192725,
+    "latency_ms": 12347,
+    "response_chars": 2943,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50µs.\n     - **Switching Delay**: 1µs per switch.\n     - **Propagation Delay**: 1µs.\n     - **Time Synchronization Error**: 1µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed reasoning for each flow includes the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC103",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:39:57.591920",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3283,
+    "tokens_out": 1123,
+    "total_tokens": 4406,
+    "cost_usd": 0.0194375,
+    "latency_ms": 10893,
+    "response_chars": 3000,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - `offset_i`: Set to 0 for all flows.\n     - `n`: Number of switches in the route (hop count - 1).\n     - `cycle_duration`: 50 µs.\n     - `switching_delay`: 1 µs.\n     - `propagation_delay`: 1 µs.\n     - `time_sync_error`: 1 µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.\n\n5. **Reason**: Detailed explanation for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC103",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:40:09.169667",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 305.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3283,
+    "tokens_out": 807,
+    "total_tokens": 4090,
+    "cost_usd": 0.0162775,
+    "latency_ms": 10566,
+    "response_chars": 1869,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 305,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC103",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:40:19.188099",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3283,
+    "tokens_out": 807,
+    "total_tokens": 4090,
+    "cost_usd": 0.0162775,
+    "latency_ms": 9007,
+    "response_chars": 1869,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC104",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:40:30.057899",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3283,
+    "tokens_out": 1130,
+    "total_tokens": 4413,
+    "cost_usd": 0.0195075,
+    "latency_ms": 9854,
+    "response_chars": 3030,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50 µs.\n     - **Switching Delay**: 1 µs.\n     - **Propagation Delay**: 1 µs.\n     - **Time Synchronization Error**: 1 µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.\n\n5. **Reason**: Detailed reasoning for each flow includes the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC104",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:40:38.458625",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3283,
+    "tokens_out": 807,
+    "total_tokens": 4090,
+    "cost_usd": 0.0162775,
+    "latency_ms": 7395,
+    "response_chars": 1869,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC104",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:40:48.629464",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 255.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3283,
+    "tokens_out": 1146,
+    "total_tokens": 4429,
+    "cost_usd": 0.0196675,
+    "latency_ms": 9159,
+    "response_chars": 3134,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 255,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50µs.\n     - **Switching Delay**: 1µs.\n     - **Propagation Delay**: 1µs.\n     - **Time Synchronization Error**: 1µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.\n\nThis JSON output provides a comprehensive overview of the WCD calculations for each flow, ensuring clarity and accuracy based on the given inputs and constraints.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC105",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:41:00.140094",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3274,
+    "tokens_out": 1100,
+    "total_tokens": 4374,
+    "cost_usd": 0.019185,
+    "latency_ms": 10498,
+    "response_chars": 2891,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the given equation:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50 µs.\n     - **Switching Delay**: 1 µs.\n     - **Propagation Delay**: 1 µs.\n     - **Time Synchronization Error**: 1 µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC105",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:41:11.617381",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3274,
+    "tokens_out": 1113,
+    "total_tokens": 4387,
+    "cost_usd": 0.019315,
+    "latency_ms": 10470,
+    "response_chars": 2971,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **cycle duration**: 50 µs.\n     - **switching delay**: 1 µs.\n     - **propagation delay**: 1 µs.\n     - **time synchronization error**: 1 µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC105",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:41:20.948382",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3274,
+    "tokens_out": 1091,
+    "total_tokens": 4365,
+    "cost_usd": 0.019095,
+    "latency_ms": 8323,
+    "response_chars": 2859,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50 µs.\n     - **Switching Delay**: 1 µs per switch.\n     - **Propagation Delay**: 1 µs.\n     - **Time Synchronization Error**: 1 µs.\n\n3. **Hypercycle**: The least common multiple (LCM) of all flow periods, calculated to be 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC106",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:41:31.024189",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3280,
+    "tokens_out": 1100,
+    "total_tokens": 4380,
+    "cost_usd": 0.0192,
+    "latency_ms": 9071,
+    "response_chars": 2888,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50µs.\n     - **Switching Delay**: 1µs.\n     - **Propagation Delay**: 1µs.\n     - **Time Synchronization Error**: 1µs.\n\n3. **Hypercycle**: The least common multiple (LCM) of all flow periods is calculated to be 375000µs.\n\n4. **Confidence**: The confidence score is set to 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC106",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:41:40.600792",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 305.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3280,
+    "tokens_out": 1129,
+    "total_tokens": 4409,
+    "cost_usd": 0.01949,
+    "latency_ms": 8566,
+    "response_chars": 3027,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 305,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50 µs.\n     - **Switching Delay**: 1 µs.\n     - **Propagation Delay**: 1 µs.\n     - **Time Synchronization Error**: 1 µs.\n\n3. **Hypercycle**: The least common multiple (LCM) of all flow periods is calculated to be 375000 µs.\n\n4. **Confidence**: The confidence score is set to 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.\n\n5. **Reason**: Detailed reasoning for each flow includes the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC106",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:41:50.822371",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 305.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3280,
+    "tokens_out": 1094,
+    "total_tokens": 4374,
+    "cost_usd": 0.01914,
+    "latency_ms": 9206,
+    "response_chars": 2858,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 305,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50µs.\n     - **Switching Delay**: 1µs.\n     - **Propagation Delay**: 1µs.\n     - **Time Synchronization Error**: 1µs.\n\n3. **Hypercycle**: The least common multiple (LCM) of all flow periods is 375000µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC107",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:42:03.736485",
+    "wcd_values": {
+      "F0": 206.0,
+      "F1": 206.0,
+      "F2": 206.0,
+      "F3": 156.0,
+      "F4": 106.0,
+      "F5": 206.0,
+      "F6": 206.0,
+      "F7": 206.0,
+      "F8": 106.0,
+      "F9": 156.0,
+      "F10": 206.0,
+      "F11": 156.0,
+      "F12": 206.0,
+      "F13": 306.0,
+      "F14": 156.0,
+      "F15": 206.0,
+      "F16": 206.0,
+      "F17": 156.0,
+      "F18": 256.0,
+      "F19": 206.0,
+      "F20": 106.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "375000µs"
+        ],
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3281,
+    "tokens_out": 1135,
+    "total_tokens": 4416,
+    "cost_usd": 0.0195525,
+    "latency_ms": 11900,
+    "response_chars": 3090,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 206,\n    \"F1\": 206,\n    \"F2\": 206,\n    \"F3\": 156,\n    \"F4\": 106,\n    \"F5\": 206,\n    \"F6\": 206,\n    \"F7\": 206,\n    \"F8\": 106,\n    \"F9\": 156,\n    \"F10\": 206,\n    \"F11\": 156,\n    \"F12\": 206,\n    \"F13\": 306,\n    \"F14\": 156,\n    \"F15\": 206,\n    \"F16\": 206,\n    \"F17\": 156,\n    \"F18\": 256,\n    \"F19\": 206,\n    \"F20\": 106\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"375000µs\"],\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - `offset_i`: Set to 0 for all flows.\n     - `n`: Number of switches in the route (hop count - 1).\n     - `cycle_duration`: 50µs.\n     - `switching_delay`: 1µs.\n     - `propagation_delay`: 1µs.\n     - `time_sync_error`: 1µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.\n\nThis JSON output provides a comprehensive overview of the WCD calculations for each flow, ensuring clarity and traceability of the process.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC107",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:42:18.161191",
+    "wcd_values": {
+      "F0": 206.0,
+      "F1": 206.0,
+      "F2": 206.0,
+      "F3": 156.0,
+      "F4": 106.0,
+      "F5": 206.0,
+      "F6": 206.0,
+      "F7": 206.0,
+      "F8": 106.0,
+      "F9": 156.0,
+      "F10": 206.0,
+      "F11": 156.0,
+      "F12": 206.0,
+      "F13": 256.0,
+      "F14": 156.0,
+      "F15": 206.0,
+      "F16": 206.0,
+      "F17": 156.0,
+      "F18": 256.0,
+      "F19": 206.0,
+      "F20": 106.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3281,
+    "tokens_out": 1136,
+    "total_tokens": 4417,
+    "cost_usd": 0.0195625,
+    "latency_ms": 13416,
+    "response_chars": 3086,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 206,\n    \"F1\": 206,\n    \"F2\": 206,\n    \"F3\": 156,\n    \"F4\": 106,\n    \"F5\": 206,\n    \"F6\": 206,\n    \"F7\": 206,\n    \"F8\": 106,\n    \"F9\": 156,\n    \"F10\": 206,\n    \"F11\": 156,\n    \"F12\": 206,\n    \"F13\": 256,\n    \"F14\": 156,\n    \"F15\": 206,\n    \"F16\": 206,\n    \"F17\": 156,\n    \"F18\": 256,\n    \"F19\": 206,\n    \"F20\": 106\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50µs.\n     - **Switching Delay**: 1µs per switch.\n     - **Propagation Delay**: 1µs.\n     - **Time Synchronization Error**: 1µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.\n\nThis JSON output provides a comprehensive overview of the WCD calculations for each flow, ensuring clarity and traceability of the process.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC107",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:42:30.237891",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 305.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3281,
+    "tokens_out": 1104,
+    "total_tokens": 4385,
+    "cost_usd": 0.0192425,
+    "latency_ms": 11075,
+    "response_chars": 2930,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 305,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50µs.\n     - **Switching Delay**: 1µs.\n     - **Propagation Delay**: 1µs.\n     - **Time Synchronization Error**: 1µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC108",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:42:40.482045",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 255.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3276,
+    "tokens_out": 1130,
+    "total_tokens": 4406,
+    "cost_usd": 0.01949,
+    "latency_ms": 9220,
+    "response_chars": 3028,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 255,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50 µs.\n     - **Switching Delay**: 1 µs.\n     - **Propagation Delay**: 1 µs.\n     - **Time Synchronization Error**: 1 µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.\n\n5. **Reason**: Detailed explanation for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC108",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:42:51.526139",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 255.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "375000µs"
+        ],
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3276,
+    "tokens_out": 1098,
+    "total_tokens": 4374,
+    "cost_usd": 0.01917,
+    "latency_ms": 10029,
+    "response_chars": 2870,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 255,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"375000µs\"],\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **cycle duration**: 50µs.\n     - **switching delay**: 1µs.\n     - **propagation delay**: 1µs.\n     - **time synchronization error**: 1µs.\n\n3. **Hypercycle**: The least common multiple (LCM) of all flow periods is 375000µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC108",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:43:01.176754",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 255.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": [
+          "50"
+        ],
+        "Hypercycle": [
+          "375000"
+        ],
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3276,
+    "tokens_out": 1100,
+    "total_tokens": 4376,
+    "cost_usd": 0.01919,
+    "latency_ms": 8639,
+    "response_chars": 2901,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 255,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": [\"50\"],\n      \"Hypercycle\": [\"375000\"],\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The worst-case delay (WCD) for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50 µs.\n     - **Switching Delay**: 1 µs.\n     - **Propagation Delay**: 1 µs.\n     - **Time Synchronization Error**: 1 µs.\n\n3. **Hypercycle**: The least common multiple (LCM) of all flow periods is calculated to be 375000 µs.\n\n4. **Confidence**: The confidence score is set to 1.0, indicating that the calculations are mathematically and procedurally provable from the given information with zero ambiguity.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC109",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:43:11.782422",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3278,
+    "tokens_out": 1120,
+    "total_tokens": 4398,
+    "cost_usd": 0.019395,
+    "latency_ms": 9580,
+    "response_chars": 2986,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority code point (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **offset_i**: Set to 0 for all flows.\n     - **n**: Number of switches in the route (hop count - 1).\n     - **Cycle Duration**: 50 µs.\n     - **Switching Delay**: 1 µs.\n     - **Propagation Delay**: 1 µs.\n     - **Time Synchronization Error**: 1 µs.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed explanation for each flow, including the path, cycle duration, hypercycle, and CQF parameters used in the calculation.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC109",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:43:19.772448",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 255.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3278,
+    "tokens_out": 807,
+    "total_tokens": 4085,
+    "cost_usd": 0.016265,
+    "latency_ms": 6985,
+    "response_chars": 1869,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 255,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC109",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:43:30.643693",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 255.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": [
+          "50µs"
+        ],
+        "Hypercycle": [
+          "937500µs"
+        ],
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3278,
+    "tokens_out": 1096,
+    "total_tokens": 4374,
+    "cost_usd": 0.019155,
+    "latency_ms": 9855,
+    "response_chars": 2905,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 255,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": [\"50µs\"],\n      \"Hypercycle\": [\"937500µs\"],\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the TSN mechanism (CQF), traffic type (TT), and priority (PCP:7).\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **Cycle Duration**: 50µs\n     - **Switching Delay**: 1µs\n     - **Propagation Delay**: 1µs\n     - **Time Synchronization Error**: 1µs\n   - **Offset**: Set to 0 for all flows as per the task.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 937500µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information for each flow, including the path, cycle duration, hypercycle, and CQF parameters, is provided to justify the WCD calculations.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC110",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:43:40.700022",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 255.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3279,
+    "tokens_out": 1103,
+    "total_tokens": 4382,
+    "cost_usd": 0.0192275,
+    "latency_ms": 9042,
+    "response_chars": 2952,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 255,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **Cycle Duration**: 50 µs\n     - **Switching Delay**: 1 µs\n     - **Propagation Delay**: 1 µs\n     - **Time Synchronization Error**: 1 µs\n     - **Offset**: 0 (as per task instruction)\n     - **n**: Number of switches in the route (hop count - 1)\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information for each flow, including the path, cycle duration, hypercycle, and CQF parameters, is provided to justify the WCD calculations.",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC110",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 2,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:43:47.120469",
+    "wcd_values": {
+      "F0": 205.0,
+      "F1": 205.0,
+      "F2": 205.0,
+      "F3": 155.0,
+      "F4": 105.0,
+      "F5": 205.0,
+      "F6": 205.0,
+      "F7": 205.0,
+      "F8": 105.0,
+      "F9": 155.0,
+      "F10": 205.0,
+      "F11": 155.0,
+      "F12": 205.0,
+      "F13": 255.0,
+      "F14": 155.0,
+      "F15": 205.0,
+      "F16": 205.0,
+      "F17": 155.0,
+      "F18": 255.0,
+      "F19": 205.0,
+      "F20": 105.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "offset": 0,
+          "n": 3,
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3279,
+    "tokens_out": 807,
+    "total_tokens": 4086,
+    "cost_usd": 0.0162675,
+    "latency_ms": 5414,
+    "response_chars": 1869,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 205,\n    \"F1\": 205,\n    \"F2\": 205,\n    \"F3\": 155,\n    \"F4\": 105,\n    \"F5\": 205,\n    \"F6\": 205,\n    \"F7\": 205,\n    \"F8\": 105,\n    \"F9\": 155,\n    \"F10\": 205,\n    \"F11\": 155,\n    \"F12\": 205,\n    \"F13\": 255,\n    \"F14\": 155,\n    \"F15\": 205,\n    \"F16\": 205,\n    \"F17\": 155,\n    \"F18\": 255,\n    \"F19\": 205,\n    \"F20\": 105\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"offset\": 0,\n        \"n\": 3,\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```",
+    "api_error": null
+  },
+  {
+    "tc_name": "TC110",
+    "model": "gpt-4o-2024-08-06",
+    "prompt_type": "CQF",
+    "prompt_variant": "formula",
+    "run": 3,
+    "temperature": 0.0,
+    "timestamp": "2026-10-29T22:43:56.585665",
+    "wcd_values": {
+      "F0": 204.0,
+      "F1": 204.0,
+      "F2": 204.0,
+      "F3": 153.0,
+      "F4": 102.0,
+      "F5": 204.0,
+      "F6": 204.0,
+      "F7": 204.0,
+      "F8": 102.0,
+      "F9": 153.0,
+      "F10": 204.0,
+      "F11": 153.0,
+      "F12": 204.0,
+      "F13": 306.0,
+      "F14": 153.0,
+      "F15": 204.0,
+      "F16": 204.0,
+      "F17": 153.0,
+      "F18": 255.0,
+      "F19": 204.0,
+      "F20": 102.0
+    },
+    "confidence": 1.0,
+    "flow_profile": {
+      "F0": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F7": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F8": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F9": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F10": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F11": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F12": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F13": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F14": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F15": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F16": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F17": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F18": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F19": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F20": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F0": {
+        "path": [
+          "ES_SM2CA",
+          "SW52",
+          "SW42",
+          "SW32",
+          "ES_FCM2"
+        ],
+        "cycle_duration": 50,
+        "Hypercycle": 375000,
+        "cqf_parameters": {
+          "cycle_duration": 50,
+          "switching_delay": 1,
+          "propagation_delay": 1,
+          "time_sync_error": 1
+        }
+      },
+      "all_parameters_used": {
+        "Bandwidth": "100 Mbps",
+        "Propagation delay": "1µs",
+        "Switching delay": "1µs",
+        "Time synchronization error": "1µs",
+        "Cycle duration": "50µs"
+      },
+      "WCD_calculation": {
+        "equation": "WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error"
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 3279,
+    "tokens_out": 1105,
+    "total_tokens": 4384,
+    "cost_usd": 0.0192475,
+    "latency_ms": 8453,
+    "response_chars": 3011,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F0\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F7\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F8\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F9\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F10\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F11\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F12\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F13\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F14\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F15\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F16\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F17\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F18\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F19\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F20\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n\n  \"WCD_us\": {\n    \"F0\": 204,\n    \"F1\": 204,\n    \"F2\": 204,\n    \"F3\": 153,\n    \"F4\": 102,\n    \"F5\": 204,\n    \"F6\": 204,\n    \"F7\": 204,\n    \"F8\": 102,\n    \"F9\": 153,\n    \"F10\": 204,\n    \"F11\": 153,\n    \"F12\": 204,\n    \"F13\": 306,\n    \"F14\": 153,\n    \"F15\": 204,\n    \"F16\": 204,\n    \"F17\": 153,\n    \"F18\": 255,\n    \"F19\": 204,\n    \"F20\": 102\n  },\n\n  \"reason\": {\n    \"F0\": {\n      \"path\": [\"ES_SM2CA\", \"SW52\", \"SW42\", \"SW32\", \"ES_FCM2\"],\n      \"cycle_duration\": 50,\n      \"Hypercycle\": 375000,\n      \"cqf_parameters\": {\n        \"cycle_duration\": 50,\n        \"switching_delay\": 1,\n        \"propagation_delay\": 1,\n        \"time_sync_error\": 1\n      }\n    },\n    \"all_parameters_used\": {\n      \"Bandwidth\": \"100 Mbps\",\n      \"Propagation delay\": \"1µs\",\n      \"Switching delay\": \"1µs\",\n      \"Time synchronization error\": \"1µs\",\n      \"Cycle duration\": \"50µs\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD_f_i = offset_i + (n + 1) * cycle_duration + n * switching_delay + propagation_delay + time_sync_error\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 1.0\n}\n```\n\n### Explanation:\n\n1. **Flow Profile**: Each flow is characterized by the CQF mechanism, TT traffic type, and PCP priority level 7.\n\n2. **WCD Calculation**:\n   - **Equation**: The WCD for each flow is calculated using the given formula:\n     \\[\n     \\text{WCD}_f_i = \\text{offset}_i + (n + 1) \\times \\text{cycle duration} + n \\times \\text{switching delay} + \\text{propagation delay} + \\text{time synchronization error}\n     \\]\n   - **Parameters**:\n     - **Cycle Duration**: 50 µs\n     - **Switching Delay**: 1 µs\n     - **Propagation Delay**: 1 µs\n     - **Time Synchronization Error**: 1 µs\n   - **Offset**: Set to 0 for all flows as per the task.\n\n3. **Hypercycle**: Calculated as the least common multiple (LCM) of all flow periods, which is 375000 µs.\n\n4. **Confidence**: The confidence score is 1.0, indicating that the calculations are based on the provided data and equations without ambiguity.\n\n5. **Reason**: Detailed information about each flow's path, cycle duration, hypercycle, and CQF parameters used in the calculations.\n\nThis JSON output provides a comprehensive overview of the WCD calculations for each flow, adhering to the specified schema and requirements.",
+    "api_error": null
+  }
+]

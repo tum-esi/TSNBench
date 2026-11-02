@@ -1,0 +1,316 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "claude-sonnet-4-5-20250929",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-04T10:00:10.687050",
+    "wcd_values": {
+      "F1": 47.424,
+      "F2": 36.192,
+      "F3": 58.88,
+      "F4": 37.048,
+      "F5": 58.416,
+      "F6": 60.176
+    },
+    "confidence": 0.75,
+    "flow_profile": {
+      "F1": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F2": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F3": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F4": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F5": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ],
+      "F6": [
+        "CBS",
+        "AVB_A",
+        "PCP:6"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node7_2",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_1"
+        ],
+        "hops": 4,
+        "egress_ports": [
+          "sw_7.P1",
+          "sw_6.P1",
+          "sw_11.P3"
+        ],
+        "frame_size_bytes": 172,
+        "frame_size_bits": 1376,
+        "period_us": 1000,
+        "arrival_curve": "alpha(t) = 1376 + 1376000 * t bits",
+        "cbs_parameters": {
+          "IdleSlope_percent": 75,
+          "IdleSlope_bps": 75000000,
+          "SendSlope_bps": -25000000,
+          "bandwidth_bps": 100000000,
+          "port_rate_bps": 100000000
+        },
+        "per_hop_delay_us": {
+          "sw_7.P1": 11.808,
+          "sw_6.P1": 11.808,
+          "sw_11.P3": 11.808
+        },
+        "total_switching_delay_us": 35.424,
+        "propagation_delay_us": 3,
+        "sync_error_us": 3,
+        "transmission_delay_us": 5.52,
+        "WCD_calculation": "WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 35.424 + 3 + 3 + 5.52 + 0.48 = 47.424 us"
+      },
+      "F2": {
+        "path": [
+          "node2_1",
+          "sw_2",
+          "sw_1",
+          "node1_1"
+        ],
+        "hops": 3,
+        "egress_ports": [
+          "sw_2.P1",
+          "sw_1.P3"
+        ],
+        "frame_size_bytes": 338,
+        "frame_size_bits": 2704,
+        "period_us": 2500,
+        "arrival_curve": "alpha(t) = 2704 + 1081600 * t bits",
+        "cbs_parameters": {
+          "IdleSlope_percent": 75,
+          "IdleSlope_bps": 75000000,
+          "SendSlope_bps": -25000000,
+          "bandwidth_bps": 100000000,
+          "port_rate_bps": 100000000
+        },
+        "per_hop_delay_us": {
+          "sw_2.P1": 10.816,
+          "sw_1.P3": 10.816
+        },
+        "total_switching_delay_us": 21.632,
+        "propagation_delay_us": 2,
+        "sync_error_us": 2,
+        "transmission_delay_us": 10.56,
+        "WCD_calculation": "WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 21.632 + 2 + 2 + 10.56 = 36.192 us"
+      },
+      "F3": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "sw_1",
+          "node1_2"
+        ],
+        "hops": 4,
+        "egress_ports": [
+          "sw_5.P0",
+          "sw_0.P0",
+          "sw_1.P4"
+        ],
+        "frame_size_bytes": 613,
+        "frame_size_bits": 4904,
+        "period_us": 1000,
+        "arrival_curve": "alpha(t) = 4904 + 4904000 * t bits",
+        "cbs_parameters": {
+          "IdleSlope_percent": 75,
+          "IdleSlope_bps": 75000000,
+          "SendSlope_bps": -25000000,
+          "bandwidth_bps": 100000000,
+          "port_rate_bps": 100000000
+        },
+        "per_hop_delay_us": {
+          "sw_5.P0": 13.472,
+          "sw_0.P0": 13.472,
+          "sw_1.P4": 13.472
+        },
+        "total_switching_delay_us": 40.416,
+        "propagation_delay_us": 3,
+        "sync_error_us": 3,
+        "transmission_delay_us": 12.464,
+        "WCD_calculation": "WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 40.416 + 3 + 3 + 12.464 = 58.88 us"
+      },
+      "F4": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "node0_0"
+        ],
+        "hops": 3,
+        "egress_ports": [
+          "sw_5.P0",
+          "sw_0.P3"
+        ],
+        "frame_size_bytes": 519,
+        "frame_size_bits": 4152,
+        "period_us": 5000,
+        "arrival_curve": "alpha(t) = 4152 + 830400 * t bits",
+        "cbs_parameters": {
+          "IdleSlope_percent": 75,
+          "IdleSlope_bps": 75000000,
+          "SendSlope_bps": -25000000,
+          "bandwidth_bps": 100000000,
+          "port_rate_bps": 100000000
+        },
+        "per_hop_delay_us": {
+          "sw_5.P0": 13.472,
+          "sw_0.P3": 11.024
+        },
+        "total_switching_delay_us": 24.496,
+        "propagation_delay_us": 2,
+        "sync_error_us": 2,
+        "transmission_delay_us": 8.552,
+        "WCD_calculation": "WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 24.496 + 2 + 2 + 8.552 = 37.048 us"
+      },
+      "F5": {
+        "path": [
+          "node9_2",
+          "sw_9",
+          "sw_10",
+          "sw_11",
+          "node11_1"
+        ],
+        "hops": 4,
+        "egress_ports": [
+          "sw_9.P2",
+          "sw_10.P1",
+          "sw_11.P3"
+        ],
+        "frame_size_bytes": 792,
+        "frame_size_bits": 6336,
+        "period_us": 2500,
+        "arrival_curve": "alpha(t) = 6336 + 2534400 * t bits",
+        "cbs_parameters": {
+          "IdleSlope_percent": 75,
+          "IdleSlope_bps": 75000000,
+          "SendSlope_bps": -25000000,
+          "bandwidth_bps": 100000000,
+          "port_rate_bps": 100000000
+        },
+        "per_hop_delay_us": {
+          "sw_9.P2": 12.288,
+          "sw_10.P1": 12.288,
+          "sw_11.P3": 12.288
+        },
+        "total_switching_delay_us": 36.864,
+        "propagation_delay_us": 3,
+        "sync_error_us": 3,
+        "transmission_delay_us": 15.552,
+        "WCD_calculation": "WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 36.864 + 3 + 3 + 15.552 = 58.416 us"
+      },
+      "F6": {
+        "path": [
+          "node8_1",
+          "sw_8",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_0"
+        ],
+        "hops": 5,
+        "egress_ports": [
+          "sw_8.P1",
+          "sw_7.P1",
+          "sw_6.P1",
+          "sw_11.P2"
+        ],
+        "frame_size_bytes": 192,
+        "frame_size_bits": 1536,
+        "period_us": 2500,
+        "arrival_curve": "alpha(t) = 1536 + 614400 * t bits",
+        "cbs_parameters": {
+          "IdleSlope_percent": 75,
+          "IdleSlope_bps": 75000000,
+          "SendSlope_bps": -25000000,
+          "bandwidth_bps": 100000000,
+          "port_rate_bps": 100000000
+        },
+        "per_hop_delay_us": {
+          "sw_8.P1": 11.808,
+          "sw_7.P1": 11.808,
+          "sw_6.P1": 11.808,
+          "sw_11.P2": 11.808
+        },
+        "total_switching_delay_us": 47.232,
+        "propagation_delay_us": 4,
+        "sync_error_us": 4,
+        "transmission_delay_us": 4.944,
+        "WCD_calculation": "WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 47.232 + 4 + 4 + 4.944 = 60.176 us"
+      },
+      "all_parameters_used": {
+        "bandwidth_bps": 100000000,
+        "bandwidth_Mbps": 100,
+        "propagation_delay_per_hop_us": 1,
+        "switching_delay_us": 1,
+        "sync_error_per_hop_us": 1,
+        "cut_through": true,
+        "IdleSlope_percent": 75,
+        "IdleSlope_bps": 75000000,
+        "SendSlope_bps": -25000000,
+        "SendSlope_calculation": "SendSlope = IdleSlope - PortRate = 75 Mbps - 100 Mbps = -25 Mbps",
+        "ethernet_overhead_bytes": 38,
+        "ethernet_overhead_breakdown": "Preamble(7) + SFD(1) + DA(6) + SA(6) + VLAN(4) + Type(2) + FCS(4) + IFG(12) = 42 bytes, using 38 for frame calculations",
+        "frame_size_calculation": "FrameSize = Payload + Overhead",
+        "transmission_time_calculation": "T_trans = FrameSize_bits / Bandwidth_bps",
+        "CBS_burst_calculation": "Burst = FrameSize_bits * (PortRate / SendSlope_magnitude)",
+        "per_hop_delay_formula": "D_hop = switching_delay + sync_error + (FrameSize_bits / IdleSlope_bps) + interference",
+        "WCD_formula": "WCD = sum(per_hop_delays_at_switches) + (hops - 1) * propagation_delay + (hops - 1) * sync_error + final_transmission_delay",
+        "network_calculus_method": "Using arrival curves alpha(t) and service curves beta(t) to compute worst-case delays through CBS shapers"
+      },
+      "WCD_calculation_methodology": {
+        "description": "Network Calculus with CBS service curves",
+        "arrival_curve": "alpha(t) = L + r*t, where L is frame size in bits, r is rate (frame_size/period)",
+        "service_curve": "beta(t) = max(0, IdleSlope * (t - T)), where T is latency term",
+        "delay_bound": "D = horizontal deviation between arrival and service curves",
+        "per_hop_components": [
+          "switching_delay: 1 us (given)",
+          "sync_error: 1 us per hop (given)",
+          "CBS_shaping_delay: frame_size_bits / IdleSlope_bps",
+          "interference: from competing flows on same egress port"
+        ],
+        "total_delay_components": [
+          "sum of per-hop delays at each switch",
+          "propagation delays: (hops-1) * 1 us",
+          "synchronization errors: (hops-1) * 1 us",
+          "final transmission: frame_size_bits / bandwidth"
+        ]
+      },
+      "missing_inputs": []
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 2399,
+    "tokens_out": 3383,
+    "total_tokens": 5782,
+    "cost_usd": 0.057942,
+    "latency_ms": 39755,
+    "response_chars": 7995,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F4\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F5\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F6\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 47.424,\n    \"F2\": 36.192,\n    \"F3\": 58.88,\n    \"F4\": 37.048,\n    \"F5\": 58.416,\n    \"F6\": 60.176\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node7_2\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_1\"],\n      \"hops\": 4,\n      \"egress_ports\": [\"sw_7.P1\", \"sw_6.P1\", \"sw_11.P3\"],\n      \"frame_size_bytes\": 172,\n      \"frame_size_bits\": 1376,\n      \"period_us\": 1000,\n      \"arrival_curve\": \"alpha(t) = 1376 + 1376000 * t bits\",\n      \"cbs_parameters\": {\n        \"IdleSlope_percent\": 75,\n        \"IdleSlope_bps\": 75000000,\n        \"SendSlope_bps\": -25000000,\n        \"bandwidth_bps\": 100000000,\n        \"port_rate_bps\": 100000000\n      },\n      \"per_hop_delay_us\": {\n        \"sw_7.P1\": 11.808,\n        \"sw_6.P1\": 11.808,\n        \"sw_11.P3\": 11.808\n      },\n      \"total_switching_delay_us\": 35.424,\n      \"propagation_delay_us\": 3,\n      \"sync_error_us\": 3,\n      \"transmission_delay_us\": 5.52,\n      \"WCD_calculation\": \"WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 35.424 + 3 + 3 + 5.52 + 0.48 = 47.424 us\"\n    },\n    \"F2\": {\n      \"path\": [\"node2_1\", \"sw_2\", \"sw_1\", \"node1_1\"],\n      \"hops\": 3,\n      \"egress_ports\": [\"sw_2.P1\", \"sw_1.P3\"],\n      \"frame_size_bytes\": 338,\n      \"frame_size_bits\": 2704,\n      \"period_us\": 2500,\n      \"arrival_curve\": \"alpha(t) = 2704 + 1081600 * t bits\",\n      \"cbs_parameters\": {\n        \"IdleSlope_percent\": 75,\n        \"IdleSlope_bps\": 75000000,\n        \"SendSlope_bps\": -25000000,\n        \"bandwidth_bps\": 100000000,\n        \"port_rate_bps\": 100000000\n      },\n      \"per_hop_delay_us\": {\n        \"sw_2.P1\": 10.816,\n        \"sw_1.P3\": 10.816\n      },\n      \"total_switching_delay_us\": 21.632,\n      \"propagation_delay_us\": 2,\n      \"sync_error_us\": 2,\n      \"transmission_delay_us\": 10.56,\n      \"WCD_calculation\": \"WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 21.632 + 2 + 2 + 10.56 = 36.192 us\"\n    },\n    \"F3\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"sw_1\", \"node1_2\"],\n      \"hops\": 4,\n      \"egress_ports\": [\"sw_5.P0\", \"sw_0.P0\", \"sw_1.P4\"],\n      \"frame_size_bytes\": 613,\n      \"frame_size_bits\": 4904,\n      \"period_us\": 1000,\n      \"arrival_curve\": \"alpha(t) = 4904 + 4904000 * t bits\",\n      \"cbs_parameters\": {\n        \"IdleSlope_percent\": 75,\n        \"IdleSlope_bps\": 75000000,\n        \"SendSlope_bps\": -25000000,\n        \"bandwidth_bps\": 100000000,\n        \"port_rate_bps\": 100000000\n      },\n      \"per_hop_delay_us\": {\n        \"sw_5.P0\": 13.472,\n        \"sw_0.P0\": 13.472,\n        \"sw_1.P4\": 13.472\n      },\n      \"total_switching_delay_us\": 40.416,\n      \"propagation_delay_us\": 3,\n      \"sync_error_us\": 3,\n      \"transmission_delay_us\": 12.464,\n      \"WCD_calculation\": \"WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 40.416 + 3 + 3 + 12.464 = 58.88 us\"\n    },\n    \"F4\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"node0_0\"],\n      \"hops\": 3,\n      \"egress_ports\": [\"sw_5.P0\", \"sw_0.P3\"],\n      \"frame_size_bytes\": 519,\n      \"frame_size_bits\": 4152,\n      \"period_us\": 5000,\n      \"arrival_curve\": \"alpha(t) = 4152 + 830400 * t bits\",\n      \"cbs_parameters\": {\n        \"IdleSlope_percent\": 75,\n        \"IdleSlope_bps\": 75000000,\n        \"SendSlope_bps\": -25000000,\n        \"bandwidth_bps\": 100000000,\n        \"port_rate_bps\": 100000000\n      },\n      \"per_hop_delay_us\": {\n        \"sw_5.P0\": 13.472,\n        \"sw_0.P3\": 11.024\n      },\n      \"total_switching_delay_us\": 24.496,\n      \"propagation_delay_us\": 2,\n      \"sync_error_us\": 2,\n      \"transmission_delay_us\": 8.552,\n      \"WCD_calculation\": \"WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 24.496 + 2 + 2 + 8.552 = 37.048 us\"\n    },\n    \"F5\": {\n      \"path\": [\"node9_2\", \"sw_9\", \"sw_10\", \"sw_11\", \"node11_1\"],\n      \"hops\": 4,\n      \"egress_ports\": [\"sw_9.P2\", \"sw_10.P1\", \"sw_11.P3\"],\n      \"frame_size_bytes\": 792,\n      \"frame_size_bits\": 6336,\n      \"period_us\": 2500,\n      \"arrival_curve\": \"alpha(t) = 6336 + 2534400 * t bits\",\n      \"cbs_parameters\": {\n        \"IdleSlope_percent\": 75,\n        \"IdleSlope_bps\": 75000000,\n        \"SendSlope_bps\": -25000000,\n        \"bandwidth_bps\": 100000000,\n        \"port_rate_bps\": 100000000\n      },\n      \"per_hop_delay_us\": {\n        \"sw_9.P2\": 12.288,\n        \"sw_10.P1\": 12.288,\n        \"sw_11.P3\": 12.288\n      },\n      \"total_switching_delay_us\": 36.864,\n      \"propagation_delay_us\": 3,\n      \"sync_error_us\": 3,\n      \"transmission_delay_us\": 15.552,\n      \"WCD_calculation\": \"WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 36.864 + 3 + 3 + 15.552 = 58.416 us\"\n    },\n    \"F6\": {\n      \"path\": [\"node8_1\", \"sw_8\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_0\"],\n      \"hops\": 5,\n      \"egress_ports\": [\"sw_8.P1\", \"sw_7.P1\", \"sw_6.P1\", \"sw_11.P2\"],\n      \"frame_size_bytes\": 192,\n      \"frame_size_bits\": 1536,\n      \"period_us\": 2500,\n      \"arrival_curve\": \"alpha(t) = 1536 + 614400 * t bits\",\n      \"cbs_parameters\": {\n        \"IdleSlope_percent\": 75,\n        \"IdleSlope_bps\": 75000000,\n        \"SendSlope_bps\": -25000000,\n        \"bandwidth_bps\": 100000000,\n        \"port_rate_bps\": 100000000\n      },\n      \"per_hop_delay_us\": {\n        \"sw_8.P1\": 11.808,\n        \"sw_7.P1\": 11.808,\n        \"sw_6.P1\": 11.808,\n        \"sw_11.P2\": 11.808\n      },\n      \"total_switching_delay_us\": 47.232,\n      \"propagation_delay_us\": 4,\n      \"sync_error_us\": 4,\n      \"transmission_delay_us\": 4.944,\n      \"WCD_calculation\": \"WCD = sum(per_hop_delays) + propagation + sync + final_transmission = 47.232 + 4 + 4 + 4.944 = 60.176 us\"\n    },\n    \"all_parameters_used\": {\n      \"bandwidth_bps\": 100000000,\n      \"bandwidth_Mbps\": 100,\n      \"propagation_delay_per_hop_us\": 1,\n      \"switching_delay_us\": 1,\n      \"sync_error_per_hop_us\": 1,\n      \"cut_through\": true,\n      \"IdleSlope_percent\": 75,\n      \"IdleSlope_bps\": 75000000,\n      \"SendSlope_bps\": -25000000,\n      \"SendSlope_calculation\": \"SendSlope = IdleSlope - PortRate = 75 Mbps - 100 Mbps = -25 Mbps\",\n      \"ethernet_overhead_bytes\": 38,\n      \"ethernet_overhead_breakdown\": \"Preamble(7) + SFD(1) + DA(6) + SA(6) + VLAN(4) + Type(2) + FCS(4) + IFG(12) = 42 bytes, using 38 for frame calculations\",\n      \"frame_size_calculation\": \"FrameSize = Payload + Overhead\",\n      \"transmission_time_calculation\": \"T_trans = FrameSize_bits / Bandwidth_bps\",\n      \"CBS_burst_calculation\": \"Burst = FrameSize_bits * (PortRate / SendSlope_magnitude)\",\n      \"per_hop_delay_formula\": \"D_hop = switching_delay + sync_error + (FrameSize_bits / IdleSlope_bps) + interference\",\n      \"WCD_formula\": \"WCD = sum(per_hop_delays_at_switches) + (hops - 1) * propagation_delay + (hops - 1) * sync_error + final_transmission_delay\",\n      \"network_calculus_method\": \"Using arrival curves alpha(t) and service curves beta(t) to compute worst-case delays through CBS shapers\"\n    },\n    \"WCD_calculation_methodology\": {\n      \"description\": \"Network Calculus with CBS service curves\",\n      \"arrival_curve\": \"alpha(t) = L + r*t, where L is frame size in bits, r is rate (frame_size/period)\",\n      \"service_curve\": \"beta(t) = max(0, IdleSlope * (t - T)), where T is latency term\",\n      \"delay_bound\": \"D = horizontal deviation between arrival and service curves\",\n      \"per_hop_components\": [\n        \"switching_delay: 1 us (given)\",\n        \"sync_error: 1 us per hop (given)\",\n        \"CBS_shaping_delay: frame_size_bits / IdleSlope_bps\",\n        \"interference: from competing flows on same egress port\"\n      ],\n      \"total_delay_components\": [\n        \"sum of per-hop delays at each switch\",\n        \"propagation delays: (hops-1) * 1 us\",\n        \"synchronization errors: (hops-1) * 1 us\",\n        \"final transmission: frame_size_bits / bandwidth\"\n      ]\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.75\n}\n```",
+    "api_error": null
+  }
+]

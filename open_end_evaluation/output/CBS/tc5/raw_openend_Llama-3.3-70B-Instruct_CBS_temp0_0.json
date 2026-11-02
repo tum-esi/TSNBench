@@ -1,0 +1,32 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "Llama-3.3-70B-Instruct",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-04T10:08:47.551241",
+    "wcd_values": {
+      "F1": 134.0,
+      "F2": 300.0,
+      "F3": 575.0,
+      "F4": 481.0,
+      "F5": 754.0,
+      "F6": 154.0
+    },
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "extracted_from_plain_text",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 2131,
+    "tokens_out": 1413,
+    "total_tokens": 3544,
+    "cost_usd": 0.0015566,
+    "latency_ms": 3524,
+    "response_chars": 4185,
+    "raw_response": "To calculate the worst-case delay (WCD) for each TSN flow, we need to follow the steps outlined in the task. Here's the solution in JSON format:\n\n```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F4\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F5\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F6\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n\n  \"WCD_us\": {\n    \"F1\": 134 + 4 * (1 + 1 + 1) + 1000 / (100 * 10^6 * 0.75),\n    \"F2\": 300 + 3 * (1 + 1 + 1) + 2500 / (100 * 10^6 * 0.75),\n    \"F3\": 575 + 4 * (1 + 1 + 1) + 1000 / (100 * 10^6 * 0.75),\n    \"F4\": 481 + 3 * (1 + 1 + 1) + 5000 / (100 * 10^6 * 0.75),\n    \"F5\": 754 + 4 * (1 + 1 + 1) + 2500 / (100 * 10^6 * 0.75),\n    \"F6\": 154 + 5 * (1 + 1 + 1) + 2500 / (100 * 10^6 * 0.75)\n  },\n\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node7_2\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_1\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"100 * 10^6 * 0.75\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"periodicity\": \"1000 microseconds\",\n        \"payload\": \"134 bytes\",\n        \"deadline\": \"683 microseconds\"\n      }\n    },\n    \"F2\": {\n      \"path\": [\"node2_1\", \"sw_2\", \"sw_1\", \"node1_1\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"100 * 10^6 * 0.75\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"periodicity\": \"2500 microseconds\",\n        \"payload\": \"300 bytes\",\n        \"deadline\": \"1049 microseconds\"\n      }\n    },\n    \"F3\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"sw_1\", \"node1_2\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"100 * 10^6 * 0.75\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"periodicity\": \"1000 microseconds\",\n        \"payload\": \"575 bytes\",\n        \"deadline\": \"1060 microseconds\"\n      }\n    },\n    \"F4\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"node0_0\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"100 * 10^6 * 0.75\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"periodicity\": \"5000 microseconds\",\n        \"payload\": \"481 bytes\",\n        \"deadline\": \"1496 microseconds\"\n      }\n    },\n    \"F5\": {\n      \"path\": [\"node9_2\", \"sw_9\", \"sw_10\", \"sw_11\", \"node11_1\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"100 * 10^6 * 0.75\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"periodicity\": \"2500 microseconds\",\n        \"payload\": \"754 bytes\",\n        \"deadline\": \"1452 microseconds\"\n      }\n    },\n    \"F6\": {\n      \"path\": [\"node8_1\", \"sw_8\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_0\"],\n      \"IdleSlope\": [\"75%\"],\n      \"SendSlope\": [\"100 * 10^6 * 0.75\"],\n      \"cbs_parameters\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"periodicity\": \"2500 microseconds\",\n        \"payload\": \"154 bytes\",\n        \"deadline\": \"922 microseconds\"\n      }\n    },\n    \"all_parameters_used\": {\n      \"bandwidth\": \"100 Mbps\",\n      \"propagation_delay\": \"1 microsecond\",\n      \"switching_delay\": \"1 microsecond\",\n      \"time_synchronization_error\": \"1 microsecond\",\n      \"idle_slope\": \"75%\"\n    },\n    \"WCD_calculation\": {\n      \"equation\": \"WCD = (payload / (bandwidth * idle_slope)) + (hop_count * (propagation_delay + switching_delay + time_synchronization_error))\",\n      \"note\": \"The WCD calculation assumes a constant bit rate (CBR) traffic model and uses the given parameters to estimate the worst-case delay for each flow.\"\n    },\n    \"missing_inputs\": []\n  },\n  \"confidence\": 0.8\n}\n```\n\nThe parameters used for CBS are:\n\n* Bandwidth: 100 Mbps\n* Periodicity: varies for each flow\n* Payload: varies for each flow\n* Deadline: varies for each flow\n* IdleSlope: 75%\n* SendSlope: 100 * 10^6 * 0.75 (calculated from IdleSlope)\n\nThe equation used to calculate the WCD is:\n\nWCD = (payload / (bandwidth * idle_slope)) + (hop_count * (propagation_delay + switching_delay + time_synchronization_error))\n\nNote that this calculation assumes a constant bit rate (CBR) traffic model and uses the given parameters to estimate the worst-case delay for each flow. The confidence score is 0.8, indicating that the calculation is based on the provided information and assumptions, but may not reflect the actual worst-case delay in a real-world scenario.",
+    "api_error": null
+  }
+]

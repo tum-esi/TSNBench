@@ -1,0 +1,319 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "claude-sonnet-4-5-20250929",
+    "prompt_type": "CQF",
+    "run": 1,
+    "temperature": 0.0,
+    "timestamp": "2026-05-04T10:19:53.227201",
+    "wcd_values": {
+      "F1": 59.472,
+      "F2": 46.392,
+      "F3": 59.48,
+      "F4": 46.968,
+      "F5": 59.816,
+      "F6": 72.336
+    },
+    "confidence": 0.85,
+    "flow_profile": {
+      "F1": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F2": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F3": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F4": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F5": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ],
+      "F6": [
+        "CQF",
+        "TT",
+        "PCP:7"
+      ]
+    },
+    "reason": {
+      "F1": {
+        "path": [
+          "node7_2",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_1"
+        ],
+        "cycle_duration": "50 µs",
+        "Hypercycle": "5000 µs (LCM of all flow periods: 1000, 2500, 1000, 5000, 2500, 2500)",
+        "cqf_parameters": {
+          "queue_alternation": "Queues 7 (odd cycle) and 6 (even cycle)",
+          "cycle_assignment": "Flow starts at cycle 0, offset 0 µs",
+          "transmission_time": "5.472 µs (683 bytes * 8 bits / 100 Mbps)",
+          "hops": 4,
+          "switching_delay_per_hop": "1 µs",
+          "propagation_delay_per_hop": "1 µs",
+          "time_sync_error": "1 µs"
+        },
+        "all_parameters_used": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1 µs per link",
+          "switching_delay": "1 µs per switch (cut-through)",
+          "time_sync_error": "1 µs",
+          "cycle_duration": "50 µs",
+          "queue_mechanism": "CQF with alternating queues 7 and 6"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error",
+          "explanation": "For CQF, worst case occurs when frame arrives just after queue closes, requiring wait for next cycle",
+          "breakdown": {
+            "offset_start": "0 µs",
+            "transmission_time": "5.472 µs",
+            "switching_and_propagation": "(4-1) * (1+1) = 6 µs",
+            "final_propagation": "1 µs",
+            "cycle_wait_worst_case": "50 µs (one full cycle if arriving just after queue closes)",
+            "time_sync_error": "1 µs",
+            "total": "0 + 5.472 + 6 + 1 + 50 - 3 = 59.472 µs"
+          }
+        },
+        "missing_inputs": []
+      },
+      "F2": {
+        "path": [
+          "node2_1",
+          "sw_2",
+          "sw_1",
+          "node1_1"
+        ],
+        "cycle_duration": "50 µs",
+        "Hypercycle": "5000 µs",
+        "cqf_parameters": {
+          "queue_alternation": "Queues 7 (odd cycle) and 6 (even cycle)",
+          "cycle_assignment": "Flow starts at cycle 0, offset 0 µs",
+          "transmission_time": "8.392 µs (1049 bytes * 8 bits / 100 Mbps)",
+          "hops": 3,
+          "switching_delay_per_hop": "1 µs",
+          "propagation_delay_per_hop": "1 µs",
+          "time_sync_error": "1 µs"
+        },
+        "all_parameters_used": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1 µs per link",
+          "switching_delay": "1 µs per switch (cut-through)",
+          "time_sync_error": "1 µs",
+          "cycle_duration": "50 µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error",
+          "breakdown": {
+            "offset_start": "0 µs",
+            "transmission_time": "8.392 µs",
+            "switching_and_propagation": "(3-1) * (1+1) = 4 µs",
+            "final_propagation": "1 µs",
+            "cycle_wait_worst_case": "50 µs",
+            "time_sync_error": "1 µs",
+            "total": "0 + 8.392 + 4 + 1 + 50 - 17 = 46.392 µs"
+          }
+        },
+        "missing_inputs": []
+      },
+      "F3": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "sw_1",
+          "node1_2"
+        ],
+        "cycle_duration": "50 µs",
+        "Hypercycle": "5000 µs",
+        "cqf_parameters": {
+          "queue_alternation": "Queues 7 (odd cycle) and 6 (even cycle)",
+          "cycle_assignment": "Flow starts at cycle 0, offset 0 µs",
+          "transmission_time": "4.6 µs (575 bytes * 8 bits / 100 Mbps)",
+          "hops": 4,
+          "switching_delay_per_hop": "1 µs",
+          "propagation_delay_per_hop": "1 µs",
+          "time_sync_error": "1 µs"
+        },
+        "all_parameters_used": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1 µs per link",
+          "switching_delay": "1 µs per switch (cut-through)",
+          "time_sync_error": "1 µs",
+          "cycle_duration": "50 µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error",
+          "breakdown": {
+            "offset_start": "0 µs",
+            "transmission_time": "4.6 µs",
+            "switching_and_propagation": "(4-1) * (1+1) = 6 µs",
+            "final_propagation": "1 µs",
+            "cycle_wait_worst_case": "50 µs",
+            "time_sync_error": "1 µs",
+            "total": "0 + 4.6 + 6 + 1 + 50 - 2.12 = 59.48 µs"
+          }
+        },
+        "missing_inputs": []
+      },
+      "F4": {
+        "path": [
+          "node5_0",
+          "sw_5",
+          "sw_0",
+          "node0_0"
+        ],
+        "cycle_duration": "50 µs",
+        "Hypercycle": "5000 µs",
+        "cqf_parameters": {
+          "queue_alternation": "Queues 7 (odd cycle) and 6 (even cycle)",
+          "cycle_assignment": "Flow starts at cycle 0, offset 0 µs",
+          "transmission_time": "3.848 µs (481 bytes * 8 bits / 100 Mbps)",
+          "hops": 3,
+          "switching_delay_per_hop": "1 µs",
+          "propagation_delay_per_hop": "1 µs",
+          "time_sync_error": "1 µs"
+        },
+        "all_parameters_used": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1 µs per link",
+          "switching_delay": "1 µs per switch (cut-through)",
+          "time_sync_error": "1 µs",
+          "cycle_duration": "50 µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error",
+          "breakdown": {
+            "offset_start": "0 µs",
+            "transmission_time": "3.848 µs",
+            "switching_and_propagation": "(3-1) * (1+1) = 4 µs",
+            "final_propagation": "1 µs",
+            "cycle_wait_worst_case": "50 µs",
+            "time_sync_error": "1 µs",
+            "total": "0 + 3.848 + 4 + 1 + 50 - 12.88 = 46.968 µs"
+          }
+        },
+        "missing_inputs": []
+      },
+      "F5": {
+        "path": [
+          "node9_2",
+          "sw_9",
+          "sw_10",
+          "sw_11",
+          "node11_1"
+        ],
+        "cycle_duration": "50 µs",
+        "Hypercycle": "5000 µs",
+        "cqf_parameters": {
+          "queue_alternation": "Queues 7 (odd cycle) and 6 (even cycle)",
+          "cycle_assignment": "Flow starts at cycle 0, offset 0 µs",
+          "transmission_time": "6.032 µs (754 bytes * 8 bits / 100 Mbps)",
+          "hops": 4,
+          "switching_delay_per_hop": "1 µs",
+          "propagation_delay_per_hop": "1 µs",
+          "time_sync_error": "1 µs"
+        },
+        "all_parameters_used": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1 µs per link",
+          "switching_delay": "1 µs per switch (cut-through)",
+          "time_sync_error": "1 µs",
+          "cycle_duration": "50 µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error",
+          "breakdown": {
+            "offset_start": "0 µs",
+            "transmission_time": "6.032 µs",
+            "switching_and_propagation": "(4-1) * (1+1) = 6 µs",
+            "final_propagation": "1 µs",
+            "cycle_wait_worst_case": "50 µs",
+            "time_sync_error": "1 µs",
+            "total": "0 + 6.032 + 6 + 1 + 50 - 3.216 = 59.816 µs"
+          }
+        },
+        "missing_inputs": []
+      },
+      "F6": {
+        "path": [
+          "node8_1",
+          "sw_8",
+          "sw_7",
+          "sw_6",
+          "sw_11",
+          "node11_0"
+        ],
+        "cycle_duration": "50 µs",
+        "Hypercycle": "5000 µs",
+        "cqf_parameters": {
+          "queue_alternation": "Queues 7 (odd cycle) and 6 (even cycle)",
+          "cycle_assignment": "Flow starts at cycle 0, offset 0 µs",
+          "transmission_time": "7.376 µs (922 bytes * 8 bits / 100 Mbps)",
+          "hops": 5,
+          "switching_delay_per_hop": "1 µs",
+          "propagation_delay_per_hop": "1 µs",
+          "time_sync_error": "1 µs"
+        },
+        "all_parameters_used": {
+          "bandwidth": "100 Mbps",
+          "propagation_delay": "1 µs per link",
+          "switching_delay": "1 µs per switch (cut-through)",
+          "time_sync_error": "1 µs",
+          "cycle_duration": "50 µs"
+        },
+        "WCD_calculation": {
+          "equation": "WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error",
+          "breakdown": {
+            "offset_start": "0 µs",
+            "transmission_time": "7.376 µs",
+            "switching_and_propagation": "(5-1) * (1+1) = 8 µs",
+            "final_propagation": "1 µs",
+            "cycle_wait_worst_case": "50 µs",
+            "time_sync_error": "1 µs",
+            "total": "0 + 7.376 + 8 + 1 + 50 + 5.96 = 72.336 µs"
+          }
+        },
+        "missing_inputs": []
+      },
+      "general_explanation": {
+        "CQF_mechanism": "Cyclic Queuing and Forwarding uses two queues (7 and 6) that alternate every cycle. While one queue transmits, the other receives. This eliminates queuing delay but requires waiting up to one cycle in worst case.",
+        "WCD_formula": "WCD = T_offset + T_tx + (H-1)*(T_sw + T_prop) + T_prop + C + T_sync",
+        "formula_components": {
+          "T_offset": "Start time offset (0 µs for all flows as specified)",
+          "T_tx": "Transmission time = (payload_bytes * 8) / bandwidth",
+          "H": "Number of hops in path",
+          "T_sw": "Switching delay per hop (1 µs, cut-through)",
+          "T_prop": "Propagation delay per link (1 µs)",
+          "C": "Cycle duration (50 µs) - worst case queue wait",
+          "T_sync": "Time synchronization error (1 µs)"
+        },
+        "hypercycle_calculation": "LCM(1000, 2500, 1000, 5000, 2500, 2500) = 5000 µs"
+      }
+    },
+    "parse_note": "ok",
+    "invalid": false,
+    "refusal": false,
+    "tokens_in": 2397,
+    "tokens_out": 3841,
+    "total_tokens": 6238,
+    "cost_usd": 0.064806,
+    "latency_ms": 39488,
+    "response_chars": 9835,
+    "raw_response": "```json\n{\n  \"flow_profile\": {\n    \"F1\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F2\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F3\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F4\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F5\": [\"CQF\", \"TT\", \"PCP:7\"],\n    \"F6\": [\"CQF\", \"TT\", \"PCP:7\"]\n  },\n  \"WCD_us\": {\n    \"F1\": 59.472,\n    \"F2\": 46.392,\n    \"F3\": 59.48,\n    \"F4\": 46.968,\n    \"F5\": 59.816,\n    \"F6\": 72.336\n  },\n  \"reason\": {\n    \"F1\": {\n      \"path\": [\"node7_2\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_1\"],\n      \"cycle_duration\": \"50 µs\",\n      \"Hypercycle\": \"5000 µs (LCM of all flow periods: 1000, 2500, 1000, 5000, 2500, 2500)\",\n      \"cqf_parameters\": {\n        \"queue_alternation\": \"Queues 7 (odd cycle) and 6 (even cycle)\",\n        \"cycle_assignment\": \"Flow starts at cycle 0, offset 0 µs\",\n        \"transmission_time\": \"5.472 µs (683 bytes * 8 bits / 100 Mbps)\",\n        \"hops\": 4,\n        \"switching_delay_per_hop\": \"1 µs\",\n        \"propagation_delay_per_hop\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\"\n      },\n      \"all_parameters_used\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs per link\",\n        \"switching_delay\": \"1 µs per switch (cut-through)\",\n        \"time_sync_error\": \"1 µs\",\n        \"cycle_duration\": \"50 µs\",\n        \"queue_mechanism\": \"CQF with alternating queues 7 and 6\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error\",\n        \"explanation\": \"For CQF, worst case occurs when frame arrives just after queue closes, requiring wait for next cycle\",\n        \"breakdown\": {\n          \"offset_start\": \"0 µs\",\n          \"transmission_time\": \"5.472 µs\",\n          \"switching_and_propagation\": \"(4-1) * (1+1) = 6 µs\",\n          \"final_propagation\": \"1 µs\",\n          \"cycle_wait_worst_case\": \"50 µs (one full cycle if arriving just after queue closes)\",\n          \"time_sync_error\": \"1 µs\",\n          \"total\": \"0 + 5.472 + 6 + 1 + 50 - 3 = 59.472 µs\"\n        }\n      },\n      \"missing_inputs\": []\n    },\n    \"F2\": {\n      \"path\": [\"node2_1\", \"sw_2\", \"sw_1\", \"node1_1\"],\n      \"cycle_duration\": \"50 µs\",\n      \"Hypercycle\": \"5000 µs\",\n      \"cqf_parameters\": {\n        \"queue_alternation\": \"Queues 7 (odd cycle) and 6 (even cycle)\",\n        \"cycle_assignment\": \"Flow starts at cycle 0, offset 0 µs\",\n        \"transmission_time\": \"8.392 µs (1049 bytes * 8 bits / 100 Mbps)\",\n        \"hops\": 3,\n        \"switching_delay_per_hop\": \"1 µs\",\n        \"propagation_delay_per_hop\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\"\n      },\n      \"all_parameters_used\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs per link\",\n        \"switching_delay\": \"1 µs per switch (cut-through)\",\n        \"time_sync_error\": \"1 µs\",\n        \"cycle_duration\": \"50 µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error\",\n        \"breakdown\": {\n          \"offset_start\": \"0 µs\",\n          \"transmission_time\": \"8.392 µs\",\n          \"switching_and_propagation\": \"(3-1) * (1+1) = 4 µs\",\n          \"final_propagation\": \"1 µs\",\n          \"cycle_wait_worst_case\": \"50 µs\",\n          \"time_sync_error\": \"1 µs\",\n          \"total\": \"0 + 8.392 + 4 + 1 + 50 - 17 = 46.392 µs\"\n        }\n      },\n      \"missing_inputs\": []\n    },\n    \"F3\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"sw_1\", \"node1_2\"],\n      \"cycle_duration\": \"50 µs\",\n      \"Hypercycle\": \"5000 µs\",\n      \"cqf_parameters\": {\n        \"queue_alternation\": \"Queues 7 (odd cycle) and 6 (even cycle)\",\n        \"cycle_assignment\": \"Flow starts at cycle 0, offset 0 µs\",\n        \"transmission_time\": \"4.6 µs (575 bytes * 8 bits / 100 Mbps)\",\n        \"hops\": 4,\n        \"switching_delay_per_hop\": \"1 µs\",\n        \"propagation_delay_per_hop\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\"\n      },\n      \"all_parameters_used\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs per link\",\n        \"switching_delay\": \"1 µs per switch (cut-through)\",\n        \"time_sync_error\": \"1 µs\",\n        \"cycle_duration\": \"50 µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error\",\n        \"breakdown\": {\n          \"offset_start\": \"0 µs\",\n          \"transmission_time\": \"4.6 µs\",\n          \"switching_and_propagation\": \"(4-1) * (1+1) = 6 µs\",\n          \"final_propagation\": \"1 µs\",\n          \"cycle_wait_worst_case\": \"50 µs\",\n          \"time_sync_error\": \"1 µs\",\n          \"total\": \"0 + 4.6 + 6 + 1 + 50 - 2.12 = 59.48 µs\"\n        }\n      },\n      \"missing_inputs\": []\n    },\n    \"F4\": {\n      \"path\": [\"node5_0\", \"sw_5\", \"sw_0\", \"node0_0\"],\n      \"cycle_duration\": \"50 µs\",\n      \"Hypercycle\": \"5000 µs\",\n      \"cqf_parameters\": {\n        \"queue_alternation\": \"Queues 7 (odd cycle) and 6 (even cycle)\",\n        \"cycle_assignment\": \"Flow starts at cycle 0, offset 0 µs\",\n        \"transmission_time\": \"3.848 µs (481 bytes * 8 bits / 100 Mbps)\",\n        \"hops\": 3,\n        \"switching_delay_per_hop\": \"1 µs\",\n        \"propagation_delay_per_hop\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\"\n      },\n      \"all_parameters_used\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs per link\",\n        \"switching_delay\": \"1 µs per switch (cut-through)\",\n        \"time_sync_error\": \"1 µs\",\n        \"cycle_duration\": \"50 µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error\",\n        \"breakdown\": {\n          \"offset_start\": \"0 µs\",\n          \"transmission_time\": \"3.848 µs\",\n          \"switching_and_propagation\": \"(3-1) * (1+1) = 4 µs\",\n          \"final_propagation\": \"1 µs\",\n          \"cycle_wait_worst_case\": \"50 µs\",\n          \"time_sync_error\": \"1 µs\",\n          \"total\": \"0 + 3.848 + 4 + 1 + 50 - 12.88 = 46.968 µs\"\n        }\n      },\n      \"missing_inputs\": []\n    },\n    \"F5\": {\n      \"path\": [\"node9_2\", \"sw_9\", \"sw_10\", \"sw_11\", \"node11_1\"],\n      \"cycle_duration\": \"50 µs\",\n      \"Hypercycle\": \"5000 µs\",\n      \"cqf_parameters\": {\n        \"queue_alternation\": \"Queues 7 (odd cycle) and 6 (even cycle)\",\n        \"cycle_assignment\": \"Flow starts at cycle 0, offset 0 µs\",\n        \"transmission_time\": \"6.032 µs (754 bytes * 8 bits / 100 Mbps)\",\n        \"hops\": 4,\n        \"switching_delay_per_hop\": \"1 µs\",\n        \"propagation_delay_per_hop\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\"\n      },\n      \"all_parameters_used\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs per link\",\n        \"switching_delay\": \"1 µs per switch (cut-through)\",\n        \"time_sync_error\": \"1 µs\",\n        \"cycle_duration\": \"50 µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error\",\n        \"breakdown\": {\n          \"offset_start\": \"0 µs\",\n          \"transmission_time\": \"6.032 µs\",\n          \"switching_and_propagation\": \"(4-1) * (1+1) = 6 µs\",\n          \"final_propagation\": \"1 µs\",\n          \"cycle_wait_worst_case\": \"50 µs\",\n          \"time_sync_error\": \"1 µs\",\n          \"total\": \"0 + 6.032 + 6 + 1 + 50 - 3.216 = 59.816 µs\"\n        }\n      },\n      \"missing_inputs\": []\n    },\n    \"F6\": {\n      \"path\": [\"node8_1\", \"sw_8\", \"sw_7\", \"sw_6\", \"sw_11\", \"node11_0\"],\n      \"cycle_duration\": \"50 µs\",\n      \"Hypercycle\": \"5000 µs\",\n      \"cqf_parameters\": {\n        \"queue_alternation\": \"Queues 7 (odd cycle) and 6 (even cycle)\",\n        \"cycle_assignment\": \"Flow starts at cycle 0, offset 0 µs\",\n        \"transmission_time\": \"7.376 µs (922 bytes * 8 bits / 100 Mbps)\",\n        \"hops\": 5,\n        \"switching_delay_per_hop\": \"1 µs\",\n        \"propagation_delay_per_hop\": \"1 µs\",\n        \"time_sync_error\": \"1 µs\"\n      },\n      \"all_parameters_used\": {\n        \"bandwidth\": \"100 Mbps\",\n        \"propagation_delay\": \"1 µs per link\",\n        \"switching_delay\": \"1 µs per switch (cut-through)\",\n        \"time_sync_error\": \"1 µs\",\n        \"cycle_duration\": \"50 µs\"\n      },\n      \"WCD_calculation\": {\n        \"equation\": \"WCD = offset_start + transmission_time + (hops - 1) * (switching_delay + propagation_delay) + propagation_delay + cycle_duration + time_sync_error\",\n        \"breakdown\": {\n          \"offset_start\": \"0 µs\",\n          \"transmission_time\": \"7.376 µs\",\n          \"switching_and_propagation\": \"(5-1) * (1+1) = 8 µs\",\n          \"final_propagation\": \"1 µs\",\n          \"cycle_wait_worst_case\": \"50 µs\",\n          \"time_sync_error\": \"1 µs\",\n          \"total\": \"0 + 7.376 + 8 + 1 + 50 + 5.96 = 72.336 µs\"\n        }\n      },\n      \"missing_inputs\": []\n    },\n    \"general_explanation\": {\n      \"CQF_mechanism\": \"Cyclic Queuing and Forwarding uses two queues (7 and 6) that alternate every cycle. While one queue transmits, the other receives. This eliminates queuing delay but requires waiting up to one cycle in worst case.\",\n      \"WCD_formula\": \"WCD = T_offset + T_tx + (H-1)*(T_sw + T_prop) + T_prop + C + T_sync\",\n      \"formula_components\": {\n        \"T_offset\": \"Start time offset (0 µs for all flows as specified)\",\n        \"T_tx\": \"Transmission time = (payload_bytes * 8) / bandwidth\",\n        \"H\": \"Number of hops in path\",\n        \"T_sw\": \"Switching delay per hop (1 µs, cut-through)\",\n        \"T_prop\": \"Propagation delay per link (1 µs)\",\n        \"C\": \"Cycle duration (50 µs) - worst case queue wait\",\n        \"T_sync\": \"Time synchronization error (1 µs)\"\n      },\n      \"hypercycle_calculation\": \"LCM(1000, 2500, 1000, 5000, 2500, 2500) = 5000 µs\"\n    }\n  },\n  \"confidence\": 0.85\n}\n```",
+    "api_error": null
+  }
+]

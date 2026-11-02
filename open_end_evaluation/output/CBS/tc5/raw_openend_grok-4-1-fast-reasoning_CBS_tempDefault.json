@@ -1,0 +1,25 @@
+[
+  {
+    "tc_name": "TC5",
+    "model": "grok-4-1-fast-reasoning",
+    "prompt_type": "CBS",
+    "run": 1,
+    "temperature": null,
+    "timestamp": "2026-05-04T10:04:34.770106",
+    "wcd_values": null,
+    "confidence": null,
+    "flow_profile": null,
+    "reason": null,
+    "parse_note": "parse_failed_no_wcd_extractable",
+    "invalid": true,
+    "refusal": false,
+    "tokens_in": 2238,
+    "tokens_out": 126,
+    "total_tokens": 2364,
+    "cost_usd": 0.0005106,
+    "latency_ms": 200190,
+    "response_chars": 252,
+    "raw_response": "{\n  \"flow_profile\": {\n    \"F0\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F1\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F2\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F3\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F4\": [\"CBS\", \"AVB_A\", \"PCP:6\"],\n    \"F5\": [\"CBS\", \"AVB_A\", \"PCP:6\"]\n  },\n  \"W",
+    "api_error": null
+  }
+]
