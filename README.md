@@ -15,7 +15,9 @@ The dataset is also available on Kaggle: [https://doi.org/10.34740/kaggle/ds/130
 TSNBench/
 ├── dataset/
 │   ├── mcqa/                            MCQA questions and answer key
-│   └── open_ended/                      TC1–TC100 and orion/TC101–TC110
+│   ├── open_ended/                      TC1–TC100 and orion/TC101–TC110
+│   └── croissant_rai_TSNBench_Time-Sensitive_Networking_LLM_Benchmark.json
+│                                        Croissant metadata with RAI fields
 ├── mcqa_evaluation/
 │   ├── config.py                        models, API clients and prices
 │   ├── run_mcqa.py                      runs the MCQA questions on the models
@@ -38,8 +40,7 @@ TSNBench/
 
 ### MCQA
 
-`dataset/mcqa/mcqa_tsn_dataset.json` holds the 939 questions (`question_id`, `question`, options `A`–`D`, `level`). `mcqa_tsn_dataset_answer_key.json` maps each `question_id` to the correct option and its category:
-
+`dataset/mcqa/mcqa_tsn_dataset.json` holds the 939 questions (`question_id`, `question`, options `A`–`D`, `level`). `mcqa_tsn_dataset_answer_key.json` maps each `question_id` to the correct option and its category.
 
 ### Open-ended test cases
 
@@ -56,9 +57,13 @@ Each test case has three CSV files:
 | TC71–TC100 | medium mesh |
 | TC101–TC110 | NASA Orion CEV |
 
+### Croissant metadata
+
+`dataset/croissant_rai_TSNBench_Time-Sensitive_Networking_LLM_Benchmark.json` describes the Kaggle release of the dataset in the [Croissant](https://mlcommons.org/croissant/) format (version 1.0), including the Responsible AI (RAI) fields: limitations, biases, personal and sensitive information, use cases, social impact and provenance.
+
 ## Setup
 
-Python 3.9 to 3.12. The pinned versions in `requirements.txt` were tested with Python 3.9, numpy 2.0.2 and scipy 1.13.1 have no wheels for Python 3.13.
+Python 3.9 to 3.12. The pinned versions in `requirements.txt` were tested with Python 3.9; numpy 2.0.2 and scipy 1.13.1 have no wheels for Python 3.13.
 
 ```bash
 git clone https://github.com/tum-esi/TSNBench.git
