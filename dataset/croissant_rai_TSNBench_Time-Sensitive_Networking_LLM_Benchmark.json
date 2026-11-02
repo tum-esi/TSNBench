@@ -1,0 +1,219 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataBiases": "cr:dataBiases",
+    "dataCollection": "cr:dataCollection",
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isEnumeration": "cr:isEnumeration",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "personalSensitiveInformation": "cr:personalSensitiveInformation",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "alternateName": "Benchmark for LLM proficiency in Time-Sensitive Networking (NeurIPS 2026)",
+  "citeAs": "10.34740/kaggle/ds/13019279",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "license": "{\"@type\": \"sc:CreativeWork\", \"name\": \"Attribution 4.0 International (CC BY 4.0)\", \"url\": \"https://creativecommons.org/licenses/by/4.0/\"}",
+  "distribution": [
+    {
+      "contentUrl": "https://www.kaggle.com/api/v1/datasets/download/anonymousdataset123/tsnbench-time-sensitive-networking-llm-benchmark",
+      "contentSize": "37.335 MB",
+      "encodingFormat": "application/zip",
+      "@id": "archive.zip",
+      "@type": "cr:FileObject",
+      "name": "archive.zip",
+      "description": "Archive containing all the contents of the TSNBench: Time-Sensitive Networking LLM Benchmark dataset"
+    },
+    {
+      "includes": "*.json",
+      "containedIn": {
+        "@id": "archive.zip"
+      },
+      "encodingFormat": "application/json",
+      "@id": "application-json_fileset",
+      "@type": "cr:FileSet",
+      "name": "application/json files",
+      "description": "application/json files contained in archive.zip"
+    },
+    {
+      "includes": "*.txt",
+      "containedIn": {
+        "@id": "archive.zip"
+      },
+      "encodingFormat": "text/plain",
+      "@id": "text-plain_fileset",
+      "@type": "cr:FileSet",
+      "name": "text/plain files",
+      "description": "text/plain files contained in archive.zip"
+    }
+  ],
+  "keywords": [
+    "subject > science and technology > computer science",
+    "technique > model comparison",
+    "technique > benchmark"
+  ],
+  "identifier": "10.34740/kaggle/ds/13019279",
+  "isAccessibleForFree": true,
+  "isLiveDataset": true,
+  "includedInDataCatalog": {
+    "@type": "sc:DataCatalog",
+    "name": "Kaggle",
+    "url": "https://www.kaggle.com"
+  },
+  "creator": [
+    {
+      "@type": "sc:Person",
+      "name": "Rubi Debnath",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Technical University of Munich"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Daniel Bujosa",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Technical University of Denmark"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Luxi Zhao",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Beihang University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Silviu S. Craciunas",
+      "affiliation": [
+        {
+          "@type": "sc:Organization",
+          "name": "Technical University of Denmark"
+        },
+        {
+          "@type": "sc:Organization",
+          "name": "NXP Semiconductors"
+        }
+      ]
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Paul Pop",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Technical University of Denmark"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Sebastian Steinhorst",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Technical University of Munich"
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "Kaggle",
+    "url": "https://www.kaggle.com/organizations/kaggle",
+    "image": "https://storage.googleapis.com/kaggle-organizations/4/thumbnail.png"
+  },
+  "thumbnailUrl": "https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-68.png-34162580/dataset-card.png",
+  "dateModified": "2026-11-01T17:53:20.46",
+  "datePublished": "2026-11-01T17:53:20.46",
+  "version": "1.0.0",
+  "@type": "sc:Dataset",
+  "name": "TSNBench: Time-Sensitive Networking LLM Benchmark",
+  "url": "https://www.kaggle.com/datasets/anonymousdataset123/tsnbench-time-sensitive-networking-llm-benchmark",
+  "description": "# TSNBench: Benchmarking LLM Proficiency in Time-Sensitive Networking\n\nTSNBench is the first benchmark for evaluating large language models (LLMs) in Time-Sensitive Networking (TSN). TSN is a suite of IEEE 802.1 standards for deterministic Ethernet communication with bounded latency. It is used in safety-critical domains such as autonomous vehicles, aviation, defense and industrial automation, where an incorrect delay bound may compromise system safety.\n\nTSNBench tests two complementary abilities:\n\n- **Declarative TSN knowledge:** 939 expert-validated multiple-choice questions (MCQs).\n- **Quantitative reasoning:** 200 open-ended Worst-Case Delay (WCD) computation tasks, 100 for the Credit-Based Shaper (CBS, IEEE 802.1Qav) and 100 for Cyclic Queuing and Forwarding (CQF, IEEE 802.1Qch). An additional 10 CBS and 10 CQF test cases use the real-world Orion network topology.\n\nThe dataset accompanies the paper *TSNBench: Benchmarking LLM Proficiency in Time-Sensitive Networking*, NeurIPS 2026, Evaluations & Datasets Track.\n\n## Dataset contents\n\n### 1. Multiple-choice question answers (MCQAs)\n- 939 questions on TSN mechanisms and concepts, including traffic shaping and scheduling (TAS, CBS, ATS, CQF), reliability and stream management (FRER, PSFP, SRP).\n- The questions were generated from 83 publicly available TSN research papers and validated by five TSN experts.\n- Each question has answer options and the correct answer.\n\n### 2. Open-ended Worst-Case Delay (WCD) tasks\nEach test case (TC) describes a TSN network: the topology, a set of TSN flows (period, frame size, deadline), and the route of the flows. The task is to compute the end-to-end worst-case delay of every flow for the given mechanism and constraints.\n\n| Task | Test cases | Topologies | Ground truth |\n|---|---|---|---|\n| CBS (802.1Qav) | 100 | one-switch, ring, medium mesh | Network calculus (NC) analysis |\n| CQF (802.1Qch) | 100 | one-switch, ring, medium mesh | Analytical CQF delay bound |\n| Orion (CBS) | 10 | real-world Orion network | Network calculus (NC) analysis |\n\nAll delays are in microseconds (µs).\n\n### 3. Prompts\n- **Closed-book (CB):** the model receives only the network description.\n- **Formula-in-context (FC):** the prompt also includes the WCD formula for the mechanism.\n- **Prompt-sensitivity variants:** paraphrased prompts used to test robustness.\n\n## Intended use and limitations\n- TSNBench is meant for **evaluation**. Do not use it to train or fine-tune models you plan to evaluate on it.\n- The open-ended tasks cover CBS and CQF. Other mechanisms (e.g. TAS) appear only in the MCQAs.\n- Ground truth is computed under the network assumptions stated in the paper (e.g. cut-through switches and fixed switching, propagation and synchronization delays). \n\n## Folder structure\n```text\nTSNBench/\n├── README.md\n├── LICENSE\n├── DATASHEET.md\n├── dataset/\n│   ├── mcqa/                          # 939 MCQs (JSON)\n│   └── open_ended/                    # TC1–TC100: topology, flows and routes files per test case\n├── evaluation_results/\n│   ├── mcqa_evaluation/output/        # per-model MCQA responses\n│   └── open_end_evaluation/output/\n│       ├── CBS/                       # per-model WCD predictions for CBS\n│       └── CQF/                       # per-model WCD predictions for CQF\n└── prompts/\n    ├── mcqa/                          # MCQA prompt templates\n    └── open_ended/                    # CB, FC and prompt-sensitivity prompts\n```\n\n## License\n- Data: **CC BY 4.0**\n- Code: **MIT**, at https://github.com/tum-esi/TSNBench\n\n## Maintenance\nTSNBench is maintained by the TUM Chair of Embedded Systems and Internet of Things (ESI). Please report issues or questions through GitHub Issues.",
+  "rai:dataLimitations": "This dataset is intended for research benchmarking of model performance on Time-Sensitive Networking (TSN) domain knowledge and worst-case delay reasoning. Its applicability is limited to the task settings, mechanisms, network assumptions, and input formats included in the dataset. The open-ended component focuses on selected TSN mechanisms, primarily Credit-Based Shaper (CBS) and Cyclic Queuing and Forwarding (CQF). It does not fully cover all TSN mechanisms, such as Time-Aware Shaper (TAS), Asynchronous Traffic Shaper (ATS), or full industrial deployment constraints. The open-ended test cases are generated from controlled software-based network instances and may not capture all real-world effects, vendor-specific behavior, hardware constraints, or operational conditions in deployed TSN systems. The dataset uses fixed assumptions for network parameters, topology descriptions, routing information, traffic-flow specifications, and worst-case delay computation. This dataset is not recommended for directly configuring, validating, certifying, or deploying safety-critical TSN networks. It should not be used as a replacement for formal timing-analysis tools, certified engineering workflows, industrial TSN configuration tools, or expert validation. Model outputs evaluated using this dataset should not be used for real-world safety-critical decisions without independent verification by qualified domain experts and validated analysis tools.",
+  "rai:dataBiases": "The dataset may contain selection bias because the multiple-choice component is derived from selected open-access TSN research papers and author-available manuscript versions. As a result, TSN topics that are more frequently discussed in the selected literature may be over-represented, while topics with limited open-access coverage, proprietary industrial relevance, or stronger representation in IEEE standards rather than research papers may be under-represented. The dataset may also contain mechanism-level bias. The open-ended reasoning component focuses primarily on Credit-Based Shaper (CBS) and Cyclic Queuing and Forwarding (CQF). Other TSN mechanisms and scenarios, such as Time-Aware Shaper (TAS), Asynchronous Traffic Shaper (ATS) are not equally represented. The dataset is not expected to contain demographic bias because it does not include personal, demographic, or human-subject data.",
+  "rai:personalSensitiveInformation": "This dataset does not contain personal or sensitive information. It does not include gender, socio-economic status, geography, language, age, culture, experience or seniority, health or medical data, political or religious beliefs, or any other personal attributes.",
+  "rai:dataUseCases": "The dataset has been validated for research benchmarking of model performance on two task categories: multiple-choice TSN knowledge evaluation and open-ended worst-case delay reasoning for CBS and CQF scenarios. The dataset is validated for comparing model accuracy, consistency, calibration, and numerical error under the provided benchmark settings. It is not validated for direct TSN deployment, safety certification, industrial network configuration, vendor-specific TSN implementations, or real-time re-configuration. Performance on this dataset should not be interpreted as evidence that a model is ready to configure TSN networks without independent verification by qualified engineers and validated analysis tools.",
+  "rai:dataSocialImpact": "This dataset may have positive societal effects by supporting safer and more rigorous evaluation of large language models in deterministic networking and safety-critical communication domains. It may also support progress toward more reliable AI-assisted tools for industrial automation, automotive systems, aerospace communication, and other real-time networked systems where timing guarantees are important. The main negative risk is misuse of benchmark results. A model that performs well on this dataset may still be unsafe for real-world TSN configuration, deployment, certification, or timing analysis. The dataset does not contain personal, demographic, or human-subject data, so direct fairness risks for demographic groups are not expected.",
+  "rai:hasSyntheticData": true,
+  "prov:wasGeneratedBy": [
+    {
+      "@type": "prov:Activity",
+      "prov:type": {
+        "@id": "https://www.wikidata.org/wiki/Q4929239"
+      },
+      "sc:description": "The dataset is constructed to evaluate model performance on Time-Sensitive Networking (TSN) domain knowledge and numerical worst-case delay reasoning. It contains multiple-choice questions, open-ended CBS and CQF reasoning tasks, topology descriptions, traffic-flow specifications, routing information, and ground-truth delay values.\n\nThe multiple-choice question dataset is collected from selected open-access TSN research papers and author-available manuscript versions. These documents are used as source material for constructing the multiple-choice question answer (MCQA) component of the dataset. Only documents that are publicly accessible or available through author-provided versions are included.\n\nThe open-ended question dataset is generated using existing software tools that are part of our internal research toolsets. These tools are used to create TSN network instances, including topology descriptions and traffic-flow specifications. The corresponding worst-case delay ground-truth values are generated using a Network Calculus tool and mathematical equations."
+    },
+    {
+      "@type": "prov:Activity",
+      "prov:type": {
+        "@id": "https://www.wikidata.org/wiki/Q5227332"
+      },
+      "sc:description": "For the MCQA dataset, we removed the non-relevant document contents, and MCQs are filtered to remove duplicates, ambiguous entries, incomplete questions, incorrect answer options, and questions dependent on research document. The MCQA dataset is verified by domain experts."
+    },
+    {
+      "@type": "prov:Activity",
+      "prov:type": {
+        "@id": "https://www.wikidata.org/wiki/Q1172378"
+      },
+      "sc:description": "For the MCQA dataset, we removed the non-relevant document contents, and MCQs are filtered to remove duplicates, ambiguous entries, incomplete questions, incorrect answer options, and questions dependent on research document. The final MCQA dataset is verified by domain experts, and incorrect, misleading, or poorly formulated questions are removed after expert review."
+    },
+    {
+      "@type": "prov:Activity",
+      "prov:type": {
+        "@id": "https://www.wikidata.org/wiki/Q3306762"
+      },
+      "sc:description": "The final MCQA dataset is verified by five domain experts with extensive experience in TSN research. The open-ended questions are generated by the experts using research tools."
+    },
+    {
+      "@type": "prov:Activity",
+      "prov:type": {
+        "@id": "https://www.wikidata.org/wiki/Q4929239"
+      },
+      "sc:description": "This dataset is intended for research benchmarking of model performance on Time-Sensitive Networking (TSN) domain knowledge and worst-case delay reasoning. Its applicability is limited to the TSN multiple-choice question answer and open-ended Credit-Based Shaper (CBS) and Cyclic Queuing and Forwarding (CQF) mechanism. It does not fully cover all TSN mechanisms, such as Time-Aware Shaper (TAS), Asynchronous Traffic Shaper (ATS), Frame Replication and Elimination for Reliability (FRER), admission control, routing-scheduling co-design, or full industrial deployment constraints. \n\nThis dataset is not recommended for directly configuring, validating, certifying, or deploying safety-critical TSN networks. It should not be used as a replacement for formal timing-analysis tools, certified engineering workflows, industrial TSN configuration tools, or expert validation."
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@type": "prov:Entity",
+      "sc:name": "Open-access TSN research papers",
+      "sc:description": "83 published or accepted research papers on Time-Sensitive Networking, used in open-access, arXiv or author-manuscript versions. They are the source material for the multiple-choice questions and the TSN lexicon terms."
+    }
+  ]
+}
